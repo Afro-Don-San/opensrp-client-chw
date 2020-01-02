@@ -8,7 +8,7 @@ import org.junit.runners.Suite;
 @Suite.SuiteClasses(
         {
                 LoginPageActivityTest.class,
-                //HomePageTests.class,
+                HomePageTests.class,
                 AddFamilyTestWcaro.class,
                 AddFamilyMemberTest.class
 })
