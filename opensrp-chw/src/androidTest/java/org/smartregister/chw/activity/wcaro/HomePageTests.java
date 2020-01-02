@@ -56,8 +56,8 @@ public class HomePageTests {
     @Test
     public void searchByName() throws InterruptedException{
         onView(ViewMatchers.withHint("Search name or ID"))
-                .perform(typeText("Yella"), closeSoftKeyboard());
-        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Yella Smith Family"))
+                .perform(typeText("Patzi"), closeSoftKeyboard());
+        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Patzi Family"))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
         Thread.sleep(1000);
         utils.logOut();
@@ -66,8 +66,8 @@ public class HomePageTests {
     @Test
     public void searchByID() throws InterruptedException{
         onView(ViewMatchers.withHint("Search name or ID"))
-                .perform(typeText("6450472"), closeSoftKeyboard());
-        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Yella Smith Family"))
+                .perform(typeText("6554356"), closeSoftKeyboard());
+        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Patzi Family"))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
         Thread.sleep(1000);
         utils.logOut();

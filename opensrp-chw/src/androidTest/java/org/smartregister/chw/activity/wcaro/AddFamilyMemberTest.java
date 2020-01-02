@@ -19,6 +19,7 @@ import org.junit.Test;
 import org.smartregister.chw.R;
 import org.smartregister.chw.activity.LoginActivity;
 import org.smartregister.chw.activity.utils.Constants;
+import org.smartregister.chw.activity.utils.Order;
 import org.smartregister.chw.activity.utils.Utils;
 
 import static androidx.test.espresso.Espresso.onData;
@@ -57,6 +58,7 @@ public class AddFamilyMemberTest {
 
 
     @Test
+    @Order(order = 1)
     public void
     addFamilyMember() throws InterruptedException{
 
@@ -118,12 +120,11 @@ public class AddFamilyMemberTest {
     }
         //Thread.sleep(5000);
         Espresso.pressBack();
-        //Espresso.pressBack();
         Thread.sleep(500);
         onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("YES")).perform(click());
         Thread.sleep(100);
         Espresso.pressBack();
-        //utils.logOut();
+        utils.logOut();
 
 }
 

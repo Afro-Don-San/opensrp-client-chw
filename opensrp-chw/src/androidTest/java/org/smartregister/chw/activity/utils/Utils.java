@@ -38,10 +38,6 @@ public class Utils  {
 
     View view;
 
-    @Rule
-    //public android.support.test.rule.ActivityTestRule<LoginActivity> mActivityTestRule = new ActivityTestRule<>(LoginActivity.class);
-
-
     public void logIn(String username, String password ) throws InterruptedException {
         onView(withId(R.id.login_user_name_edit_text))
                 .perform(typeText(username), closeSoftKeyboard());
@@ -62,7 +58,7 @@ public class Utils  {
 
      */
     public void revertLanguage() throws InterruptedException{
-        openDrawer();
+        openDrawerFrench();
         onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Français"))
                 .perform(scrollTo(), click());
         Thread.sleep(500);
@@ -81,9 +77,29 @@ public class Utils  {
                                 1),
                         isDisplayed())).perform(click());
     }
+
+    public void openDrawerFrench(){
+        onView(
+                allOf(withContentDescription("Ouvrir"),
+                        childAtPosition(
+                                allOf(withId(R.id.register_toolbar),
+                                        childAtPosition(
+                                                withClassName(is("com.google.android.material.appbar.AppBarLayout")),
+                                                0)),
+                                1),
+                        isDisplayed())).perform(click());
+    }
+
     public void logOut() throws InterruptedException{
         openDrawer();
         onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Log out as CHA"))
+                .perform(scrollTo(), click());
+
+    }
+
+    public void logOutBA() throws InterruptedException{
+        openDrawer();
+        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Log out as Community"))
                 .perform(scrollTo(), click());
 
     }

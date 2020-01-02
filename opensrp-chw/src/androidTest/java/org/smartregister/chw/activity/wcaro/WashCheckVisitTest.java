@@ -30,7 +30,7 @@ public class WashCheckVisitTest {
     @Test
     public void washCheckVisitTest() throws InterruptedException{
 
-        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Yella Smith Family"))
+        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Smith Family"))
                 .perform(scrollTo(), click());
         onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("DUE"))
                 .perform(click());
