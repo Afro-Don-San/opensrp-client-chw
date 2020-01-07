@@ -37,6 +37,8 @@ import static androidx.test.espresso.matcher.ViewMatchers.withContentDescription
 import static androidx.test.espresso.matcher.ViewMatchers.withHint;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 import static androidx.test.espresso.matcher.ViewMatchers.withSpinnerText;
+import static androidx.test.espresso.matcher.ViewMatchers.withTagKey;
+import static androidx.test.espresso.matcher.ViewMatchers.withTagValue;
 import static androidx.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.startsWith;
@@ -74,11 +76,39 @@ public class AddFamilyTestWcaro {
     public void addfamily() throws InterruptedException{
 
         try{
+
             onView(withId(R.id.action_register)).perform(click());
             Thread.sleep(1000);
-            onView(withContentDescription("Family name *")).perform(typeText("Another"), closeSoftKeyboard());
+            //onView(withContentDescription("Family name *")).perform(typeText("Another"), closeSoftKeyboard());
 
-            //onView(withId(1)).perform(typeText("Test"), closeSoftKeyboard());
+            /*onView(withTagKey(R.id.key, new Matcher<String>() {
+
+                @Override
+                public void describeTo(Description description) {
+
+                }
+
+
+                @Override
+                public boolean matches(Object o) {
+                    return "fam_name".equals(o);
+                }
+
+                @Override
+                public void describeMismatch(Object o, Description description) {
+
+                }
+
+
+                @Override
+                public void _dont_implement_Matcher___instead_extend_BaseMatcher_() {
+
+                }
+            })).perform(typeText("Test"), closeSoftKeyboard());
+
+             */
+            //onView(withTagKey(is((Object) "fam_name"))).perform(typeText("Test"), closeSoftKeyboard());;
+
             onView(withId(5))
                 .perform(typeText("Another"), closeSoftKeyboard());
             // onView(withText("Village *")).perform(typeText("Another"), closeSoftKeyboard());

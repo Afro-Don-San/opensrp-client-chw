@@ -73,21 +73,6 @@ public class HomePageTests {
         utils.logOut();
     }
 
-    @Test
-    public void changeLanguage() throws InterruptedException{
-        utils.openDrawer();
-        Thread.sleep(500);
-        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("English"))
-                .perform(scrollTo(), click());
-        Thread.sleep(500);
-        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Français"))
-                .perform(scrollTo(), click());
-        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Tous les ménages"))
-                .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
-        utils.revertLanguage();
-        utils.logOut();
-    }
-
     private String getString(@StringRes int resourceId) {
         return mActivityTestRule.getActivity().getString(resourceId);
     }

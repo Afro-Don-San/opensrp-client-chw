@@ -63,7 +63,7 @@ public class AddFamilyMemberTest {
     addFamilyMember() throws InterruptedException{
 
         try{
-            onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Amadou Diallo Family"))
+            onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Patzi Family"))
                 .perform(click());
             onView(withId(R.id.fab))
                 .perform(click());
@@ -78,13 +78,13 @@ public class AddFamilyMemberTest {
             onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Surname same as family name"))
                 .perform(scrollTo(), click());
 
-            Thread.sleep(500);
+            Thread.sleep(5000);
             //onView(withId(firstName))
                 //.perform(typeText("JinaLaKwanza"), closeSoftKeyboard());//12
             //allOf(is(instanceOf(String.class)), is("First name *")).perform(typeText("test"), closeSoftKeyboard());
-            onData(hasToString(startsWith("First name *"))).perform(typeText("test"), closeSoftKeyboard());
+            onData(hasToString(startsWith("First name izikid"))).perform(typeText("test"), closeSoftKeyboard());
 
-            Thread.sleep(1000);
+            Thread.sleep(5000);
             onView(withId(14))
                 .perform(typeText("JinaLaPili"), closeSoftKeyboard());//14
             onView(withId(16))

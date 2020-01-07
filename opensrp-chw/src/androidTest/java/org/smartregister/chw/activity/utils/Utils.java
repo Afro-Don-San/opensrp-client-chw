@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 
+import androidx.test.espresso.ViewInteraction;
 import androidx.test.espresso.matcher.ViewMatchers;
 
 
@@ -60,6 +61,15 @@ public class Utils  {
     public void revertLanguage() throws InterruptedException{
         openDrawerFrench();
         onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Français"))
+                .perform(click());
+        Thread.sleep(500);
+        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("English"))
+                .perform(click());
+    }
+
+    public void revertLanguageSwahili() throws InterruptedException{
+        openDrawerSwahili();
+        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Kiswahili"))
                 .perform(scrollTo(), click());
         Thread.sleep(500);
         onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("English"))
@@ -90,16 +100,26 @@ public class Utils  {
                         isDisplayed())).perform(click());
     }
 
+    public void openDrawerSwahili(){
+        onView(
+                allOf(withContentDescription("Fungua"),
+                        childAtPosition(
+                                allOf(withId(R.id.register_toolbar),
+                                        childAtPosition(
+                                                withClassName(is("com.google.android.material.appbar.AppBarLayout")),
+                                                0)),
+                                1),
+                        isDisplayed())).perform(click());
+    }
+
     public void logOut() throws InterruptedException{
-        openDrawer();
-        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Log out as CHA"))
-                .perform(scrollTo(), click());
+        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Log out as " + Constants.WcaroConfigs.wCaro_userName))
+                .perform(click());
 
     }
 
     public void logOutBA() throws InterruptedException{
-        openDrawer();
-        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Log out as Community"))
+        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Log out as " + Constants.BoreshaAfyaConfigs.ba_userName))
                 .perform(scrollTo(), click());
 
     }
