@@ -8,6 +8,7 @@ import androidx.test.espresso.matcher.ViewMatchers;
 import androidx.test.rule.ActivityTestRule;
 import androidx.test.rule.GrantPermissionRule;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -55,7 +56,6 @@ public class SideNavigationMenuTests {
         Thread.sleep(500);
         onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Registers"))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
-        utils.logOut();
     }
 
     @Test
@@ -64,7 +64,6 @@ public class SideNavigationMenuTests {
         Thread.sleep(500);
         onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring(Constants.WcaroConfigs.appName))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
-        utils.logOut();
     }
 
     @Test
@@ -77,7 +76,6 @@ public class SideNavigationMenuTests {
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
         onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring(Constants.GenericConfigs.child))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
-        utils.logOut();
     }
 
     @Test
@@ -86,7 +84,6 @@ public class SideNavigationMenuTests {
         Thread.sleep(500);
         onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Sync"))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
-        utils.logOut();
     }
 
     @Test
@@ -95,9 +92,7 @@ public class SideNavigationMenuTests {
         Thread.sleep(500);
         onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Log out as " + Constants.WcaroConfigs.wCaro_userName))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
-        utils.logOut();
     }
-
 
     @Test
     @Order(order = 6)
@@ -111,6 +106,9 @@ public class SideNavigationMenuTests {
         onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Tous les ménages"))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
         utils.revertLanguage();
+    }
+    @After
+    public void tearDown() throws InterruptedException {
         utils.logOut();
     }
 

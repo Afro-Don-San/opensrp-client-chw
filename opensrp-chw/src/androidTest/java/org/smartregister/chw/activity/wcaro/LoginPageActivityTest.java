@@ -52,6 +52,7 @@ public class LoginPageActivityTest {
         Thread.sleep(5000);
         onView(withId(R.id.action_family))
                 .check(matches(isDisplayed()));
+        utils.openDrawer();
         utils.logOut();
         Thread.sleep(1000);
     }

@@ -1,41 +1,38 @@
-package org.smartregister.chw.activity.wcaro;
+package org.smartregister.chw.activity.ba;
 
 import android.Manifest;
-
 import android.view.View;
 import android.widget.EditText;
 
 import androidx.annotation.StringRes;
+import androidx.test.espresso.Espresso;
 import androidx.test.espresso.assertion.ViewAssertions;
 import androidx.test.espresso.matcher.ViewMatchers;
 import androidx.test.rule.ActivityTestRule;
 import androidx.test.rule.GrantPermissionRule;
 
+import org.apache.commons.beanutils.IntrospectionContext;
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 import org.smartregister.chw.R;
 import org.smartregister.chw.activity.LoginActivity;
 import org.smartregister.chw.activity.utils.Constants;
-import org.smartregister.chw.activity.utils.OrderedRunner;
 import org.smartregister.chw.activity.utils.Utils;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
 import static androidx.test.espresso.action.ViewActions.closeSoftKeyboard;
-import static androidx.test.espresso.action.ViewActions.scrollTo;
 import static androidx.test.espresso.action.ViewActions.typeText;
 import static androidx.test.espresso.assertion.ViewAssertions.matches;
 import static androidx.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static androidx.test.espresso.matcher.ViewMatchers.withId;
 
-
-@RunWith(OrderedRunner.class)
-public class HomePageTests {
+public class HomePageTestsBa {
     @Rule
     public ActivityTestRule<LoginActivity> intentsTestRule = new ActivityTestRule<>(LoginActivity.class);
 
@@ -54,7 +51,7 @@ public class HomePageTests {
 
     @Before
     public void setUp() throws InterruptedException {
-        utils.logIn(Constants.WcaroConfigs.wCaro_username, Constants.WcaroConfigs.wCaro_password);
+        utils.logIn(Constants.BoreshaAfyaConfigs.ba_username, Constants.BoreshaAfyaConfigs.ba_password);
     }
     @Test
     public void searchByName() throws InterruptedException{
@@ -64,7 +61,7 @@ public class HomePageTests {
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
         Thread.sleep(1000);
         utils.openDrawer();
-        utils.logOut();
+        utils.logOutBA();
     }
 
     @Test
@@ -75,15 +72,28 @@ public class HomePageTests {
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
         Thread.sleep(1000);
         utils.openDrawer();
-        utils.logOut();
+        utils.logOutBA();
     }
 
     @Test
-    public void checkJobAids() throws InterruptedException{
-        onView(withId(R.id.action_job_aids))
+    public void checkScanQr() throws InterruptedException{
+        onView(withId(R.id.action_scan_qr))
                 .check(matches(isDisplayed()));
+    }
+
+    @Test
+    public void confirmQrScanFunctionality() throws InterruptedException{
+        onView(withId(R.id.action_scan_qr))
+                .perform(click());
+        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Scan QR Code"))
+                .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
+        Espresso.pressBack();
+    }
+
+    @After
+    public void tearDown() throws InterruptedException{
         utils.openDrawer();
-        utils.logOut();
+        utils.logOutBA();
     }
 
     private String getString(@StringRes int resourceId) {
@@ -106,6 +116,4 @@ public class HomePageTests {
             }
         };
     }
-
-
 }

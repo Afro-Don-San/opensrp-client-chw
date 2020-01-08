@@ -11,7 +11,6 @@ import org.smartregister.chw.activity.utils.Utils;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.click;
-import static androidx.test.espresso.action.ViewActions.scrollTo;
 
 
 public class WashCheckVisitTest {
@@ -30,12 +29,16 @@ public class WashCheckVisitTest {
     @Test
     public void washCheckVisitTest() throws InterruptedException{
 
-        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Smith Family"))
-                .perform(scrollTo(), click());
-        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("DUE"))
+        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Patzi Family"))
+                .perform(click());
+        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("MEMBERS"))
                 .perform(click());
         Thread.sleep(5000);
-        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Smith Family . WASH check"))
+        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Omo Super Patzi, 33"))
+                .perform(click());
+        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Family has services overdue"))
+                .perform(click());
+        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Sunlight Patzi, 27 .PNC Visit"))
                 .perform(click());
     }
 
