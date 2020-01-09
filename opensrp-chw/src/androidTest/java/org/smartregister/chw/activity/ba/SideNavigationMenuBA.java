@@ -8,6 +8,7 @@ import androidx.test.espresso.matcher.ViewMatchers;
 import androidx.test.rule.ActivityTestRule;
 import androidx.test.rule.GrantPermissionRule;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -60,7 +61,6 @@ public class SideNavigationMenuBA {
         Thread.sleep(500);
         onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Registers"))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
-        utils.logOutBA();
     }
 
     @Test
@@ -69,7 +69,6 @@ public class SideNavigationMenuBA {
         Thread.sleep(500);
         onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring(Constants.BoreshaAfyaConfigs.appName))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
-        utils.logOutBA();
     }
 
     @Test
@@ -82,7 +81,6 @@ public class SideNavigationMenuBA {
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
         onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring(Constants.GenericConfigs.child))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
-        utils.logOutBA();
     }
 
     @Test
@@ -91,7 +89,6 @@ public class SideNavigationMenuBA {
         Thread.sleep(500);
         onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Sync"))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
-        utils.logOutBA();
     }
 
     @Test
@@ -100,7 +97,6 @@ public class SideNavigationMenuBA {
         Thread.sleep(500);
         onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Log out as " + Constants.BoreshaAfyaConfigs.ba_userName))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
-        utils.logOutBA();
     }
 
 
@@ -109,12 +105,16 @@ public class SideNavigationMenuBA {
     public void changeLanguage() throws InterruptedException{
         Thread.sleep(500);
         onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("English"))
-                .perform(scrollTo(), click());
+                .perform(click());
         Thread.sleep(500);
         onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Kiswahili"))
-                .perform(scrollTo(), click());
+                .perform(click());
         onView(withId(R.id.txt_title_label)).check(matches(isDisplayed()));
         utils.revertLanguageSwahili();
-        utils.logOut();
+        utils.openDrawer();
+    }
+    @After
+    public void tearDown() throws InterruptedException{
+        utils.logOutBA();
     }
 }

@@ -106,6 +106,7 @@ public class SideNavigationMenuTests {
         onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Tous les ménages"))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
         utils.revertLanguage();
+        utils.openDrawer();
     }
     @After
     public void tearDown() throws InterruptedException {

@@ -9,8 +9,7 @@ import org.junit.runners.Suite;
         {
                 LoginPageActivityTest.class,
                 HomePageTests.class,
-                AddFamilyTestWcaro.class,
-                AddFamilyMemberTest.class
+                SideNavigationMenuTests.class,
 })
 public class TestRun {
 

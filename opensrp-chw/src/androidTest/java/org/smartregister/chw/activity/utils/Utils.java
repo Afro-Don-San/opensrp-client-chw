@@ -60,10 +60,10 @@ public class Utils  {
     public void revertLanguageSwahili() throws InterruptedException{
         openDrawerSwahili();
         onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Kiswahili"))
-                .perform(scrollTo(), click());
+                .perform(click());
         Thread.sleep(500);
         onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("English"))
-                .perform(scrollTo(), click());
+                .perform(click());
     }
 
     public void openDrawer(){

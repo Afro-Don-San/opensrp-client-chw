@@ -18,6 +18,7 @@ import org.smartregister.chw.R;
 import org.smartregister.chw.activity.LoginActivity;
 import org.smartregister.chw.activity.utils.Order;
 import org.smartregister.chw.activity.utils.OrderedRunner;
+import org.smartregister.chw.activity.utils.Utils;
 
 import static androidx.test.espresso.Espresso.onView;
 import static androidx.test.espresso.action.ViewActions.clearText;
@@ -32,7 +33,8 @@ import static androidx.test.espresso.matcher.ViewMatchers.withText;
 @LargeTest
 //@RunWith(AndroidJUnit4.class)
 @RunWith(OrderedRunner.class)
-public class LoginPageActivityTest {
+public class LoginPageActivityTestBa {
+    Utils utils = new Utils();
 
     @Rule
     public ActivityTestRule<LoginActivity> mActivityTestRule = new ActivityTestRule<>(LoginActivity.class);
@@ -45,6 +47,8 @@ public class LoginPageActivityTest {
         onView(withId(R.id.login_login_btn)).perform(click());
         Thread.sleep(5000);
         onView(withId(R.id.action_family)).check(matches(isDisplayed()));
+        utils.openDrawer();
+        utils.logOutBA();
     }
 
     @Test
@@ -54,7 +58,7 @@ public class LoginPageActivityTest {
         onView(withId(R.id.login_password_edit_text)).perform(clearText());
         onView(withId(R.id.login_login_btn)).perform(click());
         Thread.sleep(5000);
-        onView(withText("Please check the credentials")).check(matches(isDisplayed()));
+        onView(withText("Please check the credentials.")).check(matches(isDisplayed()));
     }
 
     @Test
@@ -65,7 +69,7 @@ public class LoginPageActivityTest {
         onView(withId(R.id.login_password_edit_text)).perform(clearText());
         onView(withId(R.id.login_login_btn)).perform(click());
         Thread.sleep(5000);
-        onView(withText("Please check the credentials")).check(matches(isDisplayed()));
+        onView(withText("Please check the credentials.")).check(matches(isDisplayed()));
     }
 
     @Test
@@ -75,7 +79,7 @@ public class LoginPageActivityTest {
         onView(withId(R.id.login_password_edit_text)).perform(typeText("Amani123"), closeSoftKeyboard());
         onView(withId(R.id.login_login_btn)).perform(click());
         Thread.sleep(5000);
-        onView(withText("Please check the credentials")).check(matches(isDisplayed()));
+        onView(withText("Please check the credentials.")).check(matches(isDisplayed()));
     }
 
     @Test
@@ -85,7 +89,7 @@ public class LoginPageActivityTest {
         onView(withId(R.id.login_password_edit_text)).perform(typeText("Amani123"), closeSoftKeyboard());
         onView(withId(R.id.login_login_btn)).perform(click());
         Thread.sleep(5000);
-        onView(withText("Please check the credentials")).check(matches(isDisplayed()));
+        onView(withText("Please check the credentials.")).check(matches(isDisplayed()));
     }
 
     private String getString(@StringRes int resourceId) {
