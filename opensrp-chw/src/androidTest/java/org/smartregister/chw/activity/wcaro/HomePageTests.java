@@ -59,8 +59,8 @@ public class HomePageTests {
     @Test
     public void searchByName() throws InterruptedException{
         onView(ViewMatchers.withHint("Search name or ID"))
-                .perform(typeText("Patzi"), closeSoftKeyboard());
-        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Patzi Family"))
+                .perform(typeText(Constants.WcaroConfigs.searchFamilyWCaro), closeSoftKeyboard());
+        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring(Constants.WcaroConfigs.familyWcaro))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
         Thread.sleep(1000);
         utils.openDrawer();
@@ -70,8 +70,8 @@ public class HomePageTests {
     @Test
     public void searchByID() throws InterruptedException{
         onView(ViewMatchers.withHint("Search name or ID"))
-                .perform(typeText("6554356"), closeSoftKeyboard());
-        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Patzi Family"))
+                .perform(typeText(Constants.WcaroConfigs.searchFamilyIDWCaro), closeSoftKeyboard());
+        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring(Constants.WcaroConfigs.familyWcaro))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
         Thread.sleep(1000);
         utils.openDrawer();

@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
 
+import androidx.test.espresso.ViewInteraction;
+
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
@@ -55,6 +57,18 @@ public class Utils  {
         Thread.sleep(500);
         onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("English"))
                 .perform(click());
+    }
+
+    public void openFamilyMenu(){
+        ViewInteraction overflowMenuButton = onView(
+                allOf(withContentDescription("More options"),
+                        childAtPosition(
+                                childAtPosition(
+                                        withId(R.id.family_toolbar),
+                                        2),
+                                0),
+                        isDisplayed()));
+        overflowMenuButton.perform(click());
     }
 
     public void revertLanguageSwahili() throws InterruptedException{

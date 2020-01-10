@@ -7,6 +7,9 @@ public class Constants {
         public static final String wCaro_password = "Wcaro123";
         public static final String appName = "Liberia CFC Monitor";
         public static final String wCaro_userName = "CHA";
+        public static final String searchFamilyWCaro = "Patzi";
+        public static final String familyWcaro = "Patzi Family";
+        public static final String searchFamilyIDWCaro = "6554356";
     }
 
     public class BoreshaAfyaConfigs{
@@ -14,6 +17,9 @@ public class Constants {
         public static final String ba_password = "Boresha123";
         public static final String appName = "USAID Boresha Afya";
         public static final String ba_userName = "Community";
+        public static final String searchFamilyBa = "Nandi";
+        public static final String familyBa = "Nandi Family";
+        public static final String searchFamilyIDBa = "";
     }
 
     public class GenericConfigs{
