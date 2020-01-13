@@ -81,6 +81,10 @@ public class SideNavigationMenuBA {
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
         onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring(Constants.GenericConfigs.child))
                 .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
+        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring(Constants.GenericConfigs.family_planning))
+                .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
+        onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring(Constants.GenericConfigs.malaria))
+                .check(ViewAssertions.matches(ViewMatchers.isDisplayed()));
     }
 
     @Test
