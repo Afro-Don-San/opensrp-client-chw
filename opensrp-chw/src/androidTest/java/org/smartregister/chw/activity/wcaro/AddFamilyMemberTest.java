@@ -21,6 +21,7 @@ import org.smartregister.chw.activity.LoginActivity;
 import org.smartregister.chw.activity.utils.Constants;
 import org.smartregister.chw.activity.utils.Order;
 import org.smartregister.chw.activity.utils.Utils;
+import org.smartregister.family.activity.FamilyWizardFormActivity;
 
 import static androidx.test.espresso.Espresso.onData;
 import static androidx.test.espresso.Espresso.onView;
@@ -36,6 +37,8 @@ public class AddFamilyMemberTest {
 
     @Rule
     public ActivityTestRule<LoginActivity> mActivityTestRule = new ActivityTestRule<>(LoginActivity.class);
+
+    public ActivityTestRule<FamilyWizardFormActivity> mActivityTestRule2 = new ActivityTestRule<>(FamilyWizardFormActivity.class);
 
     @Rule
     public GrantPermissionRule permissionRule = GrantPermissionRule.grant(android.Manifest.permission.CALL_PHONE);
@@ -58,9 +61,7 @@ public class AddFamilyMemberTest {
 
 
     @Test
-    @Order(order = 1)
-    public void
-    addFamilyMember() throws InterruptedException{
+    public void addFamilyMember() throws InterruptedException{
 
         try{
             onView(androidx.test.espresso.matcher.ViewMatchers.withSubstring("Patzi Family"))
@@ -79,6 +80,8 @@ public class AddFamilyMemberTest {
                 .perform(scrollTo(), click());
 
             Thread.sleep(5000);
+
+            mActivityTestRule2.getActivity().findViewById(android.R.id.content).getRootView().findViewWithTag("First_Name");
             //onView(withId(firstName))
                 //.perform(typeText("JinaLaKwanza"), closeSoftKeyboard());//12
             //allOf(is(instanceOf(String.class)), is("First name *")).perform(typeText("test"), closeSoftKeyboard());
