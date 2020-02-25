@@ -8,6 +8,8 @@ import android.view.ViewParent;
 
 import androidx.test.espresso.ViewInteraction;
 
+import com.vijay.jsonwizard.activities.JsonFormActivity;
+
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
@@ -157,6 +159,10 @@ public class Utils  {
                         && view.equals(((ViewGroup) parent).getChildAt(position));
             }
         };
+    }
+
+    public static int getViewId(JsonFormActivity jsonFormActivity, String key){
+        return jsonFormActivity.getFormDataView(key).getId();
     }
 
 }

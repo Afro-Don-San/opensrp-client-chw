@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.util.Pair;
 import android.view.Gravity;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
 
@@ -12,8 +13,10 @@ import org.apache.commons.lang3.StringUtils;
 import org.joda.time.DateTime;
 import org.joda.time.Days;
 import org.json.JSONObject;
+import org.smartregister.chw.BuildConfig;
 import org.smartregister.chw.R;
 import org.smartregister.chw.anc.domain.Visit;
+import org.smartregister.chw.anc.presenter.BaseAncMemberProfilePresenter;
 import org.smartregister.chw.anc.util.Constants;
 import org.smartregister.chw.application.ChwApplication;
 import org.smartregister.chw.contract.PncMemberProfileContract;
@@ -51,6 +54,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import io.reactivex.Observable;
 import io.reactivex.Observer;
@@ -171,6 +175,8 @@ public class PncMemberProfileActivity extends CorePncMemberProfileActivity imple
                 displayView();
                 setLastVisit(visit.getDate());
                 setupViews();
+                (pncMemberProfileInteractor).refreshProfileInfo(memberObject, (BaseAncMemberProfilePresenter) pncMemberProfilePresenter());
+
             }
 
             @Override
@@ -347,7 +353,7 @@ public class PncMemberProfileActivity extends CorePncMemberProfileActivity imple
 
     private void addPncReferralTypes() {
         referralTypeModels.add(new ReferralTypeModel(getString(R.string.pnc_danger_signs),
-                org.smartregister.chw.util.Constants.JSON_FORM.getPncReferralForm()));
+                BuildConfig.USE_UNIFIED_REFERRAL_APPROACH ? org.smartregister.chw.util.Constants.JSON_FORM.getPncUnifiedReferralForm() : org.smartregister.chw.util.Constants.JSON_FORM.getPncReferralForm()));
         referralTypeModels.add(new ReferralTypeModel(getString(R.string.fp_post_partum), null));
         if (MalariaDao.isRegisteredForMalaria(((PncMemberProfilePresenter) presenter()).getEntityId())) {
             referralTypeModels.add(new ReferralTypeModel(getString(R.string.client_malaria_follow_up), null));
@@ -372,6 +378,19 @@ public class PncMemberProfileActivity extends CorePncMemberProfileActivity imple
     @Override
     protected void startMalariaFollowUpVisit() {
         MalariaFollowUpVisitActivity.startMalariaFollowUpActivity(this, memberObject.getBaseEntityId());
+    }
+
+    @Override
+    protected void getRemoveBabyMenuItem(MenuItem item) {
+            for (CommonPersonObjectClient child : getChildren(memberObject)) {
+                for (Map.Entry<String, String> entry : menuItemRemoveNames.entrySet()) {
+                    if (entry.getKey().equalsIgnoreCase(item.getTitle().toString()) && entry.getValue().equalsIgnoreCase(child.entityId())) {
+                        IndividualProfileRemoveActivity.startIndividualProfileActivity(PncMemberProfileActivity.this, child,
+                                memberObject.getFamilyBaseEntityId()
+                                , memberObject.getFamilyHead(), memberObject.getPrimaryCareGiver(), ChildRegisterActivity.class.getCanonicalName());
+                    }
+                }
+        }
     }
 
     public interface Flavor {
