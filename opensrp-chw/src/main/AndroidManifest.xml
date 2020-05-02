@@ -29,6 +29,7 @@
         android:allowBackup="true"
         android:supportsRtl="true"
         android:theme="@style/ChwTheme"
+        android:usesCleartextTraffic="true"
         tools:replace="android:theme">
         <activity
             android:name=".activity.FamilyPlanningMemberProfileActivity"
@@ -235,6 +236,19 @@
             android:theme="@style/ChwTheme.NoActionBar" />
         <activity
             android:name="org.smartregister.chw.activity.UpdateRegisterDetailsActivity"
+            android:theme="@style/ChwTheme.NoActionBar" />
+
+        <activity
+            android:name=".activity.PathfinderFamilyPlanningMemberProfileActivity"
+            android:theme="@style/ChwTheme.NoActionBar" />
+        <activity
+            android:name=".activity.PathfinderFamilyPlanningRegisterActivity"
+            android:theme="@style/ChwTheme.NoActionBar" />
+        <activity
+            android:name=".activity.PathfinderFamilyPlanningFollowUpVisitActivity"
+            android:theme="@style/ChwTheme.NoActionBar" />
+        <activity
+            android:name=".activity.PathfinderFamilyPlanningUpcomingServicesActivity"
             android:theme="@style/ChwTheme.NoActionBar" />
 
         <meta-data
