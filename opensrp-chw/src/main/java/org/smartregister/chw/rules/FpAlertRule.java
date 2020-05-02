@@ -12,7 +12,7 @@ import java.util.Date;
 import java.util.Locale;
 
 public class FpAlertRule implements ICommonRule {
-    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
+    private SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
     private String visitID;
     private DateTime fpDate;
     private DateTime dueDate;

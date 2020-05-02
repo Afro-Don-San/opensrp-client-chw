@@ -38,7 +38,6 @@ public class PathfinderFamilyPlanningUpcomingServicesInteractor extends BaseAncU
         String fp_date = null;
         Integer fp_pillCycles = null;
         Rules rule = null;
-        Integer count;
         Date serviceDueDate = null;
         Date serviceOverDueDate = null;
         String serviceName = null;

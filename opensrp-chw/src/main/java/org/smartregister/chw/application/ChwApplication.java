@@ -56,7 +56,6 @@ import org.smartregister.chw.sync.ChwClientProcessor;
 import org.smartregister.chw.util.FailSafeRecalledID;
 import org.smartregister.chw.util.FileUtils;
 import org.smartregister.chw.util.JsonFormUtils;
-import org.smartregister.chw.util.PathfinderFamilyPlanningConstants;
 import org.smartregister.chw.util.Utils;
 import org.smartregister.configurableviews.ConfigurableViewsLibrary;
 import org.smartregister.configurableviews.helper.JsonSpecHelper;
@@ -201,7 +200,7 @@ public class ChwApplication extends CoreChwApplication {
         MalariaLibrary.init(context, getRepository(), BuildConfig.VERSION_CODE, BuildConfig.DATABASE_VERSION);
         FpLibrary.init(context, getRepository(), BuildConfig.VERSION_CODE, BuildConfig.DATABASE_VERSION);
 
-        if(BuildConfig.USE_PATHFINDERS_FP_MODULE) {
+        if (BuildConfig.USE_PATHFINDERS_FP_MODULE) {
             org.smartregister.chw.fp_pathfinder.FpLibrary.init(context, getRepository(), BuildConfig.VERSION_CODE, BuildConfig.DATABASE_VERSION);
         }
         // Init Reporting library
@@ -294,9 +293,9 @@ public class ChwApplication extends CoreChwApplication {
             registeredActivities.put(CoreConstants.REGISTERED_ACTIVITIES.ALL_CLIENTS_REGISTERED_ACTIVITY, AllClientsRegisterActivity.class);
         }
 
-        if(BuildConfig.USE_PATHFINDERS_FP_MODULE) {
+        if (BuildConfig.USE_PATHFINDERS_FP_MODULE) {
             registeredActivities.put(CoreConstants.REGISTERED_ACTIVITIES.FP_REGISTER_ACTIVITY, PathfinderFamilyPlanningRegisterActivity.class);
-        }else {
+        } else {
             registeredActivities.put(CoreConstants.REGISTERED_ACTIVITIES.FP_REGISTER_ACTIVITY, FpRegisterActivity.class);
         }
         registeredActivities.put(CoreConstants.REGISTERED_ACTIVITIES.UPDATES_REGISTER_ACTIVITY, UpdatesRegisterActivity.class);

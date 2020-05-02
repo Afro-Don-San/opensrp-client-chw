@@ -25,12 +25,12 @@ import java.util.List;
 import timber.log.Timber;
 
 public class PathfinderFamilyPlanningMemberProfilePresenter extends BaseFpProfilePresenter implements PathfinderFamilyPlanningMemberProfileContract.Presenter, FamilyProfileContract.InteractorCallBack, org.smartregister.chw.contract.AncMemberProfileContract.Presenter {
-    private org.smartregister.chw.fp_pathfinder.contract.BaseFpProfileContract.Interactor interactor;
-    private WeakReference<org.smartregister.chw.fp_pathfinder.contract.BaseFpProfileContract.View> view;
+    private BaseFpProfileContract.Interactor interactor;
+    private WeakReference<BaseFpProfileContract.View> view;
     private FormUtils formUtils;
     private FpMemberObject fpMemberObject;
 
-    public PathfinderFamilyPlanningMemberProfilePresenter(BaseFpProfileContract.View view, BaseFpProfileContract.Interactor interactor, org.smartregister.chw.fp_pathfinder.domain.FpMemberObject fpMemberObject) {
+    public PathfinderFamilyPlanningMemberProfilePresenter(BaseFpProfileContract.View view, BaseFpProfileContract.Interactor interactor, FpMemberObject fpMemberObject) {
         super(view, interactor, fpMemberObject);
         this.interactor = interactor;
         this.view = new WeakReference<>(view);
@@ -42,8 +42,7 @@ public class PathfinderFamilyPlanningMemberProfilePresenter extends BaseFpProfil
     public void referToFacility() {
         List<ReferralTypeModel> referralTypeModels = ((FamilyPlanningMemberProfileActivity) getView()).getReferralTypeModels();
         if (referralTypeModels.size() == 1) {
-            //TODO fix this
-//            startFamilyPlanningReferral();
+            startFamilyPlanningReferral();
         } else {
             Utils.launchClientReferralActivity((Activity) getView(), referralTypeModels, fpMemberObject.getBaseEntityId());
         }

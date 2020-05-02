@@ -38,23 +38,23 @@ public class PathfinderFamilyPlanningConstants {
 
         public static String getFamilyPlanningChangeMethodForm(String gender, Locale locale, AssetManager assetManager) {
             String formName = gender.equalsIgnoreCase(Gender.MALE.toString()) ? MALE_FAMILY_PLANNING_CHANGE_METHOD_FORM : FEMALE_FAMILY_PLANNING_CHANGE_METHOD_FORM;
-            return org.smartregister.chw.core.utils.Utils.getLocalForm(formName, locale, assetManager);
+            return Utils.getLocalForm(formName, locale, assetManager);
         }
 
         public static String getFamilyPlanningIntroduction(Locale locale, AssetManager assetManager) {
-            return org.smartregister.chw.core.utils.Utils.getLocalForm(FAMILY_PLANNING_INTRODUCTION, locale, assetManager);
+            return Utils.getLocalForm(FAMILY_PLANNING_INTRODUCTION, locale, assetManager);
         }
 
         public static String getPregnancyScreening(Locale locale, AssetManager assetManager) {
-            return org.smartregister.chw.core.utils.Utils.getLocalForm(PREGNANCY_SCREENING, locale, assetManager);
+            return Utils.getLocalForm(PREGNANCY_SCREENING, locale, assetManager);
         }
 
         public static String getChooseFamilyPlanningMethod(Locale locale, AssetManager assetManager) {
-            return org.smartregister.chw.core.utils.Utils.getLocalForm(CHOOSE_FAMILY_PLANNING_METHOD, locale, assetManager);
+            return Utils.getLocalForm(CHOOSE_FAMILY_PLANNING_METHOD, locale, assetManager);
         }
 
         public static String getGiveFamilyPlanningMethod(Locale locale, AssetManager assetManager) {
-            return org.smartregister.chw.core.utils.Utils.getLocalForm(GIVE_FAMILY_PLANNING_METHOD, locale, assetManager);
+            return Utils.getLocalForm(GIVE_FAMILY_PLANNING_METHOD, locale, assetManager);
         }
 
         public static boolean isMultiPartForm(JSONObject jsonForm) {
@@ -69,11 +69,11 @@ public class PathfinderFamilyPlanningConstants {
             private static final String FAMILY_PLANNING_FOLLOWUP_SIDE_EFFECTS = "fp_followup_side_effects";
 
             public static String getFamilyPlanningFollowupCounsel(Locale locale, AssetManager assetManager) {
-                return org.smartregister.chw.core.utils.Utils.getLocalForm(FAMILY_PLANNING_FOLLOWUP_COUNSEL, locale, assetManager);
+                return Utils.getLocalForm(FAMILY_PLANNING_FOLLOWUP_COUNSEL, locale, assetManager);
             }
 
             public static String getFamilyPlanningFollowupResupply(Locale locale, AssetManager assetManager) {
-                return org.smartregister.chw.core.utils.Utils.getLocalForm(FAMILY_PLANNING_FOLLOWUP_RESUPPLY, locale, assetManager);
+                return Utils.getLocalForm(FAMILY_PLANNING_FOLLOWUP_RESUPPLY, locale, assetManager);
             }
 
             public static String getFamilyPlanningFollowupSideEffects(Locale locale, AssetManager assetManager) {

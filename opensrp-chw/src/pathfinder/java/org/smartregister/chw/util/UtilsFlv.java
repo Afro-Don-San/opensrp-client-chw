@@ -21,32 +21,6 @@ import java.util.Date;
 import timber.log.Timber;
 
 public class UtilsFlv {
-    private static class UpdateFollowUpMenuItem extends AsyncTask<Void, Void, Void> {
-        private final String baseEntityId;
-        private Menu menu;
-        private MalariaFollowUpRule malariaFollowUpRule;
-
-        public UpdateFollowUpMenuItem(String baseEntityId, Menu menu) {
-            this.baseEntityId = baseEntityId;
-            this.menu = menu;
-        }
-
-        @Override
-        protected Void doInBackground(Void... voids) {
-            Date malariaTestDate = MalariaDao.getMalariaTestDate(baseEntityId);
-            Date followUpDate = MalariaDao.getMalariaFollowUpVisitDate(baseEntityId);
-            malariaFollowUpRule = MalariaVisitUtil.getMalariaStatus(malariaTestDate,followUpDate);
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void param) {
-            if (malariaFollowUpRule != null && StringUtils.isNotBlank(malariaFollowUpRule.getButtonStatus()) &&
-                    !CoreConstants.VISIT_STATE.EXPIRED.equalsIgnoreCase(malariaFollowUpRule.getButtonStatus())) {
-                menu.findItem(R.id.action_malaria_followup_visit).setVisible(true);
-            }
-        }
-    }
     public static void updateMalariaMenuItems(String baseEntityId, Menu menu) {
         if (MalariaDao.isRegisteredForMalaria(baseEntityId)) {
             Utils.startAsyncTask(new UpdateFollowUpMenuItem(baseEntityId, menu), null);
@@ -70,7 +44,7 @@ public class UtilsFlv {
         }
 
         // check age
-        String dobString = org.smartregister.util.Utils.getValue(commonPersonObject.getColumnmaps(), "dob", false);
+        String dobString = Utils.getValue(commonPersonObject.getColumnmaps(), "dob", false);
         if (!TextUtils.isEmpty(dobString)) {
             Period period = new Period(new DateTime(dobString), new DateTime());
             int age = period.getYears();
@@ -78,6 +52,33 @@ public class UtilsFlv {
         }
 
         return false;
+    }
+
+    private static class UpdateFollowUpMenuItem extends AsyncTask<Void, Void, Void> {
+        private final String baseEntityId;
+        private Menu menu;
+        private MalariaFollowUpRule malariaFollowUpRule;
+
+        public UpdateFollowUpMenuItem(String baseEntityId, Menu menu) {
+            this.baseEntityId = baseEntityId;
+            this.menu = menu;
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            Date malariaTestDate = MalariaDao.getMalariaTestDate(baseEntityId);
+            Date followUpDate = MalariaDao.getMalariaFollowUpVisitDate(baseEntityId);
+            malariaFollowUpRule = MalariaVisitUtil.getMalariaStatus(malariaTestDate, followUpDate);
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void param) {
+            if (malariaFollowUpRule != null && StringUtils.isNotBlank(malariaFollowUpRule.getButtonStatus()) &&
+                    !CoreConstants.VISIT_STATE.EXPIRED.equalsIgnoreCase(malariaFollowUpRule.getButtonStatus())) {
+                menu.findItem(R.id.action_malaria_followup_visit).setVisible(true);
+            }
+        }
     }
 
 }

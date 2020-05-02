@@ -500,8 +500,6 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends BaseFpProfile
                     showFpPregnancyScreeningButton();
                 } else if (fpMemberObject.getFpInitiationStage().equals(FamilyPlanningConstants.EventType.FAMILY_PLANNING_PREGNANCY_SCREENING) && fpMemberObject.getPregnancyStatus().equals(FamilyPlanningConstants.PregnancyStatus.NOT_LIKELY_PREGNANT)) {
                     showChooseFpMethodButton();
-                } else if (fpMemberObject.getFpInitiationStage().equals(FamilyPlanningConstants.EventType.FAMILY_PLANNING_PREGNANCY_SCREENING) && fpMemberObject.getPregnancyStatus().equals(FamilyPlanningConstants.PregnancyStatus.PREGNANT)) {
-                    //TODO implement show ANC referral button
                 } else if (fpMemberObject.getFpInitiationStage().equals(FamilyPlanningConstants.EventType.CHOOSING_FAMILY_PLANNING_METHOD)) {
                     showGiveFpMethodButton();
                 }
