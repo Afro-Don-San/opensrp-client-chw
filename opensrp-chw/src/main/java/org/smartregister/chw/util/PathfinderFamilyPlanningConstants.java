@@ -33,7 +33,7 @@ public class PathfinderFamilyPlanningConstants {
 
         public static String getFamilyPlanningRegistrationForm(String gender, Locale locale, AssetManager assetManager) {
             String formName = gender.equalsIgnoreCase(Gender.MALE.toString()) ? MALE_FAMILY_PLANNING_REGISTRATION_FORM : FEMALE_FAMILY_PLANNING_REGISTRATION_FORM;
-            return org.smartregister.chw.core.utils.Utils.getLocalForm(formName, locale, assetManager);
+            return Utils.getLocalForm(formName, locale, assetManager);
         }
 
         public static String getFamilyPlanningChangeMethodForm(String gender, Locale locale, AssetManager assetManager) {
