@@ -2,7 +2,7 @@
   "validate_on_submit": false,
   "show_errors_on_submit": true,
   "skip_blank_steps": true,
-  "count": "9",
+  "count": "21",
   "encounter_type": "Family Planning Method Choice",
   "entity_id": "",
   "relational_id": "",
@@ -116,13 +116,6 @@
         "v_required": {
           "value": "true",
           "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
-            }
-          }
         }
       },
       {
@@ -137,7 +130,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
             }
           }
         }
@@ -154,7 +147,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
             }
           }
         }
@@ -191,13 +184,6 @@
         "v_required": {
           "value": "true",
           "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
-            }
-          }
         }
       },
       {
@@ -230,7 +216,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
             }
           }
         }
@@ -247,7 +233,24 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "breast_feeding_6_year_old",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Explain to the client that combined oral contraceptives (COC) may not be a good option at this time because COC use during breastfeeding reduces the quantity of breast milk and can decrease the duration of lactation\nA breastfeeding woman should delay COC use until her baby is at least six months old.\nSet aside the COC cards from the methods option.\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
             }
           }
         }
@@ -255,39 +258,16 @@
     ]
   },
   "step5": {
-    "title": "Breast Feeding 6 year old child",
-    "next": "step6",
-    "fields": [
-      {
-        "key": "breast_feeding_6_year_old",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "person_attribute",
-        "openmrs_entity_id": "toaster_notes",
-        "type": "toaster_notes",
-        "text": "Explain to the client that combined oral contraceptives (COC) may not be a good option at this time because COC use during breastfeeding\nreduces the quantity of breast milk\nand can decrease the duration of lactation\nA breastfeeding woman should delay COC use until her baby is at least six months old.\nSet aside the COC cards from the methods option.\n",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step6": {
     "title": "Partner supports FP",
-    "next": "step7",
+    "next": "step6",
     "fields": [
       {
         "key": "does_partner_support_fp",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "do_you_want_to_have_children",
+        "openmrs_entity_id": "does_partner_support_fp",
         "openmrs_entity_parent": "",
-        "label": "ASK: Is your child less than six months old?",
+        "label": "ASK: Does your partner support you in using family planning?",
         "options": [
           {
             "key": "yes",
@@ -307,13 +287,6 @@
         "v_required": {
           "value": "true",
           "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
-            }
-          }
         }
       },
       {
@@ -328,7 +301,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
             }
           }
         }
@@ -345,39 +318,16 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
             }
           }
         }
       }
     ]
   },
-  "step7": {
-    "title": "Partner not supports FP",
-    "next": "step8",
-    "fields": [
-      {
-        "key": "partner_not_supportive",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "text": "Emphasize that besides condoms, no other family planning methods offer protection against STIs and HIV.",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step8": {
+  "step6": {
     "title": "Methods not wanted",
-    "next": "step9",
+    "next": "step7",
     "fields": [
       {
         "key": "if_there_are_methods_not_wanted",
@@ -405,13 +355,6 @@
         "v_required": {
           "value": "true",
           "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
-            }
-          }
         }
       },
       {
@@ -423,18 +366,39 @@
         "label": "Choose the methods the client does not want to use from the following list:",
         "options": [
           {
-            "key": "progestin_only_pills",
+            "key": "coc",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Combined oral contraceptives (COC)"
+          },
+          {
+            "key": "pop",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
             "text": "Progestin only pills"
           },
           {
-            "key": "coc",
+            "key": "vasectomy",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
-            "text": "Combined Oral Contraceptives (COC)"
+            "text": "Vasectomy"
+          },
+          {
+            "key": "male_condom",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Male Condom"
+          },
+          {
+            "key": "tubal_ligation",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Tubal Ligation"
           },
           {
             "key": "emergency_contraception",
@@ -451,11 +415,25 @@
             "text": "Interuterine device (IUD)"
           },
           {
+            "key": "lam",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Lactational amenorrhea method (LAM)"
+          },
+          {
             "key": "implants",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
             "text": "Implants"
+          },
+          {
+            "key": "female_condom",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Female Condom"
           },
           {
             "key": "injection",
@@ -479,16 +457,16 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_family_planning_registration_relevance.yml"
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
             }
           }
         }
       }
     ]
   },
-  "step9": {
-    "title": "Methods Chosed",
-    "next": "step10",
+  "step7": {
+    "title": "Decided Method wanted",
+    "next": "step8",
     "fields": [
       {
         "key": "has_decided_method_wanted",
@@ -516,36 +494,30 @@
         "v_required": {
           "value": "true",
           "err": "Please select one choice"
-        },
+        }
+      },
+      {
+        "key": "client_not_ready_to_choose",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "client_not_ready_to_choose",
+        "type": "toaster_notes",
+        "text": "Discuss any concerns the client has about family planning and answer any questions.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
             }
           }
         }
       }
     ]
   },
-  "step10": {
-    "title": "Discuss client concerns",
-    "next": "step11",
-    "fields": [
-      {
-        "key": "discuss_clients_concerns",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "person_attribute",
-        "openmrs_entity_id": "toaster_notes",
-        "type": "toaster_notes",
-        "text": "Discuss any concerns the client has about family planning and answer any questions.\n",
-        "text_color": "#1199F9",
-        "toaster_type": "info"
-      }
-    ]
-  },
-  "step11": {
+  "step8": {
     "title": "Client Ready to choose a method",
-    "next": "step12",
+    "next": "step9",
     "fields": [
       {
         "key": "is_the_client_now_ready_to_choose_a_method",
@@ -577,38 +549,65 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
             }
           }
         }
       }
     ]
   },
-  "step12": {
-    "title": "Methods Chosed",
-    "next": "step13",
+  "step9": {
+    "title": "Choosing Method",
+    "next": "step10",
     "fields": [
       {
-        "key": "has_decided_method_wanted",
+        "key": "fp_method_chose",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "has_decided_method_wanted",
+        "openmrs_entity_id": "fp_method_chose",
         "openmrs_entity_parent": "",
         "label": "Tell the client that based on her/his responses, potential methods are listed below.\nAsk the client to choose the method she/he would like to use.\n",
         "options": [
           {
-            "key": "progestin_only_pills",
+            "key": "coc",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Combined oral contraceptives (COC)",
+            "relevance": {
+              "step8:is_the_client_now_ready_to_choose_a_method": {
+                "type": "string",
+                "ex": "equalTo(., \"no\")"
+              }
+            }
+          },
+          {
+            "key": "pop",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
             "text": "Progestin only pills"
           },
           {
-            "key": "coc",
+            "key": "vasectomy",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
-            "text": "Combined Oral Contraceptives (COC)"
+            "text": "Vasectomy"
+          },
+          {
+            "key": "male_condom",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Male Condom"
+          },
+          {
+            "key": "tubal_ligation",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Tubal Ligation"
           },
           {
             "key": "emergency_contraception",
@@ -625,11 +624,25 @@
             "text": "Interuterine device (IUD)"
           },
           {
+            "key": "lam",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Lactational amenorrhea method (LAM)"
+          },
+          {
             "key": "implants",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
             "text": "Implants"
+          },
+          {
+            "key": "female_condom",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Female Condom"
           },
           {
             "key": "injection",
@@ -653,19 +666,19 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
             }
           }
         }
       }
     ]
   },
-  "step13": {
+  "step10": {
     "title": "Discuss the chosen method",
-    "next": "step14",
+    "next": "step11",
     "fields": [
       {
-        "key": "client_has_not_chose_a_method",
+        "key": "client_has_chosen_a_method",
         "openmrs_entity_parent": "",
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
@@ -676,9 +689,9 @@
       }
     ]
   },
-  "step14": {
+  "step11": {
     "title": "Client you are speaking to",
-    "next": "step15",
+    "next": "step13",
     "fields": [
       {
         "key": "are_you_speaking_to",
@@ -727,9 +740,9 @@
       }
     ]
   },
-  "step15": {
-    "title": "Can the client explain the choice",
-    "next": "step16",
+  "step12": {
+    "title": "Screening/instructions for chosen method",
+    "next": "step14",
     "fields": [
       {
         "key": "can_the_explain_the_choice",
@@ -757,29 +770,593 @@
         "v_required": {
           "value": "true",
           "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step13": {
+    "title": "Client chose method requiring referral",
+    "next": "step15",
+    "fields": [
+      {
+        "key": "explanation_of_method_requiring_referral",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "The client has chosen method which requires a referral to a health facility.\nTell the client you will give a referral to go to a health facility to get the method she/he has chosen.\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step14": {
+    "title": "Explain the use of condoms",
+    "next": "step16",
+    "fields": [
+      {
+        "key": "explanation_importance_of_condoms",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Discuss the importance of using condoms while waiting to get the family planning method from the health facility.\nGive the client condoms.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step15": {
+    "title": "Explain reasons for giving Referral",
+    "next": "step17",
+    "fields": [
+      {
+        "key": "explanation_of_reasons_for_giving_referral",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Explain the reason for giving the referral and explain where the nearest health facility is located.\nFill in the referral form. Scan QR code on the referral form.\nInform the client that you will follow up to make sure they got the service they were referred for\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
         }
       }
     ]
   },
   "step16": {
-    "title": "Explanation of fp requiring referral",
-    "next": "step17",
+    "title": "Client chose method available through CHW",
+    "next": "step18",
     "fields": [
       {
-        "key": "explanation_of_method_requiring_referral",
+        "key": "non_referral_method_chosen",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Tell the client she/he has chosen a method which you can give her/him to start using today.\nTell the client you will ask the following questions to ensure she/he is able to use the method safely.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step17": {
+    "title": "Client chose pills COC",
+    "next": "step19",
+    "fields": [
+      {
+        "key": "has_had_a_child_in_the_past_6_months",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "has_had_a_child_in_the_past_6_months",
+        "openmrs_entity_parent": "",
+        "label": "ASK: Have you had a child in the past 6 months whom you are breastfeeding?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Yes"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "No"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "smokes_more_than_15_cigarettes_per_day",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "has_had_a_child_in_the_past_6_months",
+        "openmrs_entity_parent": "",
+        "label": "ASK: Do you smoke more than 15 cigarettes per day?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Yes"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "No"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "has_severe_headaches",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "has_had_a_child_in_the_past_6_months",
+        "openmrs_entity_parent": "",
+        "label": "ASK: Do you have frequent severe headaches, often on one side, that sometimes blur your vision?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Yes"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "No"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "has_high_blood_pressure",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "has_high_blood_pressure",
+        "openmrs_entity_parent": "",
+        "label": "ASK: Have you ever been told you have high blood pressure?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Yes"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "No"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "has_diabetes",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "has_diabetes",
+        "openmrs_entity_parent": "",
+        "label": "ASK: Have you ever been told you have diabetes (high sugar in your blood)?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Yes"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "No"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "has_pain_in_abdomen",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "has_pain_in_abdomen",
+        "openmrs_entity_parent": "",
+        "label": "ASK: Do you have any pain in your abdomen or are you taking medication for abdominal pain?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Yes"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "No"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step18": {
+    "title": "Client chose POP",
+    "next": "step20",
+    "fields": [
+      {
+        "key": "breastfeeding_a_baby_less_than_6_months",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "breastfeeding_a_baby_less_than_6_months",
+        "openmrs_entity_parent": "",
+        "label": "ASK: Are you breastfeeding a baby less than 6 weeks old?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Yes"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "No"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "smokes_more_than_15_cigarettes_per_day",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "has_had_a_child_in_the_past_6_months",
+        "openmrs_entity_parent": "",
+        "label": "ASK: Do you smoke more than 15 cigarettes per day?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Yes"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "No"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "look_at_clients_skin_and_eyes",
         "openmrs_entity_parent": "",
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "The client has chosen $methodName which requires a referral to a health facility.\nTell the client you will give a referral to go to a health facility to get the method she/he has chosen.\n",
+        "text": "Look at the client’s skin and eyes. If they appear yellow,",
+        "text_color": "#1199F9",
+        "toaster_type": "info"
+      },
+      {
+        "key": "has_liver_cirrhosis",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "has_liver_cirrhosis",
+        "openmrs_entity_parent": "",
+        "label": "Do you have liver cirrhosis, liver disease or inflammation of the liver?\n",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Yes"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "No"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "has_stroke",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "has_diabetes",
+        "openmrs_entity_parent": "",
+        "label": "ASK: Have you ever had a stroke, blood clot in your legs or lungs, or heart attack?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Yes"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "No"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "taking_second_line_medication",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "has_pain_in_abdomen",
+        "openmrs_entity_parent": "",
+        "label": "ASK: Do you regularly take any pills for tuberculosis (TB), seizures (fits), ritonavir or any second line medication?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Yes"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "No"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "has_lump_in_breast",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "has_pain_in_abdomen",
+        "openmrs_entity_parent": "",
+        "label": "ASK: Have you ever been told you have a lump in your breast (or breast cancer)?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Yes"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "No"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step19": {
+    "title": "Client eligible for pills",
+    "next": "step21",
+    "fields": [
+      {
+        "key": "non_ineligible_for_pills",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Explain that the client is able to start using the chosen method for family planning.\nUse the client brochure to explain how to use the pills.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step20": {
+    "title": "Give Condoms",
+    "next": "step13",
+    "fields": [
+      {
+        "key": "ineligible_for_pills",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Tell the client that she cannot use this family planning method due to her health condition.\nAsk the client if she would like to choose a different method.",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }
     ]
   },
-  "step19": {
+  "step21": {
     "title": "Give Condoms",
-    "next": "step13",
+    "next": "step23",
     "fields": [
       {
         "key": "client_has_not_chose_a_method",

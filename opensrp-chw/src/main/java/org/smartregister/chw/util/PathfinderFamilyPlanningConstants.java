@@ -27,7 +27,7 @@ public class PathfinderFamilyPlanningConstants {
         public static final String MALE_FAMILY_PLANNING_CHANGE_METHOD_FORM = "pathfinder_male_family_planning_change_method";
         public static final String FAMILY_PLANNING_INTRODUCTION = "pathfinder_family_planning_introduction";
         public static final String PREGNANCY_SCREENING = "pathfinder_pregnancy_screening";
-        public static final String CHOOSE_FAMILY_PLANNING_METHOD = "pathfinder_choose_family_planning_method";
+        public static final String CHOOSE_FAMILY_PLANNING_METHOD = "pathfinder_family_planning_method_choice";
         public static final String GIVE_FAMILY_PLANNING_METHOD = "pathfinder_give_family_planning_method";
 
 

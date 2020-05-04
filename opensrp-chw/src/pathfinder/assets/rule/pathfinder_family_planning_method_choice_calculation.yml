@@ -1,0 +1,7 @@
+#---
+#name: step4show_fp_pregnancy_screening_date
+#description: date of pregnancy screening registration calculation
+#priority: 1
+#condition: "true"
+#actions:
+#  - "calculation = helper.getDateToday()"

@@ -1,0 +1,126 @@
+---
+name: step3_client_wants_children
+description: client_wants_children relevance
+priority: 1
+condition: "step3_do_you_want_to_have_children =='yes'"
+actions:
+  - "isRelevant = true"
+---
+name: step3_client_does_not_want_children
+description: client_does_not_want_children relevance
+priority: 1
+condition: "step3_do_you_want_to_have_children =='no'"
+actions:
+  - "isRelevant = true"
+---
+name: step4_is_the_baby_under_6_months
+description: is_the_baby_under_6_months relevance
+priority: 1
+condition: "step4_is_the_woman_currently_breast_feeding =='yes'"
+actions:
+  - "isRelevant = true"
+---
+name: step4_not_breastfeeding
+description: not_breastfeeding relevance
+priority: 1
+condition: "step4_is_the_woman_currently_breast_feeding =='no'"
+actions:
+  - "isRelevant = true"
+---
+name: step4_breast_feeding_6_year_old
+description: breast_feeding_6_year_old relevance
+priority: 1
+condition: "step4_is_the_baby_under_6_months =='yes'"
+actions:
+  - "isRelevant = true"
+---
+name: step5_partner_supportive
+description: partner_supportive relevance
+priority: 1
+condition: "step5_does_partner_support_fp =='yes'"
+actions:
+  - "isRelevant = true"
+---
+name: step5_partner_not_supportive
+description: partner_not_supportive relevance
+priority: 1
+condition: "step5_does_partner_support_fp =='no'"
+actions:
+  - "isRelevant = true"
+---
+name: step6_methods_not_wanted
+description: methods_not_wanted relevance
+priority: 1
+condition: "step6_if_there_are_methods_not_wanted == 'yes'"
+actions:
+  - "isRelevant = true"
+---
+name: step7_client_not_ready_to_choose
+description: client_not_ready_to_choose relevance
+priority: 1
+condition: "step7_has_decided_method_wanted =='no'"
+actions:
+  - "isRelevant = true"
+---
+name: step8_is_the_client_now_ready_to_choose_a_method
+description: is_the_client_now_ready_to_choose_a_method relevance
+priority: 1
+condition: "step7_has_decided_method_wanted =='no'"
+actions:
+  - "isRelevant = true"
+---
+name: step9_fp_method_chose
+description: fp_method_chose relevance
+priority: 1
+condition: "step7_has_decided_method_wanted =='yes' || step8_is_the_client_now_ready_to_choose_a_method=='yes' "
+actions:
+  - "isRelevant = true"
+#---
+#name: step11_client_has_chosen_a_method
+#description: client_has_chosen_a_method relevance
+#priority: 1
+#condition: "step8_has_decided_method_wanted =='yes' || step9_is_the_client_now_ready_to_choose_a_method='yes' "
+#actions:
+#  - "isRelevant = true"
+#---
+#name: step12_are_you_speaking_to
+#description: are_you_speaking_to relevance
+#priority: 1
+#condition: "step8_has_decided_method_wanted =='yes' || step9_is_the_client_now_ready_to_choose_a_method='yes' "
+#actions:
+#  - "isRelevant = true"
+#---
+#name: step12_man_has_chosen_a_female_method
+#description: man_has_chosen_a_female_method relevance
+#priority: 1
+#condition: " (step8_has_decided_method_wanted =='yes' || step9_is_the_client_now_ready_to_choose_a_method='yes') && step12_are_you_speaking_to =='man_only' && (step10_fp_method_chose.contains('progestin_only_pills') || step10_fp_method_chose.contains('vasectomy') || step10_fp_method_chose.contains('tubal_ligation') || step10_fp_method_chose.contains('emergency_contraception') || step10_fp_method_chose.contains('iud') || step10_fp_method_chose.contains('implants') || step10_fp_method_chose.contains('lam') || step10_fp_method_chose.contains('injection') || step10_fp_method_chose.contains('female_condom') || step10_fp_method_chose.contains('injection') || step10_fp_method_chose.contains('sdm')) "
+#actions:
+#  - "isRelevant = true"
+#---
+#name: step13_can_the_explain_the_choice
+#description: can_the_explain_the_choice relevance
+#priority: 1
+#condition: " (step8_has_decided_method_wanted =='yes' || step9_is_the_client_now_ready_to_choose_a_method='yes') && !(step12_are_you_speaking_to =='man_only' && (step10_fp_method_chose.contains('progestin_only_pills') || step10_fp_method_chose.contains('vasectomy') || step10_fp_method_chose.contains('tubal_ligation') || step10_fp_method_chose.contains('emergency_contraception') || step10_fp_method_chose.contains('iud') || step10_fp_method_chose.contains('implants') || step10_fp_method_chose.contains('lam') || step10_fp_method_chose.contains('injection') || step10_fp_method_chose.contains('female_condom') || step10_fp_method_chose.contains('injection') || step10_fp_method_chose.contains('sdm'))) "
+#actions:
+#  - "isRelevant = true"
+#---
+#name: step14_explanation_of_method_requiring_referral
+#description: explanation_of_method_requiring_referral relevance
+#priority: 1
+#condition: " (step10_fp_method_chose.contains('vasectomy') || step10_fp_method_chose.contains('tubal_ligation') || step10_fp_method_chose.contains('emergency_contraception') || step10_fp_method_chose.contains('iud') || step10_fp_method_chose.contains('implants') || step10_fp_method_chose.contains('lam') || step10_fp_method_chose.contains('injection') || step10_fp_method_chose.contains('injection') || step10_fp_method_chose.contains('sdm')) "
+#actions:
+#  - "isRelevant = true"
+#---
+#name: step15_explanation_importance_of_condoms
+#description: explanation_importance_of_condoms relevance
+#priority: 1
+#condition: " (step10_fp_method_chose.contains('vasectomy') || step10_fp_method_chose.contains('tubal_ligation') || step10_fp_method_chose.contains('emergency_contraception') || step10_fp_method_chose.contains('iud') || step10_fp_method_chose.contains('implants') || step10_fp_method_chose.contains('lam') || step10_fp_method_chose.contains('injection') || step10_fp_method_chose.contains('injection') || step10_fp_method_chose.contains('sdm')) "
+#actions:
+#  - "isRelevant = true"
+#---
+#name: step16_explanation_of_reasons_for_giving_referral
+#description: explanation_of_reasons_for_giving_referral relevance
+#priority: 1
+#condition: " (step10_fp_method_chose.contains('vasectomy') || step10_fp_method_chose.contains('tubal_ligation') || step10_fp_method_chose.contains('emergency_contraception') || step10_fp_method_chose.contains('iud') || step10_fp_method_chose.contains('implants') || step10_fp_method_chose.contains('lam') || step10_fp_method_chose.contains('injection') || step10_fp_method_chose.contains('injection') || step10_fp_method_chose.contains('sdm')) "
+#actions:
+#  - "isRelevant = true"
