@@ -4,8 +4,8 @@ import org.jeasy.rules.api.Rules;
 import org.smartregister.chw.anc.domain.MemberObject;
 import org.smartregister.chw.core.application.CoreChwApplication;
 import org.smartregister.chw.core.utils.CoreConstants;
-import org.smartregister.chw.fp_pathfinder.domain.FpMemberObject;
-import org.smartregister.chw.fp_pathfinder.util.FamilyPlanningConstants;
+import com.adosa.opensrp.chw.fp.domain.FpMemberObject;
+import com.adosa.opensrp.chw.fp.util.FamilyPlanningConstants;
 import org.smartregister.chw.rules.FpAlertRule;
 
 import java.text.ParseException;
@@ -15,7 +15,7 @@ import java.util.Locale;
 
 import timber.log.Timber;
 
-public class PathfinderFamilyPlanningUtil extends org.smartregister.chw.fp_pathfinder.util.FpUtil {
+public class PathfinderFamilyPlanningUtil extends com.adosa.opensrp.chw.fp.util.FpUtil {
 
     public static SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault());
 

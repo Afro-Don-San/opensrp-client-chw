@@ -1,8 +1,8 @@
 package org.smartregister.chw.contract;
 
 import org.json.JSONObject;
-import org.smartregister.chw.fp_pathfinder.contract.BaseFpProfileContract;
-import org.smartregister.chw.fp_pathfinder.domain.FpMemberObject;
+import com.adosa.opensrp.chw.fp.contract.BaseFpProfileContract;
+import com.adosa.opensrp.chw.fp.domain.FpMemberObject;
 import org.smartregister.repository.AllSharedPreferences;
 
 public interface PathfinderFamilyPlanningMemberProfileContract {

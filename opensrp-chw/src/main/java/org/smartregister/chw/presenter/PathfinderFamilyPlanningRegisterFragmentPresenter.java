@@ -1,7 +1,7 @@
 package org.smartregister.chw.presenter;
 
-import org.smartregister.chw.fp_pathfinder.contract.BaseFpRegisterFragmentContract;
-import org.smartregister.chw.fp_pathfinder.presenter.BaseFpRegisterFragmentPresenter;
+import com.adosa.opensrp.chw.fp.contract.BaseFpRegisterFragmentContract;
+import com.adosa.opensrp.chw.fp.presenter.BaseFpRegisterFragmentPresenter;
 
 public class PathfinderFamilyPlanningRegisterFragmentPresenter extends BaseFpRegisterFragmentPresenter {
 

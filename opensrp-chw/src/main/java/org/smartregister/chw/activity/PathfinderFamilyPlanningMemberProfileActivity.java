@@ -31,10 +31,10 @@ import org.smartregister.chw.core.utils.CoreConstants;
 import org.smartregister.chw.core.utils.CoreJsonFormUtils;
 import org.smartregister.chw.core.utils.FpUtil;
 import org.smartregister.chw.custom_view.PathfinderFamilyPlanningFloatingMenu;
-import org.smartregister.chw.fp_pathfinder.activity.BaseFpProfileActivity;
-import org.smartregister.chw.fp_pathfinder.dao.FpDao;
-import org.smartregister.chw.fp_pathfinder.domain.FpMemberObject;
-import org.smartregister.chw.fp_pathfinder.util.FamilyPlanningConstants;
+import com.adosa.opensrp.chw.fp.activity.BaseFpProfileActivity;
+import com.adosa.opensrp.chw.fp.dao.FpDao;
+import com.adosa.opensrp.chw.fp.domain.FpMemberObject;
+import com.adosa.opensrp.chw.fp.util.FamilyPlanningConstants;
 import org.smartregister.chw.interactor.PathfinderFamilyPlanningProfileInteractor;
 import org.smartregister.chw.model.ReferralTypeModel;
 import org.smartregister.chw.presenter.PathfinderFamilyPlanningMemberProfilePresenter;
@@ -58,7 +58,7 @@ import io.reactivex.disposables.Disposable;
 import io.reactivex.schedulers.Schedulers;
 import timber.log.Timber;
 
-import static org.smartregister.chw.fp_pathfinder.util.FamilyPlanningConstants.EventType.FP_FOLLOW_UP_VISIT;
+import static com.adosa.opensrp.chw.fp.util.FamilyPlanningConstants.EventType.FP_FOLLOW_UP_VISIT;
 
 public class PathfinderFamilyPlanningMemberProfileActivity extends BaseFpProfileActivity
         implements FamilyProfileExtendedContract.PresenterCallBack, PathfinderFamilyPlanningMemberProfileContract.View {
@@ -199,7 +199,7 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends BaseFpProfile
 
     @Override
     public void openFamilyPlanningIntroduction() {
-        PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, fpMemberObject.getBaseEntityId(), fpMemberObject.getAge(), PathfinderFamilyPlanningConstants.JSON_FORM.getFamilyPlanningIntroduction(getApplicationContext().getResources().getConfiguration().locale, getAssets()), org.smartregister.chw.fp_pathfinder.util.FamilyPlanningConstants.ActivityPayload.CHANGE_METHOD_PAYLOAD_TYPE);
+        PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, fpMemberObject.getBaseEntityId(), fpMemberObject.getAge(), PathfinderFamilyPlanningConstants.JSON_FORM.getFamilyPlanningIntroduction(getApplicationContext().getResources().getConfiguration().locale, getAssets()), com.adosa.opensrp.chw.fp.util.FamilyPlanningConstants.ActivityPayload.CHANGE_METHOD_PAYLOAD_TYPE);
     }
 
     @Override

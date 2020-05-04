@@ -5,7 +5,7 @@ import org.joda.time.Days;
 import org.joda.time.LocalDate;
 import org.smartregister.chw.core.rule.ICommonRule;
 import org.smartregister.chw.core.utils.CoreConstants;
-import org.smartregister.chw.fp_pathfinder.util.FamilyPlanningConstants;
+import com.adosa.opensrp.chw.fp.util.FamilyPlanningConstants;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

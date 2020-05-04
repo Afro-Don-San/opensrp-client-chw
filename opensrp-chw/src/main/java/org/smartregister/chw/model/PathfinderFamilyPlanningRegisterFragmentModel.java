@@ -2,8 +2,8 @@ package org.smartregister.chw.model;
 
 import androidx.annotation.NonNull;
 
-import org.smartregister.chw.fp_pathfinder.model.BaseFpRegisterFragmentModel;
-import org.smartregister.chw.fp_pathfinder.util.FamilyPlanningConstants;
+import com.adosa.opensrp.chw.fp.model.BaseFpRegisterFragmentModel;
+import com.adosa.opensrp.chw.fp.util.FamilyPlanningConstants;
 import org.smartregister.cursoradapter.SmartRegisterQueryBuilder;
 import org.smartregister.family.util.DBConstants;
 

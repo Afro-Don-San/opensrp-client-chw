@@ -11,9 +11,9 @@ import android.widget.RelativeLayout;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.smartregister.chw.core.listener.OnClickFloatingMenu;
-import org.smartregister.chw.fp_pathfinder.fragment.BaseFpCallDialogFragment;
-import org.smartregister.chw.fp_pathfinder.custom_views.BaseFpFloatingMenu;
-import org.smartregister.chw.fp_pathfinder.domain.FpMemberObject;
+import com.adosa.opensrp.chw.fp.fragment.BaseFpCallDialogFragment;
+import com.adosa.opensrp.chw.fp.custom_views.BaseFpFloatingMenu;
+import com.adosa.opensrp.chw.fp.domain.FpMemberObject;
 
 import static org.smartregister.chw.core.utils.Utils.redrawWithOption;
 

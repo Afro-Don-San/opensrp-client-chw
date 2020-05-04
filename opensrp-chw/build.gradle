@@ -281,7 +281,7 @@ dependencies {
         exclude group: 'com.rengwuxian.materialedittext', module: 'library'
     }
 
-    api('org.smartregister:opensrp-chw-pathfinder-family-planning:1.0.1-Test-SNAPSHOT@aar') {
+    api('com.github.afro-don-san:opensrp-chw-pathfinder-family-planning:1.0.1-Test-SNAPSHOT@aar') {
         transitive = true
         exclude group: 'org.smartregister', module: 'opensrp-client-core'
         exclude group: 'org.smartregister', module: 'opensrp-client-native-form'

@@ -14,7 +14,7 @@ import org.smartregister.chw.core.utils.Utils;
 public class FamilyOtherMemberProfileActivityFlv implements FamilyOtherMemberProfileActivity.Flavor {
 
     @Override
-    public OnClickFloatingMenu getOnClickFloatingMenu(final Activity activity, final String familyBaseEntityId) {
+    public OnClickFloatingMenu getOnClickFloatingMenu(final Activity activity, final String familyBaseEntityId, String baseEntityId) {
         return viewId -> {
             switch (viewId) {
                 case R.id.call_layout:

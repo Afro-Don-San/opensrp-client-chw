@@ -8,9 +8,9 @@ import org.smartregister.chw.anc.domain.MemberObject;
 import org.smartregister.chw.anc.domain.Visit;
 import org.smartregister.chw.anc.interactor.BaseAncUpcomingServicesInteractor;
 import org.smartregister.chw.anc.model.BaseUpcomingService;
-import org.smartregister.chw.fp_pathfinder.dao.FpDao;
-import org.smartregister.chw.fp_pathfinder.domain.FpAlertObject;
-import org.smartregister.chw.fp_pathfinder.util.FamilyPlanningConstants;
+import com.adosa.opensrp.chw.fp.dao.FpDao;
+import com.adosa.opensrp.chw.fp.domain.FpAlertObject;
+import com.adosa.opensrp.chw.fp.util.FamilyPlanningConstants;
 import org.smartregister.chw.rules.FpAlertRule;
 import org.smartregister.chw.util.PathfinderFamilyPlanningUtil;
 
