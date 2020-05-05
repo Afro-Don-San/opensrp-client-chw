@@ -2,7 +2,7 @@
   "validate_on_submit": false,
   "show_errors_on_submit": true,
   "skip_blank_steps": true,
-  "count": "21",
+  "count": "23",
   "encounter_type": "Family Planning Method Choice",
   "entity_id": "",
   "relational_id": "",
@@ -936,7 +936,7 @@
             }
           }
         },
-        "calculation":{
+        "calculation": {
           "rules-engine": {
             "ex-rules": {
               "rules-file": "pathfinder_family_planning_method_choice_calculation.yml"
@@ -1657,22 +1657,212 @@
     ]
   },
   "step20": {
-    "title": "Give Condoms",
+    "title": "COC counseling",
     "next": "step21",
     "fields": [
       {
-        "key": "ineligible_for_pills",
+        "key": "coc_counselling_1",
         "openmrs_entity_parent": "",
         "openmrs_entity": "",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Tell the client that she cannot use this family planning method due to her health condition.\nAsk the client if she would like to choose a different method.",
+        "text": "Take one pill every day, even if you are not having sexual intercourse.",
         "text_color": "#1199F9",
-        "toaster_type": "info"
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "coc_counselling_2",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "After taking the last pill in a packet, continue with another packet the next day.\nDelaying the next packet can cause pregnancy.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "coc_counselling_3",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "If you forget to take one or two pills in the first line to third line of the packet:\n * take one pill immediately when you remember\n\n *continue taking pills as usual every day at the same time\n\n*if you forget 1 or 2 pills, there is no need to use another method\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "coc_counselling_4",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "If you forget to take three pills or more in the first or second line of the packet:\n\n*take a pill as soon as you remember\n\n*continue to take the pills normally, but use another contraceptive method for seven days\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "coc_counselling_5",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "If you forget to take three or more pills from the third row of the packet:\n\n*continue taking the white/cream color pills as usual until you finish that row.\n\n*throw away all seven brown pills from the fourth row\n\n*start a new packet the day after you finish the third row\n\n*use another contraceptive method in addition to the pills for seven days\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "coc_counselling_6",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "If you vomit within two hours of taking a pill, take another pill once you feel better.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
       }
     ]
   },
   "step21": {
+    "title": "POP counseling",
+    "next": "step22",
+    "fields": [
+      {
+        "key": "pop_counselling_1",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "If you forget to take three or more tablets, take one tablet as soon as you remember.\nContinue taking one tablet at the same time every day and use condoms during sex for at least two days.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "pop_counselling_2",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "If you forget to take 3 or more pills and you had unprotected sex within the last five days, go to the health facility to get emergency contraceptive pills to prevent pregnancy.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "pop_counselling_3",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "If you vomit two hours after taking a pill, take one pill as soon as possible and then continue taking pills daily at your normal time.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "pop_counselling_4",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "If you vomit and have diarrhea for more than two days, continue taking the pill at your normal time and use a condom during sex until you are no longer sick.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "pop_counselling_5",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "If you continue to forget to take a pill every day, go to a health facility for further counseling.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step22": {
+    "title": "Client chose standard days method",
+    "next": "step23",
+    "fields": [
+
+    ]
+  },
+  "step23": {
     "title": "Give Condoms",
     "fields": [
       {
