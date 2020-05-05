@@ -1,6 +1,6 @@
 {
   "validate_on_submit": false,
-  "show_errors_on_submit": true,
+  "show_errors_on_submit": false,
   "skip_blank_steps": true,
   "count": "24",
   "encounter_type": "Family Planning Method Choice",
@@ -2031,7 +2031,7 @@
     ]
   },
   "step24": {
-    "title": "Give Condoms",
+    "title": "End",
     "fields": [
       {
         "key": "sdm_followup_visit",

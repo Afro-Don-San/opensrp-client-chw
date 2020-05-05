@@ -450,7 +450,7 @@ actions:
 name: step24_client_has_not_chose_a_method
 description: client_has_not_chose_a_method relevance
 priority: 1
-condition: " step8_is_the_client_now_ready_to_choose_a_method=='no' "
+condition: " step8_is_the_client_now_ready_to_choose_a_method=='no' || step17_has_pain_in_abdomen=='yes' || step17_has_diabetes=='yes' || step17_has_high_blood_pressure=='yes' || step17_has_severe_headaches=='yes' || step17_smokes_more_than_15_cigarettes_per_day=='yes' || step17_has_had_a_child_in_the_past_6_months=='yes' || step18_taking_second_line_medication=='yes' || step18_has_stroke=='yes' || step18_has_liver_cirrhosis=='yes' || step18_smokes_more_than_15_cigarettes_per_day=='yes' || step18_breastfeeding_a_baby_less_than_6_months=='yes'  "
 actions:
   - "isRelevant = true"
 ---
