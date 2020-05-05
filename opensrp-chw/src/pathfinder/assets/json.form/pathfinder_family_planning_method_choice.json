@@ -1021,23 +1021,6 @@
             }
           }
         }
-      },
-      {
-        "key": "man_has_chosen_a_female_method",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "person_attribute",
-        "openmrs_entity_id": "toaster_notes",
-        "type": "toaster_notes",
-        "text": "Tell the man that the method he has chosen must be used by a woman.\nTell the man that at the end of this visit, you will schedule a follow-up visit in one week to meet with him and his female partner to choose a method suitable for her.\n",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
-            }
-          }
-        }
       }
     ]
   },
@@ -1206,7 +1189,7 @@
     ]
   },
   "step17": {
-    "title": "Client chose pills COC",
+    "title": "COC Pills Screening Questions",
     "next": "step18",
     "fields": [
       {
@@ -1422,7 +1405,7 @@
     ]
   },
   "step18": {
-    "title": "Client chose POP",
+    "title": "POP Pills Screening Questions",
     "next": "step19",
     "fields": [
       {
@@ -1695,7 +1678,7 @@
     ]
   },
   "step20": {
-    "title": "COC counseling",
+    "title": "COC counseling 1",
     "next": "step21",
     "fields": [
       {
@@ -1714,7 +1697,13 @@
             }
           }
         }
-      },
+      }
+    ]
+  },
+  "step21": {
+    "title": "COC counseling 2",
+    "next": "step22",
+    "fields": [
       {
         "key": "coc_counselling_2",
         "openmrs_entity_parent": "",
@@ -1731,7 +1720,13 @@
             }
           }
         }
-      },
+      }
+    ]
+  },
+  "step22": {
+    "title": "COC counseling 3",
+    "next": "step23",
+    "fields": [
       {
         "key": "coc_counselling_3",
         "openmrs_entity_parent": "",
@@ -1748,7 +1743,13 @@
             }
           }
         }
-      },
+      }
+    ]
+  },
+  "step23": {
+    "title": "COC counseling 4",
+    "next": "step24",
+    "fields": [
       {
         "key": "coc_counselling_4",
         "openmrs_entity_parent": "",
@@ -1765,7 +1766,13 @@
             }
           }
         }
-      },
+      }
+    ]
+  },
+  "step24": {
+    "title": "COC counseling 5",
+    "next": "step25",
+    "fields": [
       {
         "key": "coc_counselling_5",
         "openmrs_entity_parent": "",
@@ -1782,7 +1789,13 @@
             }
           }
         }
-      },
+      }
+    ]
+  },
+  "step25": {
+    "title": "COC counseling 6",
+    "next": "step26",
+    "fields": [
       {
         "key": "coc_counselling_6",
         "openmrs_entity_parent": "",
@@ -1802,9 +1815,9 @@
       }
     ]
   },
-  "step21": {
-    "title": "POP counseling",
-    "next": "step22",
+  "step26": {
+    "title": "POP counseling 1",
+    "next": "step27",
     "fields": [
       {
         "key": "pop_counselling_1",
@@ -1822,7 +1835,13 @@
             }
           }
         }
-      },
+      }
+    ]
+  },
+  "step27": {
+    "title": "POP counseling 2",
+    "next": "step28",
+    "fields": [
       {
         "key": "pop_counselling_2",
         "openmrs_entity_parent": "",
@@ -1839,7 +1858,13 @@
             }
           }
         }
-      },
+      }
+    ]
+  },
+  "step28": {
+    "title": "POP counseling 3",
+    "next": "step29",
+    "fields": [
       {
         "key": "pop_counselling_3",
         "openmrs_entity_parent": "",
@@ -1856,7 +1881,13 @@
             }
           }
         }
-      },
+      }
+    ]
+  },
+  "step29": {
+    "title": "POP counseling 4",
+    "next": "step30",
+    "fields": [
       {
         "key": "pop_counselling_4",
         "openmrs_entity_parent": "",
@@ -1873,7 +1904,13 @@
             }
           }
         }
-      },
+      }
+    ]
+  },
+  "step30": {
+    "title": "POP counseling 5",
+    "next": "step31",
+    "fields": [
       {
         "key": "pop_counselling_5",
         "openmrs_entity_parent": "",
@@ -1893,9 +1930,9 @@
       }
     ]
   },
-  "step22": {
+  "step31": {
     "title": "Client chose standard days method",
-    "next": "step23",
+    "next": "step32",
     "fields": [
       {
         "key": "periods_come_when_expected",
@@ -1986,9 +2023,9 @@
       }
     ]
   },
-  "step23": {
+  "step32": {
     "title": "Client has Regular Periods",
-    "next": "step24",
+    "next": "step33",
     "fields": [
       {
         "key": "regular_periods",
@@ -2061,7 +2098,7 @@
       }
     ]
   },
-  "step24": {
+  "step33": {
     "title": "Form Submission",
     "fields": [
       {
@@ -2149,6 +2186,23 @@
           "value": "true",
           "err": "Please enter the UNIQUE ID"
         },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "man_has_chosen_a_female_method",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Tell the man that the method he has chosen must be used by a woman.\nTell the man that at the end of this visit, you will schedule a follow-up visit in one week to meet with him and his female partner to choose a method suitable for her.\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
