@@ -1645,7 +1645,14 @@
         "type": "toaster_notes",
         "text": "Tell the client that she cannot use this family planning method due to her health condition.\nAsk the client if she would like to choose a different method.",
         "text_color": "#1199F9",
-        "toaster_type": "info"
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
       }
     ]
   },
