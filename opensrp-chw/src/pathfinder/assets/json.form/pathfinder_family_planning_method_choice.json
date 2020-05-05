@@ -2031,7 +2031,7 @@
     ]
   },
   "step24": {
-    "title": "End",
+    "title": "Form Submission",
     "fields": [
       {
         "key": "sdm_followup_visit",
