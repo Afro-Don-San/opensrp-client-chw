@@ -1,7 +1,115 @@
+---
+name: step9_fp_method
+description: fp_method calculation
+priority: 1
+condition: "true"
+actions:
+  - "calculation = step9_fp_method_chose_sdm=='sdm'? 'sdm' :
+       step9_fp_method_chose_injection=='injection'? 'injection' :
+       step9_fp_method_chose_female_condom=='female_condom'? 'female_condom' :
+       step9_fp_method_chose_implants=='implants'? 'implants' :
+       step9_fp_method_chose_lam=='lam'? 'lam' :
+       step9_fp_method_chose_iud=='iud'? 'iud' :
+       step9_fp_method_chose_emergency_contraception=='emergency_contraception'? 'emergency_contraception' :
+       step9_fp_method_chose_tubal_ligation=='tubal_ligation'? 'tubal_ligation' :
+       step9_fp_method_chose_male_condom=='male_condom'? 'male_condom' :
+       step9_fp_method_chose_vasectomy=='vasectomy'? 'vasectomy' :
+       step9_fp_method_chose_pop=='pop'? 'pop' :
+       step9_fp_method_chose_coc=='coc'? 'coc' : ''
+    "
+---
+name: step9_fp_method_chose_coc
+description: fp_method_chose_coc calculation
+priority: 1
+condition: "step9_fp_method!='coc'"
+actions:
+  - "calculation = 'x' "
+---
+name: step9_fp_method_chose_pop
+description: fp_method_chose_pop calculation
+priority: 1
+condition: "step9_fp_method!='pop'"
+actions:
+  - "calculation = 'x' "
+---
+name: step9_fp_method_chose_vasectomy
+description: fp_method_chose_vasectomy calculation
+priority: 1
+condition: "step9_fp_method!='vasectomy'"
+actions:
+  - "calculation = 'x'"
+---
+name: step9_fp_method_chose_male_condom
+description: fp_method_chose_male_condom calculation
+priority: 1
+condition: "step9_fp_method!='male_condom'"
+actions:
+  - "calculation = 'x'"
+
+---
+name: step9_fp_method_chose_tubal_ligation
+description: fp_method_chose_tubal_legation calculation
+priority: 1
+condition: "step9_fp_method!='tubal_legation'"
+actions:
+  - "calculation = 'x' "
+---
+name: step9_fp_method_chose_emergency_contraception
+description: fp_method_chose_emergency_contraception calculation
+priority: 1
+condition: " step9_fp_method != 'emergency_contraception'"
+actions:
+  - "calculation = 'x' "
+---
+name: step9_fp_method_chose_iud
+description: fp_method_chose_iud calculation
+priority: 1
+condition: "step9_fp_method!='iud'"
+actions:
+  - "calculation = 'x' "
+---
+name: step9_fp_method_chose_lam
+description: fp_method_chose_lam calculation
+priority: 1
+condition: "step9_fp_method!='lam'"
+actions:
+  - "calculation = 'x' "
+---
+name: step9_fp_method_chose_implants
+description: fp_method_chose_implants calculation
+priority: 1
+condition: "step9_fp_method!='implants'"
+actions:
+  - "calculation = 'x' "
+---
+name: step9_fp_method_chose_female_condom
+description: fp_method_chose_female_condom calculation
+priority: 1
+condition: "step9_fp_method!='female_condom'"
+actions:
+  - "calculation = 'x' "
+---
+name: step9_fp_method_chose_injection
+description: fp_method_chose_injection calculation
+priority: 1
+condition: "step9_fp_method!='injection'"
+actions:
+  - "calculation = 'x' "
+---
+name: step9_fp_method_chose_sdm
+description: fp_method_chose_sdm calculation
+priority: 1
+condition: "step9_fp_method=='sdm'"
+actions:
+  - "calculation ='x' "
+
+
+
+
 #---
-#name: step4show_fp_pregnancy_screening_date
-#description: date of pregnancy screening registration calculation
+#name: step1_next_injection_date
+#description: next injectable date
 #priority: 1
-#condition: "true"
+#condition: "step1_fp_refill_injectable != ''"
 #actions:
-#  - "calculation = helper.getDateToday()"
+#  - 'calculation = ["fp_refill_injectable" : helper.addDuration(step1_fp_refill_injectable,"84d")]'
