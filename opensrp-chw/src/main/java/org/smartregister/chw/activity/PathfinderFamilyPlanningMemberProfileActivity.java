@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import org.apache.commons.lang3.StringUtils;
 import org.jeasy.rules.api.Rules;
 import org.json.JSONObject;
+import org.smartregister.chw.BuildConfig;
 import org.smartregister.chw.R;
 import org.smartregister.chw.anc.domain.MemberObject;
 import org.smartregister.chw.anc.domain.Visit;
@@ -46,6 +47,7 @@ import org.smartregister.commonregistry.CommonPersonObjectClient;
 import org.smartregister.commonregistry.CommonRepository;
 import org.smartregister.family.util.JsonFormUtils;
 import org.smartregister.family.util.Utils;
+import org.smartregister.util.FormUtils;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -220,6 +222,20 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends BaseFpProfile
     @Override
     public void openUpcomingServices() {
         PathfinderFamilyPlanningUpcomingServicesActivity.startMe(this, PathfinderFamilyPlanningUtil.toMember(fpMemberObject));
+    }
+
+    @Override
+    public void issueANCReferralForm() {
+        if (BuildConfig.USE_UNIFIED_REFERRAL_APPROACH) {
+            try {
+                JSONObject formJson = FormUtils.getInstance(this).getFormJsonFromRepositoryOrAssets(org.smartregister.chw.util.Constants.JSON_FORM.getAncUnifiedReferralForm());
+                formJson.put(org.smartregister.chw.util.Constants.REFERRAL_TASK_FOCUS, referralTypeModels.get(0).getReferralType());
+                ReferralRegistrationActivity.startGeneralReferralFormActivityForResults(this,
+                        fpMemberObject.getBaseEntityId(), formJson);
+            } catch (Exception ex) {
+                Timber.e(ex);
+            }
+        }
     }
 
     @Override
@@ -500,6 +516,8 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends BaseFpProfile
                     showFpPregnancyScreeningButton();
                 } else if (fpMemberObject.getFpInitiationStage().equals(FamilyPlanningConstants.EventType.FAMILY_PLANNING_PREGNANCY_SCREENING) && fpMemberObject.getPregnancyStatus().equals(FamilyPlanningConstants.PregnancyStatus.NOT_LIKELY_PREGNANT)) {
                     showChooseFpMethodButton();
+                }else if (fpMemberObject.getFpInitiationStage().equals(FamilyPlanningConstants.EventType.FAMILY_PLANNING_PREGNANCY_SCREENING) && fpMemberObject.getPregnancyStatus().equals(FamilyPlanningConstants.PregnancyStatus.PREGNANT)) {
+                    showIssueANCReferralButton();
                 } else if (fpMemberObject.getFpInitiationStage().equals(FamilyPlanningConstants.EventType.CHOOSING_FAMILY_PLANNING_METHOD)) {
                     showGiveFpMethodButton();
                 }
