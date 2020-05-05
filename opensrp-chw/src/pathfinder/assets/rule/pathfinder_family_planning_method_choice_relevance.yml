@@ -390,3 +390,52 @@ priority: 1
 condition: " (step18_taking_second_line_medication=='no' && step18_has_stroke=='no' && step18_has_liver_cirrhosis=='no' && step18_smokes_more_than_15_cigarettes_per_day=='no' && step18_breastfeeding_a_baby_less_than_6_months=='no') "
 actions:
   - "isRelevant = true"
+---
+name: step22_periods_come_when_expected
+description: periods_come_when_expected relevance
+priority: 1
+condition: " step9_fp_method.contains('sdm') "
+actions:
+  - "isRelevant = true"
+---
+name: step22_periods_come_when_expected
+description: periods_come_when_expected relevance
+priority: 1
+condition: " step9_fp_method.contains('sdm') "
+actions:
+  - "isRelevant = true"
+---
+name: step22_periods_come_once_a_month
+description: periods_come_once_a_month relevance
+priority: 1
+condition: " step22_periods_come_when_expected=='yes' "
+actions:
+  - "isRelevant = true"
+---
+name: step22_irregular_periods
+description: irregular_periods relevance
+priority: 1
+condition: " step22_periods_come_once_a_month=='no' || step22_periods_come_when_expected=='no' "
+actions:
+  - "isRelevant = true"
+---
+name: step23_regular_periods
+description: regular_periods relevance
+priority: 1
+condition: " step22_periods_come_once_a_month=='yes' "
+actions:
+  - "isRelevant = true"
+---
+name: step23_does_the_client_remember_lmp
+description: does_the_client_remember_lmp relevance
+priority: 1
+condition: " step22_periods_come_once_a_month=='yes' "
+actions:
+  - "isRelevant = true"
+---
+name: step23_lmp_unknown
+description: lmp_unknown relevance
+priority: 1
+condition: " step23_does_the_client_remember_lmp=='no' "
+actions:
+  - "isRelevant = true"
