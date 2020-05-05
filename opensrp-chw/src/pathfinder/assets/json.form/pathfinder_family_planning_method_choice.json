@@ -190,7 +190,7 @@
         "key": "is_the_baby_under_6_months",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "do_you_want_to_have_children",
+        "openmrs_entity_id": "is_the_baby_under_6_months",
         "openmrs_entity_parent": "",
         "label": "ASK: Is your child less than six months old?",
         "options": [

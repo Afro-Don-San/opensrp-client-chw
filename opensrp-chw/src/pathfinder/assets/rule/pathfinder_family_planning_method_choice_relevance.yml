@@ -79,7 +79,7 @@ actions:
 name: step9_fp_method_chose_coc
 description: fp_method_chose_coc relevance
 priority: 1
-condition: "!step6_methods_not_wanted.contains('coc') && step4_breast_feeding_6_year_old != 'yes' "
+condition: "!step6_methods_not_wanted.contains('coc') && step4_is_the_baby_under_6_months != 'yes' "
 actions:
   - "isRelevant = true"
 ---
