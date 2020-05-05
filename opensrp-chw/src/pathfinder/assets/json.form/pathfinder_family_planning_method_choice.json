@@ -312,7 +312,7 @@
         "openmrs_entity": "",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Explain to the client that methods requiring cooperation from her partner such as standard days method and condoms may not be suitable.\nSet aside standard days methods and condoms.\n",
+        "text": "Explain to the client that methods requiring cooperation from her partner such as standard days method and condoms may not be suitable.\nSet aside standard days methods and condoms.\n\n\nEmphasize that besides condoms, no other family planning methods offer protection against STIs and HIV.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -565,7 +565,7 @@
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "fp_method",
-        "type": "edit_text",
+        "type": "hidden",
         "calculation": {
           "rules-engine": {
             "ex-rules": {
@@ -599,14 +599,17 @@
             "text": "Combined oral contraceptives (COC)"
           }
         ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
         "relevance": {
           "rules-engine": {
             "ex-rules": {
               "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        },
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_calculation.yml"
             }
           }
         }
@@ -626,10 +629,6 @@
             "text": "Progestin only pills"
           }
         ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -660,10 +659,6 @@
             "text": "Vasectomy"
           }
         ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -694,10 +689,6 @@
             "text": "Male Condom"
           }
         ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -728,10 +719,6 @@
             "text": "Tubal Ligation"
           }
         ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -762,10 +749,6 @@
             "text": "Emergency Contraception"
           }
         ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -796,10 +779,6 @@
             "text": "Interuterine device (IUD)"
           }
         ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -830,10 +809,6 @@
             "text": "Lactational amenorrhea method (LAM)"
           }
         ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -864,10 +839,6 @@
             "text": "Implants"
           }
         ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -898,10 +869,6 @@
             "text": "Female Condom"
           }
         ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -932,10 +899,6 @@
             "text": "Injection"
           }
         ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -966,10 +929,6 @@
             "text": "Standard days method(SDM)"
           }
         ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -997,15 +956,22 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Take out the brochure for the method chosen.\nGo through the brochure with the client so that she/he understands all of its content.\n",
+        "text": "Take out the brochure for the method chosen.\nGo through the brochure with the client so that she/he understands all of its content.",
         "text_color": "#1199F9",
-        "toaster_type": "info"
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
       }
     ]
   },
   "step11": {
     "title": "Client you are speaking to",
-    "next": "step13",
+    "next": "step12",
     "fields": [
       {
         "key": "are_you_speaking_to",
@@ -1040,6 +1006,13 @@
         "v_required": {
           "value": "true",
           "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
         }
       },
       {
@@ -1050,13 +1023,20 @@
         "type": "toaster_notes",
         "text": "Tell the man that the method he has chosen must be used by a woman.\nTell the man that at the end of this visit, you will schedule a follow-up visit in one week to meet with him and his female partner to choose a method suitable for her.\n",
         "text_color": "#1199F9",
-        "toaster_type": "info"
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
       }
     ]
   },
   "step12": {
     "title": "Screening/instructions for chosen method",
-    "next": "step14",
+    "next": "step13",
     "fields": [
       {
         "key": "can_the_explain_the_choice",
@@ -1097,7 +1077,7 @@
   },
   "step13": {
     "title": "Client chose method requiring referral",
-    "next": "step15",
+    "next": "step14",
     "fields": [
       {
         "key": "explanation_of_method_requiring_referral",
@@ -1120,7 +1100,7 @@
   },
   "step14": {
     "title": "Explain the use of condoms",
-    "next": "step16",
+    "next": "step15",
     "fields": [
       {
         "key": "explanation_importance_of_condoms",
@@ -1143,7 +1123,7 @@
   },
   "step15": {
     "title": "Explain reasons for giving Referral",
-    "next": "step17",
+    "next": "step16",
     "fields": [
       {
         "key": "explanation_of_reasons_for_giving_referral",
@@ -1166,7 +1146,7 @@
   },
   "step16": {
     "title": "Client chose method available through CHW",
-    "next": "step18",
+    "next": "step17",
     "fields": [
       {
         "key": "non_referral_method_chosen",
@@ -1189,7 +1169,7 @@
   },
   "step17": {
     "title": "Client chose pills COC",
-    "next": "step19",
+    "next": "step18",
     "fields": [
       {
         "key": "has_had_a_child_in_the_past_6_months",
@@ -1405,7 +1385,7 @@
   },
   "step18": {
     "title": "Client chose POP",
-    "next": "step20",
+    "next": "step19",
     "fields": [
       {
         "key": "breastfeeding_a_baby_less_than_6_months",
@@ -1631,7 +1611,7 @@
   },
   "step19": {
     "title": "Client eligible for pills",
-    "next": "step21",
+    "next": "step20",
     "fields": [
       {
         "key": "non_ineligible_for_pills",
@@ -1654,7 +1634,7 @@
   },
   "step20": {
     "title": "Give Condoms",
-    "next": "step13",
+    "next": "step21",
     "fields": [
       {
         "key": "ineligible_for_pills",
@@ -1670,7 +1650,6 @@
   },
   "step21": {
     "title": "Give Condoms",
-    "next": "step23",
     "fields": [
       {
         "key": "client_has_not_chose_a_method",
