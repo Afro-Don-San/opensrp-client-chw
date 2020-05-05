@@ -208,3 +208,108 @@ priority: 1
 condition: " (step9_fp_method.contains('pop') || step9_fp_method.contains('coc') || step9_fp_method.contains('male_condom') || step9_fp_method.contains('female_condom')) "
 actions:
   - "isRelevant = true"
+---
+name: step17_has_had_a_child_in_the_past_6_months
+description: has_had_a_child_in_the_past_6_months relevance
+priority: 1
+condition: " step9_fp_method.contains('coc') "
+actions:
+  - "isRelevant = true"
+---
+name: step17_smokes_more_than_15_cigarettes_per_day
+description: smokes_more_than_15_cigarettes_per_day relevance
+priority: 1
+condition: " step17_has_had_a_child_in_the_past_6_months=='no' "
+actions:
+  - "isRelevant = true"
+---
+name: step17_has_severe_headaches
+description: has_severe_headaches relevance
+priority: 1
+condition: " step17_smokes_more_than_15_cigarettes_per_day=='no' "
+actions:
+  - "isRelevant = true"
+---
+name: step17_has_high_blood_pressure
+description: has_high_blood_pressure relevance
+priority: 1
+condition: " step17_has_severe_headaches=='no' "
+actions:
+  - "isRelevant = true"
+---
+name: step17_has_diabetes
+description: has_diabetes relevance
+priority: 1
+condition: " step17_has_high_blood_pressure=='no' "
+actions:
+  - "isRelevant = true"
+---
+name: step17_has_pain_in_abdomen
+description: has_pain_in_abdomen relevance
+priority: 1
+condition: " step17_has_diabetes=='no' "
+actions:
+  - "isRelevant = true"
+---
+name: step18_breastfeeding_a_baby_less_than_6_months
+description: breastfeeding_a_baby_less_than_6_months relevance
+priority: 1
+condition: " step9_fp_method.contains('pop') "
+actions:
+  - "isRelevant = true"
+---
+name: step18_smokes_more_than_15_cigarettes_per_day
+description: smokes_more_than_15_cigarettes_per_day relevance
+priority: 1
+condition: " step18_breastfeeding_a_baby_less_than_6_months=='no' "
+actions:
+  - "isRelevant = true"
+---
+name: step18_look_at_clients_skin_and_eyes
+description: look_at_clients_skin_and_eyes relevance
+priority: 1
+condition: " step18_smokes_more_than_15_cigarettes_per_day=='no' "
+actions:
+  - "isRelevant = true"
+---
+name: step18_has_liver_cirrhosis
+description: has_liver_cirrhosis relevance
+priority: 1
+condition: " step18_smokes_more_than_15_cigarettes_per_day=='no' "
+actions:
+  - "isRelevant = true"
+---
+name: step18_has_stroke
+description: has_stroke relevance
+priority: 1
+condition: " step18_has_liver_cirrhosis=='no' "
+actions:
+  - "isRelevant = true"
+---
+name: step18_taking_second_line_medication
+description: taking_second_line_medication relevance
+priority: 1
+condition: " step18_has_stroke=='no' "
+actions:
+  - "isRelevant = true"
+---
+name: step18_has_lump_in_breast
+description: has_lump_in_breast relevance
+priority: 1
+condition: " step18_taking_second_line_medication=='no' "
+actions:
+  - "isRelevant = true"
+---
+name: step19_non_ineligible_for_pills
+description: non_ineligible_for_pills relevance
+priority: 1
+condition: " (step17_has_diabetes=='no' && step17_has_high_blood_pressure=='no' && step17_has_severe_headaches=='no' && step17_smokes_more_than_15_cigarettes_per_day=='no' && step17_has_had_a_child_in_the_past_6_months=='no') || (step18_taking_second_line_medication=='no' && step18_has_stroke=='no' && step18_has_liver_cirrhosis=='no' && step18_smokes_more_than_15_cigarettes_per_day=='no' && step18_breastfeeding_a_baby_less_than_6_months=='no') "
+actions:
+  - "isRelevant = true"
+---
+name: step19_ineligible_for_pills
+description: ineligible_for_pills relevance
+priority: 1
+condition: " (step17_has_diabetes=='yes' || step17_has_high_blood_pressure=='yes' || step17_has_severe_headaches=='yes' || step17_smokes_more_than_15_cigarettes_per_day=='yes' || step17_has_had_a_child_in_the_past_6_months=='yes') || (step18_taking_second_line_medication=='yes' || step18_has_stroke=='yes' || step18_has_liver_cirrhosis=='yes' || step18_smokes_more_than_15_cigarettes_per_day=='yes' || step18_breastfeeding_a_baby_less_than_6_months=='yes') "
+actions:
+  - "isRelevant = true"
