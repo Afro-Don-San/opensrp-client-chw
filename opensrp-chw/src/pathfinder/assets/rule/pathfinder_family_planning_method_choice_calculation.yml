@@ -103,6 +103,21 @@ condition: "step9_fp_method=='sdm'"
 actions:
   - "calculation ='x' "
 
+---
+name: step9_fp_method_chose_sdm
+description: fp_method_chose_sdm calculation
+priority: 1
+condition: "step9_fp_method=='sdm'"
+actions:
+  - "calculation ='x' "
+---
+name: step12_ask_if_the_client_can_explain_the_choice
+description: ask_if_the_client_can_explain_the_choice calculation
+priority: 1
+condition: "step11_are_you_speaking_to!=''"
+actions:
+  - 'calculation = ["this_method" : step9_fp_method]'
+
 
 
 #---

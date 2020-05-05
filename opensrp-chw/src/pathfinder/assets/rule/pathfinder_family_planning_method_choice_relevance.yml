@@ -163,28 +163,35 @@ actions:
 name: step10_client_has_chosen_a_method
 description: client_has_chosen_a_method relevance
 priority: 1
-condition: "step9_fp_method.toString().equals('')"
+condition: "!step9_fp_method.toString().equals('')"
 actions:
   - "isRelevant = true"
 ---
 name: step11_are_you_speaking_to
 description: are_you_speaking_to relevance
 priority: 1
-condition: "step9_fp_method.toString().equals('')"
+condition: "!step9_fp_method.toString().equals('')"
 actions:
   - "isRelevant = true"
 ---
 name: step11_man_has_chosen_a_female_method
 description: man_has_chosen_a_female_method relevance
 priority: 1
-condition: " step9_fp_method.toString().equals('')  && step11_are_you_speaking_to =='man_only' && (step9_fp_method.contains('coc') || step9_fp_method.contains('pop') || step9_fp_method.contains('vasectomy') || step9_fp_method.contains('tubal_ligation') || step9_fp_method.contains('emergency_contraception') || step9_fp_method.contains('iud') || step9_fp_method.contains('implants') || step9_fp_method.contains('lam') || step9_fp_method.contains('injection') || step9_fp_method.contains('female_condom') || step9_fp_method.contains('injection') || step9_fp_method.contains('sdm')) "
+condition: " !step9_fp_method.toString().equals('')  && step11_are_you_speaking_to =='man_only' && (step9_fp_method.contains('coc') || step9_fp_method.contains('pop') || step9_fp_method.contains('vasectomy') || step9_fp_method.contains('tubal_ligation') || step9_fp_method.contains('emergency_contraception') || step9_fp_method.contains('iud') || step9_fp_method.contains('implants') || step9_fp_method.contains('lam') || step9_fp_method.contains('injection') || step9_fp_method.contains('female_condom') || step9_fp_method.contains('injection') || step9_fp_method.contains('sdm')) "
+actions:
+  - "isRelevant = true"
+---
+name: step12_ask_if_the_client_can_explain_the_choice
+description: ask_if_the_client_can_explain_the_choice relevance
+priority: 1
+condition: " !step9_fp_method.toString().equals('')  && !(step11_are_you_speaking_to =='man_only' && (step9_fp_method.contains('coc') || step9_fp_method.contains('pop') || step9_fp_method.contains('vasectomy') || step9_fp_method.contains('tubal_ligation') || step9_fp_method.contains('emergency_contraception') || step9_fp_method.contains('iud') || step9_fp_method.contains('implants') || step9_fp_method.contains('lam') || step9_fp_method.contains('injection') || step9_fp_method.contains('female_condom') || step9_fp_method.contains('injection') || step9_fp_method.contains('sdm'))) "
 actions:
   - "isRelevant = true"
 ---
 name: step12_can_the_explain_the_choice
 description: can_the_explain_the_choice relevance
 priority: 1
-condition: " step9_fp_method.toString().equals('')  && !(step11_are_you_speaking_to =='man_only' && (step9_fp_method.contains('coc') || step9_fp_method.contains('pop') || step9_fp_method.contains('vasectomy') || step9_fp_method.contains('tubal_ligation') || step9_fp_method.contains('emergency_contraception') || step9_fp_method.contains('iud') || step9_fp_method.contains('implants') || step9_fp_method.contains('lam') || step9_fp_method.contains('injection') || step9_fp_method.contains('female_condom') || step9_fp_method.contains('injection') || step9_fp_method.contains('sdm'))) "
+condition: " !step9_fp_method.toString().equals('')  && !(step11_are_you_speaking_to =='man_only' && (step9_fp_method.contains('coc') || step9_fp_method.contains('pop') || step9_fp_method.contains('vasectomy') || step9_fp_method.contains('tubal_ligation') || step9_fp_method.contains('emergency_contraception') || step9_fp_method.contains('iud') || step9_fp_method.contains('implants') || step9_fp_method.contains('lam') || step9_fp_method.contains('injection') || step9_fp_method.contains('female_condom') || step9_fp_method.contains('injection') || step9_fp_method.contains('sdm'))) "
 actions:
   - "isRelevant = true"
 ---

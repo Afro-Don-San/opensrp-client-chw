@@ -1046,12 +1046,36 @@
     "next": "step13",
     "fields": [
       {
+        "key": "ask_if_the_client_can_explain_the_choice",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "ASK: Can you explain why you chose: {this_method} method and not other methods?",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        },
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_calculation.yml"
+            }
+          }
+        }
+      },
+      {
         "key": "can_the_explain_the_choice",
         "type": "native_radio",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "can_the_explain_the_choice",
         "openmrs_entity_parent": "",
-        "label": "ASK: Can you explain why you chose this method and not other methods?\nWas the client adequately able to explain her reason for choosing this method?\n",
+        "label": "Was the client adequately able to explain her reason for choosing this method?\n",
         "options": [
           {
             "key": "yes",
@@ -1076,6 +1100,13 @@
           "rules-engine": {
             "ex-rules": {
               "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        },
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_calculation.yml"
             }
           }
         }
