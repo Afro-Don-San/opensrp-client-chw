@@ -72,119 +72,119 @@ actions:
 name: step9_fp_method_chose
 description: fp_method_chose relevance
 priority: 1
-condition: "step7_has_decided_method_wanted =='yes' || step8_is_the_client_now_ready_to_choose_a_method=='yes' "
+condition: "step7_has_decided_method_wanted =='yes' || step8_is_the_client_now_ready_to_choose_a_method=='yes'  "
 actions:
   - "isRelevant = true"
 ---
 name: step9_fp_method_chose_coc
 description: fp_method_chose_coc relevance
 priority: 1
-condition: "!step6_methods_not_wanted.contains('coc') && step4_is_the_baby_under_6_months != 'yes' "
+condition: "!step6_methods_not_wanted.contains('coc') && step4_is_the_baby_under_6_months != 'yes' && (step7_has_decided_method_wanted =='yes' || step8_is_the_client_now_ready_to_choose_a_method=='yes') "
 actions:
   - "isRelevant = true"
 ---
 name: step9_fp_method_chose_pop
 description: fp_method_chose_pop relevance
 priority: 1
-condition: "!step6_methods_not_wanted.contains('pop')"
+condition: "!step6_methods_not_wanted.contains('pop') && (step7_has_decided_method_wanted =='yes' || step8_is_the_client_now_ready_to_choose_a_method=='yes')"
 actions:
   - "isRelevant = true"
 ---
 name: step9_fp_method_chose_vasectomy
 description: fp_method_chose_vasectomy relevance
 priority: 1
-condition: "!step6_methods_not_wanted.contains('vasectomy')"
+condition: "!step6_methods_not_wanted.contains('vasectomy') && (step7_has_decided_method_wanted =='yes' || step8_is_the_client_now_ready_to_choose_a_method=='yes')"
 actions:
   - "isRelevant = true"
 ---
 name: step9_fp_method_chose_male_condom
 description: fp_method_chose_male_condom relevance
 priority: 1
-condition: "!step6_methods_not_wanted.contains('male_condom') && step5_does_partner_support_fp !='no'"
+condition: "!step6_methods_not_wanted.contains('male_condom') && step5_does_partner_support_fp !='no' && (step7_has_decided_method_wanted =='yes' || step8_is_the_client_now_ready_to_choose_a_method=='yes')"
 actions:
   - "isRelevant = true"
 ---
 name: step9_fp_method_chose_tubal_legation
 description: fp_method_chose_tubal_legation relevance
 priority: 1
-condition: "!step6_methods_not_wanted.contains('tubal_legation')"
+condition: "!step6_methods_not_wanted.contains('tubal_legation') && (step7_has_decided_method_wanted =='yes' || step8_is_the_client_now_ready_to_choose_a_method=='yes')"
 actions:
   - "isRelevant = true"
 ---
 name: step9_fp_method_chose_emergency_contraception
 description: fp_method_chose_emergency_contraception relevance
 priority: 1
-condition: "!step6_methods_not_wanted.contains('emergency_contraception')"
+condition: "!step6_methods_not_wanted.contains('emergency_contraception') && (step7_has_decided_method_wanted =='yes' || step8_is_the_client_now_ready_to_choose_a_method=='yes')"
 actions:
   - "isRelevant = true"
 ---
 name: step9_fp_method_chose_iud
 description: fp_method_chose_iud relevance
 priority: 1
-condition: "!step6_methods_not_wanted.contains('iud')"
+condition: "!step6_methods_not_wanted.contains('iud') && (step7_has_decided_method_wanted =='yes' || step8_is_the_client_now_ready_to_choose_a_method=='yes')"
 actions:
   - "isRelevant = true"
 ---
 name: step9_fp_method_chose_lam
 description: fp_method_chose_lam relevance
 priority: 1
-condition: "!step6_methods_not_wanted.contains('lam') && step4_is_the_woman_currently_breast_feeding != 'no'  "
+condition: "!step6_methods_not_wanted.contains('lam') && step4_is_the_woman_currently_breast_feeding != 'no'  && (step7_has_decided_method_wanted =='yes' || step8_is_the_client_now_ready_to_choose_a_method=='yes') "
 actions:
   - "isRelevant = true"
 ---
 name: step9_fp_method_chose_implants
 description: fp_method_chose_implants relevance
 priority: 1
-condition: "!step6_methods_not_wanted.contains('implants')"
+condition: "!step6_methods_not_wanted.contains('implants') && (step7_has_decided_method_wanted =='yes' || step8_is_the_client_now_ready_to_choose_a_method=='yes')"
 actions:
   - "isRelevant = true"
 ---
 name: step9_fp_method_chose_female_condom
 description: fp_method_chose_female_condom relevance
 priority: 1
-condition: "!step6_methods_not_wanted.contains('female_condom') && step5_does_partner_support_fp !='no'"
+condition: "!step6_methods_not_wanted.contains('female_condom') && step5_does_partner_support_fp !='no' && (step7_has_decided_method_wanted =='yes' || step8_is_the_client_now_ready_to_choose_a_method=='yes')"
 actions:
   - "isRelevant = true"
 ---
 name: step9_fp_method_chose_injection
 description: fp_method_chose_injection relevance
 priority: 1
-condition: "!step6_methods_not_wanted.contains('injection')"
+condition: "!step6_methods_not_wanted.contains('injection') && (step7_has_decided_method_wanted =='yes' || step8_is_the_client_now_ready_to_choose_a_method=='yes')"
 actions:
   - "isRelevant = true"
 ---
 name: step9_fp_method_chose_sdm
 description: fp_method_chose_sdm relevance
 priority: 1
-condition: "!step6_methods_not_wanted.contains('sdm') && step5_does_partner_support_fp !='no' "
+condition: "!step6_methods_not_wanted.contains('sdm') && step5_does_partner_support_fp !='no' && (step7_has_decided_method_wanted =='yes' || step8_is_the_client_now_ready_to_choose_a_method=='yes') "
 actions:
   - "isRelevant = true"
 ---
 name: step10_client_has_chosen_a_method
 description: client_has_chosen_a_method relevance
 priority: 1
-condition: "step9_fp_method !='' "
+condition: "step9_fp_method.toString().equals('')"
 actions:
   - "isRelevant = true"
 ---
 name: step11_are_you_speaking_to
 description: are_you_speaking_to relevance
 priority: 1
-condition: "step9_fp_method !=''  "
+condition: "step9_fp_method.toString().equals('')"
 actions:
   - "isRelevant = true"
 ---
 name: step11_man_has_chosen_a_female_method
 description: man_has_chosen_a_female_method relevance
 priority: 1
-condition: " step9_fp_method !=''  && step11_are_you_speaking_to =='man_only' && (step9_fp_method.contains('coc') || step9_fp_method.contains('pop') || step9_fp_method.contains('vasectomy') || step9_fp_method.contains('tubal_ligation') || step9_fp_method.contains('emergency_contraception') || step9_fp_method.contains('iud') || step9_fp_method.contains('implants') || step9_fp_method.contains('lam') || step9_fp_method.contains('injection') || step9_fp_method.contains('female_condom') || step9_fp_method.contains('injection') || step9_fp_method.contains('sdm')) "
+condition: " step9_fp_method.toString().equals('')  && step11_are_you_speaking_to =='man_only' && (step9_fp_method.contains('coc') || step9_fp_method.contains('pop') || step9_fp_method.contains('vasectomy') || step9_fp_method.contains('tubal_ligation') || step9_fp_method.contains('emergency_contraception') || step9_fp_method.contains('iud') || step9_fp_method.contains('implants') || step9_fp_method.contains('lam') || step9_fp_method.contains('injection') || step9_fp_method.contains('female_condom') || step9_fp_method.contains('injection') || step9_fp_method.contains('sdm')) "
 actions:
   - "isRelevant = true"
 ---
 name: step12_can_the_explain_the_choice
 description: can_the_explain_the_choice relevance
 priority: 1
-condition: " step9_fp_method !=''  && !(step11_are_you_speaking_to =='man_only' && (step9_fp_method.contains('coc') || step9_fp_method.contains('pop') || step9_fp_method.contains('vasectomy') || step9_fp_method.contains('tubal_ligation') || step9_fp_method.contains('emergency_contraception') || step9_fp_method.contains('iud') || step9_fp_method.contains('implants') || step9_fp_method.contains('lam') || step9_fp_method.contains('injection') || step9_fp_method.contains('female_condom') || step9_fp_method.contains('injection') || step9_fp_method.contains('sdm'))) "
+condition: " step9_fp_method.toString().equals('')  && !(step11_are_you_speaking_to =='man_only' && (step9_fp_method.contains('coc') || step9_fp_method.contains('pop') || step9_fp_method.contains('vasectomy') || step9_fp_method.contains('tubal_ligation') || step9_fp_method.contains('emergency_contraception') || step9_fp_method.contains('iud') || step9_fp_method.contains('implants') || step9_fp_method.contains('lam') || step9_fp_method.contains('injection') || step9_fp_method.contains('female_condom') || step9_fp_method.contains('injection') || step9_fp_method.contains('sdm'))) "
 actions:
   - "isRelevant = true"
 ---
@@ -437,5 +437,33 @@ name: step23_lmp_unknown
 description: lmp_unknown relevance
 priority: 1
 condition: " step23_does_the_client_remember_lmp=='no' "
+actions:
+  - "isRelevant = true"
+---
+name: step24_sdm_followup_visit
+description: sdm_followup_visit relevance
+priority: 1
+condition: " step23_does_the_client_remember_lmp=='no' "
+actions:
+  - "isRelevant = true"
+---
+name: step24_client_has_not_chose_a_method
+description: client_has_not_chose_a_method relevance
+priority: 1
+condition: " step8_is_the_client_now_ready_to_choose_a_method=='no' "
+actions:
+  - "isRelevant = true"
+---
+name: step24_followup_visit_for_clients_did_not_choose_a_method
+description: followup_visit_for_clients_did_not_choose_a_method relevance
+priority: 1
+condition: " step8_is_the_client_now_ready_to_choose_a_method=='no' "
+actions:
+  - "isRelevant = true"
+---
+name: step24_ready_to_receive_method
+description: ready_to_receive_method relevance
+priority: 1
+condition: " step23_does_the_client_remember_lmp=='yes' || (step18_taking_second_line_medication=='no' && step18_has_stroke=='no' && step18_has_liver_cirrhosis=='no' && step18_smokes_more_than_15_cigarettes_per_day=='no' && step18_breastfeeding_a_baby_less_than_6_months=='no') || (step17_has_pain_in_abdomen=='no' && step17_has_diabetes=='no' && step17_has_high_blood_pressure=='no' && step17_has_severe_headaches=='no' && step17_smokes_more_than_15_cigarettes_per_day=='no' && step17_has_had_a_child_in_the_past_6_months=='no') "
 actions:
   - "isRelevant = true"
