@@ -87,7 +87,7 @@
     ]
   },
   "step3": {
-    "title": "Family planning method choice questions",
+    "title": "Method Choice Questions",
     "next": "step4",
     "fields": [
       {
@@ -258,7 +258,7 @@
     ]
   },
   "step5": {
-    "title": "Partner supports FP",
+    "title": "Partner support for FP",
     "next": "step6",
     "fields": [
       {
@@ -533,7 +533,7 @@
     ]
   },
   "step8": {
-    "title": "Client Ready to choose a method",
+    "title": "Ready to choose a Method",
     "next": "step9",
     "fields": [
       {
@@ -971,7 +971,7 @@
     ]
   },
   "step10": {
-    "title": "Discuss the chosen method",
+    "title": "Discuss the Chosen Method",
     "next": "step11",
     "fields": [
       {
@@ -1042,7 +1042,7 @@
     ]
   },
   "step12": {
-    "title": "Screening/instructions for chosen method",
+    "title": "Screening/Instructions for chosen method",
     "next": "step13",
     "fields": [
       {
@@ -1114,7 +1114,7 @@
     ]
   },
   "step13": {
-    "title": "Client chose method requiring referral",
+    "title": "Referral Method Selected",
     "next": "step14",
     "fields": [
       {
@@ -1137,7 +1137,7 @@
     ]
   },
   "step14": {
-    "title": "Explain the use of condoms before Referral",
+    "title": "Emphasis on condoms before Referral",
     "next": "step15",
     "fields": [
       {
