@@ -209,6 +209,13 @@ condition: " (step9_fp_method.contains('vasectomy') || step9_fp_method.contains(
 actions:
   - "isRelevant = true"
 ---
+name: step15_explanation_of_reasons_for_giving_referral
+description: explanation_of_reasons_for_giving_referral relevance
+priority: 1
+condition: " (step9_fp_method.contains('vasectomy') || step9_fp_method.contains('tubal_ligation') || step9_fp_method.contains('emergency_contraception') || step9_fp_method.contains('iud') || step9_fp_method.contains('implants') || step9_fp_method.contains('lam') || step9_fp_method.contains('injection') || step9_fp_method.contains('injection')) "
+actions:
+  - "isRelevant = true"
+---
 name: step16_non_referral_method_chosen
 description: non_referral_method_chosen relevance
 priority: 1
@@ -472,5 +479,12 @@ name: step24_ready_to_receive_method
 description: ready_to_receive_method relevance
 priority: 1
 condition: " step23_does_the_client_remember_lmp=='yes' || (step18_taking_second_line_medication=='no' && step18_has_stroke=='no' && step18_has_liver_cirrhosis=='no' && step18_smokes_more_than_15_cigarettes_per_day=='no' && step18_breastfeeding_a_baby_less_than_6_months=='no') || (step17_has_pain_in_abdomen=='no' && step17_has_diabetes=='no' && step17_has_high_blood_pressure=='no' && step17_has_severe_headaches=='no' && step17_smokes_more_than_15_cigarettes_per_day=='no' && step17_has_had_a_child_in_the_past_6_months=='no') "
+actions:
+  - "isRelevant = true"
+---
+name: step24_unique_referral_id
+description: unique_referral_id relevance
+priority: 1
+condition: " (step9_fp_method.contains('vasectomy') || step9_fp_method.contains('tubal_ligation') || step9_fp_method.contains('emergency_contraception') || step9_fp_method.contains('iud') || step9_fp_method.contains('implants') || step9_fp_method.contains('lam') || step9_fp_method.contains('injection') || step9_fp_method.contains('injection')) "
 actions:
   - "isRelevant = true"

@@ -1137,7 +1137,7 @@
     ]
   },
   "step14": {
-    "title": "Explain the use of condoms",
+    "title": "Explain the use of condoms before Referral",
     "next": "step15",
     "fields": [
       {
@@ -2124,6 +2124,31 @@
         "text": "Client is Eligible to receive method",
         "text_color": "#1199F9",
         "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "unique_referral_id",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_identifier",
+        "openmrs_entity_id": "unique_referral_id",
+        "type": "barcode",
+        "barcode_type": "qrcode",
+        "hint": "Referral ID",
+        "scanButtonText": "Scan Referral Form\nQR Code",
+        "v_numeric": {
+          "value": "true",
+          "err": "Please enter a valid ID"
+        },
+        "v_required": {
+          "value": "true",
+          "err": "Please enter the UNIQUE ID"
+        },
         "relevance": {
           "rules-engine": {
             "ex-rules": {
