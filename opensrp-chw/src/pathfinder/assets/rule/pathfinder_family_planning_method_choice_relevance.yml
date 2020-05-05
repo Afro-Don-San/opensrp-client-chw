@@ -48,6 +48,13 @@ condition: "step5_does_partner_support_fp =='no'"
 actions:
   - "isRelevant = true"
 ---
+name: step5_emphasis_on_condoms
+description: emphasis_on_condoms relevance
+priority: 1
+condition: "step5_does_partner_support_fp =='no'"
+actions:
+  - "isRelevant = true"
+---
 name: step6_methods_not_wanted
 description: methods_not_wanted relevance
 priority: 1
@@ -405,24 +412,10 @@ condition: " step11_are_you_speaking_to !='man_only' && step9_fp_method.contains
 actions:
   - "isRelevant = true"
 ---
-name: step31_periods_come_when_expected
-description: periods_come_when_expected relevance
-priority: 1
-condition: " step11_are_you_speaking_to !='man_only' && step9_fp_method.contains('sdm') "
-actions:
-  - "isRelevant = true"
----
 name: step31_periods_come_once_a_month
 description: periods_come_once_a_month relevance
 priority: 1
 condition: " step31_periods_come_when_expected=='yes' "
-actions:
-  - "isRelevant = true"
----
-name: step31_irregular_periods
-description: irregular_periods relevance
-priority: 1
-condition: " step31_periods_come_once_a_month=='no' || step31_periods_come_when_expected=='no' "
 actions:
   - "isRelevant = true"
 ---
@@ -487,5 +480,12 @@ name: step33_man_has_chosen_a_female_method
 description: man_has_chosen_a_female_method relevance
 priority: 1
 condition: " step9_fp_method.length()>1  && step11_are_you_speaking_to =='man_only' && (step9_fp_method.contains('coc') || step9_fp_method.contains('pop') || step9_fp_method.contains('vasectomy') || step9_fp_method.contains('tubal_ligation') || step9_fp_method.contains('emergency_contraception') || step9_fp_method.contains('iud') || step9_fp_method.contains('implants') || step9_fp_method.contains('lam') || step9_fp_method.contains('injection') || step9_fp_method.contains('female_condom') || step9_fp_method.contains('injection') || step9_fp_method.contains('sdm')) "
+actions:
+  - "isRelevant = true"
+---
+name: step33_irregular_periods
+description: irregular_periods relevance
+priority: 1
+condition: " step31_periods_come_once_a_month=='no' || step31_periods_come_when_expected=='no' "
 actions:
   - "isRelevant = true"
