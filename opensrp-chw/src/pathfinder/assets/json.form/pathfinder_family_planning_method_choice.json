@@ -59,6 +59,55 @@
     "next": "step2",
     "fields": [
       {
+        "key": "fp_method_choice_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_method_choice_date",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "fp_start_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_start_date",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "fp_initiation_stage",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_initiation_stage",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "age",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "age",
+        "type": "hidden"
+      },
+      {
         "key": "introduction_notes",
         "openmrs_entity_parent": "",
         "openmrs_entity": "person_attribute",
@@ -578,10 +627,10 @@
     "next": "step10",
     "fields": [
       {
-        "key": "fp_method",
+        "key": "fp_method_accepted",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_method",
+        "openmrs_entity_id": "fp_method_accepted",
         "type": "hidden",
         "calculation": {
           "rules-engine": {
