@@ -44,6 +44,7 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
             flavor.updateFpMenuItems(baseEntityId, menu);
             menu.findItem(R.id.action_anc_registration).setVisible(true);
         } else {
+            flavor.updateFpMenuItems(baseEntityId, menu);
             menu.findItem(R.id.action_anc_registration).setVisible(false);
         }
 

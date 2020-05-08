@@ -62,6 +62,6 @@ public class FamilyOtherMemberProfileActivityFlv implements FamilyOtherMemberPro
 
     @Override
     public boolean hasANC() {
-        return true;
+        return false;
     }
 }
