@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
+import com.adosa.opensrp.chw.fp.activity.BaseFpFollowUpVisitActivity;
+import com.adosa.opensrp.chw.fp.domain.FpMemberObject;
+import com.adosa.opensrp.chw.fp.util.FamilyPlanningConstants;
 import com.vijay.jsonwizard.constants.JsonFormConstants;
 import com.vijay.jsonwizard.domain.Form;
 
@@ -13,10 +16,7 @@ import org.smartregister.chw.anc.domain.MemberObject;
 import org.smartregister.chw.anc.presenter.BaseAncHomeVisitPresenter;
 import org.smartregister.chw.core.task.RunnableTask;
 import org.smartregister.chw.core.utils.Utils;
-import com.adosa.opensrp.chw.fp.activity.BaseFpFollowUpVisitActivity;
-import com.adosa.opensrp.chw.fp.domain.FpMemberObject;
-import com.adosa.opensrp.chw.fp.util.FamilyPlanningConstants;
-import org.smartregister.chw.interactor.FpFollowUpVisitInteractor;
+import org.smartregister.chw.interactor.PathfinderFpFollowUpVisitInteractor;
 import org.smartregister.chw.schedulers.ChwScheduleTaskExecutor;
 import org.smartregister.family.util.Constants;
 import org.smartregister.family.util.JsonFormUtils;
@@ -45,7 +45,7 @@ public class PathfinderFamilyPlanningFollowUpVisitActivity extends BaseFpFollowU
 
     @Override
     protected void registerPresenter() {
-        presenter = new BaseAncHomeVisitPresenter(memberObject, this, new FpFollowUpVisitInteractor());
+        presenter = new BaseAncHomeVisitPresenter(memberObject, this, new PathfinderFpFollowUpVisitInteractor());
     }
 
     @Override
