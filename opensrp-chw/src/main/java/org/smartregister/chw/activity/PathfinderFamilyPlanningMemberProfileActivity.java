@@ -52,11 +52,11 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends CorePathfinde
 
     }
 
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        addFpReferralTypes();
-//    }
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        addFpReferralTypes();
+    }
 
     protected void removeMember() {
         IndividualProfileRemoveActivity.startIndividualProfileActivity(PathfinderFamilyPlanningMemberProfileActivity.this,
