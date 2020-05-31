@@ -3,7 +3,7 @@
   "show_errors_on_submit": true,
   "skip_blank_steps": true,
   "count": "18",
-  "encounter_type": "Introduction to Family Planning",
+  "encounter_type": "Give Family Planning Method",
   "entity_id": "",
   "relational_id": "",
   "metadata": {
@@ -63,6 +63,20 @@
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "fp_reg_date",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "fp_start_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_start_date",
         "type": "hidden",
         "calculation": {
           "rules-engine": {
