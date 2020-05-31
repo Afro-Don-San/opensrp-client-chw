@@ -40,7 +40,6 @@ import org.smartregister.chw.interactor.PathfinderFamilyPlanningProfileInteracto
 import org.smartregister.chw.model.ReferralTypeModel;
 import org.smartregister.chw.presenter.PathfinderFamilyPlanningMemberProfilePresenter;
 import org.smartregister.chw.rules.FpAlertRule;
-import org.smartregister.chw.util.PathfinderFamilyPlanningConstants;
 import org.smartregister.chw.util.PathfinderFamilyPlanningUtil;
 import org.smartregister.commonregistry.CommonPersonObject;
 import org.smartregister.commonregistry.CommonPersonObjectClient;
