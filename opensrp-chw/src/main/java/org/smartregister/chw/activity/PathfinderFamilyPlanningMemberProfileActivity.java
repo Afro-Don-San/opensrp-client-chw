@@ -91,16 +91,6 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends CorePathfinde
     }
 
     @Override
-    public void verifyHasPhone() {
-        // Implement
-    }
-
-    @Override
-    public void notifyHasPhone(boolean b) {
-        // Implement
-    }
-
-    @Override
     public void openMedicalHistory() {
         OnMemberTypeLoadedListener onMemberTypeLoadedListener = memberType -> {
 
