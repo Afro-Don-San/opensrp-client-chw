@@ -10,6 +10,10 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.loader.content.CursorLoader;
 import androidx.loader.content.Loader;
 
+import com.adosa.opensrp.chw.fp.dao.PathfinderFpDao;
+import com.adosa.opensrp.chw.fp.fragment.BasePathfinderFpRegisterFragment;
+import com.adosa.opensrp.chw.fp.util.PathfinderFamilyPlanningConstants;
+
 import org.apache.commons.lang3.StringUtils;
 import org.jetbrains.annotations.Nullable;
 import org.smartregister.chw.activity.PathfinderFamilyPlanningFollowUpVisitActivity;
@@ -19,9 +23,6 @@ import org.smartregister.chw.core.custom_views.NavigationMenu;
 import org.smartregister.chw.core.utils.CoreConstants;
 import org.smartregister.chw.core.utils.QueryGenerator;
 import org.smartregister.chw.core.utils.Utils;
-import com.adosa.opensrp.chw.fp.dao.FpDao;
-import com.adosa.opensrp.chw.fp.fragment.BaseFpRegisterFragment;
-import com.adosa.opensrp.chw.fp.util.FamilyPlanningConstants;
 import org.smartregister.chw.model.PathfinderFamilyPlanningRegisterFragmentModel;
 import org.smartregister.chw.presenter.PathfinderFamilyPlanningRegisterFragmentPresenter;
 import org.smartregister.chw.provider.PathfinderFpProvider;
@@ -35,7 +36,7 @@ import java.util.Set;
 
 import timber.log.Timber;
 
-public class PathfinderFamilyPlanningRegisterFragment extends BaseFpRegisterFragment {
+public class PathfinderFamilyPlanningRegisterFragment extends BasePathfinderFpRegisterFragment {
 
     private static final String DUE_FILTER_TAG = "PRESSED";
     private View view;
@@ -52,12 +53,12 @@ public class PathfinderFamilyPlanningRegisterFragment extends BaseFpRegisterFrag
 
     @Override
     protected void openProfile(CommonPersonObjectClient client) {
-        PathfinderFamilyPlanningMemberProfileActivity.startFpMemberProfileActivity(getActivity(), FpDao.getMember(client.getCaseId()));
+        PathfinderFamilyPlanningMemberProfileActivity.startFpMemberProfileActivity(getActivity(), PathfinderFpDao.getMember(client.getCaseId()));
     }
 
     @Override
     protected void openFollowUpVisit(CommonPersonObjectClient client) {
-        PathfinderFamilyPlanningFollowUpVisitActivity.startMe(getActivity(), FpDao.getMember(client.getCaseId()), false);
+        PathfinderFamilyPlanningFollowUpVisitActivity.startMe(getActivity(), PathfinderFpDao.getMember(client.getCaseId()), false);
     }
 
     @Override
@@ -275,7 +276,7 @@ public class PathfinderFamilyPlanningRegisterFragment extends BaseFpRegisterFrag
     }
 
     public String getDueCondition() {
-        return FamilyPlanningConstants.DBConstants.FAMILY_PLANNING_TABLE + ".base_entity_id in (select base_entity_id from schedule_service where strftime('%Y-%m-%d') BETWEEN due_date and ifnull(expiry_date,strftime('%Y-%m-%d')) and schedule_name = '" + CoreConstants.SCHEDULE_TYPES.FP_VISIT + "' and ifnull(not_done_date,'') = '' and ifnull(completion_date,'') = '' )  ";
+        return PathfinderFamilyPlanningConstants.DBConstants.FAMILY_PLANNING_TABLE + ".base_entity_id in (select base_entity_id from schedule_service where strftime('%Y-%m-%d') BETWEEN due_date and ifnull(expiry_date,strftime('%Y-%m-%d')) and schedule_name = '" + CoreConstants.SCHEDULE_TYPES.FP_VISIT + "' and ifnull(not_done_date,'') = '' and ifnull(completion_date,'') = '' )  ";
     }
 
     protected void dueFilter(View dueOnlyLayout) {

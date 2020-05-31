@@ -3,7 +3,7 @@ package org.smartregister.chw.presenter;
 import android.app.Activity;
 
 import com.adosa.opensrp.chw.fp.contract.BaseFpProfileContract;
-import com.adosa.opensrp.chw.fp.domain.FpMemberObject;
+import com.adosa.opensrp.chw.fp.domain.PathfinderFpMemberObject;
 
 import org.smartregister.chw.activity.FamilyPlanningMemberProfileActivity;
 import org.smartregister.chw.core.presenter.CorePathfinderFamilyPlanningMemberProfilePresenter;
@@ -18,9 +18,9 @@ public class PathfinderFamilyPlanningMemberProfilePresenter extends CorePathfind
     private BaseFpProfileContract.Interactor interactor;
     private WeakReference<BaseFpProfileContract.View> view;
     private FormUtils formUtils;
-    private FpMemberObject fpMemberObject;
+    private PathfinderFpMemberObject fpMemberObject;
 
-    public PathfinderFamilyPlanningMemberProfilePresenter(BaseFpProfileContract.View view, BaseFpProfileContract.Interactor interactor, FpMemberObject fpMemberObject) {
+    public PathfinderFamilyPlanningMemberProfilePresenter(BaseFpProfileContract.View view, BaseFpProfileContract.Interactor interactor, PathfinderFpMemberObject fpMemberObject) {
         super(view, interactor, fpMemberObject);
         this.interactor = interactor;
         this.view = new WeakReference<>(view);

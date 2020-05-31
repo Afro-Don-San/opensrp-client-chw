@@ -3,12 +3,13 @@ package org.smartregister.chw.activity;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.View;
 
 import androidx.annotation.NonNull;
 
-import com.adosa.opensrp.chw.fp.domain.FpMemberObject;
-import com.adosa.opensrp.chw.fp.util.FamilyPlanningConstants;
+import com.adosa.opensrp.chw.fp.domain.PathfinderFpMemberObject;
+import com.adosa.opensrp.chw.fp.util.PathfinderFamilyPlanningConstants;
 
 import org.json.JSONObject;
 import org.smartregister.chw.BuildConfig;
@@ -34,9 +35,9 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends CorePathfinde
 
     private List<ReferralTypeModel> referralTypeModels = new ArrayList<>();
 
-    public static void startFpMemberProfileActivity(Activity activity, FpMemberObject memberObject) {
+    public static void startFpMemberProfileActivity(Activity activity, PathfinderFpMemberObject memberObject) {
         Intent intent = new Intent(activity, PathfinderFamilyPlanningMemberProfileActivity.class);
-        intent.putExtra(FamilyPlanningConstants.FamilyPlanningMemberObject.MEMBER_OBJECT, memberObject);
+        intent.putExtra(PathfinderFamilyPlanningConstants.FamilyPlanningMemberObject.MEMBER_OBJECT, memberObject);
         activity.startActivity(intent);
     }
 
@@ -51,28 +52,28 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends CorePathfinde
 
     }
 
-    @Override
-    protected void onCreation() {
-        super.onCreation();
-        addFpReferralTypes();
-    }
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        addFpReferralTypes();
+//    }
 
     protected void removeMember() {
         IndividualProfileRemoveActivity.startIndividualProfileActivity(PathfinderFamilyPlanningMemberProfileActivity.this,
-                getClientDetailsByBaseEntityID(fpMemberObject.getBaseEntityId()),
-                fpMemberObject.getFamilyBaseEntityId(), fpMemberObject.getFamilyHead(),
-                fpMemberObject.getPrimaryCareGiver(), FpRegisterActivity.class.getCanonicalName());
+                getClientDetailsByBaseEntityID(pathfinderFpMemberObject.getBaseEntityId()),
+                pathfinderFpMemberObject.getFamilyBaseEntityId(), pathfinderFpMemberObject.getFamilyHead(),
+                pathfinderFpMemberObject.getPrimaryCareGiver(), FpRegisterActivity.class.getCanonicalName());
     }
 
     protected void startFamilyPlanningRegistrationActivity() {
         //TODO change the form name
-        FpRegisterActivity.startFpRegistrationActivity(this, fpMemberObject.getBaseEntityId(), fpMemberObject.getAge(), CoreConstants.JSON_FORM.getFpChangeMethodForm(fpMemberObject.getGender()), FamilyPlanningConstants.ActivityPayload.CHANGE_METHOD_PAYLOAD_TYPE);
+        FpRegisterActivity.startFpRegistrationActivity(this, pathfinderFpMemberObject.getBaseEntityId(), pathfinderFpMemberObject.getAge(), CoreConstants.JSON_FORM.getFpChangeMethodForm(pathfinderFpMemberObject.getGender()), PathfinderFamilyPlanningConstants.ActivityPayload.CHANGE_METHOD_PAYLOAD_TYPE);
     }
 
     @Override
     protected void initializePresenter() {
         showProgressBar(true);
-        fpProfilePresenter = new PathfinderFamilyPlanningMemberProfilePresenter(this, new CorePathfinderFamilyPlanningProfileInteractor(this), fpMemberObject);
+        fpProfilePresenter = new PathfinderFamilyPlanningMemberProfilePresenter(this, new CorePathfinderFamilyPlanningProfileInteractor(this), pathfinderFpMemberObject);
     }
 
     @Override
@@ -114,33 +115,33 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends CorePathfinde
 
     @Override
     public void openFamilyPlanningRegistration() {
-        PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, fpMemberObject.getBaseEntityId(), fpMemberObject.getAge(), CoreConstants.JSON_FORM.getFpRegistrationForm(fpMemberObject.getGender()), FamilyPlanningConstants.ActivityPayload.UPDATE_REGISTRATION_PAYLOAD_TYPE);
+        PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, pathfinderFpMemberObject.getBaseEntityId(), pathfinderFpMemberObject.getAge(), CoreConstants.JSON_FORM.getFpRegistrationForm(pathfinderFpMemberObject.getGender()), PathfinderFamilyPlanningConstants.ActivityPayload.UPDATE_REGISTRATION_PAYLOAD_TYPE);
 
     }
 
     @Override
     public void openFamilyPlanningIntroduction() {
-        PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, fpMemberObject.getBaseEntityId(), fpMemberObject.getAge(), CoreConstants.JSON_FORM.getPathfinderFamilyPlanningIntroduction(), com.adosa.opensrp.chw.fp.util.FamilyPlanningConstants.ActivityPayload.CHANGE_METHOD_PAYLOAD_TYPE);
+        PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, pathfinderFpMemberObject.getBaseEntityId(), pathfinderFpMemberObject.getAge(), CoreConstants.JSON_FORM.getPathfinderFamilyPlanningIntroduction(), com.adosa.opensrp.chw.fp.util.PathfinderFamilyPlanningConstants.ActivityPayload.CHANGE_METHOD_PAYLOAD_TYPE);
     }
 
     @Override
     public void openPregnancyScreening() {
-        PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, fpMemberObject.getBaseEntityId(), fpMemberObject.getAge(), CoreConstants.JSON_FORM.getPathfinderPregnancyScreening(), org.smartregister.chw.fp.util.FamilyPlanningConstants.ActivityPayload.CHANGE_METHOD_PAYLOAD_TYPE);
+        PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, pathfinderFpMemberObject.getBaseEntityId(), pathfinderFpMemberObject.getAge(), CoreConstants.JSON_FORM.getPathfinderPregnancyScreening(), PathfinderFamilyPlanningConstants.ActivityPayload.CHANGE_METHOD_PAYLOAD_TYPE);
     }
 
     @Override
     public void openChooseFpMethod() {
-        PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, fpMemberObject.getBaseEntityId(), fpMemberObject.getAge(), CoreConstants.JSON_FORM.getPathfinderChooseFamilyPlanningMethod(), org.smartregister.chw.fp.util.FamilyPlanningConstants.ActivityPayload.CHANGE_METHOD_PAYLOAD_TYPE);
+        PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, pathfinderFpMemberObject.getBaseEntityId(), pathfinderFpMemberObject.getAge(), CoreConstants.JSON_FORM.getPathfinderChooseFamilyPlanningMethod(), PathfinderFamilyPlanningConstants.ActivityPayload.CHANGE_METHOD_PAYLOAD_TYPE);
     }
 
     @Override
     public void openGiveFpMethodButton() {
-        PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, fpMemberObject.getBaseEntityId(), fpMemberObject.getAge(), CoreConstants.JSON_FORM.getPathfinderGiveFamilyPlanningMethod(), org.smartregister.chw.fp.util.FamilyPlanningConstants.ActivityPayload.CHANGE_METHOD_PAYLOAD_TYPE);
+        PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, pathfinderFpMemberObject.getBaseEntityId(), pathfinderFpMemberObject.getAge(), CoreConstants.JSON_FORM.getPathfinderGiveFamilyPlanningMethod(), PathfinderFamilyPlanningConstants.ActivityPayload.CHANGE_METHOD_PAYLOAD_TYPE);
     }
 
     @Override
     public void openUpcomingServices() {
-        PathfinderFamilyPlanningUpcomingServicesActivity.startMe(this, PathfinderFamilyPlanningUtil.toMember(fpMemberObject));
+        PathfinderFamilyPlanningUpcomingServicesActivity.startMe(this, PathfinderFamilyPlanningUtil.toMember(pathfinderFpMemberObject));
     }
 
     @Override
@@ -150,7 +151,7 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends CorePathfinde
                 JSONObject formJson = FormUtils.getInstance(this).getFormJsonFromRepositoryOrAssets(org.smartregister.chw.util.Constants.JSON_FORM.getAncUnifiedReferralForm());
                 formJson.put(org.smartregister.chw.util.Constants.REFERRAL_TASK_FOCUS, referralTypeModels.get(0).getReferralType());
                 ReferralRegistrationActivity.startGeneralReferralFormActivityForResults(this,
-                        fpMemberObject.getBaseEntityId(), formJson);
+                        pathfinderFpMemberObject.getBaseEntityId(), formJson);
             } catch (Exception ex) {
                 Timber.e(ex);
             }
@@ -161,10 +162,10 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends CorePathfinde
     public void openFamilyDueServices() {
         Intent intent = new Intent(this, FamilyProfileActivity.class);
 
-        intent.putExtra(org.smartregister.family.util.Constants.INTENT_KEY.FAMILY_BASE_ENTITY_ID, fpMemberObject.getFamilyBaseEntityId());
-        intent.putExtra(org.smartregister.family.util.Constants.INTENT_KEY.FAMILY_HEAD, fpMemberObject.getFamilyHead());
-        intent.putExtra(org.smartregister.family.util.Constants.INTENT_KEY.PRIMARY_CAREGIVER, fpMemberObject.getPrimaryCareGiver());
-        intent.putExtra(org.smartregister.family.util.Constants.INTENT_KEY.FAMILY_NAME, fpMemberObject.getFamilyName());
+        intent.putExtra(org.smartregister.family.util.Constants.INTENT_KEY.FAMILY_BASE_ENTITY_ID, pathfinderFpMemberObject.getFamilyBaseEntityId());
+        intent.putExtra(org.smartregister.family.util.Constants.INTENT_KEY.FAMILY_HEAD, pathfinderFpMemberObject.getFamilyHead());
+        intent.putExtra(org.smartregister.family.util.Constants.INTENT_KEY.PRIMARY_CAREGIVER, pathfinderFpMemberObject.getPrimaryCareGiver());
+        intent.putExtra(org.smartregister.family.util.Constants.INTENT_KEY.FAMILY_NAME, pathfinderFpMemberObject.getFamilyName());
 
         intent.putExtra(CoreConstants.INTENT_KEY.SERVICE_DUE, true);
         startActivity(intent);
@@ -172,13 +173,13 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends CorePathfinde
 
     @Override
     public void openFollowUpVisitForm(boolean isEdit) {
-        PathfinderFamilyPlanningFollowUpVisitActivity.startMe(this, fpMemberObject, isEdit);
+        PathfinderFamilyPlanningFollowUpVisitActivity.startMe(this, pathfinderFpMemberObject, isEdit);
     }
 
     private void addFpReferralTypes() {
         //TODO change the form to pathfinder form
         referralTypeModels.add(new ReferralTypeModel(getString(R.string.family_planning_referral),
-                org.smartregister.chw.util.Constants.JSON_FORM.getFamilyPlanningReferralForm(fpMemberObject.getGender()), CoreConstants.TASKS_FOCUS.FP_SIDE_EFFECTS));
+                org.smartregister.chw.util.Constants.JSON_FORM.getFamilyPlanningReferralForm(pathfinderFpMemberObject.getGender()), CoreConstants.TASKS_FOCUS.FP_SIDE_EFFECTS));
     }
 
     public List<ReferralTypeModel> getReferralTypeModels() {

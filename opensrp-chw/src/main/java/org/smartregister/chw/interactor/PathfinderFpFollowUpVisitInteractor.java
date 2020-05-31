@@ -1,6 +1,6 @@
 package org.smartregister.chw.interactor;
 
-import com.adosa.opensrp.chw.fp.interactor.BaseFpFollowUpVisitInteractor;
+import com.adosa.opensrp.chw.fp.interactor.BasePathfinderFpFollowUpVisitInteractor;
 
 import org.smartregister.chw.anc.contract.BaseAncHomeVisitContract;
 import org.smartregister.chw.anc.domain.MemberObject;
@@ -13,7 +13,7 @@ import java.util.Map;
 
 import timber.log.Timber;
 
-public class PathfinderFpFollowUpVisitInteractor extends BaseFpFollowUpVisitInteractor {
+public class PathfinderFpFollowUpVisitInteractor extends BasePathfinderFpFollowUpVisitInteractor {
 
     private Flavor flavor = new PathfinderFpFollowUpVisitInteractorFlv();
 
@@ -49,6 +49,7 @@ public class PathfinderFpFollowUpVisitInteractor extends BaseFpFollowUpVisitInte
         // read all the member details from the database
         return PNCDao.getMember(memberID);
     }
+
     public interface Flavor {
         LinkedHashMap<String, BaseAncHomeVisitAction> calculateActions(final BaseAncHomeVisitContract.View view, MemberObject memberObject, final BaseAncHomeVisitContract.InteractorCallBack callBack) throws BaseAncHomeVisitAction.ValidationException;
     }

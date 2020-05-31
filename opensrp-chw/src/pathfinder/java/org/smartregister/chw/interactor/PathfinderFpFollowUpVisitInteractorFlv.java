@@ -2,9 +2,9 @@ package org.smartregister.chw.interactor;
 
 import android.content.Context;
 
-import com.adosa.opensrp.chw.fp.dao.FpDao;
-import com.adosa.opensrp.chw.fp.domain.FpAlertObject;
-import com.adosa.opensrp.chw.fp.util.FamilyPlanningConstants;
+import com.adosa.opensrp.chw.fp.dao.PathfinderFpDao;
+import com.adosa.opensrp.chw.fp.domain.PathfinderFpAlertObject;
+import com.adosa.opensrp.chw.fp.util.PathfinderFamilyPlanningConstants;
 
 import org.apache.commons.lang3.StringUtils;
 import org.joda.time.format.DateTimeFormat;
@@ -56,15 +56,15 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
         this.memberObject = memberObject;
         editMode = view.getEditMode();
         this.view = view;
-        List<FpAlertObject> memberDetails = FpDao.getFpDetails(memberObject.getBaseEntityId());
+        List<PathfinderFpAlertObject> memberDetails = PathfinderFpDao.getFpDetails(memberObject.getBaseEntityId());
         if (memberDetails.size() > 0) {
-            for (FpAlertObject detail : memberDetails) {
+            for (PathfinderFpAlertObject detail : memberDetails) {
                 familyPlanningMethod = detail.getFpMethod();
             }
         }
         // get the preloaded data
         if (view.getEditMode()) {
-            Visit lastVisit = AncLibrary.getInstance().visitRepository().getLatestVisit(memberObject.getBaseEntityId(), FamilyPlanningConstants.EventType.FP_FOLLOW_UP_VISIT);
+            Visit lastVisit = AncLibrary.getInstance().visitRepository().getLatestVisit(memberObject.getBaseEntityId(), PathfinderFamilyPlanningConstants.EventType.FP_FOLLOW_UP_VISIT);
             if (lastVisit != null) {
                 details = Collections.unmodifiableMap(VisitUtils.getVisitGroups(AncLibrary.getInstance().visitDetailsRepository().getVisits(lastVisit.getVisitId())));
             }
@@ -86,7 +86,7 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
 
         Map<String, List<VisitDetail>> details = null;
         if (editMode) {
-            Visit lastVisit = AncLibrary.getInstance().visitRepository().getLatestVisit(memberObject.getBaseEntityId(), FamilyPlanningConstants.EventType.FP_FOLLOW_UP_VISIT_SIDE_EFFECTS);
+            Visit lastVisit = AncLibrary.getInstance().visitRepository().getLatestVisit(memberObject.getBaseEntityId(), PathfinderFamilyPlanningConstants.EventType.FP_FOLLOW_UP_VISIT_SIDE_EFFECTS);
             if (lastVisit != null) {
                 details = VisitUtils.getVisitGroups(AncLibrary.getInstance().visitDetailsRepository().getVisits(lastVisit.getVisitId()));
             }
@@ -115,7 +115,7 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
 
         Map<String, List<VisitDetail>> details = null;
         if (editMode) {
-            Visit lastVisit = AncLibrary.getInstance().visitRepository().getLatestVisit(memberObject.getBaseEntityId(), FamilyPlanningConstants.EventType.FP_FOLLOW_UP_VISIT_COUNSELLING);
+            Visit lastVisit = AncLibrary.getInstance().visitRepository().getLatestVisit(memberObject.getBaseEntityId(), PathfinderFamilyPlanningConstants.EventType.FP_FOLLOW_UP_VISIT_COUNSELLING);
             if (lastVisit != null) {
                 details = VisitUtils.getVisitGroups(AncLibrary.getInstance().visitDetailsRepository().getVisits(lastVisit.getVisitId()));
             }
@@ -135,7 +135,7 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
 
     private void evaluateResupply() throws Exception {
         String familyPlanningMethodTranslated = null;
-        switch (familyPlanningMethod){
+        switch (familyPlanningMethod) {
             case "COC":
                 familyPlanningMethodTranslated = context.getString(R.string.coc);
                 break;
@@ -162,10 +162,10 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
                 break;
         }
 
-        if (!familyPlanningMethod.equalsIgnoreCase(FamilyPlanningConstants.DBConstants.FP_TUBAL_LIGATION) && !familyPlanningMethod.equalsIgnoreCase(FamilyPlanningConstants.DBConstants.FP_IUD)) {
+        if (!familyPlanningMethod.equalsIgnoreCase(PathfinderFamilyPlanningConstants.DBConstants.FP_TUBAL_LIGATION) && !familyPlanningMethod.equalsIgnoreCase(PathfinderFamilyPlanningConstants.DBConstants.FP_IUD)) {
             Map<String, List<VisitDetail>> details = null;
             if (editMode) {
-                Visit lastVisit = AncLibrary.getInstance().visitRepository().getLatestVisit(memberObject.getBaseEntityId(), FamilyPlanningConstants.EventType.FP_FOLLOW_UP_VISIT_RESUPPLY);
+                Visit lastVisit = AncLibrary.getInstance().visitRepository().getLatestVisit(memberObject.getBaseEntityId(), PathfinderFamilyPlanningConstants.EventType.FP_FOLLOW_UP_VISIT_RESUPPLY);
                 if (lastVisit != null) {
                     details = VisitUtils.getVisitGroups(AncLibrary.getInstance().visitDetailsRepository().getVisits(lastVisit.getVisitId()));
                 }
@@ -178,7 +178,7 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
                 org.smartregister.chw.anc.util.JsonFormUtils.populateForm(jsonObject, details);
             }
 
-            if (!familyPlanningMethod.equalsIgnoreCase(FamilyPlanningConstants.DBConstants.FP_INJECTABLE)) {
+            if (!familyPlanningMethod.equalsIgnoreCase(PathfinderFamilyPlanningConstants.DBConstants.FP_INJECTABLE)) {
                 BaseAncHomeVisitAction action = new BaseAncHomeVisitAction.Builder(context, context.getString(R.string.resupply, familyPlanningMethodTranslated))
                         .withOptional(false)
                         .withDetails(details)
@@ -281,7 +281,7 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
             if (StringUtils.isBlank(no_condoms) && StringUtils.isBlank(no_pillcycles) && StringUtils.isBlank(last_injection_date)) {
                 return BaseAncHomeVisitAction.Status.PENDING;
             }
-            if("0".equalsIgnoreCase(no_pillcycles) || "0".equalsIgnoreCase(no_condoms))
+            if ("0".equalsIgnoreCase(no_pillcycles) || "0".equalsIgnoreCase(no_condoms))
                 return BaseAncHomeVisitAction.Status.PARTIALLY_COMPLETED;
 
             if (!StringUtils.isBlank(no_condoms) || !StringUtils.isBlank(no_pillcycles) || !StringUtils.isBlank(last_injection_date)) {
@@ -326,7 +326,8 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
                 Timber.e(e);
             }
         }
-        private String evaluateCondomSideEffects(){
+
+        private String evaluateCondomSideEffects() {
             String condomSideEffects;
 
             switch (condom_side_effects) {
@@ -346,7 +347,7 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
             return condomSideEffects;
         }
 
-        private String evaluateCocPopSideEffects(){
+        private String evaluateCocPopSideEffects() {
             String cocpopSideEffects;
             switch (cocpop_side_effects) {
                 case "Heavy_bleeding_":
@@ -368,7 +369,7 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
             return cocpopSideEffects;
         }
 
-        private String evaluateInjectSideEffects(){
+        private String evaluateInjectSideEffects() {
             String injectSideEffects;
             switch (inject_side_effects) {
                 case "Heavy_bleeding_":
@@ -390,7 +391,7 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
             return injectSideEffects;
         }
 
-        private String evaluateIUCDSideEffects(){
+        private String evaluateIUCDSideEffects() {
             String iucdSideEffects;
             switch (IUCD_side_effects) {
                 case "Severe_pain_inside_the_vagina_after_IUD_was_put_in":
@@ -415,14 +416,14 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
                     iucdSideEffects = context.getString(R.string.none);
                     break;
                 default:
-                    iucdSideEffects ="";
+                    iucdSideEffects = "";
                     break;
             }
             return iucdSideEffects;
 
         }
 
-        private String evaluateSterilizationSideEffects(){
+        private String evaluateSterilizationSideEffects() {
             String sterilizationSideEffects;
             switch (sterilization_side_effects) {
                 case "Incisional_bleeding":
@@ -447,7 +448,7 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
             return sterilizationSideEffects;
         }
 
-        private String evaluateActionTaken(){
+        private String evaluateActionTaken() {
             String actionTaken;
 
             switch (action_taken) {

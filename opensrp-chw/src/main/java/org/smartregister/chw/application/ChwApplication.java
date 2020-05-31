@@ -194,7 +194,7 @@ public class ChwApplication extends CoreChwApplication {
         FpLibrary.init(context, getRepository(), BuildConfig.VERSION_CODE, BuildConfig.DATABASE_VERSION);
 
         if (BuildConfig.USE_PATHFINDERS_FP_MODULE) {
-            com.adosa.opensrp.chw.fp.FpLibrary.init(context, getRepository(), BuildConfig.VERSION_CODE, BuildConfig.DATABASE_VERSION);
+            com.adosa.opensrp.chw.fp.PathfinderFpLibrary.init(context, getRepository(), BuildConfig.VERSION_CODE, BuildConfig.DATABASE_VERSION);
         }
         // Init Reporting library
         ReportingLibrary.init(context, getRepository(), null, BuildConfig.VERSION_CODE, BuildConfig.DATABASE_VERSION);

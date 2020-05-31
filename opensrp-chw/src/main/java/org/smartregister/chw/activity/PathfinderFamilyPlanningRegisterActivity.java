@@ -3,7 +3,7 @@ package org.smartregister.chw.activity;
 import android.app.Activity;
 import android.content.Intent;
 
-import com.adosa.opensrp.chw.fp.util.FamilyPlanningConstants;
+import com.adosa.opensrp.chw.fp.util.PathfinderFamilyPlanningConstants;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -24,10 +24,10 @@ public class PathfinderFamilyPlanningRegisterActivity extends CorePathfinderFami
     public static void startFpRegistrationActivity(Activity activity, String baseEntityID, String dob, String formName, String payloadType) {
         Timber.e("coze starting family planning activity");
         Intent intent = new Intent(activity, PathfinderFamilyPlanningRegisterActivity.class);
-        intent.putExtra(FamilyPlanningConstants.ActivityPayload.BASE_ENTITY_ID, baseEntityID);
-        intent.putExtra(FamilyPlanningConstants.ActivityPayload.DOB, dob);
-        intent.putExtra(FamilyPlanningConstants.ActivityPayload.FP_FORM_NAME, formName);
-        intent.putExtra(FamilyPlanningConstants.ActivityPayload.ACTION, payloadType);
+        intent.putExtra(PathfinderFamilyPlanningConstants.ActivityPayload.BASE_ENTITY_ID, baseEntityID);
+        intent.putExtra(PathfinderFamilyPlanningConstants.ActivityPayload.DOB, dob);
+        intent.putExtra(PathfinderFamilyPlanningConstants.ActivityPayload.FP_FORM_NAME, formName);
+        intent.putExtra(PathfinderFamilyPlanningConstants.ActivityPayload.ACTION, payloadType);
         baseEntityId = baseEntityID;
         activity.startActivity(intent);
     }
@@ -62,9 +62,9 @@ public class PathfinderFamilyPlanningRegisterActivity extends CorePathfinderFami
         NativeFormsDataBinder binder = new NativeFormsDataBinder(this, baseEntityId);
         binder.setDataLoader(new FPDataLoader(getString(R.string.fp_update_family_planning)));
 
-        JSONObject form = binder.getPrePopulatedForm(FamilyPlanningConstants.Forms.FAMILY_PLANNING_REGISTRATION_FORM);
+        JSONObject form = binder.getPrePopulatedForm(PathfinderFamilyPlanningConstants.Forms.FAMILY_PLANNING_REGISTRATION_FORM);
         try {
-            form.put(JsonFormUtils.ENCOUNTER_TYPE, FamilyPlanningConstants.EventType.UPDATE_FAMILY_PLANNING_REGISTRATION);
+            form.put(JsonFormUtils.ENCOUNTER_TYPE, PathfinderFamilyPlanningConstants.EventType.UPDATE_FAMILY_PLANNING_REGISTRATION);
         } catch (JSONException e) {
             e.printStackTrace();
         }

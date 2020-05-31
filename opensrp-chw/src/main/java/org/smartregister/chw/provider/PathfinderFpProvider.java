@@ -6,6 +6,10 @@ import android.os.AsyncTask;
 import android.view.View;
 import android.widget.Button;
 
+import com.adosa.opensrp.chw.fp.dao.PathfinderFpDao;
+import com.adosa.opensrp.chw.fp.provider.BasePathfinderFpRegisterProvider;
+import com.adosa.opensrp.chw.fp.util.PathfinderFamilyPlanningConstants;
+
 import org.apache.commons.lang3.StringUtils;
 import org.jeasy.rules.api.Rules;
 import org.joda.time.DateTime;
@@ -16,9 +20,6 @@ import org.smartregister.chw.core.rule.FpAlertRule;
 import org.smartregister.chw.core.utils.CoreConstants;
 import org.smartregister.chw.core.utils.FpUtil;
 import org.smartregister.chw.core.utils.HomeVisitUtil;
-import com.adosa.opensrp.chw.fp.dao.FpDao;
-import com.adosa.opensrp.chw.fp.provider.BaseFpRegisterProvider;
-import com.adosa.opensrp.chw.fp.util.FamilyPlanningConstants;
 import org.smartregister.commonregistry.CommonPersonObjectClient;
 import org.smartregister.util.Utils;
 import org.smartregister.view.contract.SmartRegisterClient;
@@ -31,7 +32,7 @@ import java.util.Set;
  *
  * @author cozej4 https://github.com/cozej4
  */
-public class PathfinderFpProvider extends BaseFpRegisterProvider {
+public class PathfinderFpProvider extends BasePathfinderFpRegisterProvider {
 
     private Context context;
     private View.OnClickListener onClickListener;
@@ -124,13 +125,13 @@ public class PathfinderFpProvider extends BaseFpRegisterProvider {
         @Override
         protected Void doInBackground(Void... params) {
             String baseEntityID = Utils.getValue(pc.getColumnmaps(), DBConstants.KEY.BASE_ENTITY_ID, false);
-            dayFp = Utils.getValue(pc.getColumnmaps(), FamilyPlanningConstants.DBConstants.FP_FP_START_DATE, true);
-            fpMethod = Utils.getValue(pc.getColumnmaps(), FamilyPlanningConstants.DBConstants.FP_METHOD_ACCEPTED, false);
-            pillCycles = FpDao.getLastPillCycle(baseEntityID, fpMethod);
-            if (fpMethod.equalsIgnoreCase(FamilyPlanningConstants.DBConstants.FP_INJECTABLE)) {
-                lastVisit = FpDao.getLatestInjectionVisit(baseEntityID, fpMethod);
+            dayFp = Utils.getValue(pc.getColumnmaps(), PathfinderFamilyPlanningConstants.DBConstants.FP_FP_START_DATE, true);
+            fpMethod = Utils.getValue(pc.getColumnmaps(), PathfinderFamilyPlanningConstants.DBConstants.FP_METHOD_ACCEPTED, false);
+            pillCycles = PathfinderFpDao.getLastPillCycle(baseEntityID, fpMethod);
+            if (fpMethod.equalsIgnoreCase(PathfinderFamilyPlanningConstants.DBConstants.FP_INJECTABLE)) {
+                lastVisit = PathfinderFpDao.getLatestInjectionVisit(baseEntityID, fpMethod);
             } else {
-                lastVisit = FpDao.getLatestFpVisit(baseEntityID, FamilyPlanningConstants.EventType.FP_FOLLOW_UP_VISIT, fpMethod);
+                lastVisit = PathfinderFpDao.getLatestFpVisit(baseEntityID, PathfinderFamilyPlanningConstants.EventType.FP_FOLLOW_UP_VISIT, fpMethod);
             }
             return null;
         }
