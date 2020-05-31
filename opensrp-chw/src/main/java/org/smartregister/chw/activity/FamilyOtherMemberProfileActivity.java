@@ -80,9 +80,9 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
         String dob = org.smartregister.family.util.Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.DOB, false);
         String gender = org.smartregister.family.util.Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.GENDER, false);
 
-        if(BuildConfig.USE_PATHFINDERS_FP_MODULE) {
-            PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(FamilyOtherMemberProfileActivity.this, baseEntityId, dob, PathfinderFamilyPlanningConstants.JSON_FORM.getFamilyPlanningRegistrationForm(gender,getApplicationContext().getResources().getConfiguration().locale,getAssets()), FamilyPlanningConstants.ActivityPayload.REGISTRATION_PAYLOAD_TYPE);
-        }else{
+        if (BuildConfig.USE_PATHFINDERS_FP_MODULE) {
+            PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(FamilyOtherMemberProfileActivity.this, baseEntityId, dob, CoreConstants.JSON_FORM.getPathfinderFamilyPlanningRegistrationForm(), FamilyPlanningConstants.ActivityPayload.REGISTRATION_PAYLOAD_TYPE);
+        } else {
             FpRegisterActivity.startFpRegistrationActivity(FamilyOtherMemberProfileActivity.this, baseEntityId, dob, CoreConstants.JSON_FORM.getFpRegistrationForm(gender), FamilyPlanningConstants.ActivityPayload.REGISTRATION_PAYLOAD_TYPE);
         }
     }
@@ -92,9 +92,9 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
         String dob = org.smartregister.family.util.Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.DOB, false);
         String gender = org.smartregister.family.util.Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.GENDER, false);
 
-        if(BuildConfig.USE_PATHFINDERS_FP_MODULE) {
-            PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, baseEntityId, dob, PathfinderFamilyPlanningConstants.JSON_FORM.getFamilyPlanningChangeMethodForm(gender,getApplicationContext().getResources().getConfiguration().locale,getAssets()), FamilyPlanningConstants.ActivityPayload.CHANGE_METHOD_PAYLOAD_TYPE);
-        }else {
+        if (BuildConfig.USE_PATHFINDERS_FP_MODULE) {
+            PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, baseEntityId, dob, CoreConstants.JSON_FORM.getPathfinderFamilyPlanningChangeMethodForm(), FamilyPlanningConstants.ActivityPayload.CHANGE_METHOD_PAYLOAD_TYPE);
+        } else {
             FpRegisterActivity.startFpRegistrationActivity(this, baseEntityId, dob, CoreConstants.JSON_FORM.getFpChangeMethodForm(gender), FamilyPlanningConstants.ActivityPayload.CHANGE_METHOD_PAYLOAD_TYPE);
 
         }
@@ -155,7 +155,7 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
     @Override
     protected void initializePresenter() {
         super.initializePresenter();
-        onClickFloatingMenu = flavor.getOnClickFloatingMenu(this, familyBaseEntityId,baseEntityId);
+        onClickFloatingMenu = flavor.getOnClickFloatingMenu(this, familyBaseEntityId, baseEntityId);
     }
 
     @Override
@@ -174,11 +174,16 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
         return FamilyOtherMemberProfileFragment.newInstance(getIntent().getExtras());
     }
 
+    @Override
+    protected void startMalariaFollowUpVisit() {
+        MalariaFollowUpVisitActivity.startMalariaFollowUpActivity(this, baseEntityId);
+    }
+
     /**
      * build implementation differences file
      */
     public interface Flavor {
-        OnClickFloatingMenu getOnClickFloatingMenu(final Activity activity, final String familyBaseEntityId , final String baseEntityId);
+        OnClickFloatingMenu getOnClickFloatingMenu(final Activity activity, final String familyBaseEntityId, final String baseEntityId);
 
         boolean isOfReproductiveAge(CommonPersonObjectClient commonPersonObject, String gender);
 
@@ -189,11 +194,6 @@ public class FamilyOtherMemberProfileActivity extends CoreFamilyOtherMemberProfi
         void updateMaleFpMenuItems(@Nullable String baseEntityId, @Nullable Menu menu);
 
         boolean hasANC();
-    }
-
-    @Override
-    protected void startMalariaFollowUpVisit() {
-        MalariaFollowUpVisitActivity.startMalariaFollowUpActivity(this, baseEntityId);
     }
 
 }
