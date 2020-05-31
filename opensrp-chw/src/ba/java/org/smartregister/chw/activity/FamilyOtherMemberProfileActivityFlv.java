@@ -76,17 +76,4 @@ public class FamilyOtherMemberProfileActivityFlv implements FamilyOtherMemberPro
     public boolean hasANC() {
         return true;
     }
-
-    private void addReferralTypes(Activity activity) {
-        if (BuildConfig.USE_UNIFIED_REFERRAL_APPROACH) {
-            referralTypeModels.add(new ReferralTypeModel(activity.getString(R.string.hiv_referral),
-                    org.smartregister.chw.util.Constants.JSON_FORM.getHivReferralForm()));
-
-            referralTypeModels.add(new ReferralTypeModel(activity.getString(R.string.tb_referral),
-                    org.smartregister.chw.util.Constants.JSON_FORM.getTbReferralForm()));
-
-            referralTypeModels.add(new ReferralTypeModel(activity.getString(R.string.gbv_referral),
-                    org.smartregister.chw.util.Constants.JSON_FORM.getGbvReferralForm()));
-        }
-    }
 }

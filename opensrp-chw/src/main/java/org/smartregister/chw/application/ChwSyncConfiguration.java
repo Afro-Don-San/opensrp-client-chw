@@ -5,7 +5,6 @@ import org.smartregister.SyncFilter;
 import org.smartregister.chw.BuildConfig;
 import org.smartregister.chw.core.utils.Utils;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -66,19 +65,11 @@ public class ChwSyncConfiguration extends SyncConfiguration {
 
     @Override
     public List<String> getSynchronizedLocationTags() {
-        if(BuildConfig.USE_UNIFIED_REFERRAL_APPROACH) {
-            return Collections.singletonList("Facility");
-        }else{
-            return new ArrayList<>();
-        }
+        return Collections.singletonList("MOH Jhpiego Facility Name");
     }
 
     @Override
     public String getTopAllowedLocationLevel() {
-        if(BuildConfig.USE_UNIFIED_REFERRAL_APPROACH) {
-            return "Council";
-        }else{
-            return "";
-        }
+        return "Council";
     }
 }

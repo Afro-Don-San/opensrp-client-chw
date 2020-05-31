@@ -178,7 +178,7 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends CorePathfinde
     private void addFpReferralTypes() {
         //TODO change the form to pathfinder form
         referralTypeModels.add(new ReferralTypeModel(getString(R.string.family_planning_referral),
-                org.smartregister.chw.util.Constants.JSON_FORM.getFamilyPlanningReferralForm(fpMemberObject.getGender())));
+                org.smartregister.chw.util.Constants.JSON_FORM.getFamilyPlanningReferralForm(fpMemberObject.getGender()), CoreConstants.TASKS_FOCUS.FP_SIDE_EFFECTS));
     }
 
     public List<ReferralTypeModel> getReferralTypeModels() {

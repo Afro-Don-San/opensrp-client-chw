@@ -7,7 +7,7 @@ import org.smartregister.chw.anc.activity.BaseAncUpcomingServicesActivity;
 import org.smartregister.chw.anc.domain.MemberObject;
 import org.smartregister.chw.anc.presenter.BaseAncUpcomingServicesPresenter;
 import org.smartregister.chw.anc.util.Constants;
-import org.smartregister.chw.interactor.PathfinderFamilyPlanningUpcomingServicesInteractor;
+import org.smartregister.chw.core.interactor.CorePathfinderFamilyPlanningUpcomingServicesInteractor;
 
 public class PathfinderFamilyPlanningUpcomingServicesActivity extends BaseAncUpcomingServicesActivity {
     public static void startMe(Activity activity, MemberObject memberObject) {
@@ -18,7 +18,7 @@ public class PathfinderFamilyPlanningUpcomingServicesActivity extends BaseAncUpc
 
     @Override
     public void initializePresenter() {
-        presenter = new BaseAncUpcomingServicesPresenter(memberObject, new PathfinderFamilyPlanningUpcomingServicesInteractor(), this);
+        presenter = new BaseAncUpcomingServicesPresenter(memberObject, new CorePathfinderFamilyPlanningUpcomingServicesInteractor(), this);
     }
 
 }
