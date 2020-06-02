@@ -5,3 +5,17 @@ priority: 1
 condition: "true"
 actions:
   - "calculation = helper.getDateToday()"
+---
+name: step1_fp_method
+description: step1_fp_method calculation
+priority: 1
+condition: "true"
+actions:
+  - 'calculation = step1_fp_method_accepted'
+---
+name: step1_selected_method_note
+description: selected_method_note calculation
+priority: 1
+condition: "true"
+actions:
+  - 'calculation = ["fp_method" : step1_fp_method]'

@@ -1,10 +1,10 @@
 ---
-name: step1_fp_start_date
-description: fp_start_date calculation
+name: step1_fp_method_accepted
+description: step1_fp_method_accepted releance
 priority: 1
-condition: "true"
+condition: "step1_fp_method == '' "
 actions:
-  - "calculation = helper.getDateToday()"
+  - "isRelevant = true"
 ---
 name: step1_no_pillcycles
 description: no pillcycle
