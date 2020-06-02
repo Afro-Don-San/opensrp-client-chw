@@ -355,7 +355,7 @@
         "key": "number_of_pills",
         "type": "edit_text",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "number_of_condoms",
+        "openmrs_entity_id": "number_of_pills",
         "openmrs_entity_parent": "",
         "edit_type": "number",
         "hint": "Fill in the number of packets you gave the client",
