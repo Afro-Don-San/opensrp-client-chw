@@ -2,7 +2,7 @@
   "validate_on_submit": false,
   "show_errors_on_submit": true,
   "skip_blank_steps": true,
-  "count": "18",
+  "count": "17",
   "encounter_type": "Give Family Planning Method",
   "entity_id": "",
   "relational_id": "",
@@ -59,41 +59,6 @@
     "next": "step2",
     "fields": [
       {
-        "key": "fp_method_accepted",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_method_accepted",
-        "type": "edit_text",
-        "calculation": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_calculation.yml"
-            }
-          }
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "fp_method",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_method",
-        "type": "hidden",
-        "calculation": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_calculation.yml"
-            }
-          }
-        }
-      },
-      {
         "key": "fp_start_date",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
@@ -127,25 +92,26 @@
     ]
   },
   "step2": {
-    "title": "Explain usage of Fp Method",
+    "title": "Instructions on Giving FP Method",
     "next": "step3",
     "fields": [
       {
-        "key": "explain_method",
+        "key": "give_condoms_note",
         "openmrs_entity_parent": "",
         "openmrs_entity": "person_attribute",
-        "openmrs_entity_id": "toaster_notes",
+        "openmrs_entity_id": "give_condoms_note",
         "type": "toaster_notes",
         "text": "Give the client condoms and ask if she/he knows how to use them.\n\nShow her/him how to accurately use the condoms.\n\nAsk the client to show you the steps for correct condom usage.",
         "text_color": "#1199F9",
-        "toaster_type": "info"
-      }
-    ]
-  },
-  "step3": {
-    "title": "Instructions on Giving FP Method",
-    "next": "step4",
-    "fields": [
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      },
       {
         "key": "give_pills_note",
         "openmrs_entity_parent": "",
@@ -182,9 +148,9 @@
       }
     ]
   },
-  "step4": {
+  "step3": {
     "title": "Give fp method",
-    "next": "step5",
+    "next": "step4",
     "fields": [
       {
         "key": "male_condoms_given",
@@ -362,10 +328,10 @@
         }
       },
       {
-        "key": "no_condoms",
+        "key": "number_of_condoms",
         "type": "edit_text",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "no_condoms",
+        "openmrs_entity_id": "number_of_condoms",
         "openmrs_entity_parent": "",
         "edit_type": "number",
         "hint": "Enter the number of condoms you gave the client",
@@ -386,13 +352,13 @@
         }
       },
       {
-        "key": "no_pills",
+        "key": "number_of_pills",
         "type": "edit_text",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "no_condoms",
+        "openmrs_entity_id": "number_of_condoms",
         "openmrs_entity_parent": "",
         "edit_type": "number",
-        "hint": "Fill in the number of POP packets you gave the client",
+        "hint": "Fill in the number of packets you gave the client",
         "v_required": {
           "value": "true",
           "err": "this value cannot be null"
@@ -411,9 +377,9 @@
       }
     ]
   },
-  "step5": {
+  "step4": {
     "title": "Pills Counselling",
-    "next": "step6",
+    "next": "step5",
     "fields": [
       {
         "key": "coc_note",
@@ -451,9 +417,9 @@
       }
     ]
   },
-  "step6": {
+  "step5": {
     "title": "Cycle beads counseling 1",
-    "next": "step7",
+    "next": "step6",
     "fields": [
       {
         "key": "sdm_counselling_1",
@@ -474,9 +440,9 @@
       }
     ]
   },
-  "step7": {
+  "step6": {
     "title": "Cycle beads counseling 2",
-    "next": "step8",
+    "next": "step7",
     "fields": [
       {
         "key": "sdm_counselling_2",
@@ -497,9 +463,9 @@
       }
     ]
   },
-  "step8": {
+  "step7": {
     "title": "Cycle beads counseling 3",
-    "next": "step9",
+    "next": "step8",
     "fields": [
       {
         "key": "sdm_counselling_3",
@@ -520,9 +486,9 @@
       }
     ]
   },
-  "step9": {
+  "step8": {
     "title": "Cycle beads counseling 4",
-    "next": "step10",
+    "next": "step9",
     "fields": [
       {
         "key": "sdm_counselling_4",
@@ -543,9 +509,9 @@
       }
     ]
   },
-  "step10": {
+  "step9": {
     "title": "Cycle beads counseling 5",
-    "next": "step11",
+    "next": "step10",
     "fields": [
       {
         "key": "sdm_counselling_5",
@@ -566,9 +532,9 @@
       }
     ]
   },
-  "step11": {
+  "step10": {
     "title": "Cycle beads counseling 6",
-    "next": "step12",
+    "next": "step11",
     "fields": [
       {
         "key": "sdm_counselling_6",
@@ -589,9 +555,9 @@
       }
     ]
   },
-  "step12": {
+  "step11": {
     "title": "Determine client comprehension 1",
-    "next": "step13",
+    "next": "step12",
     "fields": [
       {
         "key": "determine_clients_comprehension_1",
@@ -612,9 +578,9 @@
       }
     ]
   },
-  "step13": {
+  "step12": {
     "title": "Determine client comprehension 2",
-    "next": "step14",
+    "next": "step13",
     "fields": [
       {
         "key": "determine_clients_comprehension_2",
@@ -635,9 +601,9 @@
       }
     ]
   },
-  "step14": {
+  "step13": {
     "title": "Determine client comprehension 3",
-    "next": "step15",
+    "next": "step14",
     "fields": [
       {
         "key": "determine_clients_comprehension_3",
@@ -658,9 +624,9 @@
       }
     ]
   },
-  "step15": {
+  "step14": {
     "title": "Determine client comprehension 4",
-    "next": "step16",
+    "next": "step15",
     "fields": [
       {
         "key": "determine_clients_comprehension_4",
@@ -681,9 +647,9 @@
       }
     ]
   },
-  "step16": {
-    "title": "Condoms Not Given",
-    "next": "step17",
+  "step15": {
+    "title": "FP Method Not Given",
+    "next": "step16",
     "fields": [
       {
         "key": "reasons_for_not_giving_male_condoms",
@@ -862,9 +828,9 @@
       }
     ]
   },
-  "step17": {
+  "step16": {
     "title": "Give Referral",
-    "next": "step18",
+    "next": "step17",
     "fields": [
       {
         "key": "give_referral_note",
@@ -872,7 +838,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Tell the client you will give a referral to go to a health facility to get condoms.\n\nExplain the reason for giving the referral and explain where the nearest health facility is located.\n\nFill in the referral form.\n\nInform the client that you will follow up to make sure they got the service they were referred for.\n",
+        "text": "Tell the client you will give a referral to go to a health facility to get {fp_method}.\n\nExplain the reason for giving the referral and explain where the nearest health facility is located.\n\nFill in the referral form.\n\nInform the client that you will follow up to make sure they got the service they were referred for.\n",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -881,11 +847,18 @@
               "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
             }
           }
+        },
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_calculation.yml"
+            }
+          }
         }
       }
     ]
   },
-  "step18": {
+  "step17": {
     "title": "End",
     "fields": [
       {
@@ -908,7 +881,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
             }
           }
         }
