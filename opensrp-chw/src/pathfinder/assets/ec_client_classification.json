@@ -269,6 +269,13 @@
             "creates_case": [
               "ec_family_planning"
             ]
+          },
+          {
+            "field": "eventType",
+            "field_value": "Give Family Planning Method",
+            "creates_case": [
+              "ec_family_planning"
+            ]
           }
         ]
       }

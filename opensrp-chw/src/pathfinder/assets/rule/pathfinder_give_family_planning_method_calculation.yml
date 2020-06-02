@@ -4,7 +4,7 @@ description: fp_start_date calculation
 priority: 1
 condition: "true"
 actions:
-  - "calculation = helper.getDateToday()"
+  - "calculation = System.currentTimeMillis()"
 ---
 name: step1_selected_method_note
 description: selected_method_note calculation
