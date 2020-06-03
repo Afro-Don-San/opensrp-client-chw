@@ -127,7 +127,7 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
                 .withBaseEntityID(memberObject.getBaseEntityId())
                 .withProcessingMode(BaseAncHomeVisitAction.ProcessingMode.SEPARATE)
                 .withHelper(new CounsellingHelper())
-                .withFormName(Constants.JSON_FORM.FamilyPlanningFollowUpVisitUtils.getFamilyPlanningFollowupCounsel())
+                .withFormName(Constants.JSON_FORM.PathfinderFamilyPlanningFollowUpVisitUtils.getFamilyPlanningFollowupCounsel())
                 .build();
 
         actionList.put(context.getString(R.string.counseling), action);
@@ -136,33 +136,27 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
     private void evaluateResupply() throws Exception {
         String familyPlanningMethodTranslated = null;
         switch (familyPlanningMethod) {
-            case "COC":
+            case "coc":
                 familyPlanningMethodTranslated = context.getString(R.string.coc);
                 break;
-            case "POP":
+            case "pop":
                 familyPlanningMethodTranslated = context.getString(R.string.pop);
                 break;
-            case "Female sterilization":
-                familyPlanningMethodTranslated = context.getString(R.string.female_sterilization);
-                break;
-            case "Injectable":
-                familyPlanningMethodTranslated = context.getString(R.string.injectable);
-                break;
-            case "Male condom":
+            case "male_condom":
                 familyPlanningMethodTranslated = context.getString(R.string.male_condom);
                 break;
-            case "Female condom":
+            case "female_condom":
                 familyPlanningMethodTranslated = context.getString(R.string.female_condom);
                 break;
-            case "IUCD":
-                familyPlanningMethodTranslated = context.getString(R.string.iucd);
+            case "sdm":
+                familyPlanningMethodTranslated = context.getString(R.string.standard_day_method);
                 break;
             default:
                 familyPlanningMethodTranslated = " ";
                 break;
         }
 
-        if (!familyPlanningMethod.equalsIgnoreCase(PathfinderFamilyPlanningConstants.DBConstants.FP_TUBAL_LIGATION) && !familyPlanningMethod.equalsIgnoreCase(PathfinderFamilyPlanningConstants.DBConstants.FP_IUD)) {
+        if (familyPlanningMethod.equalsIgnoreCase("coc")) {
             Map<String, List<VisitDetail>> details = null;
             if (editMode) {
                 Visit lastVisit = AncLibrary.getInstance().visitRepository().getLatestVisit(memberObject.getBaseEntityId(), PathfinderFamilyPlanningConstants.EventType.FP_FOLLOW_UP_VISIT_RESUPPLY);
@@ -211,9 +205,10 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
         if (form == null) {
             return null;
         } else {
-            JSONArray field = fields(form);
-            JSONObject datePass = getFieldJSONObject(field, "fp_method");
-            datePass.put("value", familyPlanningMethod);
+
+            JSONObject fp_method = new JSONObject();
+            fp_method.put("fp_method", familyPlanningMethod);
+            form.put("global", fp_method);
             return form;
         }
     }
@@ -542,6 +537,7 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
 
         @Override
         public BaseAncHomeVisitAction.Status evaluateStatusOnPayload() {
+            Timber.e("Coze ::  CounsellingHelper evaluateStatusOnPayload ");
             if (StringUtils.isBlank(fp_counselling)) {
                 return BaseAncHomeVisitAction.Status.PENDING;
             }
