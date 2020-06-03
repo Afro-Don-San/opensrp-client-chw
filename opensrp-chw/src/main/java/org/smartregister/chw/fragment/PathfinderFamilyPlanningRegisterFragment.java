@@ -20,12 +20,12 @@ import org.smartregister.chw.activity.PathfinderFamilyPlanningFollowUpVisitActiv
 import org.smartregister.chw.activity.PathfinderFamilyPlanningMemberProfileActivity;
 import org.smartregister.chw.anc.util.DBConstants;
 import org.smartregister.chw.core.custom_views.NavigationMenu;
+import org.smartregister.chw.core.provider.CorePathfinderFpProvider;
 import org.smartregister.chw.core.utils.CoreConstants;
 import org.smartregister.chw.core.utils.QueryGenerator;
 import org.smartregister.chw.core.utils.Utils;
 import org.smartregister.chw.model.PathfinderFamilyPlanningRegisterFragmentModel;
 import org.smartregister.chw.presenter.PathfinderFamilyPlanningRegisterFragmentPresenter;
-import org.smartregister.chw.provider.PathfinderFpProvider;
 import org.smartregister.commonregistry.CommonPersonObjectClient;
 import org.smartregister.cursoradapter.RecyclerViewPaginatedAdapter;
 import org.smartregister.view.customcontrols.CustomFontTextView;
@@ -63,7 +63,7 @@ public class PathfinderFamilyPlanningRegisterFragment extends BasePathfinderFpRe
 
     @Override
     public void initializeAdapter(Set<org.smartregister.configurableviews.model.View> visibleColumns) {
-        PathfinderFpProvider fpRegisterProvider = new PathfinderFpProvider(getActivity(), visibleColumns, registerActionHandler, paginationViewHandler);
+        CorePathfinderFpProvider fpRegisterProvider = new CorePathfinderFpProvider(getActivity(), visibleColumns, registerActionHandler, paginationViewHandler);
         clientAdapter = new RecyclerViewPaginatedAdapter(null, fpRegisterProvider, context().commonrepository(this.tablename));
         clientAdapter.setCurrentlimit(20);
         clientsView.setAdapter(clientAdapter);

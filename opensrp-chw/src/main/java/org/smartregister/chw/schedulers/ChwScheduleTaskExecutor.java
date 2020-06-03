@@ -1,5 +1,7 @@
 package org.smartregister.chw.schedulers;
 
+import com.adosa.opensrp.chw.fp.util.PathfinderFamilyPlanningConstants;
+
 import org.smartregister.chw.application.ChwApplication;
 import org.smartregister.chw.core.contract.ScheduleService;
 import org.smartregister.chw.core.schedulers.ScheduleTaskExecutor;
@@ -11,6 +13,7 @@ import org.smartregister.chw.task.ChildHomeVisitScheduler;
 import org.smartregister.chw.task.FpVisitScheduler;
 import org.smartregister.chw.task.MalariaScheduler;
 import org.smartregister.chw.task.PNCVisitScheduler;
+import org.smartregister.chw.task.PathfinderFpVisitScheduler;
 import org.smartregister.chw.task.RoutineHouseHoldVisitScheduler;
 import org.smartregister.chw.task.WashCheckScheduler;
 
@@ -54,6 +57,9 @@ public class ChwScheduleTaskExecutor extends ScheduleTaskExecutor {
 
             if (ChwApplication.getApplicationFlavor().hasFamilyPlanning())
                 initializeFPClassifier(scheduleServiceMap);
+
+            if (ChwApplication.getApplicationFlavor().hasFamilyPlanning())
+                initializePathfinderFPClassifier(scheduleServiceMap);
 
             if (ChwApplication.getApplicationFlavor().hasRoutineVisit())
                 initializeRoutineHouseholdClassifier(scheduleServiceMap);
@@ -123,6 +129,16 @@ public class ChwScheduleTaskExecutor extends ScheduleTaskExecutor {
         addToClassifers(FamilyPlanningConstants.EventType.FP_FOLLOW_UP_VISIT, classifier, scheduleServices);
         addToClassifers(FamilyPlanningConstants.EventType.FAMILY_PLANNING_REGISTRATION, classifier, scheduleServices);
         addToClassifers(FamilyPlanningConstants.EventType.FAMILY_PLANNING_CHANGE_METHOD, classifier, scheduleServices);
+    }
+
+
+    private void initializePathfinderFPClassifier(Map<String, List<ScheduleService>> classifier) {
+        List<ScheduleService> scheduleServices = new ArrayList<>();
+        scheduleServices.add(new PathfinderFpVisitScheduler());
+        addToClassifers(PathfinderFamilyPlanningConstants.EventType.GIVE_FAMILY_PLANNING_METHOD, classifier, scheduleServices);
+        addToClassifers(PathfinderFamilyPlanningConstants.EventType.FP_FOLLOW_UP_VISIT, classifier, scheduleServices);
+        addToClassifers(PathfinderFamilyPlanningConstants.EventType.FAMILY_PLANNING_REGISTRATION, classifier, scheduleServices);
+        addToClassifers(PathfinderFamilyPlanningConstants.EventType.FAMILY_PLANNING_CHANGE_METHOD, classifier, scheduleServices);
     }
 
     private void initializeRoutineHouseholdClassifier(Map<String, List<ScheduleService>> classifier) {
