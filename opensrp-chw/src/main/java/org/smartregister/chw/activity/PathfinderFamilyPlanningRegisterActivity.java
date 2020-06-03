@@ -16,8 +16,6 @@ import org.smartregister.family.util.JsonFormUtils;
 import org.smartregister.helper.BottomNavigationHelper;
 import org.smartregister.view.fragment.BaseRegisterFragment;
 
-import timber.log.Timber;
-
 public class PathfinderFamilyPlanningRegisterActivity extends CorePathfinderFamilyPlanningRegisterActivity {
     private static String baseEntityId;
 

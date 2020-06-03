@@ -11,10 +11,6 @@ import androidx.annotation.NonNull;
 import com.adosa.opensrp.chw.fp.domain.PathfinderFpMemberObject;
 import com.adosa.opensrp.chw.fp.util.PathfinderFamilyPlanningConstants;
 
-import org.joda.time.DateTime;
-import org.joda.time.Period;
-import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 import org.smartregister.chw.BuildConfig;
 import org.smartregister.chw.R;
@@ -22,8 +18,6 @@ import org.smartregister.chw.core.activity.CorePathfinderFamilyPlanningMemberPro
 import org.smartregister.chw.core.interactor.CorePathfinderFamilyPlanningProfileInteractor;
 import org.smartregister.chw.core.utils.CoreConstants;
 import org.smartregister.chw.core.utils.PathfinderFamilyPlanningUtil;
-import org.smartregister.chw.fp.util.FamilyPlanningConstants;
-import org.smartregister.chw.fp.util.FpJsonFormUtils;
 import org.smartregister.chw.model.ReferralTypeModel;
 import org.smartregister.chw.presenter.PathfinderFamilyPlanningMemberProfilePresenter;
 import org.smartregister.commonregistry.CommonPersonObject;
@@ -31,7 +25,6 @@ import org.smartregister.commonregistry.CommonPersonObjectClient;
 import org.smartregister.commonregistry.CommonRepository;
 import org.smartregister.family.util.Utils;
 import org.smartregister.util.FormUtils;
-import org.smartregister.util.JsonFormUtils;
 
 import java.util.ArrayList;
 import java.util.List;
