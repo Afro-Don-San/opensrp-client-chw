@@ -22,7 +22,6 @@ public class PathfinderFamilyPlanningRegisterActivity extends CorePathfinderFami
     private static String baseEntityId;
 
     public static void startFpRegistrationActivity(Activity activity, String baseEntityID, String dob, String formName, String payloadType) {
-        Timber.e("coze starting family planning activity");
         Intent intent = new Intent(activity, PathfinderFamilyPlanningRegisterActivity.class);
         intent.putExtra(PathfinderFamilyPlanningConstants.ActivityPayload.BASE_ENTITY_ID, baseEntityID);
         intent.putExtra(PathfinderFamilyPlanningConstants.ActivityPayload.DOB, dob);

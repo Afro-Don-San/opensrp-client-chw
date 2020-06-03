@@ -153,6 +153,20 @@
     "next": "step4",
     "fields": [
       {
+        "key": "fp_method_given",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_method_given",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_calculation.yml"
+            }
+          }
+        }
+      },
+      {
         "key": "male_condoms_given",
         "type": "native_radio",
         "openmrs_entity": "concept",
@@ -875,7 +889,7 @@
           "err": "Please enter a valid ID"
         },
         "v_required": {
-          "value": "true",
+          "value": "false",
           "err": "Please enter the UNIQUE ID"
         },
         "relevance": {

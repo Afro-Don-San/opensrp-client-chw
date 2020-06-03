@@ -1,5 +1,7 @@
 package org.smartregister.chw.interactor;
 
+import android.content.Context;
+
 import com.adosa.opensrp.chw.fp.interactor.BasePathfinderFpFollowUpVisitInteractor;
 
 import org.smartregister.chw.anc.contract.BaseAncHomeVisitContract;
@@ -29,7 +31,7 @@ public class PathfinderFpFollowUpVisitInteractor extends BasePathfinderFpFollowU
             }
 
             final LinkedHashMap<String, BaseAncHomeVisitAction> actionList = new LinkedHashMap<>();
-
+            flavor.setContext(view.getContext());
             try {
                 for (Map.Entry<String, BaseAncHomeVisitAction> entry : flavor.calculateActions(view, memberObject, callBack).entrySet()) {
                     actionList.put(entry.getKey(), entry.getValue());
@@ -51,6 +53,7 @@ public class PathfinderFpFollowUpVisitInteractor extends BasePathfinderFpFollowU
     }
 
     public interface Flavor {
+        void setContext(Context context);
         LinkedHashMap<String, BaseAncHomeVisitAction> calculateActions(final BaseAncHomeVisitContract.View view, MemberObject memberObject, final BaseAncHomeVisitContract.InteractorCallBack callBack) throws BaseAncHomeVisitAction.ValidationException;
     }
 

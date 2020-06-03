@@ -55,31 +55,24 @@
     "title": "Counselling",
     "fields": [
       {
-        "key": "fp_method",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "person_identifier",
-        "openmrs_entity_id": "opensrp_id",
-        "type": "hidden"
-      },
-      {
         "key": "satisfaction_with_current_method",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "1382AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "openmrs_entity_id": "satisfaction_with_current_method",
         "openmrs_entity_parent": "",
         "label": "ASK: Are you satisfied with using ",
         "options": [
           {
             "key": "yes",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "yes",
             "openmrs_entity_parent": "",
             "text": "Yes"
           },
           {
             "key": "no",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
             "text": "No"
           }
@@ -101,7 +94,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "family_planning_followup_relevance.yml"
+              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
             }
           }
         }
@@ -118,7 +111,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "family_planning_followup_relevance.yml"
+              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
             }
           }
         }
@@ -135,7 +128,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "family_planning_followup_relevance.yml"
+              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
             }
           }
         }
@@ -170,7 +163,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "family_planning_followup_relevance.yml"
+              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
             }
           }
         }
@@ -187,7 +180,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "family_planning_followup_relevance.yml"
+              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
             }
           }
         }
@@ -204,7 +197,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "family_planning_followup_relevance.yml"
+              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
             }
           }
         }
@@ -221,7 +214,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "family_planning_followup_relevance.yml"
+              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
             }
           }
         }
@@ -256,7 +249,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "family_planning_followup_relevance.yml"
+              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
             }
           }
         }
@@ -335,7 +328,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "family_planning_followup_relevance.yml"
+              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
             }
           }
         }
@@ -355,7 +348,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "family_planning_followup_relevance.yml"
+              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
             }
           }
         }
@@ -441,7 +434,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "family_planning_followup_relevance.yml"
+              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
             }
           }
         }
@@ -476,7 +469,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "family_planning_followup_relevance.yml"
+              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
             }
           }
         }

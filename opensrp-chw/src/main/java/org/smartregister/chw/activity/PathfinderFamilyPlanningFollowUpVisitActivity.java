@@ -13,10 +13,10 @@ import com.vijay.jsonwizard.domain.Form;
 import org.json.JSONObject;
 import org.smartregister.chw.R;
 import org.smartregister.chw.anc.domain.MemberObject;
-import org.smartregister.chw.anc.presenter.BaseAncHomeVisitPresenter;
 import org.smartregister.chw.core.task.RunnableTask;
 import org.smartregister.chw.core.utils.Utils;
 import org.smartregister.chw.interactor.PathfinderFpFollowUpVisitInteractor;
+import org.smartregister.chw.presenter.PathfinderFpFollowUpVisitPresenter;
 import org.smartregister.chw.schedulers.ChwScheduleTaskExecutor;
 import org.smartregister.family.util.Constants;
 import org.smartregister.family.util.JsonFormUtils;
@@ -45,7 +45,7 @@ public class PathfinderFamilyPlanningFollowUpVisitActivity extends BasePathfinde
 
     @Override
     protected void registerPresenter() {
-        presenter = new BaseAncHomeVisitPresenter(memberObject, this, new PathfinderFpFollowUpVisitInteractor());
+        presenter = new PathfinderFpFollowUpVisitPresenter(memberObject, this, new PathfinderFpFollowUpVisitInteractor());
     }
 
     @Override

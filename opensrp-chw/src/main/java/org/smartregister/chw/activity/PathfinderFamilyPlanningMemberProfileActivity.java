@@ -143,7 +143,6 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends CorePathfinde
 
     @Override
     public void openGiveFpMethodButton() {
-        Timber.e("Coze::openGiveFpMethodButton "+pathfinderFpMemberObject.getFpMethod());
         PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, pathfinderFpMemberObject.getBaseEntityId(), pathfinderFpMemberObject.getFpMethod(), CoreConstants.JSON_FORM.getPathfinderGiveFamilyPlanningMethod(), PathfinderFamilyPlanningConstants.ActivityPayload.GIVE_FP_METHOD);
     }
 

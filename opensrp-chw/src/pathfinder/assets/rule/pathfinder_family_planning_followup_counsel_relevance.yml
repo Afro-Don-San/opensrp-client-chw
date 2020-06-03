@@ -1,0 +1,89 @@
+---
+name: step1_not_satisfied_with_chw_given_method
+description: not_satisfied_with_chw_given_method relevance
+priority: 1
+condition: "step1_satisfaction_with_current_method.contains('no') && (global_fp_method.contains('female_condom') || global_fp_method.contains('male_condom') || global_fp_method.contains('coc')|| global_fp_method.contains('pop')|| global_fp_method.contains('sdm') )"
+actions:
+ - "isRelevant = true"
+---
+name: step1_not_satisfied_with_facility_given_method
+description: not_satisfied_with_facility_given_method relevance
+priority: 1
+condition: "step1_satisfaction_with_current_method.contains('no') && (global_fp_method.contains('vasectomy') || global_fp_method.contains('iud') || global_fp_method.contains('implants')|| global_fp_method.contains('tubal_ligation')|| global_fp_method.contains('lam')|| global_fp_method.contains('injection') )"
+actions:
+ - "isRelevant = true"
+---
+name: step1_continue_using_method_provider
+description: continue_using_method_provider relevance
+priority: 1
+condition: "step1_satisfaction_with_current_method.contains('yes') && (global_fp_method.contains('vasectomy') || global_fp_method.contains('iud') || global_fp_method.contains('implants')|| global_fp_method.contains('tubal_ligation')|| global_fp_method.contains('lam')|| global_fp_method.contains('injection') )"
+actions:
+ - "isRelevant = true"
+---
+name: step1_does_the_client_use_condoms
+description: does_the_client_use_condoms relevance
+priority: 1
+condition: "step1_satisfaction_with_current_method.contains('yes') && (global_fp_method.contains('female_condom') || global_fp_method.contains('male_condom'))"
+actions:
+ - "isRelevant = true"
+---
+name: step1_emphasize_consistent_use_of_condoms
+description: emphasize_consistent_use_of_condoms relevance
+priority: 1
+condition: "step1_does_the_client_use_condoms.contains('no')"
+actions:
+ - "isRelevant = true"
+---
+name: step1_does_the_client_take_the_pills
+description: does_the_client_take_the_pills relevance
+priority: 1
+condition: "step1_satisfaction_with_current_method.contains('yes') && (global_fp_method.contains('coc') || global_fp_method.contains('pop'))"
+actions:
+ - "isRelevant = true"
+---
+name: step1_check_the_client_understands_how_to_use_sdm
+description: check_the_client_understands_how_to_use_sdm relevance
+priority: 1
+condition: "step1_satisfaction_with_current_method.contains('yes') && (global_fp_method.contains('sdm'))"
+actions:
+ - "isRelevant = true"
+---
+name: step1_willingness_to_continue_with_family_planning_method
+description: willingness_to_continue_with_family_planning_method relevance
+priority: 1
+condition: "step1_satisfaction_with_current_method.contains('no') && (global_fp_method.contains('female_condom') || global_fp_method.contains('male_condom') || global_fp_method.contains('coc')|| global_fp_method.contains('pop')|| global_fp_method.contains('sdm'))"
+actions:
+ - "isRelevant = true"
+---
+name: step1_client_need_refill
+description: client_need_refill relevance
+priority: 1
+condition: "(step1_satisfaction_with_current_method.contains('yes') || step1_willingness_to_continue_with_family_planning_method.contains('yes')) && (global_fp_method.contains('female_condom') || global_fp_method.contains('male_condom') || global_fp_method.contains('coc')|| global_fp_method.contains('pop')|| global_fp_method.contains('sdm'))"
+actions:
+ - "isRelevant = true"
+---
+name: step1_reason_stop_fp_chw
+description: reason_stop_fp_chw relevance
+priority: 1
+condition: "step1_willingness_to_continue_with_family_planning_method == 'no'"
+actions:
+ - "isRelevant = true"
+---
+name: step1_other_reason_fp_chw
+description: Other reason fp stop
+priority: 1
+condition: "step1_reason_stop_fp_chw =='others'"
+actions:
+ - "isRelevant = true"
+
+---
+name: step1_side_effects_fp
+description: side effects fp
+priority: 1
+condition: "step1_reason_stop_fp_chw =='side_effects'"
+actions:
+ - "isRelevant = true"
+
+
+
+
