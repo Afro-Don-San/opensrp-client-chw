@@ -1,17 +1,17 @@
 ---
+name: step1_pregnant_screening_done
+description: pregnant_screening_done calculation
+priority: 1
+condition: "true"
+actions:
+  - "calculation = true"
+---
 name: step1_fp_pregnancy_screening_date
 description: date of pregnancy screening registration calculation
 priority: 1
 condition: "true"
 actions:
   - "calculation = helper.getDateToday()"
----
-name: step1_fp_initiation_stage
-description: calculation of what stage fp_initiation_stage
-priority: 1
-condition: "true"
-actions:
-  - "calculation = 'Family Planning Pregnancy Screening'"
 ---
 name: step4_edd_calculated
 description: EDD calculated

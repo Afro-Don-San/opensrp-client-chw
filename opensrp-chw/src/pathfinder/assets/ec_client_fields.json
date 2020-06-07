@@ -1023,11 +1023,27 @@
           }
         },
         {
-          "column_name": "fp_initiation_stage",
+          "column_name": "introduction_to_fp_done",
           "type": "Event",
           "json_mapping": {
             "field": "obs.fieldCode",
-            "concept": "fp_initiation_stage"
+            "concept": "introduction_to_fp_done"
+          }
+        },
+        {
+          "column_name": "pregnant_screening_done",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "pregnant_screening_done"
+          }
+        },
+        {
+          "column_name": "fp_method_choice_done",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "fp_method_choice_done"
           }
         },
         {

@@ -59,10 +59,10 @@
     "next": "step2",
     "fields": [
       {
-        "key": "fp_pregnancy_screening_date",
+        "key": "pregnant_screening_done",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_pregnancy_screening_date",
+        "openmrs_entity_id": "pregnant_screening_done",
         "type": "hidden",
         "calculation": {
           "rules-engine": {
@@ -73,10 +73,10 @@
         }
       },
       {
-        "key": "fp_initiation_stage",
+        "key": "fp_pregnancy_screening_date",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_initiation_stage",
+        "openmrs_entity_id": "fp_pregnancy_screening_date",
         "type": "hidden",
         "calculation": {
           "rules-engine": {

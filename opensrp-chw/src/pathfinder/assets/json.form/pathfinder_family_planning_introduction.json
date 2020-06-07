@@ -59,10 +59,10 @@
     "next": "step2",
     "fields": [
       {
-        "key": "fp_introduction_date",
+        "key": "introduction_to_fp_done",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_introduction_date",
+        "openmrs_entity_id": "introduction_to_fp_done",
         "type": "hidden",
         "calculation": {
           "rules-engine": {
@@ -73,10 +73,10 @@
         }
       },
       {
-        "key": "fp_initiation_stage",
+        "key": "fp_introduction_date",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_initiation_stage",
+        "openmrs_entity_id": "fp_introduction_date",
         "type": "hidden",
         "calculation": {
           "rules-engine": {

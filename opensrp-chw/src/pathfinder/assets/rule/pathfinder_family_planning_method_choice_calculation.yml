@@ -1,17 +1,17 @@
 ---
+name: step1_fp_method_choice_done
+description: fp_method_choice_done calculation
+priority: 1
+condition: "true"
+actions:
+  - "calculation = true"
+---
 name: step1_fp_method_choice_date
 description: date of method choice registration calculation
 priority: 1
 condition: "true"
 actions:
   - "calculation = helper.getDateToday()"
----
-name: step1_fp_initiation_stage
-description: calculation of what stage fp_initiation_stage
-priority: 1
-condition: "true"
-actions:
-  - "calculation = 'Family Planning Method Choice'"
 ---
 name: step9_fp_method_accepted
 description: fp_method_accepted calculation
