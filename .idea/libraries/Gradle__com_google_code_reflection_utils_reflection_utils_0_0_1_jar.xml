@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.google.code.reflection-utils:reflection-utils:0.0.1@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.reflection-utils/reflection-utils/0.0.1/f7905188fd5b2600e8cbe9ab77fb40f36b272960/reflection-utils-0.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.reflection-utils/reflection-utils/0.0.1/ccc397d377fceaad1137c086392b600bc263f5ba/reflection-utils-0.0.1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.code.reflection-utils/reflection-utils/0.0.1/8b98c03fa185f2384ff4368752fb8d70624f6a41/reflection-utils-0.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

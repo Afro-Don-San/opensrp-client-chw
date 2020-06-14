@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Gradle: org.smartregister:opensrp-client-materialedittext:2.1.6-SNAPSHOT@aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f9608783dc84c3b68f914571b20f3175/jetified-opensrp-client-materialedittext-2.1.6-SNAPSHOT/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f9608783dc84c3b68f914571b20f3175/jetified-opensrp-client-materialedittext-2.1.6-SNAPSHOT/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f9608783dc84c3b68f914571b20f3175/jetified-opensrp-client-materialedittext-2.1.6-SNAPSHOT/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.smartregister/opensrp-client-materialedittext/2.1.6-SNAPSHOT/ee8612ae0c7cfe5a05bee6329f6394650038c4f8/opensrp-client-materialedittext-2.1.6-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.smartregister/opensrp-client-materialedittext/2.1.6-SNAPSHOT/ee8612ae0c7cfe5a05bee6329f6394650038c4f8/opensrp-client-materialedittext-2.1.6-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

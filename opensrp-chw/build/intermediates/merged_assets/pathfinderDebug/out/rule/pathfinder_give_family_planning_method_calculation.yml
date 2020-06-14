@@ -1,0 +1,28 @@
+---
+name: step1_fp_start_date
+description: fp_start_date calculation
+priority: 1
+condition: "true"
+actions:
+  - "calculation = System.currentTimeMillis()"
+---
+name: step1_selected_method_note
+description: selected_method_note calculation
+priority: 1
+condition: "true"
+actions:
+  - 'calculation = ["fp_method" : global_fp_method]'
+---
+name: step3_fp_method_given
+description: fp_method_given calculation
+priority: 1
+condition: "true"
+actions:
+  - "calculation = ( step3_male_condoms_given == 'yes' || step3_female_condoms_given == 'yes' || step3_coc_given == 'yes' || step3_pop_given == 'yes' || step3_sdm_given == 'yes' )"
+---
+name: step16_give_referral_note
+description: step16_give_referral_note calculation
+priority: 1
+condition: "true"
+actions:
+  - 'calculation = ["fp_method" : global_fp_method]'

@@ -1,0 +1,922 @@
+{
+  "validate_on_submit": false,
+  "show_errors_on_submit": true,
+  "skip_blank_steps": true,
+  "count": "17",
+  "encounter_type": "Give Family Planning Method",
+  "entity_id": "",
+  "relational_id": "",
+  "metadata": {
+    "start": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "start",
+      "openmrs_entity_id": "163137AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "end": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "end",
+      "openmrs_entity_id": "163138AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "today": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "encounter",
+      "openmrs_entity_id": "encounter_date"
+    },
+    "deviceid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "deviceid",
+      "openmrs_entity_id": "163149AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "subscriberid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "subscriberid",
+      "openmrs_entity_id": "163150AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "simserial": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "simserial",
+      "openmrs_entity_id": "163151AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "phonenumber": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "phonenumber",
+      "openmrs_entity_id": "163152AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "encounter_location": "",
+    "look_up": {
+      "entity_id": "",
+      "value": ""
+    }
+  },
+  "step1": {
+    "title": "Method Selected",
+    "next": "step2",
+    "fields": [
+      {
+        "key": "fp_start_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_start_date",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "selected_method_note",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Client has chosen {fp_method}.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_calculation.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step2": {
+    "title": "Instructions on Giving FP Method",
+    "next": "step3",
+    "fields": [
+      {
+        "key": "give_condoms_note",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "give_condoms_note",
+        "type": "toaster_notes",
+        "text": "Give the client condoms and ask if she/he knows how to use them.\n\nShow her/him how to accurately use the condoms.\n\nAsk the client to show you the steps for correct condom usage.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "give_pills_note",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Give the client 3 packets of pills.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "give_sdm_note",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Give the client the cycle beads.\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step3": {
+    "title": "Give fp method",
+    "next": "step4",
+    "fields": [
+      {
+        "key": "fp_method_given",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_method_given",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "male_condoms_given",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "male_condoms_given",
+        "openmrs_entity_parent": "",
+        "label": "Did you give the clients male condoms?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes",
+            "openmrs_entity_parent": "",
+            "text": "Yes"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no",
+            "openmrs_entity_parent": "",
+            "text": "No"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "female_condoms_given",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "female_condoms_given",
+        "openmrs_entity_parent": "",
+        "label": "Did you give the client female condoms",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes",
+            "openmrs_entity_parent": "",
+            "text": "Yes"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no",
+            "openmrs_entity_parent": "",
+            "text": "No"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "coc_given",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "coc_given",
+        "openmrs_entity_parent": "",
+        "label": "Did you give the client COC pills?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes",
+            "openmrs_entity_parent": "",
+            "text": "Yes"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no",
+            "openmrs_entity_parent": "",
+            "text": "No"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "pop_given",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "pop_given",
+        "openmrs_entity_parent": "",
+        "label": "Did you give the client POP pills?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes",
+            "openmrs_entity_parent": "",
+            "text": "Yes"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no",
+            "openmrs_entity_parent": "",
+            "text": "No"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "sdm_given",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "sdm_given",
+        "openmrs_entity_parent": "",
+        "label": "Did you give the client cycle beads?\n",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes",
+            "openmrs_entity_parent": "",
+            "text": "Yes"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no",
+            "openmrs_entity_parent": "",
+            "text": "No"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_condoms",
+        "type": "edit_text",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_condoms",
+        "openmrs_entity_parent": "",
+        "edit_type": "number",
+        "hint": "Enter the number of condoms you gave the client",
+        "v_required": {
+          "value": "true",
+          "err": "this value cannot be null"
+        },
+        "v_numeric_integer": {
+          "value": "true",
+          "err": "Must be a rounded number"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "number_of_pills",
+        "type": "edit_text",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "number_of_pills",
+        "openmrs_entity_parent": "",
+        "edit_type": "number",
+        "hint": "Fill in the number of packets you gave the client",
+        "v_required": {
+          "value": "true",
+          "err": "this value cannot be null"
+        },
+        "v_numeric_integer": {
+          "value": "true",
+          "err": "Must be a rounded number"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step4": {
+    "title": "Pills Counselling",
+    "next": "step5",
+    "fields": [
+      {
+        "key": "coc_note",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Tell the client you will bring her more pills before she uses up her supply of pills.\nEncourage the client to come to see you if she experiences\n*severe abdominal pain\n*severe headache with blurred vision\n*severe chest pain\n*severe muscle cramps\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "pop_note",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Tell the client you will bring her more pills before she uses up her supply of pills.\nEncourage the client to come to see you if she experiences\n*Severe stomach pain\n*Vaginal bleeding or a missed period\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step5": {
+    "title": "Cycle beads counseling 1",
+    "next": "step6",
+    "fields": [
+      {
+        "key": "sdm_counselling_1",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Help the client complete the following steps:\nMark the first day of the client’s last menstrual period on the calendar\nStart with that date on the cycle beads\nPut the ring on the RED bead and move it from bead to bead as you say and count the dates until you reach the bead for today\nPut the ring on the bead for today’s date\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step6": {
+    "title": "Cycle beads counseling 2",
+    "next": "step7",
+    "fields": [
+      {
+        "key": "sdm_counselling_2",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Tell the client:\nThe red bead marks the first day of her period\nIf she has unprotected sex between the first and fifth white bead, she may need emergency contraception (ECP)\nIf she uses ECP, she should use other FP methods such as condoms until she gets her period again\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step7": {
+    "title": "Cycle beads counseling 3",
+    "next": "step8",
+    "fields": [
+      {
+        "key": "sdm_counselling_3",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Tell the client:\nAlways mark the first day of bleeding on her calendar\nHelp her find ways to remember to move the ring every day\nMark the first day of her period on the calendar\nThe red bead marks the first day of her period\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step8": {
+    "title": "Cycle beads counseling 4",
+    "next": "step9",
+    "fields": [
+      {
+        "key": "sdm_counselling_4",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Tell the client:\nMove the ring one bead every day in the direction of the arrow\nWhen the ring is on any white bead, use a condom or do not have sex. You are likely to get pregnant on those days\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step9": {
+    "title": "Cycle beads counseling 5",
+    "next": "step10",
+    "fields": [
+      {
+        "key": "sdm_counselling_5",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Remind the client to do the following:\nMove the ring every day\nMake sure her cycle is between 26 and 32 days\nKeep checking the length of her menstrual cycle\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step10": {
+    "title": "Cycle beads counseling 6",
+    "next": "step11",
+    "fields": [
+      {
+        "key": "sdm_counselling_6",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Explain what to do if she forgets to move the ring:\nCheck your calendar for the day you marked as the first day of your period\nCount the number of days that have passed from that day until today\nStarting on the red bead, move the ring that same number of beads on your cycle beads\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step11": {
+    "title": "Determine client comprehension 1",
+    "next": "step12",
+    "fields": [
+      {
+        "key": "determine_clients_comprehension_1",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Ask the client the following questions to determine her/his comprehension about the method chosen:",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step12": {
+    "title": "Determine client comprehension 2",
+    "next": "step13",
+    "fields": [
+      {
+        "key": "determine_clients_comprehension_2",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "ASK: How will you use the method you have chosen?",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step13": {
+    "title": "Determine client comprehension 3",
+    "next": "step14",
+    "fields": [
+      {
+        "key": "determine_clients_comprehension_3",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "ASK: What are the side effects you can get from this method?\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step14": {
+    "title": "Determine client comprehension 4",
+    "next": "step15",
+    "fields": [
+      {
+        "key": "determine_clients_comprehension_4",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "ASK: Which symptoms would require you to go quickly to a health facility?",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step15": {
+    "title": "FP Method Not Given",
+    "next": "step16",
+    "fields": [
+      {
+        "key": "reasons_for_not_giving_male_condoms",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "reasons_for_not_giving_condoms",
+        "openmrs_entity_parent": "",
+        "label": "Why didn’t you give the client male condoms?",
+        "options": [
+          {
+            "key": "out_of_stock",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "out_of_stock",
+            "openmrs_entity_parent": "",
+            "text": "Out of Stock"
+          },
+          {
+            "key": "other",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no",
+            "openmrs_entity_parent": "",
+            "text": "Other"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "reasons_for_not_giving_female_condoms",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "reasons_for_not_giving_female_condoms",
+        "openmrs_entity_parent": "",
+        "label": "Why didn’t you give the client male condoms?",
+        "options": [
+          {
+            "key": "out_of_stock",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "out_of_stock",
+            "openmrs_entity_parent": "",
+            "text": "Out of Stock"
+          },
+          {
+            "key": "other",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no",
+            "openmrs_entity_parent": "",
+            "text": "Other"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "reasons_for_not_giving_coc",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "reasons_for_not_giving_coc",
+        "openmrs_entity_parent": "",
+        "label": "Why did you not give the client COC?",
+        "options": [
+          {
+            "key": "out_of_stock",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "out_of_stock",
+            "openmrs_entity_parent": "",
+            "text": "Out of Stock"
+          },
+          {
+            "key": "other",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no",
+            "openmrs_entity_parent": "",
+            "text": "Other"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "reasons_for_not_giving_pop",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "reasons_for_not_giving_pop",
+        "openmrs_entity_parent": "",
+        "label": "Why did you not give the client POP?\n",
+        "options": [
+          {
+            "key": "out_of_stock",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "out_of_stock",
+            "openmrs_entity_parent": "",
+            "text": "Out of Stock"
+          },
+          {
+            "key": "other",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no",
+            "openmrs_entity_parent": "",
+            "text": "Other"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "reasons_for_not_giving_sdm",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "reasons_for_not_giving_sdm",
+        "openmrs_entity_parent": "",
+        "label": "Why did you not give the client cycle beads?\n",
+        "options": [
+          {
+            "key": "out_of_stock",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "out_of_stock",
+            "openmrs_entity_parent": "",
+            "text": "Out of Stock"
+          },
+          {
+            "key": "other",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no",
+            "openmrs_entity_parent": "",
+            "text": "Other"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step16": {
+    "title": "Give Referral",
+    "next": "step17",
+    "fields": [
+      {
+        "key": "give_referral_note",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Tell the client you will give a referral to go to a health facility to get {fp_method}.\n\nExplain the reason for giving the referral and explain where the nearest health facility is located.\n\nFill in the referral form.\n\nInform the client that you will follow up to make sure they got the service they were referred for.\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        },
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_calculation.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step17": {
+    "title": "End",
+    "fields": [
+      {
+        "key": "unique_referral_id",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_identifier",
+        "openmrs_entity_id": "unique_referral_id",
+        "type": "barcode",
+        "barcode_type": "qrcode",
+        "hint": "Referral ID",
+        "scanButtonText": "Scan Referral Form\nQR Code",
+        "v_numeric": {
+          "value": "true",
+          "err": "Please enter a valid ID"
+        },
+        "v_required": {
+          "value": "true",
+          "err": "Please enter the UNIQUE ID"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "end_note",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "EXPLAIN: It is fine if you don’t remember all the details. That is why I am leaving this brochure that contains the information and will tell you where you can get it.\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

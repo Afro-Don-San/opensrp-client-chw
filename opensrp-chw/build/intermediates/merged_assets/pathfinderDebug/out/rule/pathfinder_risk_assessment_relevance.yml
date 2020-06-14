@@ -1,0 +1,161 @@
+---
+name: step6_has_partner_had_other_sexual_partner
+description: has_partner_had_other_sexual_partner relevance
+priority: 1
+condition: "step5_has_more_than_one_sexual_partner == 'no'"
+actions:
+  - "isRelevant = true"
+---
+name: step7_has_been_diagnosed_with_sti
+description: has_been_diagnosed_with_sti relevance
+priority: 1
+condition: "step6_has_partner_had_other_sexual_partner == 'no'"
+actions:
+  - "isRelevant = true"
+---
+name: step8_has_partner_been_diagnosed_with_sti
+description: has_partner_been_diagnosed_with_sti relevance
+priority: 1
+condition: "step7_has_been_diagnosed_with_sti == 'no'"
+actions:
+  - "isRelevant = true"
+---
+name: step9_partner_symptoms
+description: partner_symptoms relevance
+priority: 1
+condition: "step8_has_partner_been_diagnosed_with_sti == 'no' || step8_has_partner_been_diagnosed_with_sti == 'not_sure'"
+actions:
+  - "isRelevant = true"
+---
+name: step10_use_condom_with_partner
+description: use_condom_with_partner relevance
+priority: 1
+condition: "step5_has_more_than_one_sexual_partner == 'yes' || step6_has_partner_had_other_sexual_partner == 'yes' || step8_has_partner_been_diagnosed_with_sti=='yes' || !step9_partner_symptoms.contains('none') "
+actions:
+  - "isRelevant = true"
+---
+name: step10_client_may_have_sti
+description: client_may_have_sti relevance
+priority: 1
+condition: "step10_use_condom_with_partner == 'no' || step7_has_been_diagnosed_with_sti == 'yes'"
+actions:
+  - "isRelevant = true"
+---
+name: step11_client_has_not_received_full_treatment
+description: client_has_not_received_full_treatment relevance
+priority: 1
+condition: "step10_client_may_have_sti == 'no'"
+actions:
+  - "isRelevant = true"
+---
+name: step13_willing_to_disclose_status
+description: willing_to_disclose_status relevance
+priority: 1
+condition: "step12_has_been_tested_for_hiv == 'yes'"
+actions:
+  - "isRelevant = true"
+---
+name: step14_has_been_tested_for_hiv
+description: has_been_tested_for_hiv relevance
+priority: 1
+condition: "step13_willing_to_disclose_status == 'yes'"
+actions:
+  - "isRelevant = true"
+---
+name: step15_has_had_unprotected_sex_since_last_tested_for_hiv
+description: has_had_unprotected_sex_since_last_tested_for_hiv relevance
+priority: 1
+condition: "step14_has_been_tested_for_hiv == 'hiv_negative'"
+actions:
+  - "isRelevant = true"
+---
+name: step15_another_test_because_of_new_infections
+description: another_test_because_of_new_infections relevance
+priority: 1
+condition: "step15_has_had_unprotected_sex_since_last_tested_for_hiv == 'yes'"
+actions:
+  - "isRelevant = true"
+---
+name: step16_receiving_care_and_treatment_from_facility
+description: receiving_care_and_treatment_from_facility relevance
+priority: 1
+condition: "step15_has_been_tested_for_hiv == 'hiv_positive'"
+actions:
+  - "isRelevant = true"
+---
+name: step17_give_referral_to_nearest_ctc
+description: give_referral_to_nearest_ctc relevance
+priority: 1
+condition: "step16_receiving_care_and_treatment_from_facility == 'no'"
+actions:
+  - "isRelevant = true"
+---
+name: step18_has_received_home_based_care_services
+description: has_received_home_based_care_services relevance
+priority: 1
+condition: "step15_has_been_tested_for_hiv == 'hiv_positive'"
+actions:
+  - "isRelevant = true"
+---
+name: step18_like_to_be_registered_to_receive_home_based_care_services
+description: like_to_be_registered_to_receive_home_based_care_services relevance
+priority: 1
+condition: "step18_has_received_home_based_care_services == 'no'"
+actions:
+  - "isRelevant = true"
+---
+name: step18_client_not_ready
+description: client_not_ready relevance
+priority: 1
+condition: "step18_like_to_be_registered_to_receive_home_based_care_services == 'no'"
+actions:
+  - "isRelevant = true"
+---
+name: step18_register_client_for_home_based_care
+description: register_client_for_home_based_care relevance
+priority: 1
+condition: "step18_like_to_be_registered_to_receive_home_based_care_services == 'yes'"
+actions:
+  - "isRelevant = true"
+---
+name: step19_discuss_and_give_information_on_hiv_testing
+description: discuss_and_give_information_on_hiv_testing relevance
+priority: 1
+condition: "step12_has_been_tested_for_hiv == 'no'"
+actions:
+  - "isRelevant = true"
+---
+name: step20_counsel_the_client
+description: counsel_the_client relevance
+priority: 1
+condition: "step12_has_been_tested_for_hiv == 'no'"
+actions:
+  - "isRelevant = true"
+---
+name: step21_client_would_like_to_be_tested_for_hiv
+description: client_would_like_to_be_tested_for_hiv relevance
+priority: 1
+condition: "step12_has_been_tested_for_hiv == 'no'"
+actions:
+  - "isRelevant = true"
+---
+name: step21_explore_issues_preventing_client_from_accepting_test
+description: explore_issues_preventing_client_from_accepting_test relevance
+priority: 1
+condition: "step21_client_would_like_to_be_tested_for_hiv == 'no'"
+actions:
+  - "isRelevant = true"
+---
+name: step22_does_client_now_want_to_be_tested
+description: does_client_now_want_to_be_tested relevance
+priority: 1
+condition: "step21_client_would_like_to_be_tested_for_hiv == 'no'"
+actions:
+  - "isRelevant = true"
+---
+name: step23_refer_htc
+description: refer_htc relevance
+priority: 1
+condition: "step21_client_would_like_to_be_tested_for_hiv == 'yes' || step21_client_would_like_to_be_tested_for_hiv == 'yes'"
+actions:
+  - "isRelevant = true"

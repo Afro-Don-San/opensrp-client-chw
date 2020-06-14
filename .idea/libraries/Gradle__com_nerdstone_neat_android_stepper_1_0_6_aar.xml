@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.nerdstone:neat-android-stepper:1.0.6@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f3c6e200ae96d349fb8e2ac9db2a9fee/jetified-neat-android-stepper-1.0.6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/f3c6e200ae96d349fb8e2ac9db2a9fee/jetified-neat-android-stepper-1.0.6/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nerdstone/neat-android-stepper/1.0.6/4e056d18f47d76a78b667b9603e3aa504871384a/neat-android-stepper-1.0.6-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.nerdstone/neat-android-stepper/1.0.6/47d85e0ba6d203f0f74b11fbce63dbf6f028d2f8/neat-android-stepper-1.0.6-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

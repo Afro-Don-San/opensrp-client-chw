@@ -1,0 +1,44 @@
+[
+  {
+    "id": "1",
+    "name_en": "The client is attending clinic",
+    "name_sw": "Mteja anahudhuria kliniki.",
+    "is_active": true
+  },
+  {
+    "id": "2",
+    "name_en": "Found the client s/he is will to return back to the clinic.",
+    "name_sw": "Amepatikana na yupo tayari kurudi kliniki.",
+    "is_active": true
+  },
+  {
+    "id": "3",
+    "name_en": "Found the client s/he has return back to the clinic.",
+    "name_sw": "Amepatikana na amerudi kliniki.",
+    "is_active": true
+  },
+  {
+    "id": "4",
+    "name_en": "The client is dead.",
+    "name_sw": "Amefariki.",
+    "is_active": true
+  },
+  {
+    "id": "5",
+    "name_en": "The client transferred clinic without notification.",
+    "name_sw": "Amehamia kituo kingine bila taarifa.",
+    "is_active": true
+  },
+  {
+    "id": "6",
+    "name_en": "The client has reallocated.",
+    "name_sw": "Amepatikana lakini hayupo tayari kurudi klinik.",
+    "is_active": true
+  },
+  {
+    "id": "7",
+    "name_en": "Client not Found.",
+    "name_sw": "Hajapatikana.",
+    "is_active": true
+  }
+]

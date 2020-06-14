@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: org.smartregister:opensrp-client-simprints:1.0.3-SNAPSHOT@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5092631af97f3a68a6726a288fed3e89/jetified-opensrp-client-simprints-1.0.3-SNAPSHOT/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5092631af97f3a68a6726a288fed3e89/jetified-opensrp-client-simprints-1.0.3-SNAPSHOT/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.smartregister/opensrp-client-simprints/1.0.3-SNAPSHOT/f0ab84132a7d7d7572f3fde5f2d8ec4b75bd2aaa/opensrp-client-simprints-1.0.3-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.smartregister/opensrp-client-simprints/1.0.3-SNAPSHOT/f0ab84132a7d7d7572f3fde5f2d8ec4b75bd2aaa/opensrp-client-simprints-1.0.3-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

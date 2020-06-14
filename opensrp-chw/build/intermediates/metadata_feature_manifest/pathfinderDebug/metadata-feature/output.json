@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "applicationId": "org.smartregister.chw.pf",
+  "variantType": "BASE_APK",
+  "elements": [
+    {
+      "outputType": {
+        "type": "METADATA_FEATURE_MANIFEST"
+      },
+      "apkData": {
+        "type": "MAIN",
+        "splits": [],
+        "versionCode": 2,
+        "versionName": "1.0.2",
+        "outputFile": "opensrp-chw-pathfinder-debug.apk",
+        "fullName": "pathfinderDebug",
+        "baseName": "pathfinder-debug",
+        "dirName": ""
+      },
+      "path": "AndroidManifest.xml",
+      "properties": {}
+    }
+  ]
+}

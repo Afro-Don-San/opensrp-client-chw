@@ -1,0 +1,1002 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.smartregister.chw.pf"
+4    android:versionCode="2"
+5    android:versionName="1.0.2" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="18"
+8-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml
+10
+11    <uses-feature
+11-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:6:5-8:36
+12        android:name="android.hardware.camera"
+12-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:7:9-47
+13        android:required="false" />
+13-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:8:9-33
+14    <uses-feature
+14-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:9:5-11:36
+15        android:name="android.hardware.camera.autofocus"
+15-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:10:9-57
+16        android:required="true" />
+16-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:11:9-33
+17    <uses-feature
+17-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:12:5-14:36
+18        android:name="android.hardware.telephony"
+18-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:13:9-50
+19        android:required="false" />
+19-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:14:9-33
+20
+21    <uses-permission android:name="android.permission.CAMERA" />
+21-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:16:5-65
+21-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:16:22-62
+22    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+22-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:17:5-80
+22-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:17:22-77
+23    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+23-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:18:5-81
+23-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:18:22-78
+24    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
+24-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:19:5-80
+24-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:19:22-77
+25    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+25-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:20:5-81
+25-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:20:22-78
+26    <uses-permission android:name="android.permission.INTERNET" />
+26-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:21:5-67
+26-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:21:22-64
+27    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+27-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:22:5-79
+27-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:22:22-76
+28    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+28-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:23:5-81
+28-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:23:22-78
+29    <uses-permission android:name="android.permission.WAKE_LOCK" />
+29-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:24:5-68
+29-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:24:22-65
+30    <uses-permission android:name="android.permission.CALL_PHONE" />
+30-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:25:5-69
+30-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:25:22-66
+31    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+31-->[org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8b041c82453d4047c1cb1168496f13cf/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200607.155356-76/AndroidManifest.xml:12:5-75
+31-->[org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8b041c82453d4047c1cb1168496f13cf/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200607.155356-76/AndroidManifest.xml:12:22-72
+32    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+32-->[org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:11:5-77
+32-->[org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:11:22-74
+33    <uses-permission android:name="android.permission.VIBRATE" />
+33-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:15:5-66
+33-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:15:22-63
+34    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+34-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:20:5-79
+34-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:20:22-76
+35    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- Required for Nearby Connections -->
+35-->[org.smartregister:opensrp-client-native-form:1.10.0-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/23da009bf08b92c8b5858a9b94b72c0f/jetified-opensrp-client-native-form-1.10.0-Test-20200603.194752-1/AndroidManifest.xml:17:5-76
+35-->[org.smartregister:opensrp-client-native-form:1.10.0-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/23da009bf08b92c8b5858a9b94b72c0f/jetified-opensrp-client-native-form-1.10.0-Test-20200603.194752-1/AndroidManifest.xml:17:22-73
+36    <uses-permission android:name="android.permission.BLUETOOTH" />
+36-->[org.smartregister:android-p2p-sync:0.3.6-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e2ba3682a10cee65c4945d6c4e913ecf/jetified-android-p2p-sync-0.3.6-SNAPSHOT/AndroidManifest.xml:12:5-68
+36-->[org.smartregister:android-p2p-sync:0.3.6-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e2ba3682a10cee65c4945d6c4e913ecf/jetified-android-p2p-sync-0.3.6-SNAPSHOT/AndroidManifest.xml:12:22-65
+37    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+37-->[org.smartregister:android-p2p-sync:0.3.6-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e2ba3682a10cee65c4945d6c4e913ecf/jetified-android-p2p-sync-0.3.6-SNAPSHOT/AndroidManifest.xml:13:5-74
+37-->[org.smartregister:android-p2p-sync:0.3.6-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e2ba3682a10cee65c4945d6c4e913ecf/jetified-android-p2p-sync-0.3.6-SNAPSHOT/AndroidManifest.xml:13:22-71
+38    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+38-->[org.smartregister:android-p2p-sync:0.3.6-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e2ba3682a10cee65c4945d6c4e913ecf/jetified-android-p2p-sync-0.3.6-SNAPSHOT/AndroidManifest.xml:15:5-76
+38-->[org.smartregister:android-p2p-sync:0.3.6-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e2ba3682a10cee65c4945d6c4e913ecf/jetified-android-p2p-sync-0.3.6-SNAPSHOT/AndroidManifest.xml:15:22-73
+39    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+39-->[org.smartregister:android-p2p-sync:0.3.6-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e2ba3682a10cee65c4945d6c4e913ecf/jetified-android-p2p-sync-0.3.6-SNAPSHOT/AndroidManifest.xml:16:5-81
+39-->[org.smartregister:android-p2p-sync:0.3.6-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e2ba3682a10cee65c4945d6c4e913ecf/jetified-android-p2p-sync-0.3.6-SNAPSHOT/AndroidManifest.xml:16:22-78
+40
+41    <uses-feature
+41-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2a749d1a2d64a87f201f54a15576cb77/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:28:5-30:36
+42        android:name="android.hardware.camera.front"
+42-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2a749d1a2d64a87f201f54a15576cb77/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:29:9-53
+43        android:required="false" />
+43-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2a749d1a2d64a87f201f54a15576cb77/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:30:9-33
+44    <uses-feature
+44-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2a749d1a2d64a87f201f54a15576cb77/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:36:5-38:36
+45        android:name="android.hardware.camera.flash"
+45-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2a749d1a2d64a87f201f54a15576cb77/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:37:9-53
+46        android:required="false" />
+46-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2a749d1a2d64a87f201f54a15576cb77/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:38:9-33
+47    <uses-feature
+47-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2a749d1a2d64a87f201f54a15576cb77/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:39:5-41:36
+48        android:name="android.hardware.screen.landscape"
+48-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2a749d1a2d64a87f201f54a15576cb77/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:40:9-57
+49        android:required="false" />
+49-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2a749d1a2d64a87f201f54a15576cb77/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:41:9-33
+50    <uses-feature
+50-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2a749d1a2d64a87f201f54a15576cb77/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:42:5-44:36
+51        android:name="android.hardware.wifi"
+51-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2a749d1a2d64a87f201f54a15576cb77/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:43:9-45
+52        android:required="false" />
+52-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2a749d1a2d64a87f201f54a15576cb77/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:44:9-33
+53
+54    <application
+54-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:27:5-291:19
+55        android:name="org.smartregister.chw.application.ChwApplication"
+55-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:28:9-51
+56        android:allowBackup="true"
+56-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:29:9-35
+57        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+57-->[androidx.core:core:1.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/82957a909092d1742f49119efe029dfc/core-1.2.0/AndroidManifest.xml:24:18-86
+58        android:clearTaskOnLaunch="true"
+58-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:27:9-41
+59        android:debuggable="true"
+60        android:label="@string/app_name"
+60-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:28:9-41
+61        android:largeHeap="true"
+61-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:29:9-33
+62        android:supportsRtl="true"
+62-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:30:9-35
+63        android:testOnly="true"
+64        android:theme="@style/ChwTheme"
+64-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:31:9-40
+65        android:usesCleartextTraffic="true" >
+65-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:32:9-44
+66        <activity
+66-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:34:9-37:59
+67            android:name="org.smartregister.chw.activity.FamilyPlanningMemberProfileActivity"
+67-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:35:13-73
+68            android:label="@string/family_planning"
+68-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:36:13-52
+69            android:theme="@style/ChwTheme.NoActionBar" />
+69-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:37:13-56
+70        <activity
+70-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:38:9-40:59
+71            android:name="org.smartregister.chw.activity.AncUpcomingServicesActivity"
+71-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:39:13-65
+72            android:theme="@style/ChwTheme.NoActionBar" />
+72-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:40:13-56
+73        <activity
+73-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:41:9-43:59
+74            android:name="org.smartregister.chw.activity.AncMedicalHistoryActivity"
+74-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:42:13-63
+75            android:theme="@style/ChwTheme.NoActionBar" />
+75-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:43:13-56
+76        <activity
+76-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:44:9-46:59
+77            android:name="org.smartregister.chw.activity.AncHomeVisitActivity"
+77-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:45:13-58
+78            android:theme="@style/ChwTheme.NoActionBar" />
+78-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:46:13-56
+79        <activity
+79-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:47:9-49:59
+80            android:name="org.smartregister.chw.activity.AncRegisterActivity"
+80-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:48:13-57
+81            android:theme="@style/ChwTheme.NoActionBar" />
+81-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:49:13-56
+82        <activity
+82-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:50:9-52:59
+83            android:name="org.smartregister.chw.activity.AncMemberProfileActivity"
+83-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:51:13-62
+84            android:theme="@style/ChwTheme.NoActionBar" />
+84-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:52:13-56
+85        <activity
+85-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:53:9-55:59
+86            android:name="org.smartregister.chw.activity.PncUpcomingServicesActivity"
+86-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:54:13-65
+87            android:theme="@style/ChwTheme.NoActionBar" />
+87-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:55:13-56
+88        <activity
+88-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:56:9-58:59
+89            android:name="org.smartregister.chw.activity.PncMedicalHistoryActivity"
+89-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:57:13-63
+90            android:theme="@style/ChwTheme.NoActionBar" />
+90-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:58:13-56
+91        <activity
+91-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:59:9-61:59
+92            android:name="org.smartregister.chw.activity.PncHomeVisitActivity"
+92-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:60:13-58
+93            android:theme="@style/ChwTheme.NoActionBar" />
+93-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:61:13-56
+94        <activity
+94-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:62:9-64:59
+95            android:name="org.smartregister.chw.activity.PncRegisterActivity"
+95-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:63:13-57
+96            android:theme="@style/ChwTheme.NoActionBar" />
+96-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:64:13-56
+97        <activity
+97-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:65:9-67:59
+98            android:name="org.smartregister.chw.activity.PncMemberProfileActivity"
+98-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:66:13-62
+99            android:theme="@style/ChwTheme.NoActionBar" />
+99-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:67:13-56
+100        <activity
+100-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:68:9-70:59
+101            android:name="org.smartregister.chw.activity.MalariaRegisterActivity"
+101-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:69:13-61
+102            android:theme="@style/ChwTheme.NoActionBar" />
+102-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:70:13-56
+103        <activity
+103-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:71:9-73:59
+104            android:name="org.smartregister.chw.activity.FpRegisterActivity"
+104-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:72:13-56
+105            android:theme="@style/ChwTheme.NoActionBar" />
+105-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:73:13-56
+106        <activity android:name="org.smartregister.chw.core.activity.ChwP2pModeSelectActivity" />
+106-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:74:9-76
+106-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:74:19-73
+107        <activity
+107-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:75:9-77:59
+108            android:name="org.smartregister.chw.activity.JobAidsActivity"
+108-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:76:13-53
+109            android:theme="@style/ChwTheme.NoActionBar" />
+109-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:77:13-56
+110        <activity
+110-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:78:9-80:59
+111            android:name="org.smartregister.chw.activity.FamilyRemoveMemberActivity"
+111-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:79:13-64
+112            android:theme="@style/ChwTheme.NoActionBar" />
+112-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:80:13-56
+113        <activity
+113-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:81:9-84:59
+114            android:name="org.smartregister.chw.activity.FamilyProfileMenuActivity"
+114-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:82:13-63
+115            android:screenOrientation="portrait"
+115-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:83:13-49
+116            android:theme="@style/ChwTheme.NoActionBar" />
+116-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:84:13-56
+117        <activity
+117-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:85:9-89:59
+118            android:name="org.smartregister.chw.activity.FamilyRegisterActivity"
+118-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:86:13-60
+119            android:label="@string/app_name"
+119-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:87:13-45
+120            android:screenOrientation="portrait"
+120-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:88:13-49
+121            android:theme="@style/ChwTheme.NoActionBar" />
+121-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:89:13-56
+122        <activity
+122-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:90:9-99:20
+123            android:name="org.smartregister.chw.activity.FamilyProfileActivity"
+123-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:91:13-59
+124            android:label="@string/title_family_detail"
+124-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:92:13-56
+125            android:parentActivityName="org.smartregister.chw.activity.FamilyRegisterActivity"
+125-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:93:13-74
+126            android:screenOrientation="portrait"
+126-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:94:13-49
+127            android:theme="@style/ChwTheme.NoActionBar" >
+127-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:95:13-56
+128            <meta-data
+128-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:96:13-98:89
+129                android:name="android.support.PARENT_ACTIVITY"
+129-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:97:17-63
+130                android:value="org.smartregister.chw.activity.FamilyRegisterActivity" />
+130-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:98:17-86
+131        </activity>
+132        <activity
+132-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:100:9-108:20
+133            android:name="org.smartregister.chw.activity.FamilyOtherMemberProfileActivity"
+133-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:101:13-70
+134            android:label="@string/title_family_detail"
+134-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:102:13-56
+135            android:parentActivityName="org.smartregister.chw.activity.FamilyRegisterActivity"
+135-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:103:13-74
+136            android:theme="@style/FamilyTheme.NoActionBar" >
+136-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:104:13-59
+137            <meta-data
+137-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:96:13-98:89
+138                android:name="android.support.PARENT_ACTIVITY"
+138-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:97:17-63
+139                android:value=".activity.FamilyProfileActivity" />
+139-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:98:17-86
+140        </activity>
+141        <activity
+141-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:109:9-114:76
+142            android:name="org.smartregister.family.activity.FamilyWizardFormActivity"
+142-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:110:13-86
+143            android:launchMode="singleTask"
+143-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:111:13-44
+144            android:screenOrientation="portrait"
+144-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:112:13-49
+145            android:theme="@style/FamilyTheme.NoActionBar"
+145-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:113:13-59
+146            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+146-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:114:13-73
+147        <activity
+147-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:115:9-117:59
+148            android:name="org.smartregister.chw.activity.ChildRegisterActivity"
+148-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:116:13-59
+149            android:theme="@style/ChwTheme.NoActionBar" />
+149-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:117:13-56
+150        <activity
+150-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:118:9-120:59
+151            android:name="org.smartregister.chw.activity.ChildHomeVisitActivity"
+151-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:119:13-60
+152            android:theme="@style/ChwTheme.NoActionBar" />
+152-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:120:13-56
+153        <activity
+153-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:121:9-124:59
+154            android:name="org.smartregister.chw.activity.ChildProfileActivity"
+154-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:122:13-58
+155            android:label="@string/child_details"
+155-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:123:13-50
+156            android:theme="@style/ChwTheme.NoActionBar" />
+156-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:124:13-56
+157        <activity
+157-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:125:9-128:59
+158            android:name="org.smartregister.chw.activity.ChildMedicalHistoryActivity"
+158-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:126:13-65
+159            android:label="@string/medical_history"
+159-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:127:13-52
+160            android:theme="@style/ChwTheme.NoActionBar" />
+160-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:128:13-56
+161        <activity
+161-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:129:9-132:59
+162            android:name="org.smartregister.chw.core.activity.CoreChildMedicalHistoryActivity"
+162-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:130:13-74
+163            android:label="@string/medical_history"
+163-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:131:13-52
+164            android:theme="@style/ChwTheme.NoActionBar" />
+164-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:132:13-56
+165        <activity
+165-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:133:9-136:59
+166            android:name="org.smartregister.chw.core.activity.CoreUpcomingServicesActivity"
+166-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:134:13-71
+167            android:label="@string/upcoming_services"
+167-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:135:13-54
+168            android:theme="@style/ChwTheme.NoActionBar" />
+168-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:136:13-56
+169        <activity
+169-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:137:9-140:59
+170            android:name="org.smartregister.chw.core.activity.CoreFpUpcomingServicesActivity"
+170-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:138:13-73
+171            android:label="@string/upcoming_services"
+171-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:139:13-54
+172            android:theme="@style/ChwTheme.NoActionBar" />
+172-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:140:13-56
+173        <activity
+173-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:141:9-143:59
+174            android:name="org.smartregister.chw.activity.IndividualProfileRemoveActivity"
+174-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:142:13-69
+175            android:theme="@style/ChwTheme.NoActionBar" />
+175-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:143:13-56
+176        <activity
+176-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:144:9-146:59
+177            android:name="org.smartregister.chw.activity.ClientReferralActivity"
+177-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:145:13-60
+178            android:theme="@style/ChwTheme.NoActionBar" />
+178-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:146:13-56
+179        <activity
+179-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:147:9-161:20
+180            android:name="org.smartregister.chw.activity.LoginActivity"
+180-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:148:13-51
+181            android:icon="@drawable/ic_launcher"
+181-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:149:13-49
+182            android:label="@string/app_name"
+182-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:150:13-45
+183            android:launchMode="singleTask"
+183-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:151:13-44
+184            android:roundIcon="@drawable/ic_launcher_round"
+184-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:152:13-60
+185            android:screenOrientation="portrait"
+185-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:153:13-49
+186            android:theme="@style/ChwTheme.Login"
+186-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:154:13-50
+187            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" >
+187-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:155:13-73
+188            <intent-filter>
+188-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:156:13-160:29
+189                <action android:name="android.intent.action.MAIN" />
+189-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:157:17-69
+189-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:157:25-66
+190
+191                <category android:name="android.intent.category.LAUNCHER" />
+191-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:159:17-77
+191-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:159:27-74
+192            </intent-filter>
+193        </activity>
+194        <activity
+194-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:162:9-165:59
+195            android:name="org.smartregister.chw.activity.AboveFiveChildProfileActivity"
+195-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:163:13-67
+196            android:label="@string/child_details"
+196-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:164:13-50
+197            android:theme="@style/ChwTheme.NoActionBar" />
+197-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:165:13-56
+198        <activity
+198-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:166:9-169:59
+199            android:name="org.smartregister.chw.activity.MalariaProfileActivity"
+199-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:167:13-60
+200            android:label="@string/malaria"
+200-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:168:13-44
+201            android:theme="@style/ChwTheme.NoActionBar" />
+201-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:169:13-56
+202        <activity
+202-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:170:9-173:59
+203            android:name="org.smartregister.chw.core.activity.CoreAncRegisterActivity"
+203-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:171:13-66
+204            android:label="@string/anc_register"
+204-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:172:13-49
+205            android:theme="@style/ChwTheme.NoActionBar" />
+205-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:173:13-56
+206        <activity
+206-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:174:9-176:59
+207            android:name="org.smartregister.chw.activity.MalariaUpcomingServicesActivity"
+207-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:175:13-69
+208            android:theme="@style/ChwTheme.NoActionBar" />
+208-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:176:13-56
+209        <activity
+209-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:177:9-180:59
+210            android:name="org.smartregister.chw.activity.ReferralRegisterActivity"
+210-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:178:13-62
+211            android:label="@string/anc_register"
+211-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:179:13-49
+212            android:theme="@style/ChwTheme.NoActionBar" />
+212-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:180:13-56
+213        <activity
+213-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:181:9-184:59
+214            android:name="org.smartregister.chw.activity.ReferralRegistrationActivity"
+214-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:182:13-66
+215            android:label="@string/issue_referral"
+215-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:183:13-51
+216            android:theme="@style/ChwTheme.NoActionBar" />
+216-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:184:13-56
+217        <activity
+217-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:185:9-187:59
+218            android:name="org.smartregister.chw.activity.FpFollowUpVisitActivity"
+218-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:186:13-61
+219            android:theme="@style/ChwTheme.NoActionBar" />
+219-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:187:13-56
+220        <activity
+220-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:188:9-190:59
+221            android:name="org.smartregister.chw.activity.SickFormMedicalHistory"
+221-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:189:13-60
+222            android:theme="@style/ChwTheme.NoActionBar" />
+222-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:190:13-56
+223        <activity
+223-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:191:9-193:59
+224            android:name="org.smartregister.chw.core.activity.HIA2ReportsActivity"
+224-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:192:13-62
+225            android:theme="@style/ChwTheme.NoActionBar" />
+225-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:193:13-56
+226        <activity
+226-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:194:9-196:59
+227            android:name="org.smartregister.chw.core.activity.ReportSummaryActivity"
+227-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:195:13-64
+228            android:theme="@style/ChwTheme.NoActionBar" />
+228-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:196:13-56
+229        <activity
+229-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:197:9-200:59
+230            android:name="org.smartregister.chw.core.activity.ServiceJsonFormActivity"
+230-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:198:13-66
+231            android:label="@string/stock_usage_report"
+231-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:199:13-55
+232            android:theme="@style/ChwTheme.NoActionBar" />
+232-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:200:13-56
+233        <activity
+233-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:202:11-204:59
+234            android:name="org.smartregister.chw.core.activity.CoreStockInventoryReportActivity"
+234-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:202:22-84
+235            android:label="@string/stock_usage_report"
+235-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:203:13-55
+236            android:theme="@style/ChwTheme.NoActionBar" />
+236-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:204:13-56
+237        <activity
+237-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:205:9-207:59
+238            android:name="org.smartregister.chw.core.activity.CoreStockInventoryItemDetailsReportActivity"
+238-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:206:13-86
+239            android:theme="@style/ChwTheme.NoActionBar" />
+239-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:207:13-56
+240        <activity
+240-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:209:9-211:59
+241            android:name="org.smartregister.chw.activity.ReportsActivity"
+241-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:210:13-53
+242            android:theme="@style/ChwTheme.NoActionBar" />
+242-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:211:13-56
+243        <activity
+243-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:213:9-215:59
+244            android:name="org.smartregister.chw.activity.FragmentBaseActivity"
+244-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:214:13-58
+245            android:theme="@style/ChwTheme.NoActionBar" />
+245-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:215:13-56
+246        <activity
+246-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:216:9-218:59
+247            android:name="org.smartregister.chw.activity.PinLoginActivity"
+247-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:217:13-54
+248            android:theme="@style/ChwTheme.NoActionBar" />
+248-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:218:13-56
+249        <activity
+249-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:219:9-221:59
+250            android:name="org.smartregister.chw.activity.AllClientsRegisterActivity"
+250-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:220:13-64
+251            android:theme="@style/ChwTheme.NoActionBar" />
+251-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:221:13-56
+252        <activity
+252-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:223:9-225:59
+253            android:name="org.smartregister.opd.activity.BaseOpdFormActivity"
+253-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:224:13-78
+254            android:theme="@style/ChwTheme.NoActionBar" />
+254-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:225:13-56
+255        <activity
+255-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:227:9-229:59
+256            android:name="org.smartregister.chw.activity.SickChildJsonFormActivity"
+256-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:228:13-63
+257            android:theme="@style/ChwTheme.NoActionBar" />
+257-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:229:13-56
+258        <activity
+258-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:230:9-232:59
+259            android:name="org.smartregister.chw.activity.UpdatesRegisterActivity"
+259-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:231:13-82
+260            android:theme="@style/ChwTheme.NoActionBar" />
+260-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:232:13-56
+261        <activity
+261-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:233:9-235:59
+262            android:name="org.smartregister.chw.activity.UpdateRegisterDetailsActivity"
+262-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:234:13-88
+263            android:theme="@style/ChwTheme.NoActionBar" />
+263-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:235:13-56
+264        <activity
+264-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:237:9-239:59
+265            android:name="org.smartregister.chw.activity.PathfinderFamilyPlanningMemberProfileActivity"
+265-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:238:13-83
+266            android:theme="@style/ChwTheme.NoActionBar" />
+266-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:239:13-56
+267        <activity
+267-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:240:9-242:59
+268            android:name="org.smartregister.chw.activity.PathfinderFamilyPlanningRegisterActivity"
+268-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:241:13-78
+269            android:theme="@style/ChwTheme.NoActionBar" />
+269-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:242:13-56
+270        <activity
+270-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:243:9-245:59
+271            android:name="org.smartregister.chw.activity.PathfinderFamilyPlanningFollowUpVisitActivity"
+271-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:244:13-83
+272            android:theme="@style/ChwTheme.NoActionBar" />
+272-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:245:13-56
+273        <activity
+273-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:246:9-248:59
+274            android:name="org.smartregister.chw.activity.PathfinderFamilyPlanningUpcomingServicesActivity"
+274-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:247:13-86
+275            android:theme="@style/ChwTheme.NoActionBar" />
+275-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:248:13-56
+276        <activity
+276-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:250:9-254:62
+277            android:name="org.smartregister.chw.activity.AllClientsMemberProfileActivity"
+277-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:251:13-69
+278            android:label="@string/title_family_detail"
+278-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:252:13-56
+279            android:parentActivityName="org.smartregister.chw.activity.AllClientsRegisterActivity"
+279-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:253:13-78
+280            android:theme="@style/FamilyTheme.NoActionBar" />
+280-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:254:13-59
+281
+282        <meta-data
+282-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:256:9-258:72
+283            android:name="io.fabric.ApiKey"
+283-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:257:13-44
+284            android:value="3f94f9c3caeff331b3a2bd8c2182b663ad6a955a" />
+284-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:258:13-69
+285
+286        <provider
+287            android:name="androidx.core.content.FileProvider"
+287-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:261:13-62
+288            android:authorities="org.smartregister.chw.pf.fileprovider"
+288-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:262:13-64
+289            android:exported="false"
+289-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:263:13-37
+290            android:grantUriPermissions="true" >
+290-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:264:13-47
+291            <meta-data
+291-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:265:13-267:64
+292                android:name="android.support.FILE_PROVIDER_PATHS"
+292-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:266:17-67
+293                android:resource="@xml/captured_images_path" />
+293-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:267:17-61
+294        </provider>
+295
+296        <service android:name="org.smartregister.immunization.service.intent.VaccineIntentService" />
+296-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:270:9-102
+296-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:270:18-99
+297        <service android:name="org.smartregister.immunization.service.intent.RecurringIntentService" />
+297-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:271:9-104
+297-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:271:18-101
+298        <service android:name="org.smartregister.sync.intent.PullUniqueIdsIntentService" />
+298-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:272:9-92
+298-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:272:18-89
+299        <service android:name="org.smartregister.sync.intent.ExtendedSyncIntentService" />
+299-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:273:9-91
+299-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:273:18-88
+300        <service android:name="org.smartregister.sync.intent.SyncLocationsByLevelAndTagsIntentService" />
+300-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:274:9-106
+300-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:274:18-103
+301        <service android:name="org.smartregister.sync.intent.DocumentConfigurationIntentService" />
+301-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:275:9-100
+301-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:275:18-97
+302        <service android:name="org.smartregister.sync.intent.ValidateIntentService" />
+302-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:276:9-87
+302-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:276:18-84
+303        <service
+303-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:277:9-84
+304            android:name="org.smartregister.service.ImageUploadSyncService"
+304-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:277:18-81
+305            android:enabled="true" />
+305-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:32:13-35
+306        <service android:name="org.smartregister.chw.anc.intent.HomeVisitIntentService" />
+306-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:278:9-70
+306-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:278:18-67
+307        <service android:name="org.smartregister.chw.sync.intent.ChwSyncTaskIntentService" />
+307-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:279:9-73
+307-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:279:18-70
+308        <service android:name="org.smartregister.sync.intent.PlanIntentService" />
+308-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:280:9-83
+308-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:280:18-80
+309        <service android:name="org.smartregister.chw.intent.ChwPncCloseDateIntent" />
+309-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:281:9-65
+309-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:281:18-62
+310        <service
+310-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:282:9-103
+311            android:name="org.smartregister.reporting.service.IndicatorGeneratorIntentService"
+311-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:282:18-100
+312            android:exported="false" />
+312-->[org.smartregister:opensrp-client-reporting:0.0.17-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/81416aec1cb9f6277849064d6b50af26/jetified-opensrp-client-reporting-0.0.17-SNAPSHOT/AndroidManifest.xml:17:13-37
+313        <service android:name="org.smartregister.chw.service.SchedulesIntentService" />
+313-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:283:9-67
+313-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:283:18-64
+314        <service android:name="org.smartregister.chw.sync.ChwSyncIntentService" />
+314-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:284:9-62
+314-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:284:18-59
+315        <service android:name="org.smartregister.chw.core.service.StockUsageReportService" />
+315-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:285:9-94
+315-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:285:18-91
+316        <service android:name="org.smartregister.growthmonitoring.service.intent.WeightForHeightIntentService" />
+316-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:286:9-114
+316-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:286:18-111
+317
+318        <uses-library
+318-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:288:9-290:40
+319            android:name="org.apache.http.legacy"
+319-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:289:13-50
+320            android:required="false" />
+320-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:290:13-37
+321
+322        <activity
+322-->[org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:14:9-17:76
+323            android:name="org.smartregister.chw.referral.activity.BaseIssueReferralActivity"
+323-->[org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:15:13-93
+324            android:theme="@style/ChwReferralTheme.NoActionBar"
+324-->[org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:16:13-64
+325            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+325-->[org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:17:13-73
+326        <activity
+326-->[org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:18:9-21:76
+327            android:name="org.smartregister.chw.referral.activity.ReferralDetailsViewActivity"
+327-->[org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:19:13-95
+328            android:theme="@style/ChwReferralTheme.NoActionBar"
+328-->[org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:20:13-64
+329            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+329-->[org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:21:13-73
+330        <activity
+330-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:34:9-37:54
+331            android:name="org.smartregister.view.activity.ReportsActivity"
+331-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:35:13-75
+332            android:screenOrientation="landscape"
+332-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:36:13-50
+333            android:theme="@style/AppThemeNoTitle" />
+333-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:37:13-51
+334        <activity
+334-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:38:9-41:54
+335            android:name="org.smartregister.view.activity.VideosActivity"
+335-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:39:13-74
+336            android:screenOrientation="landscape"
+336-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:40:13-50
+337            android:theme="@style/AppThemeNoTitle" />
+337-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:41:13-51
+338        <activity
+338-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:42:9-45:54
+339            android:name="org.smartregister.view.activity.ReportIndicatorListViewActivity"
+339-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:43:13-91
+340            android:screenOrientation="landscape"
+340-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:44:13-50
+341            android:theme="@style/AppThemeNoTitle" />
+341-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:45:13-51
+342        <activity
+342-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:46:9-49:54
+343            android:name="org.smartregister.view.activity.ReportIndicatorDetailActivity"
+343-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:47:13-89
+344            android:screenOrientation="landscape"
+344-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:48:13-50
+345            android:theme="@style/AppThemeNoTitle" />
+345-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:49:13-51
+346        <activity
+346-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:50:9-53:54
+347            android:name="org.smartregister.view.activity.ReportIndicatorCaseListActivity"
+347-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:51:13-91
+348            android:screenOrientation="landscape"
+348-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:52:13-50
+349            android:theme="@style/AppThemeNoTitle" />
+349-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:53:13-51
+350        <activity
+350-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:54:9-57:54
+351            android:name="org.smartregister.view.activity.EligibleCoupleDetailActivity"
+351-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:55:13-88
+352            android:screenOrientation="landscape"
+352-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:56:13-50
+353            android:theme="@style/AppThemeNoTitle" />
+353-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:57:13-51
+354        <activity
+354-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:58:9-61:69
+355            android:name="org.smartregister.view.activity.CameraLaunchActivity"
+355-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:59:13-80
+356            android:screenOrientation="landscape"
+356-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:60:13-50
+357            android:theme="@android:style/Theme.Holo.NoActionBar" />
+357-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:61:13-66
+358        <activity
+358-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:62:9-65:54
+359            android:name="org.smartregister.view.activity.FormActivity"
+359-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:63:13-72
+360            android:screenOrientation="portrait"
+360-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:64:13-49
+361            android:theme="@style/AppThemeNoTitle" />
+361-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:65:13-51
+362        <activity
+362-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:66:9-69:76
+363            android:name="org.smartregister.view.activity.MicroFormActivity"
+363-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:67:13-77
+364            android:screenOrientation="landscape"
+364-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:68:13-50
+365            android:theme="@android:style/Theme.Holo.Dialog.NoActionBar" />
+365-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:69:13-73
+366        <activity
+366-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:70:9-73:54
+367            android:name="org.smartregister.view.activity.NativeECSmartRegisterActivity"
+367-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:71:13-89
+368            android:screenOrientation="landscape"
+368-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:72:13-50
+369            android:theme="@style/AppThemeNoTitle" />
+369-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:73:13-51
+370        <activity
+370-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:74:9-77:52
+371            android:name="org.smartregister.view.activity.BarcodeScanActivity"
+371-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:75:13-79
+372            android:configChanges="keyboardHidden|orientation"
+372-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:76:13-63
+373            android:screenOrientation="portrait" />
+373-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:77:13-49
+374        <activity
+374-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:78:9-80:53
+375            android:name="org.smartregister.view.activity.NativeHomeActivity"
+375-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:79:13-78
+376            android:screenOrientation="landscape" />
+376-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:80:13-50
+377        <activity
+377-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:81:9-84:52
+378            android:name="org.smartregister.view.activity.SettingsActivity"
+378-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:82:13-76
+379            android:launchMode="singleTask"
+379-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:83:13-44
+380            android:screenOrientation="portrait" />
+380-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:84:13-49
+381
+382        <receiver android:name="org.smartregister.view.receiver.SyncBroadcastReceiver" />
+382-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:86:9-90
+382-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:86:19-87
+383        <receiver android:name="org.smartregister.view.receiver.ConnectivityChangeReceiver" >
+383-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:87:9-91:20
+383-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:87:19-92
+384            <intent-filter>
+384-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:88:13-90:29
+385                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+385-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:89:17-79
+385-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:89:25-76
+386            </intent-filter>
+387        </receiver>
+388        <receiver android:name="org.smartregister.view.receiver.TimeChangedBroadcastReceiver" >
+388-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:92:9-97:20
+388-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:92:19-94
+389            <intent-filter>
+389-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:93:13-96:29
+390                <action android:name="android.intent.action.TIME_SET" />
+390-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:94:17-73
+390-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:94:25-70
+391                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+391-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:95:17-81
+391-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:95:25-78
+392            </intent-filter>
+393        </receiver>
+394
+395        <service android:name="org.smartregister.service.intentservices.ReplicationIntentService" />
+395-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:99:9-101
+395-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:99:18-98
+396        <service android:name="org.smartregister.sync.intent.P2pProcessRecordsService" />
+396-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:100:9-90
+396-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:100:18-87
+397
+398        <meta-data
+398-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:102:9-104:39
+399            android:name="com.google.android.gms.vision.Dependencies"
+399-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:103:13-70
+400            android:value="barcode" />
+400-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:104:13-36
+401        <meta-data
+401-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:105:9-107:69
+402            android:name="com.google.android.gms.version"
+402-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:106:13-58
+403            android:value="@integer/google_play_services_version" />
+403-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:107:13-66
+404
+405        <activity
+405-->[org.smartregister:opensrp-client-native-form:1.10.0-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/23da009bf08b92c8b5858a9b94b72c0f/jetified-opensrp-client-native-form-1.10.0-Test-20200603.194752-1/AndroidManifest.xml:31:9-34:52
+406            android:name="com.vijay.jsonwizard.activities.JsonFormBarcodeScanActivity"
+406-->[org.smartregister:opensrp-client-native-form:1.10.0-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/23da009bf08b92c8b5858a9b94b72c0f/jetified-opensrp-client-native-form-1.10.0-Test-20200603.194752-1/AndroidManifest.xml:32:13-87
+407            android:configChanges="keyboardHidden|orientation"
+407-->[org.smartregister:opensrp-client-native-form:1.10.0-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/23da009bf08b92c8b5858a9b94b72c0f/jetified-opensrp-client-native-form-1.10.0-Test-20200603.194752-1/AndroidManifest.xml:33:13-63
+408            android:screenOrientation="portrait" />
+408-->[org.smartregister:opensrp-client-native-form:1.10.0-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/23da009bf08b92c8b5858a9b94b72c0f/jetified-opensrp-client-native-form-1.10.0-Test-20200603.194752-1/AndroidManifest.xml:34:13-49
+409        <activity android:name="org.smartregister.opd.activity.BaseOpdProfileActivity" />
+409-->[org.smartregister:opensrp-client-opd:0.0.13-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/9d5aa1bc182c78c5059df68ae4a3327a/jetified-opensrp-client-opd-0.0.13-SNAPSHOT/AndroidManifest.xml:13:9-90
+409-->[org.smartregister:opensrp-client-opd:0.0.13-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/9d5aa1bc182c78c5059df68ae4a3327a/jetified-opensrp-client-opd-0.0.13-SNAPSHOT/AndroidManifest.xml:13:19-87
+410
+411        <service android:name="org.smartregister.configurableviews.service.PullConfigurableViewsIntentService" />
+411-->[org.smartregister:opensrp-client-configurable-views:1.1.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/3d1aa8f5ec1736e2fa6769bc11094698/jetified-opensrp-client-configurable-views-1.1.5-SNAPSHOT/AndroidManifest.xml:15:9-114
+411-->[org.smartregister:opensrp-client-configurable-views:1.1.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/3d1aa8f5ec1736e2fa6769bc11094698/jetified-opensrp-client-configurable-views-1.1.5-SNAPSHOT/AndroidManifest.xml:15:18-111
+412
+413        <activity android:name="org.smartregister.chw.anc.activity.BaseAncUpcomingServicesActivity" />
+413-->[org.smartregister:opensrp-client-chw-anc:0.1.61-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4a9d2b76a02923eb0a4dc6e5c3a39cbd/jetified-opensrp-client-chw-anc-0.1.61-SNAPSHOT/AndroidManifest.xml:14:9-103
+413-->[org.smartregister:opensrp-client-chw-anc:0.1.61-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4a9d2b76a02923eb0a4dc6e5c3a39cbd/jetified-opensrp-client-chw-anc-0.1.61-SNAPSHOT/AndroidManifest.xml:14:19-100
+414        <activity android:name="org.smartregister.chw.anc.activity.BaseAncMedicalHistoryActivity" />
+414-->[org.smartregister:opensrp-client-chw-anc:0.1.61-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4a9d2b76a02923eb0a4dc6e5c3a39cbd/jetified-opensrp-client-chw-anc-0.1.61-SNAPSHOT/AndroidManifest.xml:15:9-101
+414-->[org.smartregister:opensrp-client-chw-anc:0.1.61-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4a9d2b76a02923eb0a4dc6e5c3a39cbd/jetified-opensrp-client-chw-anc-0.1.61-SNAPSHOT/AndroidManifest.xml:15:19-98
+415        <activity android:name="org.smartregister.chw.anc.activity.BaseAncMemberProfileActivity" />
+415-->[org.smartregister:opensrp-client-chw-anc:0.1.61-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4a9d2b76a02923eb0a4dc6e5c3a39cbd/jetified-opensrp-client-chw-anc-0.1.61-SNAPSHOT/AndroidManifest.xml:16:9-100
+415-->[org.smartregister:opensrp-client-chw-anc:0.1.61-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4a9d2b76a02923eb0a4dc6e5c3a39cbd/jetified-opensrp-client-chw-anc-0.1.61-SNAPSHOT/AndroidManifest.xml:16:19-97
+416        <activity android:name="org.smartregister.chw.anc.activity.BaseAncHomeVisitActivity" />
+416-->[org.smartregister:opensrp-client-chw-anc:0.1.61-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4a9d2b76a02923eb0a4dc6e5c3a39cbd/jetified-opensrp-client-chw-anc-0.1.61-SNAPSHOT/AndroidManifest.xml:17:9-96
+416-->[org.smartregister:opensrp-client-chw-anc:0.1.61-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4a9d2b76a02923eb0a4dc6e5c3a39cbd/jetified-opensrp-client-chw-anc-0.1.61-SNAPSHOT/AndroidManifest.xml:17:19-93
+417        <activity android:name="org.smartregister.simprint.SimPrintsRegisterActivity" />
+417-->[org.smartregister:opensrp-client-simprints:1.0.3-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5092631af97f3a68a6726a288fed3e89/jetified-opensrp-client-simprints-1.0.3-SNAPSHOT/AndroidManifest.xml:16:9-89
+417-->[org.smartregister:opensrp-client-simprints:1.0.3-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5092631af97f3a68a6726a288fed3e89/jetified-opensrp-client-simprints-1.0.3-SNAPSHOT/AndroidManifest.xml:16:19-86
+418        <activity android:name="org.smartregister.simprint.SimPrintsVerifyActivity" />
+418-->[org.smartregister:opensrp-client-simprints:1.0.3-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5092631af97f3a68a6726a288fed3e89/jetified-opensrp-client-simprints-1.0.3-SNAPSHOT/AndroidManifest.xml:17:9-87
+418-->[org.smartregister:opensrp-client-simprints:1.0.3-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5092631af97f3a68a6726a288fed3e89/jetified-opensrp-client-simprints-1.0.3-SNAPSHOT/AndroidManifest.xml:17:19-84
+419        <activity android:name="org.smartregister.simprint.SimPrintsIdentifyActivity" />
+419-->[org.smartregister:opensrp-client-simprints:1.0.3-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5092631af97f3a68a6726a288fed3e89/jetified-opensrp-client-simprints-1.0.3-SNAPSHOT/AndroidManifest.xml:18:9-89
+419-->[org.smartregister:opensrp-client-simprints:1.0.3-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5092631af97f3a68a6726a288fed3e89/jetified-opensrp-client-simprints-1.0.3-SNAPSHOT/AndroidManifest.xml:18:19-86
+420        <activity
+420-->[org.smartregister:android-p2p-sync:0.3.6-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e2ba3682a10cee65c4945d6c4e913ecf/jetified-android-p2p-sync-0.3.6-SNAPSHOT/AndroidManifest.xml:24:9-27:70
+421            android:name="org.smartregister.p2p.activity.P2pModeSelectActivity"
+421-->[org.smartregister:android-p2p-sync:0.3.6-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e2ba3682a10cee65c4945d6c4e913ecf/jetified-android-p2p-sync-0.3.6-SNAPSHOT/AndroidManifest.xml:25:13-80
+422            android:label="@string/peer_to_peer_activity_title"
+422-->[org.smartregister:android-p2p-sync:0.3.6-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e2ba3682a10cee65c4945d6c4e913ecf/jetified-android-p2p-sync-0.3.6-SNAPSHOT/AndroidManifest.xml:26:13-64
+423            android:windowSoftInputMode="stateHidden|adjustResize" />
+423-->[org.smartregister:android-p2p-sync:0.3.6-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e2ba3682a10cee65c4945d6c4e913ecf/jetified-android-p2p-sync-0.3.6-SNAPSHOT/AndroidManifest.xml:27:13-67
+424
+425        <service
+425-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:17:9-20:72
+426            android:name="com.evernote.android.job.v21.PlatformJobService"
+426-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:18:13-75
+427            android:exported="false"
+427-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:19:13-37
+428            android:permission="android.permission.BIND_JOB_SERVICE" />
+428-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:20:13-69
+429        <service
+429-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:21:9-24:72
+430            android:name="com.evernote.android.job.v14.PlatformAlarmService"
+430-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:22:13-77
+431            android:exported="false"
+431-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:23:13-37
+432            android:permission="android.permission.BIND_JOB_SERVICE" />
+432-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:24:13-69
+433        <service
+433-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:25:9-27:40
+434            android:name="com.evernote.android.job.v14.PlatformAlarmServiceExact"
+434-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:26:13-82
+435            android:exported="false" />
+435-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:27:13-37
+436
+437        <receiver
+437-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:29:9-38:20
+438            android:name="com.evernote.android.job.v14.PlatformAlarmReceiver"
+438-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:30:13-78
+439            android:exported="false" >
+439-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:31:13-37
+440            <intent-filter>
+440-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:32:13-37:29
+441
+442                <!-- Keep the filter for legacy intents -->
+443                <action android:name="com.evernote.android.job.v14.RUN_JOB" />
+443-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:35:17-79
+443-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:35:25-76
+444                <action android:name="net.vrallev.android.job.v14.RUN_JOB" />
+444-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:36:17-78
+444-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:36:25-75
+445            </intent-filter>
+446        </receiver>
+447        <receiver
+447-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:39:9-48:20
+448            android:name="com.evernote.android.job.JobBootReceiver"
+448-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:40:13-68
+449            android:exported="false" >
+449-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:41:13-37
+450            <intent-filter>
+450-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:42:13-47:29
+451                <action android:name="android.intent.action.BOOT_COMPLETED" />
+451-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:43:17-79
+451-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:43:25-76
+452                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+452-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:44:17-82
+452-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:44:25-79
+453                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON" />
+453-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:45:17-82
+453-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:45:25-79
+454                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+454-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:46:17-84
+454-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:46:25-81
+455            </intent-filter>
+456        </receiver>
+457
+458        <service
+458-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:50:9-58:19
+459            android:name="com.evernote.android.job.gcm.PlatformGcmService"
+459-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:51:13-75
+460            android:enabled="false"
+460-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:52:13-36
+461            android:exported="true"
+461-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:53:13-36
+462            android:permission="com.google.android.gms.permission.BIND_NETWORK_TASK_SERVICE" >
+462-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:54:13-93
+463            <intent-filter>
+463-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:55:13-57:29
+464                <action android:name="com.google.android.gms.gcm.ACTION_TASK_READY" />
+464-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:56:17-87
+464-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:56:25-84
+465            </intent-filter>
+466        </service>
+467        <service
+467-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:59:9-62:72
+468            android:name="com.evernote.android.job.JobRescheduleService"
+468-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:60:13-73
+469            android:exported="false"
+469-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:61:13-37
+470            android:permission="android.permission.BIND_JOB_SERVICE" />
+470-->[com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:62:13-69
+471
+472        <provider
+472-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/9125711f275440a4ff8cba1132fd86b5/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:25:9-29:43
+473            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+473-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/9125711f275440a4ff8cba1132fd86b5/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:26:13-79
+474            android:authorities="org.smartregister.chw.pf.lifecycle-process"
+474-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/9125711f275440a4ff8cba1132fd86b5/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:27:13-69
+475            android:exported="false"
+475-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/9125711f275440a4ff8cba1132fd86b5/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:28:13-37
+476            android:multiprocess="true" />
+476-->[androidx.lifecycle:lifecycle-process:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/9125711f275440a4ff8cba1132fd86b5/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:29:13-40
+477        <provider
+477-->[com.crashlytics.sdk.android:crashlytics:2.10.1] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4c8418cd2c6d11c669b2ffefb8d0a954/jetified-crashlytics-2.10.1/AndroidManifest.xml:19:9-23:38
+478            android:name="com.crashlytics.android.CrashlyticsInitProvider"
+478-->[com.crashlytics.sdk.android:crashlytics:2.10.1] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4c8418cd2c6d11c669b2ffefb8d0a954/jetified-crashlytics-2.10.1/AndroidManifest.xml:20:13-75
+479            android:authorities="org.smartregister.chw.pf.crashlyticsinitprovider"
+479-->[com.crashlytics.sdk.android:crashlytics:2.10.1] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4c8418cd2c6d11c669b2ffefb8d0a954/jetified-crashlytics-2.10.1/AndroidManifest.xml:21:13-75
+480            android:exported="false"
+480-->[com.crashlytics.sdk.android:crashlytics:2.10.1] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4c8418cd2c6d11c669b2ffefb8d0a954/jetified-crashlytics-2.10.1/AndroidManifest.xml:22:13-37
+481            android:initOrder="90" />
+481-->[com.crashlytics.sdk.android:crashlytics:2.10.1] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4c8418cd2c6d11c669b2ffefb8d0a954/jetified-crashlytics-2.10.1/AndroidManifest.xml:23:13-35
+482
+483        <activity
+483-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2a749d1a2d64a87f201f54a15576cb77/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:47:9-53:63
+484            android:name="com.journeyapps.barcodescanner.CaptureActivity"
+484-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2a749d1a2d64a87f201f54a15576cb77/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:48:13-74
+485            android:clearTaskOnLaunch="true"
+485-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2a749d1a2d64a87f201f54a15576cb77/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:49:13-45
+486            android:screenOrientation="sensorLandscape"
+486-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2a749d1a2d64a87f201f54a15576cb77/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:50:13-56
+487            android:stateNotNeeded="true"
+487-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2a749d1a2d64a87f201f54a15576cb77/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:51:13-42
+488            android:theme="@style/zxing_CaptureTheme"
+488-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2a749d1a2d64a87f201f54a15576cb77/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:52:13-54
+489            android:windowSoftInputMode="stateAlwaysHidden" />
+489-->[com.journeyapps:zxing-android-embedded:3.6.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2a749d1a2d64a87f201f54a15576cb77/jetified-zxing-android-embedded-3.6.0/AndroidManifest.xml:53:13-60
+490        <activity
+490-->[com.google.android.gms:play-services-base:16.0.1] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f5e0b71421c9989336ad4a8b45b33c4c/jetified-play-services-base-16.0.1/AndroidManifest.xml:23:9-26:75
+491            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+491-->[com.google.android.gms:play-services-base:16.0.1] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f5e0b71421c9989336ad4a8b45b33c4c/jetified-play-services-base-16.0.1/AndroidManifest.xml:24:13-79
+492            android:exported="false"
+492-->[com.google.android.gms:play-services-base:16.0.1] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f5e0b71421c9989336ad4a8b45b33c4c/jetified-play-services-base-16.0.1/AndroidManifest.xml:25:13-37
+493            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+493-->[com.google.android.gms:play-services-base:16.0.1] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f5e0b71421c9989336ad4a8b45b33c4c/jetified-play-services-base-16.0.1/AndroidManifest.xml:26:13-72
+494    </application>
+495
+496</manifest>

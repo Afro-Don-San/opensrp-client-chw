@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: org.smartregister:opensrp-client-reporting:0.0.17-SNAPSHOT@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/81416aec1cb9f6277849064d6b50af26/jetified-opensrp-client-reporting-0.0.17-SNAPSHOT/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/81416aec1cb9f6277849064d6b50af26/jetified-opensrp-client-reporting-0.0.17-SNAPSHOT/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.smartregister/opensrp-client-reporting/0.0.17-SNAPSHOT/94cbc19586b001d5dbce34c86f81f29f31009522/opensrp-client-reporting-0.0.17-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.smartregister/opensrp-client-reporting/0.0.17-SNAPSHOT/94cbc19586b001d5dbce34c86f81f29f31009522/opensrp-client-reporting-0.0.17-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
