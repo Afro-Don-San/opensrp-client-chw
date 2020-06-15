@@ -92,6 +92,18 @@ public class PathfinderFpPregnancyScreeningInteractorFlv extends DefaultPathfind
                 .withFormName(ancReferralJsonObject.toString())
                 .build();
 
+        JSONObject pregnancyTestReferralJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.getPathfinderPregnancyTestReferral());
+        injectReferralFacilities(pregnancyTestReferralJsonObject);
+
+        BaseAncHomeVisitAction pregnancyTestReferralAction = new BaseAncHomeVisitAction.Builder(context, context.getString(R.string.issue_pregnancy_test_referral))
+                .withOptional(false)
+                .withDetails(null)
+                .withBaseEntityID(memberObject.getBaseEntityId())
+                .withHelper(new ANCReferralHelper(context))
+                .withProcessingMode(BaseAncHomeVisitAction.ProcessingMode.SEPARATE)
+                .withFormName(pregnancyTestReferralJsonObject.toString())
+                .build();
+
         JSONObject pregnancyScreeningJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.getPathfinderPregnancyScreening());
 
         BaseAncHomeVisitAction action = new BaseAncHomeVisitAction.Builder(context, context.getString(R.string.fp_pregnancy_screening))
@@ -99,7 +111,7 @@ public class PathfinderFpPregnancyScreeningInteractorFlv extends DefaultPathfind
                 .withDetails(null)
                 .withBaseEntityID(memberObject.getBaseEntityId())
                 .withProcessingMode(BaseAncHomeVisitAction.ProcessingMode.SEPARATE)
-                .withHelper(new PregnancyScreeningHelper(context, ancReferralAction))
+                .withHelper(new PregnancyScreeningHelper(context, ancReferralAction, pregnancyTestReferralAction))
                 .withFormName(pregnancyScreeningJsonObject.toString())
                 .build();
 
@@ -177,11 +189,14 @@ public class PathfinderFpPregnancyScreeningInteractorFlv extends DefaultPathfind
     private class PregnancyScreeningHelper extends HomeVisitActionHelper {
         private String is_client_pregnant;
         private String started_anc;
+        private String choose_pregnancy_test_referral;
         private BaseAncHomeVisitAction ancReferralAction;
+        private BaseAncHomeVisitAction pregnancyTestReferralAction;
 
-        public PregnancyScreeningHelper(Context context, BaseAncHomeVisitAction ancReferralAction) {
+        public PregnancyScreeningHelper(Context context, BaseAncHomeVisitAction ancReferralAction, BaseAncHomeVisitAction pregnancyTestReferralAction) {
             this.context = context;
             this.ancReferralAction = ancReferralAction;
+            this.pregnancyTestReferralAction = pregnancyTestReferralAction;
         }
 
         @Override
@@ -190,6 +205,7 @@ public class PathfinderFpPregnancyScreeningInteractorFlv extends DefaultPathfind
                 JSONObject jsonObject = new JSONObject(jsonPayload);
                 is_client_pregnant = JsonFormUtils.getValue(jsonObject, "is_client_pregnant");
                 started_anc = JsonFormUtils.getValue(jsonObject, "started_anc");
+                choose_pregnancy_test_referral = JsonFormUtils.getValue(jsonObject, "choose_pregnancy_test_referral");
             } catch (JSONException e) {
                 Timber.e(e);
             }
@@ -222,11 +238,18 @@ public class PathfinderFpPregnancyScreeningInteractorFlv extends DefaultPathfind
                     e.printStackTrace();
                 }
                 return BaseAncHomeVisitAction.Status.COMPLETED;
-            } else if ("no".equalsIgnoreCase(is_client_pregnant)) {
+            } else if ("no".equalsIgnoreCase(is_client_pregnant) && choose_pregnancy_test_referral.equals("receive_pregnancy_test_referral")) {
+                try {
+                    LinkedHashMap<String, BaseAncHomeVisitAction> additionalList = new LinkedHashMap<>();
+                    additionalList.put(context.getString(R.string.issue_pregnancy_test_referral), pregnancyTestReferralAction);
+                    ((PathfinderFamilyPlanningPregnancyScreeningActivity) context).initializeActions(additionalList);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 return BaseAncHomeVisitAction.Status.COMPLETED;
             }
             {
-                return BaseAncHomeVisitAction.Status.PARTIALLY_COMPLETED;
+                return BaseAncHomeVisitAction.Status.COMPLETED;
             }
         }
     }

@@ -20,7 +20,14 @@ condition: "step3_is_client_pregnant =='yes' && step3_knows_lmp!=''"
 actions:
   - "calculation =String.valueOf(String.valueOf(step3_edd_text).concat(' ')).concat(step3_knows_lmp=='yes'? helper.addDuration(step3_lmp,'280d') : ((step3_gestation_age!= '' ? (helper.addDuration(helper.getDateToday(), String.valueOf(40 - step3_gestation_age).concat('w')))  :''))   ) "
 ---
-name: step9_pregnancy_status
+name: step4_edd
+description: step1_edd calculated
+priority: 2
+condition: "step3_is_client_pregnant =='yes' && step3_knows_lmp!=''"
+actions:
+  - "calculation =  step3_knows_lmp=='yes'? helper.addDuration(step3_lmp,'280d') : ((step3_gestation_age!= '' ? (helper.addDuration(helper.getDateToday(), String.valueOf(40 - step3_gestation_age).concat('w')))  :'')) "
+---
+name: step10_pregnancy_status
 description: pregnancy_status calculated
 priority: 1
 condition: "true"

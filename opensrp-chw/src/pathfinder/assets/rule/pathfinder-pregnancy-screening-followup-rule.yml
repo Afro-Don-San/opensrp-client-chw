@@ -1,0 +1,6 @@
+name: one
+description: pregnant woman followup after edd
+priority: 1
+condition: "pathfinderFpAlertRule.isPregnancyScreeningFollowupValid(14,21,365)"
+actions:
+  - "pathfinderFpAlertRule.setVisitID('1')"

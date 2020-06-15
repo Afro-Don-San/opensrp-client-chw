@@ -29,7 +29,6 @@ public class FamilyOtherMemberProfileActivityFlv implements FamilyOtherMemberPro
                     break;
                 case R.id.refer_to_facility_layout:
                     if (BuildConfig.USE_UNIFIED_REFERRAL_APPROACH) {
-                        addReferralTypes(activity);
                         org.smartregister.chw.util.Utils.launchClientReferralActivity(activity, referralTypeModels, baseEntityId);
                     } else {
                         Toast.makeText(activity, "Refer to facility", Toast.LENGTH_SHORT).show();

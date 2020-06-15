@@ -6,19 +6,16 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="Coze" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
     <option name="TOOL_WINDOW_REGEXP_FILTER" value="false" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="345861a7-bf7e-43db-a3ca-5347f7ca549b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/opensrp-chw/src/main/java/org/smartregister/chw/activity/PathfinderFamilyPlanningMethodChoiceActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opensrp-chw/src/main/java/org/smartregister/chw/activity/PathfinderGiveFamilyPlanningMethodActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opensrp-chw/src/main/java/org/smartregister/chw/interactor/PathfinderFpMethodChoiceInteractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opensrp-chw/src/main/java/org/smartregister/chw/interactor/PathfinderGiveFpMethodInteractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/json.form/pathfinder_fp_method_referral.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/java/org/smartregister/chw/interactor/PathfinderFpMethodChoiceInteractorFlv.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/java/org/smartregister/chw/interactor/PathfinderGiveFpMethodInteractorFlv.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/json.form/pathfinder_pregnancy_test_referral.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/rule/pathfinder-pregnancy-screening-followup-rule.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/rule/pathfinder-pregnant-woman-followup-rule.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -33,8 +30,11 @@
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_afro_don_san_opensrp_chw_pathfinder_family_planning_1_0_1_Test_SNAPSHOT_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_github_afro_don_san_opensrp_chw_pathfinder_family_planning_1_0_1_Test_SNAPSHOT_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__org_smartregister_opensrp_client_chw_core_1_2_11_Pathfinder_SNAPSHOT_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__org_smartregister_opensrp_client_chw_core_1_2_11_Pathfinder_SNAPSHOT_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/generated/fabric/res/pathfinder/debug/values/com_crashlytics_build_id.xml" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/generated/fabric/res/pathfinder/debug/values/com_crashlytics_build_id.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/generated/source/buildConfig/pathfinder/debug/org/smartregister/chw/BuildConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/generated/source/buildConfig/pathfinder/debug/org/smartregister/chw/BuildConfig.java" afterDir="false" />
@@ -42,8 +42,8 @@
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/blame/res/pathfinder/debug/multi-v2/values-fr.json" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/blame/res/pathfinder/debug/multi-v2/values-fr.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/blame/res/pathfinder/debug/multi-v2/values-sw.json" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/blame/res/pathfinder/debug/multi-v2/values-sw.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/blame/res/pathfinder/debug/multi-v2/values.json" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/blame/res/pathfinder/debug/multi-v2/values.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/bundle_manifest/pathfinderDebug/bundle-manifest/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/bundle_manifest/pathfinderDebug/bundle-manifest/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/pathfinderDebug/R.jar" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/pathfinderDebug/R.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/dex/pathfinderDebug/mergeExtDexPathfinderDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/dex/pathfinderDebug/mergeExtDexPathfinderDebug/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/dex/pathfinderDebug/mergeExtDexPathfinderDebug/classes3.dex" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/dex/pathfinderDebug/mergeExtDexPathfinderDebug/classes3.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/dex/pathfinderDebug/mergeProjectDexPathfinderDebug/classes.dex" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/dex/pathfinderDebug/mergeProjectDexPathfinderDebug/classes.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/dex/pathfinderDebug/mergeProjectDexPathfinderDebug/classes2.dex" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/dex/pathfinderDebug/mergeProjectDexPathfinderDebug/classes2.dex" afterDir="false" />
@@ -57,8 +57,11 @@
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/incremental/packagePathfinderDebug/tmp/pathfinderDebug/zip-cache/androidResources" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/incremental/packagePathfinderDebug/tmp/pathfinderDebug/zip-cache/androidResources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/incremental/packagePathfinderDebug/tmp/pathfinderDebug/zip-cache/javaResources0" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/incremental/packagePathfinderDebug/tmp/pathfinderDebug/zip-cache/javaResources0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/incremental/pathfinderDebug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/incremental/pathfinderDebug-mergeJavaRes/merge-state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/incremental/pathfinderDebug-mergeJavaRes/zip-cache/DWeN+Bffdn_HmJc4bkgJ4z8QoCk=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/incremental/pathfinderDebug-mergeJavaRes/zip-cache/i0_4oymqiAxTJse2nG0lydmOqOk=" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/incremental/pathfinderDebug-mergeNativeLibs/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/incremental/pathfinderDebug-mergeNativeLibs/merge-state" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/instant_app_manifest/pathfinderDebug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/instant_app_manifest/pathfinderDebug/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/incremental/pathfinderDebug-mergeNativeLibs/zip-cache/DWeN+Bffdn_HmJc4bkgJ4z8QoCk=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/incremental/pathfinderDebug-mergeNativeLibs/zip-cache/i0_4oymqiAxTJse2nG0lydmOqOk=" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/BuildConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/BuildConfig.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/actionhelper/ANCCardAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/actionhelper/ANCCardAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/actionhelper/ANCCounselingAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/actionhelper/ANCCounselingAction.class" afterDir="false" />
@@ -82,11 +85,9 @@
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/activity/DefaultChildProfileActivityFlv.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/activity/DefaultChildProfileActivityFlv.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/activity/FamilyPlanningMemberProfileActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/activity/FamilyPlanningMemberProfileActivity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/activity/FamilyProfileActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/activity/FamilyProfileActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/activity/FpRegisterActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/activity/FpRegisterActivity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/activity/JobAidsActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/activity/JobAidsActivity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/activity/MalariaProfileActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/activity/MalariaProfileActivity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/activity/PathfinderFamilyPlanningMemberProfileActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/activity/PathfinderFamilyPlanningMemberProfileActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/activity/PathfinderFamilyPlanningRegisterActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/activity/PathfinderFamilyPlanningRegisterActivity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/activity/PncMemberProfileActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/activity/PncMemberProfileActivity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/activity/SickFormMedicalHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/activity/SickFormMedicalHistory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/adapter/GuideBooksAdapter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/adapter/GuideBooksAdapter$1.class" afterDir="false" />
@@ -123,7 +124,6 @@
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/interactor/PathfinderFpFollowUpVisitInteractorFlv.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/interactor/PathfinderFpFollowUpVisitInteractorFlv.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/model/DefaultNavigationModelFlv.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/model/DefaultNavigationModelFlv.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/model/NavigationModelFlv.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/model/NavigationModelFlv.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/presenter/AllClientsMemberPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/presenter/AllClientsMemberPresenter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/presenter/ChildProfilePresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/presenter/ChildProfilePresenter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/presenter/ChwAllClientRegisterPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/presenter/ChwAllClientRegisterPresenter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/presenter/ReferralFollowupFragmentPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/jacoco_instrumented_classes/pathfinderDebug/out/org/smartregister/chw/presenter/ReferralFollowupFragmentPresenter.class" afterDir="false" />
@@ -158,11 +158,9 @@
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/activity/DefaultChildProfileActivityFlv.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/activity/DefaultChildProfileActivityFlv.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/activity/FamilyPlanningMemberProfileActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/activity/FamilyPlanningMemberProfileActivity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/activity/FamilyProfileActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/activity/FamilyProfileActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/activity/FpRegisterActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/activity/FpRegisterActivity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/activity/JobAidsActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/activity/JobAidsActivity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/activity/MalariaProfileActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/activity/MalariaProfileActivity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/activity/PathfinderFamilyPlanningMemberProfileActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/activity/PathfinderFamilyPlanningMemberProfileActivity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/activity/PathfinderFamilyPlanningRegisterActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/activity/PathfinderFamilyPlanningRegisterActivity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/activity/PncMemberProfileActivity.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/activity/PncMemberProfileActivity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/activity/SickFormMedicalHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/activity/SickFormMedicalHistory.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/adapter/GuideBooksAdapter$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/adapter/GuideBooksAdapter$1.class" afterDir="false" />
@@ -199,7 +197,6 @@
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/interactor/PathfinderFpFollowUpVisitInteractorFlv.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/interactor/PathfinderFpFollowUpVisitInteractorFlv.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/model/DefaultNavigationModelFlv.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/model/DefaultNavigationModelFlv.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/model/NavigationModelFlv.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/model/NavigationModelFlv.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/presenter/AllClientsMemberPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/presenter/AllClientsMemberPresenter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/presenter/ChildProfilePresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/presenter/ChildProfilePresenter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/presenter/ChwAllClientRegisterPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/presenter/ChwAllClientRegisterPresenter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/presenter/ReferralFollowupFragmentPresenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/presenter/ReferralFollowupFragmentPresenter.class" afterDir="false" />
@@ -212,13 +209,11 @@
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/util/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/javac/pathfinderDebug/classes/org/smartregister/chw/util/Utils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/manifest_merge_blame_file/pathfinderDebug/manifest-merger-blame-pathfinder-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/manifest_merge_blame_file/pathfinderDebug/manifest-merger-blame-pathfinder-debug-report.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/merged_assets/pathfinderDebug/out/crashlytics-build.properties" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/merged_assets/pathfinderDebug/out/crashlytics-build.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/merged_assets/pathfinderDebug/out/ec_client_classification.json" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/merged_assets/pathfinderDebug/out/ec_client_classification.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/merged_assets/pathfinderDebug/out/json.form/pathfinder_family_planning_method_choice.json" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/merged_assets/pathfinderDebug/out/json.form/pathfinder_family_planning_method_choice.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/merged_assets/pathfinderDebug/out/json.form/pathfinder_give_family_planning_method.json" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/merged_assets/pathfinderDebug/out/json.form/pathfinder_give_family_planning_method.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/merged_assets/pathfinderDebug/out/rule/pathfinder_family_planning_method_choice_relevance.yml" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/merged_assets/pathfinderDebug/out/rule/pathfinder_family_planning_method_choice_relevance.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/merged_assets/pathfinderDebug/out/rule/pathfinder_give_family_planning_method_relevance.yml" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/merged_assets/pathfinderDebug/out/rule/pathfinder_give_family_planning_method_relevance.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/merged_assets/pathfinderDebug/out/ec_client_fields.json" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/merged_assets/pathfinderDebug/out/ec_client_fields.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/merged_assets/pathfinderDebug/out/json.form/pathfinder_pregnancy_screening.json" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/merged_assets/pathfinderDebug/out/json.form/pathfinder_pregnancy_screening.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/merged_assets/pathfinderDebug/out/rule/pathfinder_pregnancy_screening_calculation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/merged_assets/pathfinderDebug/out/rule/pathfinder_pregnancy_screening_calculation.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/merged_assets/pathfinderDebug/out/rule/pathfinder_pregnancy_screening_relevance.yml" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/merged_assets/pathfinderDebug/out/rule/pathfinder_pregnancy_screening_relevance.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/merged_java_res/pathfinderDebug/out.jar" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/merged_java_res/pathfinderDebug/out.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/merged_manifests/pathfinderDebug/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/merged_manifests/pathfinderDebug/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/processed_res/pathfinderDebug/out/resources-pathfinderDebug.ap_" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/processed_res/pathfinderDebug/out/resources-pathfinderDebug.ap_" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/BuildConfig.dex" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/BuildConfig.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/actionhelper/ANCCardAction.dex" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/actionhelper/ANCCardAction.dex" afterDir="false" />
@@ -243,11 +238,9 @@
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/activity/DefaultChildProfileActivityFlv.dex" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/activity/DefaultChildProfileActivityFlv.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/activity/FamilyPlanningMemberProfileActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/activity/FamilyPlanningMemberProfileActivity.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/activity/FamilyProfileActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/activity/FamilyProfileActivity.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/activity/FpRegisterActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/activity/FpRegisterActivity.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/activity/JobAidsActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/activity/JobAidsActivity.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/activity/MalariaProfileActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/activity/MalariaProfileActivity.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/activity/PathfinderFamilyPlanningMemberProfileActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/activity/PathfinderFamilyPlanningMemberProfileActivity.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/activity/PathfinderFamilyPlanningRegisterActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/activity/PathfinderFamilyPlanningRegisterActivity.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/activity/PncMemberProfileActivity.dex" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/activity/PncMemberProfileActivity.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/activity/SickFormMedicalHistory.dex" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/activity/SickFormMedicalHistory.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/adapter/GuideBooksAdapter$1.dex" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/adapter/GuideBooksAdapter$1.dex" afterDir="false" />
@@ -284,7 +277,6 @@
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/interactor/PathfinderFpFollowUpVisitInteractorFlv.dex" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/interactor/PathfinderFpFollowUpVisitInteractorFlv.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/model/DefaultNavigationModelFlv.dex" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/model/DefaultNavigationModelFlv.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/model/NavigationModelFlv.dex" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/model/NavigationModelFlv.dex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/presenter/AllClientsMemberPresenter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/presenter/AllClientsMemberPresenter.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/presenter/ChildProfilePresenter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/presenter/ChildProfilePresenter.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/presenter/ChwAllClientRegisterPresenter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/presenter/ChwAllClientRegisterPresenter.dex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/presenter/ReferralFollowupFragmentPresenter.dex" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/project_dex_archive/pathfinderDebug/out/org/smartregister/chw/presenter/ReferralFollowupFragmentPresenter.dex" afterDir="false" />
@@ -299,39 +291,17 @@
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/runtime_symbol_list/pathfinderDebug/R.txt" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/runtime_symbol_list/pathfinderDebug/R.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/intermediates/symbol_list_with_package_name/pathfinderDebug/package-aware-r.txt" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/intermediates/symbol_list_with_package_name/pathfinderDebug/package-aware-r.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/build-history.bin" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/build-history.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.keystream.len" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/class-fq-name-to-source.tab_i" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.keystream.len" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/java-sources-proto-map.tab_i" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/proto.tab" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/proto.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/proto.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.keystream.len" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.len" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.len" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab.values.at" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/caches-jvm/jvm/kotlin/source-to-classes.tab_i" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/last-build.bin" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/kotlin/compilePathfinderDebugKotlin/last-build.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/outputs/apk/pathfinder/debug/opensrp-chw-pathfinder-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/outputs/apk/pathfinder/debug/opensrp-chw-pathfinder-debug.apk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opensrp-chw/build/outputs/logs/manifest-merger-pathfinder-debug-report.txt" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/build/outputs/logs/manifest-merger-pathfinder-debug-report.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/opensrp-chw.iml" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/opensrp-chw.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/src/main/java/org/smartregister/chw/activity/PathfinderFamilyPlanningMemberProfileActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/src/main/java/org/smartregister/chw/activity/PathfinderFamilyPlanningMemberProfileActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/src/main/java/org/smartregister/chw/activity/PathfinderFamilyPlanningPregnancyScreeningActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/src/main/java/org/smartregister/chw/activity/PathfinderFamilyPlanningPregnancyScreeningActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/src/main/java/org/smartregister/chw/interactor/PathfinderFpPregnancyScreeningInteractor.java" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/src/main/java/org/smartregister/chw/interactor/PathfinderFpPregnancyScreeningInteractor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/src/main/java/org/smartregister/chw/presenter/PathfinderFpPregnancyScreeningPresenter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/ec_client_classification.json" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/ec_client_classification.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/json.form/pathfinder_family_planning_method_choice.json" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/json.form/pathfinder_family_planning_method_choice.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/json.form/pathfinder_give_family_planning_method.json" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/json.form/pathfinder_give_family_planning_method.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/rule/pathfinder_family_planning_method_choice_relevance.yml" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/rule/pathfinder_family_planning_method_choice_relevance.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/rule/pathfinder_give_family_planning_method_relevance.yml" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/rule/pathfinder_give_family_planning_method_relevance.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/java/org/smartregister/chw/interactor/PathfinderPathfinderFpPregnancyScreeningInteractorFlv.java" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/java/org/smartregister/chw/interactor/PathfinderFpPregnancyScreeningInteractorFlv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opensrp-chw/opensrp-chw.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/opensrp-chw/src/ba/java/org/smartregister/chw/activity/FamilyOtherMemberProfileActivityFlv.java" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/src/ba/java/org/smartregister/chw/activity/FamilyOtherMemberProfileActivityFlv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/ec_client_fields.json" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/ec_client_fields.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/json.form/pathfinder_pregnancy_screening.json" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/json.form/pathfinder_pregnancy_screening.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/rule/pathfinder_pregnancy_screening_calculation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/rule/pathfinder_pregnancy_screening_calculation.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/rule/pathfinder_pregnancy_screening_relevance.yml" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/rule/pathfinder_pregnancy_screening_relevance.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/java/org/smartregister/chw/interactor/PathfinderFpPregnancyScreeningInteractorFlv.java" beforeDir="false" afterPath="$PROJECT_DIR$/opensrp-chw/src/pathfinder/java/org/smartregister/chw/interactor/PathfinderFpPregnancyScreeningInteractorFlv.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opensrp-client-chw-pathfinder.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -352,17 +322,15 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="opensrp-client-chw-pathfinder" type="f1a62948:ProjectNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
       </state>
     </system>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="opensrp-client-chw-pathfinder" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -388,7 +356,7 @@
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/opensrp-chw/src/pathfinder/res/drawable-hdpi" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/json.form" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/rule" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.17" />
@@ -401,9 +369,12 @@
     <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/rule" />
       <recent name="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/json.form" />
-      <recent name="$PROJECT_DIR$/opensrp-chw/src/main/assets/json.form" />
+      <recent name="$PROJECT_DIR$/opensrp-chw/src/main/java/org/smartregister/chw/interactor" />
+      <recent name="$PROJECT_DIR$/opensrp-chw/src/pathfinder/java/org/smartregister/chw/activity" />
+      <recent name="$PROJECT_DIR$/opensrp-chw/src/pathfinder/res/drawable" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="org.smartregister.chw.interactor" />
@@ -412,12 +383,9 @@
       <recent name="org.smartregister.chw.task" />
       <recent name="org.smartregister.chw.rules" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/json.form" />
-      <recent name="$PROJECT_DIR$/opensrp-chw/src/pathfinder/assets/rule" />
-      <recent name="$PROJECT_DIR$/opensrp-chw/src/pathfinder/java/org/smartregister/chw/activity" />
-      <recent name="$PROJECT_DIR$/opensrp-chw/src/pathfinder/res/drawable" />
-      <recent name="$PROJECT_DIR$/opensrp-chw/src/pathfinder/res/drawable-hdpi" />
+      <recent name="$PROJECT_DIR$/opensrp-chw/src/main/assets/json.form" />
     </key>
   </component>
   <component name="RunManager">
@@ -627,30 +595,34 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1590837874579" />
+    <state x="533" y="203" key="#opensrp-chw" timestamp="1592229286362">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="533" y="203" key="#opensrp-chw/0.0.1680.1050@0.0.1680.1050" timestamp="1592229286362" />
     <state x="100" y="100" width="1480" height="850" key="DiffContextDialog" timestamp="1590931397903">
       <screen x="0" y="23" width="1680" height="981" />
     </state>
     <state x="100" y="100" width="1480" height="850" key="DiffContextDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1590931255520" />
     <state x="100" y="100" width="1480" height="850" key="DiffContextDialog/0.23.1680.981@0.23.1680.981" timestamp="1590931397903" />
-    <state width="1638" height="434" key="GridCell.Tab.0.bottom" timestamp="1592228145292">
+    <state width="1638" height="434" key="GridCell.Tab.0.bottom" timestamp="1592241878474">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="434" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1592228145292" />
+    <state width="1638" height="434" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1592241878474" />
     <state width="1638" height="293" key="GridCell.Tab.0.bottom/0.23.1680.981@0.23.1680.981" timestamp="1591458460399" />
-    <state width="1638" height="434" key="GridCell.Tab.0.center" timestamp="1592228145290">
+    <state width="1638" height="434" key="GridCell.Tab.0.center" timestamp="1592241878472">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="434" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1592228145290" />
+    <state width="1638" height="434" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1592241878472" />
     <state width="1638" height="293" key="GridCell.Tab.0.center/0.23.1680.981@0.23.1680.981" timestamp="1591458460398" />
-    <state width="1638" height="434" key="GridCell.Tab.0.left" timestamp="1592228145290">
+    <state width="1638" height="434" key="GridCell.Tab.0.left" timestamp="1592241878470">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="434" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1592228145290" />
+    <state width="1638" height="434" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1592241878470" />
     <state width="1638" height="293" key="GridCell.Tab.0.left/0.23.1680.981@0.23.1680.981" timestamp="1591458460398" />
-    <state width="1638" height="434" key="GridCell.Tab.0.right" timestamp="1592228145291">
+    <state width="1638" height="434" key="GridCell.Tab.0.right" timestamp="1592241878473">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="434" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1592228145291" />
+    <state width="1638" height="434" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1592241878473" />
     <state width="1638" height="293" key="GridCell.Tab.0.right/0.23.1680.981@0.23.1680.981" timestamp="1591458460399" />
     <state x="168" y="94" key="MergeDialog" timestamp="1591212111624">
       <screen x="0" y="0" width="1680" height="1050" />
@@ -668,10 +640,10 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="341" y="164" key="SettingsEditor/0.0.1680.1050@0.0.1680.1050" timestamp="1592035672942" />
-    <state width="634" height="456" key="SwitcherDM" timestamp="1592224871038">
+    <state width="634" height="456" key="SwitcherDM" timestamp="1592248647656">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="634" height="456" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1592224871038" />
+    <state width="634" height="456" key="SwitcherDM/0.0.1680.1050@0.0.1680.1050" timestamp="1592248647656" />
     <state x="540" y="290" key="Vcs.Multiple.Commit.Info.Dialog.Key" timestamp="1591212073746">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -688,14 +660,14 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="498" y="147" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1680.1050@0.0.1680.1050" timestamp="1591203720253" />
-    <state x="283" y="212" width="1140" height="745" key="find.popup" timestamp="1592215535789">
+    <state x="283" y="212" width="1140" height="745" key="find.popup" timestamp="1592248630128">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="283" y="212" width="1140" height="745" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1592215535789" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1592223511977">
+    <state x="283" y="212" width="1140" height="745" key="find.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1592248630128" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1592248640235">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1592223511977" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1592248640235" />
   </component>
   <component name="masterDetails">
     <states>

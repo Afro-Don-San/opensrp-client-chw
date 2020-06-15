@@ -6113,6 +6113,7 @@ string irregular_period
 string issuance_date
 string issue_anc_referral
 string issue_new_referral
+string issue_pregnancy_test_referral
 string issue_referral
 string issued
 string issued_referrals
@@ -6612,6 +6613,8 @@ string powered_by
 string ppiucd
 string pre_referral_management
 string pregnancy_confirmation
+string pregnancy_screening_followup
+string pregnant_client_followup
 string previous
 string previous_heights
 string previous_page

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/opensrp-chw/opensrp-chw.iml" filepath="$PROJECT_DIR$/opensrp-chw/opensrp-chw.iml" group="opensrp-client-chw-pathfinder/opensrp-chw" />
-      <module fileurl="file://$PROJECT_DIR$/opensrp-client-chw-pathfinder.iml" filepath="$PROJECT_DIR$/opensrp-client-chw-pathfinder.iml" group="opensrp-client-chw-pathfinder" />
-    </modules>
-  </component>
-</project>

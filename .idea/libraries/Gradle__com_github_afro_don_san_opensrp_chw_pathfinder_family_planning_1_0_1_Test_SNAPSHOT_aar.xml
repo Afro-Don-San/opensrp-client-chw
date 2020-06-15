@@ -1,14 +1,14 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.afro-don-san:opensrp-chw-pathfinder-family-planning:1.0.1-Test-SNAPSHOT@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2cc00bbfbae7e57d003bc777296fad7d/jetified-opensrp-chw-pathfinder-family-planning-1.0.1-Test-20200615.110432-101/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/2cc00bbfbae7e57d003bc777296fad7d/jetified-opensrp-chw-pathfinder-family-planning-1.0.1-Test-20200615.110432-101/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9d5b135d11abdffa34d36b97c0aae7d9/jetified-opensrp-chw-pathfinder-family-planning-1.0.1-Test-20200615.182005-108/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/9d5b135d11abdffa34d36b97c0aae7d9/jetified-opensrp-chw-pathfinder-family-planning-1.0.1-Test-20200615.182005-108/res" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$USER_HOME$/.m2/repository/com/github/afro-don-san/opensrp-chw-pathfinder-family-planning/1.0.1-Test-SNAPSHOT/opensrp-chw-pathfinder-family-planning-1.0.1-Test-20200613.062449-99-javadoc.jar!/" />
+      <root url="jar://$USER_HOME$/.m2/repository/com/github/afro-don-san/opensrp-chw-pathfinder-family-planning/1.0.1-Test-SNAPSHOT/opensrp-chw-pathfinder-family-planning-1.0.1-Test-20200615.110432-101-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$USER_HOME$/.m2/repository/com/github/afro-don-san/opensrp-chw-pathfinder-family-planning/1.0.1-Test-SNAPSHOT/opensrp-chw-pathfinder-family-planning-1.0.1-Test-20200613.062449-99-sources.jar!/" />
+      <root url="jar://$USER_HOME$/.m2/repository/com/github/afro-don-san/opensrp-chw-pathfinder-family-planning/1.0.1-Test-SNAPSHOT/opensrp-chw-pathfinder-family-planning-1.0.1-Test-20200615.110432-101-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

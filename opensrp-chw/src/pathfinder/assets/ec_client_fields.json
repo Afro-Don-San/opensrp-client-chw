@@ -1055,6 +1055,30 @@
           }
         },
         {
+          "column_name": "edd",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "edd"
+          }
+        },
+        {
+          "column_name": "choose_pregnancy_test_referral",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "choose_pregnancy_test_referral"
+          }
+        },
+        {
+          "column_name": "fp_pregnancy_screening_date",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "fp_pregnancy_screening_date"
+          }
+        },
+        {
           "column_name": "fp_method_accepted",
           "type": "Event",
           "json_mapping": {
