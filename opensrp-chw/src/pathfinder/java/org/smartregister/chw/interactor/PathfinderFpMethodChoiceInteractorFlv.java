@@ -21,6 +21,7 @@ import org.smartregister.chw.anc.domain.VisitDetail;
 import org.smartregister.chw.anc.model.BaseAncHomeVisitAction;
 import org.smartregister.chw.anc.util.VisitUtils;
 import org.smartregister.chw.application.ChwApplication;
+import org.smartregister.chw.core.activity.CorePathfinderFollowupVisitActivity;
 import org.smartregister.chw.domain.PncBaby;
 import org.smartregister.chw.util.Constants;
 import org.smartregister.chw.util.JsonFormUtils;
@@ -35,7 +36,7 @@ import java.util.Map;
 
 import timber.log.Timber;
 
-public class PathfinderPathfinderFpPregnancyScreeningInteractorFlv extends DefaultPathfinderFpPregnancyScreeningInteractorFlv {
+public class PathfinderFpMethodChoiceInteractorFlv extends DefaultPathfinderFpPregnancyScreeningInteractorFlv {
     protected LinkedHashMap<String, BaseAncHomeVisitAction> actionList;
     protected Context context;
     protected Map<String, List<VisitDetail>> details = null;
@@ -70,7 +71,7 @@ public class PathfinderPathfinderFpPregnancyScreeningInteractorFlv extends Defau
         }
         try {
             Constants.JSON_FORM.setLocaleAndAssetManager(ChwApplication.getCurrentLocale(), ChwApplication.getInstance().getApplicationContext().getAssets());
-            evaluatePregnancyScreening();
+            evaluateFpMethodChoice();
         } catch (BaseAncHomeVisitAction.ValidationException e) {
             throw (e);
         } catch (Exception e) {
@@ -79,31 +80,31 @@ public class PathfinderPathfinderFpPregnancyScreeningInteractorFlv extends Defau
         return actionList;
     }
 
-    private void evaluatePregnancyScreening() throws Exception {
-        JSONObject ancReferralJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.getPathfinderAncReferral());
-        injectReferralFacilities(ancReferralJsonObject);
+    private void evaluateFpMethodChoice() throws Exception {
+        JSONObject fpMethodReferralJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.getPathfinderFpMethodReferral());
+        injectReferralFacilities(fpMethodReferralJsonObject);
 
-        BaseAncHomeVisitAction ancReferralAction = new BaseAncHomeVisitAction.Builder(context, context.getString(R.string.issue_anc_referral))
+        BaseAncHomeVisitAction fpMethodReferral = new BaseAncHomeVisitAction.Builder(context, context.getString(R.string.fp_method_referral))
                 .withOptional(false)
                 .withDetails(null)
                 .withBaseEntityID(memberObject.getBaseEntityId())
-                .withHelper(new ANCReferralHelper(context))
+                .withHelper(new FpMethodReferralHelper(context))
                 .withProcessingMode(BaseAncHomeVisitAction.ProcessingMode.SEPARATE)
-                .withFormName(ancReferralJsonObject.toString())
+                .withFormName(fpMethodReferralJsonObject.toString())
                 .build();
 
-        JSONObject pregnancyScreeningJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.getPathfinderPregnancyScreening());
+        JSONObject fpMethodChoiceJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.getPathfinderChooseFamilyPlanningMethod());
 
-        BaseAncHomeVisitAction action = new BaseAncHomeVisitAction.Builder(context, context.getString(R.string.fp_pregnancy_screening))
+        BaseAncHomeVisitAction action = new BaseAncHomeVisitAction.Builder(context, context.getString(R.string.choose_fp_method))
                 .withOptional(false)
                 .withDetails(null)
                 .withBaseEntityID(memberObject.getBaseEntityId())
                 .withProcessingMode(BaseAncHomeVisitAction.ProcessingMode.SEPARATE)
-                .withHelper(new PregnancyScreeningHelper(context, ancReferralAction))
-                .withFormName(pregnancyScreeningJsonObject.toString())
+                .withHelper(new FpMethodChoiceHelper(context, fpMethodReferral))
+                .withFormName(fpMethodChoiceJsonObject.toString())
                 .build();
 
-        actionList.put(context.getString(R.string.fp_pregnancy_screening), action);
+        actionList.put(context.getString(R.string.choose_fp_method), action);
     }
 
     private JSONObject injectReferralFacilities(JSONObject form) throws Exception {
@@ -134,10 +135,10 @@ public class PathfinderPathfinderFpPregnancyScreeningInteractorFlv extends Defau
         }
     }
 
-    private class ANCReferralHelper extends HomeVisitActionHelper {
+    private class FpMethodReferralHelper extends HomeVisitActionHelper {
         private String referral_date;
 
-        public ANCReferralHelper(Context context) {
+        public FpMethodReferralHelper(Context context) {
             this.context = context;
         }
 
@@ -157,7 +158,7 @@ public class PathfinderPathfinderFpPregnancyScreeningInteractorFlv extends Defau
                 return null;
             }
             StringBuilder builder = new StringBuilder();
-            builder.append(context.getString(R.string.issue_anc_referral)).append(":").append(" ").append(context.getString(R.string.yes));
+            builder.append(context.getString(R.string.fp_method_referral)).append(":").append(" ").append(context.getString(R.string.yes));
             return builder.toString();
         }
 
@@ -165,31 +166,26 @@ public class PathfinderPathfinderFpPregnancyScreeningInteractorFlv extends Defau
         public BaseAncHomeVisitAction.Status evaluateStatusOnPayload() {
             if (StringUtils.isBlank(referral_date)) {
                 return BaseAncHomeVisitAction.Status.PENDING;
-            }
-
-            if (!StringUtils.isBlank(referral_date)) {
+            }else {
                 return BaseAncHomeVisitAction.Status.COMPLETED;
-            } else
-                return BaseAncHomeVisitAction.Status.PARTIALLY_COMPLETED;
+            }
         }
     }
 
-    private class PregnancyScreeningHelper extends HomeVisitActionHelper {
-        private String is_client_pregnant;
-        private String started_anc;
-        private BaseAncHomeVisitAction ancReferralAction;
+    private class FpMethodChoiceHelper extends HomeVisitActionHelper {
+        private String fp_method_accepted;
+        private BaseAncHomeVisitAction fpMethodReferralAction;
 
-        public PregnancyScreeningHelper(Context context, BaseAncHomeVisitAction ancReferralAction) {
+        public FpMethodChoiceHelper(Context context, BaseAncHomeVisitAction fpMethodReferralAction) {
             this.context = context;
-            this.ancReferralAction = ancReferralAction;
+            this.fpMethodReferralAction = fpMethodReferralAction;
         }
 
         @Override
         public void onPayloadReceived(String jsonPayload) {
             try {
                 JSONObject jsonObject = new JSONObject(jsonPayload);
-                is_client_pregnant = JsonFormUtils.getValue(jsonObject, "is_client_pregnant");
-                started_anc = JsonFormUtils.getValue(jsonObject, "started_anc");
+                fp_method_accepted = JsonFormUtils.getValue(jsonObject, "fp_method_accepted");
             } catch (JSONException e) {
                 Timber.e(e);
             }
@@ -197,36 +193,37 @@ public class PathfinderPathfinderFpPregnancyScreeningInteractorFlv extends Defau
 
         @Override
         public String evaluateSubTitle() {
-            if (StringUtils.isBlank(is_client_pregnant)) {
+            if (StringUtils.isBlank(fp_method_accepted)) {
                 return null;
             }
             StringBuilder builder = new StringBuilder();
-            if (is_client_pregnant.equalsIgnoreCase("yes"))
-                builder.append(context.getString(R.string.pregnancy_confirmation)).append(":").append(" ").append(context.getString(R.string.yes));
-            else if (is_client_pregnant.equalsIgnoreCase("no")) {
-                builder.append(context.getString(R.string.pregnancy_confirmation)).append(":").append(" ").append(context.getString(R.string.no));
-            }
+            builder.append(context.getString(R.string.choose_fp_method)).append(":").append(" ").append(context.getString(R.string.yes));
             return builder.toString();
         }
 
         @Override
         public BaseAncHomeVisitAction.Status evaluateStatusOnPayload() {
-            if (StringUtils.isBlank(is_client_pregnant)) {
+            if (StringUtils.isBlank(fp_method_accepted)) {
                 return BaseAncHomeVisitAction.Status.PENDING;
-            } else if ("no".equalsIgnoreCase(started_anc)) {
+            } else if (
+                    "vasectomy".equalsIgnoreCase(fp_method_accepted)||
+                    "iud".equalsIgnoreCase(fp_method_accepted)||
+                    "lam".equalsIgnoreCase(fp_method_accepted)||
+                    "implants".equalsIgnoreCase(fp_method_accepted)||
+                    "injection".equalsIgnoreCase(fp_method_accepted)||
+                    "emergency_contraception".equalsIgnoreCase(fp_method_accepted)||
+                    "tubal_ligation".equalsIgnoreCase(fp_method_accepted)
+            ) {
                 try {
                     LinkedHashMap<String, BaseAncHomeVisitAction> additionalList = new LinkedHashMap<>();
-                    additionalList.put(context.getString(R.string.issue_anc_referral), ancReferralAction);
-                    ((PathfinderFamilyPlanningPregnancyScreeningActivity) context).initializeActions(additionalList);
+                    additionalList.put(context.getString(R.string.fp_method_referral), fpMethodReferralAction);
+                    ((CorePathfinderFollowupVisitActivity) context).initializeActions(additionalList);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                return BaseAncHomeVisitAction.Status.COMPLETED;
-            } else if ("no".equalsIgnoreCase(is_client_pregnant)) {
-                return BaseAncHomeVisitAction.Status.COMPLETED;
-            }
-            {
                 return BaseAncHomeVisitAction.Status.PARTIALLY_COMPLETED;
+            } else  {
+                return BaseAncHomeVisitAction.Status.COMPLETED;
             }
         }
     }

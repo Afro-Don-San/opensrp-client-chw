@@ -11,9 +11,12 @@ import androidx.annotation.NonNull;
 import com.adosa.opensrp.chw.fp.domain.PathfinderFpMemberObject;
 import com.adosa.opensrp.chw.fp.util.PathfinderFamilyPlanningConstants;
 
+import org.json.JSONObject;
 import org.smartregister.chw.R;
 import org.smartregister.chw.core.activity.CorePathfinderFamilyPlanningMemberProfileActivity;
+import org.smartregister.chw.core.activity.CorePathfinderFamilyPlanningRegisterActivity;
 import org.smartregister.chw.core.interactor.CorePathfinderFamilyPlanningProfileInteractor;
+import org.smartregister.chw.core.presenter.CorePathfinderFamilyPlanningMemberProfilePresenter;
 import org.smartregister.chw.core.utils.CoreConstants;
 import org.smartregister.chw.core.utils.PathfinderFamilyPlanningUtil;
 import org.smartregister.chw.model.ReferralTypeModel;
@@ -21,6 +24,8 @@ import org.smartregister.chw.presenter.PathfinderFamilyPlanningMemberProfilePres
 import org.smartregister.commonregistry.CommonPersonObject;
 import org.smartregister.commonregistry.CommonPersonObjectClient;
 import org.smartregister.commonregistry.CommonRepository;
+import org.smartregister.family.util.Constants;
+import org.smartregister.family.util.JsonFormUtils;
 import org.smartregister.family.util.Utils;
 
 import java.util.ArrayList;
@@ -134,12 +139,12 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends CorePathfinde
 
     @Override
     public void openChooseFpMethod() {
-        PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, pathfinderFpMemberObject.getBaseEntityId(), pathfinderFpMemberObject.getAge(), CoreConstants.JSON_FORM.getPathfinderChooseFamilyPlanningMethod(), PathfinderFamilyPlanningConstants.ActivityPayload.CHANGE_METHOD_PAYLOAD_TYPE);
+        PathfinderFamilyPlanningMethodChoiceActivity.startMe(this, pathfinderFpMemberObject, false);
     }
 
     @Override
     public void openGiveFpMethodButton() {
-        PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, pathfinderFpMemberObject.getBaseEntityId(), pathfinderFpMemberObject.getFpMethod(), CoreConstants.JSON_FORM.getPathfinderGiveFamilyPlanningMethod(), PathfinderFamilyPlanningConstants.ActivityPayload.GIVE_FP_METHOD);
+        PathfinderGiveFamilyPlanningMethodActivity.startMe(this, pathfinderFpMemberObject, false);
     }
 
     @Override
@@ -173,6 +178,37 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends CorePathfinde
 
     public List<ReferralTypeModel> getReferralTypeModels() {
         return referralTypeModels;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode) {
+            case CoreConstants.ProfileActivityResults.CHANGE_COMPLETED:
+                if (resultCode == Activity.RESULT_OK) {
+                    Intent intent = new Intent(this, PathfinderFamilyPlanningRegisterActivity.class);
+                    intent.putExtras(getIntent().getExtras());
+                    startActivity(intent);
+                    finish();
+                }
+                break;
+            case JsonFormUtils.REQUEST_CODE_GET_JSON:
+                if (resultCode == RESULT_OK) {
+                    try {
+                        String jsonString = data.getStringExtra(Constants.JSON_FORM_EXTRA.JSON);
+                        JSONObject form = new JSONObject(jsonString);
+                        if (form.getString(JsonFormUtils.ENCOUNTER_TYPE).equals(CoreConstants.EventType.FAMILY_PLANNING_REFERRAL)) {
+                            ((CorePathfinderFamilyPlanningMemberProfilePresenter) fpProfilePresenter).createReferralEvent(Utils.getAllSharedPreferences(), jsonString);
+                            showToast(this.getString(org.smartregister.chw.core.R.string.referral_submitted));
+                        }
+                    } catch (Exception e) {
+                        Timber.e(e);
+                    }
+                }
+                break;
+            default:
+                break;
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 }
 

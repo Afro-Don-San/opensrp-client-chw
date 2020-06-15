@@ -1,21 +1,21 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:263:9-271:20
+INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:269:9-277:20
 	android:grantUriPermissions
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:267:13-47
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:273:13-47
 	android:authorities
 		INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:265:13-64
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:271:13-64
 	android:exported
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:266:13-37
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:272:13-37
 	android:name
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:264:13-62
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:270:13-62
 manifest
-ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:2:1-296:12
-INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:2:1-296:12
-INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:2:1-296:12
-INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:2:1-296:12
-MERGED from [org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8b041c82453d4047c1cb1168496f13cf/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200607.155356-76/AndroidManifest.xml:2:1-14:12
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:2:1-302:12
+INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:2:1-302:12
+INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:2:1-302:12
+INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:2:1-302:12
+MERGED from [org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f12f3351cdc2e59c489f9ed8d4d56e60/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200615.120432-97/AndroidManifest.xml:2:1-14:12
 MERGED from [org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:2:1-24:12
 MERGED from [androidx.databinding:databinding-adapters:4.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/33277a0c0024ec0448ac6b9d51184f59/databinding-adapters-4.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:4.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/24e18519e33a5c1664493d7f7ce81a6d/databinding-runtime-4.0.0/AndroidManifest.xml:17:1-24:12
@@ -29,7 +29,7 @@ MERGED from [org.smartregister:opensrp-client-family:1.2.34-SNAPSHOT] /Users/ila
 MERGED from [org.smartregister:opensrp-client-reporting:0.0.17-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/81416aec1cb9f6277849064d6b50af26/jetified-opensrp-client-reporting-0.0.17-SNAPSHOT/AndroidManifest.xml:2:1-20:12
 MERGED from [org.smartregister:opensrp-client-growth-monitoring:1.1.20-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/dedce58134b88386e41c0eb87651a127/jetified-opensrp-client-growth-monitoring-1.1.20-SNAPSHOT/AndroidManifest.xml:2:1-16:12
 MERGED from [org.smartregister:opensrp-chw-family-planning:1.0.24-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5b1c33acbb95c20cdc0dfd4fad6c13b2/jetified-opensrp-chw-family-planning-1.0.24-20200602.073832-2/AndroidManifest.xml:2:1-11:12
-MERGED from [com.github.afro-don-san:opensrp-chw-pathfinder-family-planning:1.0.1-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/a4bd3b033ba98d172921f34f23dce075/jetified-opensrp-chw-pathfinder-family-planning-1.0.1-Test-20200613.062449-99/AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.afro-don-san:opensrp-chw-pathfinder-family-planning:1.0.1-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2cc00bbfbae7e57d003bc777296fad7d/jetified-opensrp-chw-pathfinder-family-planning-1.0.1-Test-20200615.110432-101/AndroidManifest.xml:2:1-11:12
 MERGED from [org.smartregister:opensrp-client-chw-anc:0.1.61-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4a9d2b76a02923eb0a4dc6e5c3a39cbd/jetified-opensrp-client-chw-anc-0.1.61-SNAPSHOT/AndroidManifest.xml:2:1-20:12
 MERGED from [org.smartregister:opensrp-client-chw-pnc:0.0.33-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/c157e409b377243cf2bfa73bd0b7cf4f/jetified-opensrp-client-chw-pnc-0.0.33-20200607.152610-2/AndroidManifest.xml:2:1-11:12
 MERGED from [org.smartregister:opensrp-client-chw-malaria:1.2.17-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/6621c34e8e8db16334c32f706f983940/jetified-opensrp-client-chw-malaria-1.2.17-20200528.043201-1/AndroidManifest.xml:2:1-11:12
@@ -122,22 +122,22 @@ MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/ilakozeju
 MERGED from [com.google.android.gms:play-services-basement:16.1.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/323043d3fbe18fd16490c77af2a79adf/jetified-play-services-basement-16.1.0/AndroidManifest.xml:17:1-28:12
 MERGED from [com.github.chivorns:smartmaterialspinner:1.2.1] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/eecfab845429d51a137c7f94dbc787c3/jetified-smartmaterialspinner-1.2.1/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.legacy:legacy-support-v13:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/a77de91302351675a1068d60db1646cd/legacy-support-v13-1.0.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:2:1-296:12
-INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:2:1-296:12
-INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:2:1-296:12
+INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:2:1-302:12
+INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:2:1-302:12
+INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:2:1-302:12
 	package
 		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:4:5-36
 		INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml
 		INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:2:1-296:12
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:2:1-302:12
 		INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml
 	xmlns:tools
 		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:2:1-296:12
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:2:1-302:12
 		INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:2:11-69
@@ -249,12 +249,12 @@ MERGED from [com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/cache
 		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:24:22-65
 uses-permission#android.permission.CALL_PHONE
 ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:25:5-69
-MERGED from [org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8b041c82453d4047c1cb1168496f13cf/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200607.155356-76/AndroidManifest.xml:11:5-69
-MERGED from [org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8b041c82453d4047c1cb1168496f13cf/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200607.155356-76/AndroidManifest.xml:11:5-69
+MERGED from [org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f12f3351cdc2e59c489f9ed8d4d56e60/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200615.120432-97/AndroidManifest.xml:11:5-69
+MERGED from [org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f12f3351cdc2e59c489f9ed8d4d56e60/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200615.120432-97/AndroidManifest.xml:11:5-69
 	android:name
 		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:25:22-66
 application
-ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:27:5-294:19
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:27:5-300:19
 MERGED from [org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:13:5-22:19
 MERGED from [org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:13:5-22:19
 MERGED from [org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:26:5-108:19
@@ -783,110 +783,122 @@ ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-path
 		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:251:13-56
 	android:name
 		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:250:13-86
-activity#org.smartregister.chw.activity.AllClientsMemberProfileActivity
-ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:253:9-257:62
-	android:parentActivityName
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:256:13-78
-	android:label
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:255:13-56
+activity#org.smartregister.chw.activity.PathfinderFamilyPlanningMethodChoiceActivity
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:252:9-254:59
 	android:theme
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:257:13-59
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:254:13-56
 	android:name
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:254:13-69
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:253:13-82
+activity#org.smartregister.chw.activity.PathfinderGiveFamilyPlanningMethodActivity
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:255:9-257:59
+	android:theme
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:257:13-56
+	android:name
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:256:13-80
+activity#org.smartregister.chw.activity.AllClientsMemberProfileActivity
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:259:9-263:62
+	android:parentActivityName
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:262:13-78
+	android:label
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:261:13-56
+	android:theme
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:263:13-59
+	android:name
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:260:13-69
 meta-data#io.fabric.ApiKey
-ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:259:9-261:72
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:265:9-267:72
 	android:value
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:261:13-69
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:267:13-69
 	android:name
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:260:13-44
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:266:13-44
 service#org.smartregister.immunization.service.intent.VaccineIntentService
-ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:273:9-102
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:279:9-102
 	android:name
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:273:18-99
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:279:18-99
 service#org.smartregister.immunization.service.intent.RecurringIntentService
-ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:274:9-104
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:280:9-104
 	android:name
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:274:18-101
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:280:18-101
 service#org.smartregister.sync.intent.PullUniqueIdsIntentService
-ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:275:9-92
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:281:9-92
 	android:name
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:275:18-89
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:281:18-89
 service#org.smartregister.sync.intent.ExtendedSyncIntentService
-ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:276:9-91
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:282:9-91
 	android:name
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:276:18-88
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:282:18-88
 service#org.smartregister.sync.intent.SyncLocationsByLevelAndTagsIntentService
-ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:277:9-106
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:283:9-106
 	android:name
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:277:18-103
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:283:18-103
 service#org.smartregister.sync.intent.DocumentConfigurationIntentService
-ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:278:9-100
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:284:9-100
 	android:name
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:278:18-97
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:284:18-97
 service#org.smartregister.sync.intent.ValidateIntentService
-ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:279:9-87
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:285:9-87
 	android:name
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:279:18-84
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:285:18-84
 service#org.smartregister.service.ImageUploadSyncService
-ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:280:9-84
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:286:9-84
 MERGED from [org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:30:9-32:38
 MERGED from [org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:30:9-32:38
 	android:enabled
 		ADDED from [org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:32:13-35
 	android:name
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:280:18-81
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:286:18-81
 service#org.smartregister.chw.anc.intent.HomeVisitIntentService
-ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:281:9-70
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:287:9-70
 	android:name
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:281:18-67
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:287:18-67
 service#org.smartregister.chw.sync.intent.ChwSyncTaskIntentService
-ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:282:9-73
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:288:9-73
 	android:name
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:282:18-70
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:288:18-70
 service#org.smartregister.sync.intent.PlanIntentService
-ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:283:9-83
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:289:9-83
 	android:name
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:283:18-80
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:289:18-80
 service#org.smartregister.chw.intent.ChwPncCloseDateIntent
-ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:284:9-65
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:290:9-65
 	android:name
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:284:18-62
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:290:18-62
 service#org.smartregister.reporting.service.IndicatorGeneratorIntentService
-ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:285:9-103
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:291:9-103
 MERGED from [org.smartregister:opensrp-client-reporting:0.0.17-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/81416aec1cb9f6277849064d6b50af26/jetified-opensrp-client-reporting-0.0.17-SNAPSHOT/AndroidManifest.xml:15:9-17:40
 MERGED from [org.smartregister:opensrp-client-reporting:0.0.17-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/81416aec1cb9f6277849064d6b50af26/jetified-opensrp-client-reporting-0.0.17-SNAPSHOT/AndroidManifest.xml:15:9-17:40
 	android:exported
 		ADDED from [org.smartregister:opensrp-client-reporting:0.0.17-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/81416aec1cb9f6277849064d6b50af26/jetified-opensrp-client-reporting-0.0.17-SNAPSHOT/AndroidManifest.xml:17:13-37
 	android:name
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:285:18-100
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:291:18-100
 service#org.smartregister.chw.service.SchedulesIntentService
-ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:286:9-67
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:292:9-67
 	android:name
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:286:18-64
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:292:18-64
 service#org.smartregister.chw.sync.ChwSyncIntentService
-ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:287:9-62
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:293:9-62
 	android:name
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:287:18-59
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:293:18-59
 service#org.smartregister.chw.core.service.StockUsageReportService
-ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:288:9-94
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:294:9-94
 	android:name
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:288:18-91
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:294:18-91
 service#org.smartregister.growthmonitoring.service.intent.WeightForHeightIntentService
-ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:289:9-114
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:295:9-114
 	android:name
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:289:18-111
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:295:18-111
 uses-library#org.apache.http.legacy
-ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:291:9-293:40
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:297:9-299:40
 	android:required
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:293:13-37
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:299:13-37
 	android:name
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:292:13-50
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:298:13-50
 uses-sdk
 INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml
 INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml
-MERGED from [org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8b041c82453d4047c1cb1168496f13cf/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200607.155356-76/AndroidManifest.xml:7:5-9:41
-MERGED from [org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8b041c82453d4047c1cb1168496f13cf/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200607.155356-76/AndroidManifest.xml:7:5-9:41
+MERGED from [org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f12f3351cdc2e59c489f9ed8d4d56e60/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200615.120432-97/AndroidManifest.xml:7:5-9:41
+MERGED from [org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f12f3351cdc2e59c489f9ed8d4d56e60/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200615.120432-97/AndroidManifest.xml:7:5-9:41
 MERGED from [org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:7:5-9:41
 MERGED from [org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.databinding:databinding-adapters:4.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/33277a0c0024ec0448ac6b9d51184f59/databinding-adapters-4.0.0/AndroidManifest.xml:22:5-44
@@ -913,8 +925,8 @@ MERGED from [org.smartregister:opensrp-client-growth-monitoring:1.1.20-SNAPSHOT]
 MERGED from [org.smartregister:opensrp-client-growth-monitoring:1.1.20-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/dedce58134b88386e41c0eb87651a127/jetified-opensrp-client-growth-monitoring-1.1.20-SNAPSHOT/AndroidManifest.xml:7:5-9:41
 MERGED from [org.smartregister:opensrp-chw-family-planning:1.0.24-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5b1c33acbb95c20cdc0dfd4fad6c13b2/jetified-opensrp-chw-family-planning-1.0.24-20200602.073832-2/AndroidManifest.xml:7:5-9:41
 MERGED from [org.smartregister:opensrp-chw-family-planning:1.0.24-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5b1c33acbb95c20cdc0dfd4fad6c13b2/jetified-opensrp-chw-family-planning-1.0.24-20200602.073832-2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.afro-don-san:opensrp-chw-pathfinder-family-planning:1.0.1-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/a4bd3b033ba98d172921f34f23dce075/jetified-opensrp-chw-pathfinder-family-planning-1.0.1-Test-20200613.062449-99/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.afro-don-san:opensrp-chw-pathfinder-family-planning:1.0.1-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/a4bd3b033ba98d172921f34f23dce075/jetified-opensrp-chw-pathfinder-family-planning-1.0.1-Test-20200613.062449-99/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.afro-don-san:opensrp-chw-pathfinder-family-planning:1.0.1-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2cc00bbfbae7e57d003bc777296fad7d/jetified-opensrp-chw-pathfinder-family-planning-1.0.1-Test-20200615.110432-101/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.afro-don-san:opensrp-chw-pathfinder-family-planning:1.0.1-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2cc00bbfbae7e57d003bc777296fad7d/jetified-opensrp-chw-pathfinder-family-planning-1.0.1-Test-20200615.110432-101/AndroidManifest.xml:7:5-9:41
 MERGED from [org.smartregister:opensrp-client-chw-anc:0.1.61-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4a9d2b76a02923eb0a4dc6e5c3a39cbd/jetified-opensrp-client-chw-anc-0.1.61-SNAPSHOT/AndroidManifest.xml:7:5-9:41
 MERGED from [org.smartregister:opensrp-client-chw-anc:0.1.61-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4a9d2b76a02923eb0a4dc6e5c3a39cbd/jetified-opensrp-client-chw-anc-0.1.61-SNAPSHOT/AndroidManifest.xml:7:5-9:41
 MERGED from [org.smartregister:opensrp-client-chw-pnc:0.0.33-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/c157e409b377243cf2bfa73bd0b7cf4f/jetified-opensrp-client-chw-pnc-0.0.33-20200607.152610-2/AndroidManifest.xml:7:5-9:41
@@ -1112,17 +1124,17 @@ INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-p
 		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml
 		INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:268:13-270:64
+ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:274:13-276:64
 	android:resource
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:270:17-61
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:276:17-61
 	android:name
-		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:269:17-67
+		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:275:17-67
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from [org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8b041c82453d4047c1cb1168496f13cf/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200607.155356-76/AndroidManifest.xml:12:5-75
+ADDED from [org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f12f3351cdc2e59c489f9ed8d4d56e60/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200615.120432-97/AndroidManifest.xml:12:5-75
 MERGED from [org.smartregister:opensrp-client-native-form:1.10.0-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/23da009bf08b92c8b5858a9b94b72c0f/jetified-opensrp-client-native-form-1.10.0-Test-20200603.194752-1/AndroidManifest.xml:18:5-75
 MERGED from [org.smartregister:opensrp-client-native-form:1.10.0-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/23da009bf08b92c8b5858a9b94b72c0f/jetified-opensrp-client-native-form-1.10.0-Test-20200603.194752-1/AndroidManifest.xml:18:5-75
 	android:name
-		ADDED from [org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8b041c82453d4047c1cb1168496f13cf/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200607.155356-76/AndroidManifest.xml:12:22-72
+		ADDED from [org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f12f3351cdc2e59c489f9ed8d4d56e60/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200615.120432-97/AndroidManifest.xml:12:22-72
 uses-permission#android.permission.READ_PHONE_NUMBERS
 ADDED from [org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:11:5-77
 MERGED from [org.smartregister:opensrp-client-chw-anc:0.1.61-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4a9d2b76a02923eb0a4dc6e5c3a39cbd/jetified-opensrp-client-chw-anc-0.1.61-SNAPSHOT/AndroidManifest.xml:11:5-77

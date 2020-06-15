@@ -249,6 +249,12 @@
         <activity
             android:name=".activity.PathfinderFamilyPlanningUpcomingServicesActivity"
             android:theme="@style/ChwTheme.NoActionBar" />
+        <activity
+            android:name=".activity.PathfinderFamilyPlanningMethodChoiceActivity"
+            android:theme="@style/ChwTheme.NoActionBar" />
+        <activity
+            android:name=".activity.PathfinderGiveFamilyPlanningMethodActivity"
+            android:theme="@style/ChwTheme.NoActionBar" />
 
         <activity
             android:name=".activity.AllClientsMemberProfileActivity"

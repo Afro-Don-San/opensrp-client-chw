@@ -278,6 +278,12 @@
             android:name="org.smartregister.chw.activity.PathfinderFamilyPlanningUpcomingServicesActivity"
             android:theme="@style/ChwTheme.NoActionBar" />
         <activity
+            android:name="org.smartregister.chw.activity.PathfinderFamilyPlanningMethodChoiceActivity"
+            android:theme="@style/ChwTheme.NoActionBar" />
+        <activity
+            android:name="org.smartregister.chw.activity.PathfinderGiveFamilyPlanningMethodActivity"
+            android:theme="@style/ChwTheme.NoActionBar" />
+        <activity
             android:name="org.smartregister.chw.activity.AllClientsMemberProfileActivity"
             android:label="@string/title_family_detail"
             android:parentActivityName="org.smartregister.chw.activity.AllClientsRegisterActivity"

@@ -2,7 +2,7 @@
   "validate_on_submit": false,
   "show_errors_on_submit": true,
   "skip_blank_steps": true,
-  "count": "17",
+  "count": "16",
   "encounter_type": "Give Family Planning Method",
   "entity_id": "",
   "relational_id": "",
@@ -843,8 +843,7 @@
     ]
   },
   "step16": {
-    "title": "Give Referral",
-    "next": "step17",
+    "title": "End",
     "fields": [
       {
         "key": "give_referral_note",
@@ -866,36 +865,6 @@
           "rules-engine": {
             "ex-rules": {
               "rules-file": "pathfinder_give_family_planning_method_calculation.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step17": {
-    "title": "End",
-    "fields": [
-      {
-        "key": "unique_referral_id",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "person_identifier",
-        "openmrs_entity_id": "unique_referral_id",
-        "type": "barcode",
-        "barcode_type": "qrcode",
-        "hint": "Referral ID",
-        "scanButtonText": "Scan Referral Form\nQR Code",
-        "v_numeric": {
-          "value": "true",
-          "err": "Please enter a valid ID"
-        },
-        "v_required": {
-          "value": "true",
-          "err": "Please enter the UNIQUE ID"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
             }
           }
         }

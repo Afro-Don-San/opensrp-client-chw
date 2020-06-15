@@ -2,7 +2,7 @@
   "validate_on_submit": false,
   "show_errors_on_submit": false,
   "skip_blank_steps": true,
-  "count": "33",
+  "count": "32",
   "encounter_type": "Family Planning Method Choice",
   "entity_id": "",
   "relational_id": "",
@@ -1195,31 +1195,8 @@
     ]
   },
   "step15": {
-    "title": "Explain reasons for giving Referral",
-    "next": "step16",
-    "fields": [
-      {
-        "key": "explanation_of_reasons_for_giving_referral",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "text": "Explain the reason for giving the referral and explain where the nearest health facility is located.\nFill in the referral form. Scan QR code on the referral form.\nInform the client that you will follow up to make sure they got the service they were referred for\n",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step16": {
     "title": "Client chose method available through CHW",
-    "next": "step17",
+    "next": "step16",
     "fields": [
       {
         "key": "non_referral_method_chosen",
@@ -1240,9 +1217,9 @@
       }
     ]
   },
-  "step17": {
+  "step16": {
     "title": "COC Pills Screening Questions",
-    "next": "step18",
+    "next": "step17",
     "fields": [
       {
         "key": "has_had_a_child_in_the_past_6_months",
@@ -1456,9 +1433,9 @@
       }
     ]
   },
-  "step18": {
+  "step17": {
     "title": "POP Pills Screening Questions",
-    "next": "step19",
+    "next": "step18",
     "fields": [
       {
         "key": "breastfeeding_a_baby_less_than_6_months",
@@ -1689,9 +1666,9 @@
       }
     ]
   },
-  "step19": {
+  "step18": {
     "title": "Eligibility for pills",
-    "next": "step20",
+    "next": "step19",
     "fields": [
       {
         "key": "non_ineligible_for_pills",
@@ -1729,9 +1706,9 @@
       }
     ]
   },
-  "step20": {
+  "step19": {
     "title": "COC counseling 1",
-    "next": "step21",
+    "next": "step20",
     "fields": [
       {
         "key": "coc_counselling_1",
@@ -1752,9 +1729,9 @@
       }
     ]
   },
-  "step21": {
+  "step20": {
     "title": "COC counseling 2",
-    "next": "step22",
+    "next": "step21",
     "fields": [
       {
         "key": "coc_counselling_2",
@@ -1775,9 +1752,9 @@
       }
     ]
   },
-  "step22": {
+  "step21": {
     "title": "COC counseling 3",
-    "next": "step23",
+    "next": "step22",
     "fields": [
       {
         "key": "coc_counselling_3",
@@ -1798,9 +1775,9 @@
       }
     ]
   },
-  "step23": {
+  "step22": {
     "title": "COC counseling 4",
-    "next": "step24",
+    "next": "step23",
     "fields": [
       {
         "key": "coc_counselling_4",
@@ -1821,9 +1798,9 @@
       }
     ]
   },
-  "step24": {
+  "step23": {
     "title": "COC counseling 5",
-    "next": "step25",
+    "next": "step24",
     "fields": [
       {
         "key": "coc_counselling_5",
@@ -1844,9 +1821,9 @@
       }
     ]
   },
-  "step25": {
+  "step24": {
     "title": "COC counseling 6",
-    "next": "step26",
+    "next": "step25",
     "fields": [
       {
         "key": "coc_counselling_6",
@@ -1867,9 +1844,9 @@
       }
     ]
   },
-  "step26": {
+  "step25": {
     "title": "POP counseling 1",
-    "next": "step27",
+    "next": "step26",
     "fields": [
       {
         "key": "pop_counselling_1",
@@ -1890,9 +1867,9 @@
       }
     ]
   },
-  "step27": {
+  "step26": {
     "title": "POP counseling 2",
-    "next": "step28",
+    "next": "step27",
     "fields": [
       {
         "key": "pop_counselling_2",
@@ -1913,9 +1890,9 @@
       }
     ]
   },
-  "step28": {
+  "step27": {
     "title": "POP counseling 3",
-    "next": "step29",
+    "next": "step28",
     "fields": [
       {
         "key": "pop_counselling_3",
@@ -1936,9 +1913,9 @@
       }
     ]
   },
-  "step29": {
+  "step28": {
     "title": "POP counseling 4",
-    "next": "step30",
+    "next": "step29",
     "fields": [
       {
         "key": "pop_counselling_4",
@@ -1959,9 +1936,9 @@
       }
     ]
   },
-  "step30": {
+  "step29": {
     "title": "POP counseling 5",
-    "next": "step31",
+    "next": "step30",
     "fields": [
       {
         "key": "pop_counselling_5",
@@ -1982,9 +1959,9 @@
       }
     ]
   },
-  "step31": {
+  "step30": {
     "title": "Standard Days Method Screening Questions",
-    "next": "step32",
+    "next": "step31",
     "fields": [
       {
         "key": "periods_come_when_expected",
@@ -2058,9 +2035,9 @@
       }
     ]
   },
-  "step32": {
+  "step31": {
     "title": "Client has Regular Periods",
-    "next": "step33",
+    "next": "step32",
     "fields": [
       {
         "key": "regular_periods",
@@ -2133,7 +2110,7 @@
       }
     ]
   },
-  "step33": {
+  "step32": {
     "title": "Form Submission",
     "fields": [
       {
@@ -2205,22 +2182,14 @@
         }
       },
       {
-        "key": "unique_referral_id",
+        "key": "explanation_of_reasons_for_giving_referral",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "person_identifier",
-        "openmrs_entity_id": "unique_referral_id",
-        "type": "barcode",
-        "barcode_type": "qrcode",
-        "hint": "Referral ID",
-        "scanButtonText": "Scan Referral Form\nQR Code",
-        "v_numeric": {
-          "value": "true",
-          "err": "Please enter a valid ID"
-        },
-        "v_required": {
-          "value": "true",
-          "err": "Please enter the UNIQUE ID"
-        },
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Explain the reason for giving the referral and explain where the nearest health facility is located.\nFill in the referral form. Scan QR code on the referral form.\nInform the client that you will follow up to make sure they got the service they were referred for\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
         "relevance": {
           "rules-engine": {
             "ex-rules": {

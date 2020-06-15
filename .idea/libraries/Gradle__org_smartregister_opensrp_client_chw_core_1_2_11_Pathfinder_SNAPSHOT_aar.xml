@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/29b7758c94799fa1caa5176d56e64de3/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200615.084549-88/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/29b7758c94799fa1caa5176d56e64de3/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200615.084549-88/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6c91af25ed87705303fb3c5798760288/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200615.115533-96/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6c91af25ed87705303fb3c5798760288/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200615.115533-96/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.m2/repository/org/smartregister/opensrp-client-chw-core/1.2.11-Pathfinder-SNAPSHOT/opensrp-client-chw-core-1.2.11-Pathfinder-20200615.055705-77-javadoc.jar!/" />
