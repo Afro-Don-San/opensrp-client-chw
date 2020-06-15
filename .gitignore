@@ -18,4 +18,5 @@ project.properties
 .DS_Store
 .settings
 build/
+build/*
 jacoco.exec
