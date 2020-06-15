@@ -244,6 +244,9 @@
             android:name=".activity.PathfinderFamilyPlanningFollowUpVisitActivity"
             android:theme="@style/ChwTheme.NoActionBar" />
         <activity
+            android:name=".activity.PathfinderFamilyPlanningPregnancyScreeningActivity"
+            android:theme="@style/ChwTheme.NoActionBar" />
+        <activity
             android:name=".activity.PathfinderFamilyPlanningUpcomingServicesActivity"
             android:theme="@style/ChwTheme.NoActionBar" />
 

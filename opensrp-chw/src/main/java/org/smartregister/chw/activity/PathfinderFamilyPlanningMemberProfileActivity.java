@@ -11,8 +11,6 @@ import androidx.annotation.NonNull;
 import com.adosa.opensrp.chw.fp.domain.PathfinderFpMemberObject;
 import com.adosa.opensrp.chw.fp.util.PathfinderFamilyPlanningConstants;
 
-import org.json.JSONObject;
-import org.smartregister.chw.BuildConfig;
 import org.smartregister.chw.R;
 import org.smartregister.chw.core.activity.CorePathfinderFamilyPlanningMemberProfileActivity;
 import org.smartregister.chw.core.interactor.CorePathfinderFamilyPlanningProfileInteractor;
@@ -24,7 +22,6 @@ import org.smartregister.commonregistry.CommonPersonObject;
 import org.smartregister.commonregistry.CommonPersonObjectClient;
 import org.smartregister.commonregistry.CommonRepository;
 import org.smartregister.family.util.Utils;
-import org.smartregister.util.FormUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -124,15 +121,15 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends CorePathfinde
         PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, pathfinderFpMemberObject.getBaseEntityId(), pathfinderFpMemberObject.getAge(), CoreConstants.JSON_FORM.getPathfinderFamilyPlanningIntroduction(), com.adosa.opensrp.chw.fp.util.PathfinderFamilyPlanningConstants.ActivityPayload.CHANGE_METHOD_PAYLOAD_TYPE);
     }
 
-//    @Override TODO implement this override
+    //    @Override TODO implement this override
     public void openFamilyPlanningRiskAssessmentHivTestingAndDualCounseling() {
         Timber.e("Coze ::openFamilyPlanningRiskAssessmentHivTestingAndDualCounseling ");
-        PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, pathfinderFpMemberObject.getBaseEntityId(),  pathfinderFpMemberObject.getAge(), CoreConstants.JSON_FORM.getPathfinderRiskAssessmentHivTestingDualProtectionCounseling(), PathfinderFamilyPlanningConstants.ActivityPayload.CHANGE_METHOD_PAYLOAD_TYPE);
+        PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, pathfinderFpMemberObject.getBaseEntityId(), pathfinderFpMemberObject.getAge(), CoreConstants.JSON_FORM.getPathfinderRiskAssessmentHivTestingDualProtectionCounseling(), PathfinderFamilyPlanningConstants.ActivityPayload.CHANGE_METHOD_PAYLOAD_TYPE);
     }
 
     @Override
     public void openPregnancyScreening() {
-        PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, pathfinderFpMemberObject.getBaseEntityId(), pathfinderFpMemberObject.getAge(), CoreConstants.JSON_FORM.getPathfinderPregnancyScreening(), PathfinderFamilyPlanningConstants.ActivityPayload.CHANGE_METHOD_PAYLOAD_TYPE);
+        PathfinderFamilyPlanningPregnancyScreeningActivity.startMe(this, pathfinderFpMemberObject, false);
     }
 
     @Override
@@ -148,20 +145,6 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends CorePathfinde
     @Override
     public void openUpcomingServices() {
         PathfinderFamilyPlanningUpcomingServicesActivity.startMe(this, PathfinderFamilyPlanningUtil.toMember(pathfinderFpMemberObject));
-    }
-
-    @Override
-    public void issueANCReferralForm() {
-        if (BuildConfig.USE_UNIFIED_REFERRAL_APPROACH) {
-            try {
-                JSONObject formJson = FormUtils.getInstance(this).getFormJsonFromRepositoryOrAssets(org.smartregister.chw.util.Constants.JSON_FORM.getAncUnifiedReferralForm());
-                formJson.put(org.smartregister.chw.util.Constants.REFERRAL_TASK_FOCUS, referralTypeModels.get(0).getReferralType());
-                ReferralRegistrationActivity.startGeneralReferralFormActivityForResults(this,
-                        pathfinderFpMemberObject.getBaseEntityId(), formJson);
-            } catch (Exception ex) {
-                Timber.e(ex);
-            }
-        }
     }
 
     @Override

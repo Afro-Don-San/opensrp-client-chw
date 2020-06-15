@@ -4313,7 +4313,6 @@ id textview_immunization
 id textview_immunization_group_secondary_text
 id textview_immunization_secondary_text
 id textview_introduction_to_fp
-id textview_issue_anc_referral
 id textview_issue_referral
 id textview_last_vist_day
 id textview_medical_history

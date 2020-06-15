@@ -137,7 +137,7 @@
             android:theme="@style/FamilyTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activity.FamilyProfileActivity" />
+                android:value="org.smartregister.chw.activity.FamilyProfileActivity" />
         </activity>
         <activity
             android:name="org.smartregister.family.activity.FamilyWizardFormActivity"
@@ -270,6 +270,9 @@
             android:theme="@style/ChwTheme.NoActionBar" />
         <activity
             android:name="org.smartregister.chw.activity.PathfinderFamilyPlanningFollowUpVisitActivity"
+            android:theme="@style/ChwTheme.NoActionBar" />
+        <activity
+            android:name="org.smartregister.chw.activity.PathfinderFamilyPlanningPregnancyScreeningActivity"
             android:theme="@style/ChwTheme.NoActionBar" />
         <activity
             android:name="org.smartregister.chw.activity.PathfinderFamilyPlanningUpcomingServicesActivity"
