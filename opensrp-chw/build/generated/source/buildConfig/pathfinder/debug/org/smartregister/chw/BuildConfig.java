@@ -37,7 +37,7 @@ public final class BuildConfig {
   public static final String opensrp_url = "https://boresha-afya.smartregister.org/opensrp/";
   public static final String opensrp_url_debug = "http://172.105.87.198:8082/opensrp/";
   // Fields from default config.
-  public static final long BUILD_TIMESTAMP = 1592210834987L;
+  public static final long BUILD_TIMESTAMP = 1592215766888L;
   public static final boolean IS_SYNC_SETTINGS = false;
   public static final long MAX_SERVER_TIME_DIFFERENCE = 1800000l;
   public static final int MAX_SYNC_RETRIES = 3;

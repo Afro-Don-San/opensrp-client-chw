@@ -114,18 +114,19 @@ public class PathfinderPathfinderFpPregnancyScreeningInteractorFlv extends Defau
             JSONArray fields = form.getJSONObject("step1").getJSONArray("fields");
             for (int i = 0; i < fields.length(); i++) {
                 JSONObject object = fields.getJSONObject(i);
-                if (object.getString("key").equals("referral_facility")) {
+                if (object.getString("key").equals("chw_referral_hf")) {
                     List<Location> locations = new LocationRepository().getAllLocations();
 
-                    JSONArray keys = new JSONArray();
+                    JSONObject openmrsIds = new JSONObject();
                     JSONArray values = new JSONArray();
                     for(Location location : locations){
-                        keys.put(location.getId());
+                        openmrsIds.put(location.getProperties().getName(),location.getId());
                         values.put(location.getProperties().getName());
                     }
 
                     object.put("values",values);
-                    object.put("keys",keys);
+                    object.put("keys",values);
+                    object.put("openmrs_choice_ids",openmrsIds);
                     break;
                 }
             }
@@ -134,7 +135,7 @@ public class PathfinderPathfinderFpPregnancyScreeningInteractorFlv extends Defau
     }
 
     private class ANCReferralHelper extends HomeVisitActionHelper {
-        private String anc_referral_date;
+        private String referral_date;
 
         public ANCReferralHelper(Context context) {
             this.context = context;
@@ -144,7 +145,7 @@ public class PathfinderPathfinderFpPregnancyScreeningInteractorFlv extends Defau
         public void onPayloadReceived(String jsonPayload) {
             try {
                 JSONObject jsonObject = new JSONObject(jsonPayload);
-                anc_referral_date = JsonFormUtils.getValue(jsonObject, "anc_referral_date");
+                referral_date = JsonFormUtils.getValue(jsonObject, "referral_date");
             } catch (JSONException e) {
                 Timber.e(e);
             }
@@ -152,7 +153,7 @@ public class PathfinderPathfinderFpPregnancyScreeningInteractorFlv extends Defau
 
         @Override
         public String evaluateSubTitle() {
-            if (StringUtils.isBlank(anc_referral_date)) {
+            if (StringUtils.isBlank(referral_date)) {
                 return null;
             }
             StringBuilder builder = new StringBuilder();
@@ -162,11 +163,11 @@ public class PathfinderPathfinderFpPregnancyScreeningInteractorFlv extends Defau
 
         @Override
         public BaseAncHomeVisitAction.Status evaluateStatusOnPayload() {
-            if (StringUtils.isBlank(anc_referral_date)) {
+            if (StringUtils.isBlank(referral_date)) {
                 return BaseAncHomeVisitAction.Status.PENDING;
             }
 
-            if (!StringUtils.isBlank(anc_referral_date)) {
+            if (!StringUtils.isBlank(referral_date)) {
                 return BaseAncHomeVisitAction.Status.COMPLETED;
             } else
                 return BaseAncHomeVisitAction.Status.PARTIALLY_COMPLETED;

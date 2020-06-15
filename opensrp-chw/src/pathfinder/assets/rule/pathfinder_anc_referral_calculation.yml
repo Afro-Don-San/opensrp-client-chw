@@ -1,7 +1,40 @@
 ---
-name: step1_anc_referral_date
-description: anc_referral_date calculation
+name: step1_referral_date
+description: referral_date calculation
+priority: 1
+condition: "true"
+actions:
+  - "calculation = System.currentTimeMillis()"
+---
+name: step1_referral_time
+description: "Referral time calculation"
+priority: 1
+condition: "true"
+actions:
+  - "def getDate(dateFormat) {
+        import java.util.*;
+        import java.text.SimpleDateFormat;
+        return new SimpleDateFormat(dateFormat).format(System.currentTimeMillis());
+    }"
+  - "calculation = getDate('HH:mm:ss')"
+---
+name: step1_referral_appointment_date
+description: referral_appointment_date calculation
 priority: 1
 condition: "true"
 actions:
   - "calculation = helper.getDateToday()"
+---
+name: step1_referral_type
+description: referral_type calculation
+priority: 1
+condition: "true"
+actions:
+  - "calculation = 'community_to_facility_referral'"
+---
+name: step1_referral_status
+description: referral_status calculation
+priority: 1
+condition: "true"
+actions:
+  - "calculation = 'PENDING'"
