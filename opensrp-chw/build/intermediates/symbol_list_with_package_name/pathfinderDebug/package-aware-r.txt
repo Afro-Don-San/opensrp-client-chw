@@ -1125,6 +1125,8 @@ color alert_upcoming_light_blue
 color alert_urgent
 color alert_urgent_red
 color anc_member_profile_bg
+color androidx_core_ripple_material_light
+color androidx_core_secondary_text_default_material_light
 color background_floating_material_dark
 color background_floating_material_light
 color background_material_dark
@@ -6689,6 +6691,7 @@ string referral_status_failed
 string referral_status_pending
 string referral_status_successful
 string referral_submitted
+string referral_submitted_successfully
 string referral_type
 string referred
 string referred_by
@@ -7048,7 +7051,6 @@ string submitted_by_
 string subtask_done
 string subtask_not_done
 string subtask_visit_not_done
-string successful_issued_referral
 string successful_referral_notification_title
 string suspected_malaria
 string switch_register_view

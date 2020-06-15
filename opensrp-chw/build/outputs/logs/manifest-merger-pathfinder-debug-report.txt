@@ -15,11 +15,11 @@ ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-path
 INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:2:1-302:12
 INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:2:1-302:12
 INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:2:1-302:12
-MERGED from [org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5859d5ef4615af85d215523c68c92e4a/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200615.133637-101/AndroidManifest.xml:2:1-14:12
-MERGED from [org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:2:1-24:12
+MERGED from [org.smartregister:opensrp-client-chw-core:1.2.12-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2cd38195f3afaa8856262f51fd8592ad/jetified-opensrp-client-chw-core-1.2.12-Pathfinder-20200615.210037-1/AndroidManifest.xml:2:1-14:12
+MERGED from [org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:2:1-24:12
 MERGED from [androidx.databinding:databinding-adapters:4.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/33277a0c0024ec0448ac6b9d51184f59/databinding-adapters-4.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:4.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/24e18519e33a5c1664493d7f7ce81a6d/databinding-runtime-4.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [com.nerdstone:neat-form-core:1.1.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f0eaa7784096e569d5a3c023cec23bbd/jetified-neat-form-core-1.1.0/AndroidManifest.xml:2:1-11:12
+MERGED from [com.nerdstone:neat-form-core:1.1.1] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/225e302c32d9df744960b158615ca264/jetified-neat-form-core-1.1.1/AndroidManifest.xml:2:1-11:12
 MERGED from [com.nerdstone:neat-android-stepper:1.0.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f3c6e200ae96d349fb8e2ac9db2a9fee/jetified-neat-android-stepper-1.0.6/AndroidManifest.xml:2:1-11:12
 MERGED from [org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:2:1-110:12
 MERGED from [org.smartregister:opensrp-client-native-form:1.10.0-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/23da009bf08b92c8b5858a9b94b72c0f/jetified-opensrp-client-native-form-1.10.0-Test-20200603.194752-1/AndroidManifest.xml:2:1-44:12
@@ -29,7 +29,7 @@ MERGED from [org.smartregister:opensrp-client-family:1.2.34-SNAPSHOT] /Users/ila
 MERGED from [org.smartregister:opensrp-client-reporting:0.0.17-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/81416aec1cb9f6277849064d6b50af26/jetified-opensrp-client-reporting-0.0.17-SNAPSHOT/AndroidManifest.xml:2:1-20:12
 MERGED from [org.smartregister:opensrp-client-growth-monitoring:1.1.20-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/dedce58134b88386e41c0eb87651a127/jetified-opensrp-client-growth-monitoring-1.1.20-SNAPSHOT/AndroidManifest.xml:2:1-16:12
 MERGED from [org.smartregister:opensrp-chw-family-planning:1.0.24-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5b1c33acbb95c20cdc0dfd4fad6c13b2/jetified-opensrp-chw-family-planning-1.0.24-20200602.073832-2/AndroidManifest.xml:2:1-11:12
-MERGED from [com.github.afro-don-san:opensrp-chw-pathfinder-family-planning:1.0.1-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2cc00bbfbae7e57d003bc777296fad7d/jetified-opensrp-chw-pathfinder-family-planning-1.0.1-Test-20200615.110432-101/AndroidManifest.xml:2:1-11:12
+MERGED from [com.github.afro-don-san:opensrp-chw-pathfinder-family-planning:1.0.1-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/6801659a4e9da1c22b47f5cc6c918c6c/jetified-opensrp-chw-pathfinder-family-planning-1.0.1-Test-20200615.190447-113/AndroidManifest.xml:2:1-11:12
 MERGED from [org.smartregister:opensrp-client-chw-anc:0.1.61-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4a9d2b76a02923eb0a4dc6e5c3a39cbd/jetified-opensrp-client-chw-anc-0.1.61-SNAPSHOT/AndroidManifest.xml:2:1-20:12
 MERGED from [org.smartregister:opensrp-client-chw-pnc:0.0.33-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/c157e409b377243cf2bfa73bd0b7cf4f/jetified-opensrp-client-chw-pnc-0.0.33-20200607.152610-2/AndroidManifest.xml:2:1-11:12
 MERGED from [org.smartregister:opensrp-client-chw-malaria:1.2.17-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/6621c34e8e8db16334c32f706f983940/jetified-opensrp-client-chw-malaria-1.2.17-20200528.043201-1/AndroidManifest.xml:2:1-11:12
@@ -57,6 +57,7 @@ MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/ilakozejuma
 MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/fc457bf4fefceedfddff1778fa46d76c/vectordrawable-1.0.1/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.transition:transition:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/68ff161da1546cb22e6ea5f865d3a13b/transition-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.media:media:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/72907453e83df9c6a6e35db4488aa615/media-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core-ktx:1.3.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/45a12ec1822ef3e9f188a5791e6f8c74/jetified-core-ktx-1.3.0/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.fragment:fragment:1.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d33276ff738864368ebe2f9e4b0550e/fragment-1.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.loader:loader:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e805f74e89a3bc5a9b3522276a644c98/loader-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/19b868bff28ae0f2e4edfb8f1f6668d5/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -66,14 +67,13 @@ MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/ilakozej
 MERGED from [androidx.customview:customview:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/9b05cc421dc1edcc1380f49002220421/customview-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/88e39e40f94b6d67c57ed2a5ed155239/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/6ae793f966cfb95336804193ed2d8249/asynclayoutinflater-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core-ktx:1.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5df9576d72aad9359593e50e0f9d7881/jetified-core-ktx-1.2.0/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.activity:activity:1.1.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/44e46a15aa3ac1d0bda2eb5c1c0a3563/jetified-activity-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.core:core:1.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/82957a909092d1742f49119efe029dfc/core-1.2.0/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.core:core:1.3.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e5e0503f30bbc688de2458ac64b265f0/core-1.3.0/AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/9125711f275440a4ff8cba1132fd86b5/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:17:1-32:12
 MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4a62a318b0ca607c77071808e393ca68/jetified-lifecycle-service-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/10d1e3487e7ecacf0e94d611153024e6/lifecycle-runtime-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/6d7db601a480b97a2297131bf8c200d9/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f6cababa1a4eb3b1d254534bd774e186/jetified-lifecycle-viewmodel-ktx-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/97055fa1bacf677836b3b28c49845ccd/jetified-lifecycle-viewmodel-ktx-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [org.koin:koin-androidx-scope:2.0.1] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/92459f0619b07f60ffc90e848589556a/jetified-koin-androidx-scope-2.0.1/AndroidManifest.xml:2:1-9:12
 MERGED from [org.koin:koin-android:2.0.1] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/80e897b354c3b451875f225c1a9eb7b0/jetified-koin-android-2.0.1/AndroidManifest.xml:2:1-7:12
 MERGED from [io.reactivex.rxjava2:rxandroid:2.1.1] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/af46771d72edfc46a7e0e358f9c92a0a/jetified-rxandroid-2.1.1/AndroidManifest.xml:15:1-20:12
@@ -89,14 +89,14 @@ MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/ilakozejumanne/.gr
 MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5a35629571b99a680c28ba19ac23d068/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.print:print:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/82fd4a38f6682efbef1c9f451fb18b39/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/df4cc87fd36750c6074f6c6fdf2a689d/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f9908539186b319dbf6d47e4ff3c51d3/jetified-lifecycle-viewmodel-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/97f541dcd1c860d49750def43de3d293/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.sqlite:sqlite-framework:2.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/33372e31efa6a226bb34a63d06ba1c13/sqlite-framework-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.sqlite:sqlite:2.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/22371202ebb7df5da4a641bc15d045a9/sqlite-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e67b8c319c087bf054f6cb87b1cdcbe3/lifecycle-livedata-2.2.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f9908539186b319dbf6d47e4ff3c51d3/jetified-lifecycle-viewmodel-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/60c13be227c6ad13ef6b452c23ea36a9/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/7518d0431af15d370a6c822abe60f0a7/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2bed83f48e2936a8582bf9c9b9f1a662/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/97f541dcd1c860d49750def43de3d293/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/fecf3d565684869c8f3c0e3dae8be54c/jetified-timber-4.7.1/AndroidManifest.xml:2:1-9:12
 MERGED from [com.github.bmelnychuk:atv:1.2.9] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/7534fdc74a9e72116ffe76c67f874d1b/jetified-atv-1.2.9/AndroidManifest.xml:2:1-14:12
 MERGED from [com.google.android.gms:play-services-location:16.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/7e3eb3e085befaed0165d5fbeecba200/jetified-play-services-location-16.0.0/AndroidManifest.xml:2:1-9:12
@@ -249,14 +249,14 @@ MERGED from [com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/cache
 		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:24:22-65
 uses-permission#android.permission.CALL_PHONE
 ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:25:5-69
-MERGED from [org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5859d5ef4615af85d215523c68c92e4a/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200615.133637-101/AndroidManifest.xml:11:5-69
-MERGED from [org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5859d5ef4615af85d215523c68c92e4a/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200615.133637-101/AndroidManifest.xml:11:5-69
+MERGED from [org.smartregister:opensrp-client-chw-core:1.2.12-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2cd38195f3afaa8856262f51fd8592ad/jetified-opensrp-client-chw-core-1.2.12-Pathfinder-20200615.210037-1/AndroidManifest.xml:11:5-69
+MERGED from [org.smartregister:opensrp-client-chw-core:1.2.12-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2cd38195f3afaa8856262f51fd8592ad/jetified-opensrp-client-chw-core-1.2.12-Pathfinder-20200615.210037-1/AndroidManifest.xml:11:5-69
 	android:name
 		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:25:22-66
 application
 ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:27:5-300:19
-MERGED from [org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:13:5-22:19
-MERGED from [org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:13:5-22:19
+MERGED from [org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:13:5-22:19
+MERGED from [org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:13:5-22:19
 MERGED from [org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:26:5-108:19
 MERGED from [org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:26:5-108:19
 MERGED from [org.smartregister:opensrp-client-native-form:1.10.0-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/23da009bf08b92c8b5858a9b94b72c0f/jetified-opensrp-client-native-form-1.10.0-Test-20200603.194752-1/AndroidManifest.xml:24:5-42:19
@@ -291,8 +291,8 @@ MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /Users/ilakozejumann
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/6af6e3c9103c02c7d143804480693f86/lifecycle-extensions-2.2.0/AndroidManifest.xml:24:5-25:19
 MERGED from [com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:16:5-63:19
 MERGED from [com.evernote:android-job:1.2.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2686f413522ac63ee571fe140ad73206/jetified-android-job-1.2.6/AndroidManifest.xml:16:5-63:19
-MERGED from [androidx.core:core:1.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/82957a909092d1742f49119efe029dfc/core-1.2.0/AndroidManifest.xml:24:5-89
-MERGED from [androidx.core:core:1.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/82957a909092d1742f49119efe029dfc/core-1.2.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.3.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e5e0503f30bbc688de2458ac64b265f0/core-1.3.0/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.3.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e5e0503f30bbc688de2458ac64b265f0/core-1.3.0/AndroidManifest.xml:24:5-89
 MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/9125711f275440a4ff8cba1132fd86b5/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:24:5-30:19
 MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/9125711f275440a4ff8cba1132fd86b5/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:24:5-30:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/6d7db601a480b97a2297131bf8c200d9/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
@@ -344,7 +344,7 @@ MERGED from [com.google.android.gms:play-services-basement:16.1.0] /Users/ilakoz
 	android:clearTaskOnLaunch
 		ADDED from [org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:27:9-41
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/82957a909092d1742f49119efe029dfc/core-1.2.0/AndroidManifest.xml:24:18-86
+		ADDED from [androidx.core:core:1.3.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e5e0503f30bbc688de2458ac64b265f0/core-1.3.0/AndroidManifest.xml:24:18-86
 	android:label
 		ADDED from [org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:28:9-41
 	android:supportsRtl
@@ -897,16 +897,16 @@ uses-sdk
 INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml
 INJECTED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml
-MERGED from [org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5859d5ef4615af85d215523c68c92e4a/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200615.133637-101/AndroidManifest.xml:7:5-9:41
-MERGED from [org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5859d5ef4615af85d215523c68c92e4a/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200615.133637-101/AndroidManifest.xml:7:5-9:41
-MERGED from [org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:7:5-9:41
-MERGED from [org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:7:5-9:41
+MERGED from [org.smartregister:opensrp-client-chw-core:1.2.12-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2cd38195f3afaa8856262f51fd8592ad/jetified-opensrp-client-chw-core-1.2.12-Pathfinder-20200615.210037-1/AndroidManifest.xml:7:5-9:41
+MERGED from [org.smartregister:opensrp-client-chw-core:1.2.12-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2cd38195f3afaa8856262f51fd8592ad/jetified-opensrp-client-chw-core-1.2.12-Pathfinder-20200615.210037-1/AndroidManifest.xml:7:5-9:41
+MERGED from [org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:7:5-9:41
+MERGED from [org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.databinding:databinding-adapters:4.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/33277a0c0024ec0448ac6b9d51184f59/databinding-adapters-4.0.0/AndroidManifest.xml:22:5-44
 MERGED from [androidx.databinding:databinding-adapters:4.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/33277a0c0024ec0448ac6b9d51184f59/databinding-adapters-4.0.0/AndroidManifest.xml:22:5-44
 MERGED from [androidx.databinding:databinding-runtime:4.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/24e18519e33a5c1664493d7f7ce81a6d/databinding-runtime-4.0.0/AndroidManifest.xml:22:5-44
 MERGED from [androidx.databinding:databinding-runtime:4.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/24e18519e33a5c1664493d7f7ce81a6d/databinding-runtime-4.0.0/AndroidManifest.xml:22:5-44
-MERGED from [com.nerdstone:neat-form-core:1.1.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f0eaa7784096e569d5a3c023cec23bbd/jetified-neat-form-core-1.1.0/AndroidManifest.xml:7:5-9:41
-MERGED from [com.nerdstone:neat-form-core:1.1.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f0eaa7784096e569d5a3c023cec23bbd/jetified-neat-form-core-1.1.0/AndroidManifest.xml:7:5-9:41
+MERGED from [com.nerdstone:neat-form-core:1.1.1] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/225e302c32d9df744960b158615ca264/jetified-neat-form-core-1.1.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.nerdstone:neat-form-core:1.1.1] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/225e302c32d9df744960b158615ca264/jetified-neat-form-core-1.1.1/AndroidManifest.xml:7:5-9:41
 MERGED from [com.nerdstone:neat-android-stepper:1.0.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f3c6e200ae96d349fb8e2ac9db2a9fee/jetified-neat-android-stepper-1.0.6/AndroidManifest.xml:7:5-9:41
 MERGED from [com.nerdstone:neat-android-stepper:1.0.6] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f3c6e200ae96d349fb8e2ac9db2a9fee/jetified-neat-android-stepper-1.0.6/AndroidManifest.xml:7:5-9:41
 MERGED from [org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:8:5-10:41
@@ -925,8 +925,8 @@ MERGED from [org.smartregister:opensrp-client-growth-monitoring:1.1.20-SNAPSHOT]
 MERGED from [org.smartregister:opensrp-client-growth-monitoring:1.1.20-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/dedce58134b88386e41c0eb87651a127/jetified-opensrp-client-growth-monitoring-1.1.20-SNAPSHOT/AndroidManifest.xml:7:5-9:41
 MERGED from [org.smartregister:opensrp-chw-family-planning:1.0.24-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5b1c33acbb95c20cdc0dfd4fad6c13b2/jetified-opensrp-chw-family-planning-1.0.24-20200602.073832-2/AndroidManifest.xml:7:5-9:41
 MERGED from [org.smartregister:opensrp-chw-family-planning:1.0.24-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5b1c33acbb95c20cdc0dfd4fad6c13b2/jetified-opensrp-chw-family-planning-1.0.24-20200602.073832-2/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.afro-don-san:opensrp-chw-pathfinder-family-planning:1.0.1-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2cc00bbfbae7e57d003bc777296fad7d/jetified-opensrp-chw-pathfinder-family-planning-1.0.1-Test-20200615.110432-101/AndroidManifest.xml:7:5-9:41
-MERGED from [com.github.afro-don-san:opensrp-chw-pathfinder-family-planning:1.0.1-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2cc00bbfbae7e57d003bc777296fad7d/jetified-opensrp-chw-pathfinder-family-planning-1.0.1-Test-20200615.110432-101/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.afro-don-san:opensrp-chw-pathfinder-family-planning:1.0.1-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/6801659a4e9da1c22b47f5cc6c918c6c/jetified-opensrp-chw-pathfinder-family-planning-1.0.1-Test-20200615.190447-113/AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.afro-don-san:opensrp-chw-pathfinder-family-planning:1.0.1-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/6801659a4e9da1c22b47f5cc6c918c6c/jetified-opensrp-chw-pathfinder-family-planning-1.0.1-Test-20200615.190447-113/AndroidManifest.xml:7:5-9:41
 MERGED from [org.smartregister:opensrp-client-chw-anc:0.1.61-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4a9d2b76a02923eb0a4dc6e5c3a39cbd/jetified-opensrp-client-chw-anc-0.1.61-SNAPSHOT/AndroidManifest.xml:7:5-9:41
 MERGED from [org.smartregister:opensrp-client-chw-anc:0.1.61-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4a9d2b76a02923eb0a4dc6e5c3a39cbd/jetified-opensrp-client-chw-anc-0.1.61-SNAPSHOT/AndroidManifest.xml:7:5-9:41
 MERGED from [org.smartregister:opensrp-client-chw-pnc:0.0.33-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/c157e409b377243cf2bfa73bd0b7cf4f/jetified-opensrp-client-chw-pnc-0.0.33-20200607.152610-2/AndroidManifest.xml:7:5-9:41
@@ -981,6 +981,8 @@ MERGED from [androidx.transition:transition:1.0.0] /Users/ilakozejumanne/.gradle
 MERGED from [androidx.transition:transition:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/68ff161da1546cb22e6ea5f865d3a13b/transition-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.media:media:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/72907453e83df9c6a6e35db4488aa615/media-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.media:media:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/72907453e83df9c6a6e35db4488aa615/media-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core-ktx:1.3.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/45a12ec1822ef3e9f188a5791e6f8c74/jetified-core-ktx-1.3.0/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.core:core-ktx:1.3.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/45a12ec1822ef3e9f188a5791e6f8c74/jetified-core-ktx-1.3.0/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.fragment:fragment:1.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d33276ff738864368ebe2f9e4b0550e/fragment-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d33276ff738864368ebe2f9e4b0550e/fragment-1.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.loader:loader:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e805f74e89a3bc5a9b3522276a644c98/loader-1.0.0/AndroidManifest.xml:20:5-44
@@ -999,12 +1001,10 @@ MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/ilakoz
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/88e39e40f94b6d67c57ed2a5ed155239/swiperefreshlayout-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/6ae793f966cfb95336804193ed2d8249/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/6ae793f966cfb95336804193ed2d8249/asynclayoutinflater-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core-ktx:1.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5df9576d72aad9359593e50e0f9d7881/jetified-core-ktx-1.2.0/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.core:core-ktx:1.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5df9576d72aad9359593e50e0f9d7881/jetified-core-ktx-1.2.0/AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.activity:activity:1.1.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/44e46a15aa3ac1d0bda2eb5c1c0a3563/jetified-activity-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.1.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/44e46a15aa3ac1d0bda2eb5c1c0a3563/jetified-activity-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/82957a909092d1742f49119efe029dfc/core-1.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/82957a909092d1742f49119efe029dfc/core-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e5e0503f30bbc688de2458ac64b265f0/core-1.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e5e0503f30bbc688de2458ac64b265f0/core-1.3.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/9125711f275440a4ff8cba1132fd86b5/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/9125711f275440a4ff8cba1132fd86b5/jetified-lifecycle-process-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4a62a318b0ca607c77071808e393ca68/jetified-lifecycle-service-2.2.0/AndroidManifest.xml:20:5-22:41
@@ -1013,8 +1013,8 @@ MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/ilakozejumanne/.
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/10d1e3487e7ecacf0e94d611153024e6/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/6d7db601a480b97a2297131bf8c200d9/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/6d7db601a480b97a2297131bf8c200d9/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f6cababa1a4eb3b1d254534bd774e186/jetified-lifecycle-viewmodel-ktx-2.1.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f6cababa1a4eb3b1d254534bd774e186/jetified-lifecycle-viewmodel-ktx-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/97055fa1bacf677836b3b28c49845ccd/jetified-lifecycle-viewmodel-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/97055fa1bacf677836b3b28c49845ccd/jetified-lifecycle-viewmodel-ktx-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [org.koin:koin-androidx-scope:2.0.1] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/92459f0619b07f60ffc90e848589556a/jetified-koin-androidx-scope-2.0.1/AndroidManifest.xml:5:5-44
 MERGED from [org.koin:koin-androidx-scope:2.0.1] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/92459f0619b07f60ffc90e848589556a/jetified-koin-androidx-scope-2.0.1/AndroidManifest.xml:5:5-44
 MERGED from [org.koin:koin-android:2.0.1] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/80e897b354c3b451875f225c1a9eb7b0/jetified-koin-android-2.0.1/AndroidManifest.xml:5:5-44
@@ -1045,22 +1045,22 @@ MERGED from [androidx.print:print:1.0.0] /Users/ilakozejumanne/.gradle/caches/tr
 MERGED from [androidx.print:print:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/82fd4a38f6682efbef1c9f451fb18b39/print-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/df4cc87fd36750c6074f6c6fdf2a689d/interpolator-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/df4cc87fd36750c6074f6c6fdf2a689d/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f9908539186b319dbf6d47e4ff3c51d3/jetified-lifecycle-viewmodel-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f9908539186b319dbf6d47e4ff3c51d3/jetified-lifecycle-viewmodel-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/97f541dcd1c860d49750def43de3d293/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/97f541dcd1c860d49750def43de3d293/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.sqlite:sqlite-framework:2.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/33372e31efa6a226bb34a63d06ba1c13/sqlite-framework-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.sqlite:sqlite-framework:2.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/33372e31efa6a226bb34a63d06ba1c13/sqlite-framework-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.sqlite:sqlite:2.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/22371202ebb7df5da4a641bc15d045a9/sqlite-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.sqlite:sqlite:2.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/22371202ebb7df5da4a641bc15d045a9/sqlite-2.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e67b8c319c087bf054f6cb87b1cdcbe3/lifecycle-livedata-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e67b8c319c087bf054f6cb87b1cdcbe3/lifecycle-livedata-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f9908539186b319dbf6d47e4ff3c51d3/jetified-lifecycle-viewmodel-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f9908539186b319dbf6d47e4ff3c51d3/jetified-lifecycle-viewmodel-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/60c13be227c6ad13ef6b452c23ea36a9/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/60c13be227c6ad13ef6b452c23ea36a9/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/7518d0431af15d370a6c822abe60f0a7/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/7518d0431af15d370a6c822abe60f0a7/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2bed83f48e2936a8582bf9c9b9f1a662/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2bed83f48e2936a8582bf9c9b9f1a662/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/97f541dcd1c860d49750def43de3d293/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/97f541dcd1c860d49750def43de3d293/lifecycle-viewmodel-2.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/fecf3d565684869c8f3c0e3dae8be54c/jetified-timber-4.7.1/AndroidManifest.xml:5:5-43
 MERGED from [com.jakewharton.timber:timber:4.7.1] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/fecf3d565684869c8f3c0e3dae8be54c/jetified-timber-4.7.1/AndroidManifest.xml:5:5-43
 MERGED from [com.github.bmelnychuk:atv:1.2.9] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/7534fdc74a9e72116ffe76c67f874d1b/jetified-atv-1.2.9/AndroidManifest.xml:8:5-10:41
@@ -1130,33 +1130,33 @@ ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-path
 	android:name
 		ADDED from /Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:275:17-67
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from [org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5859d5ef4615af85d215523c68c92e4a/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200615.133637-101/AndroidManifest.xml:12:5-75
+ADDED from [org.smartregister:opensrp-client-chw-core:1.2.12-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2cd38195f3afaa8856262f51fd8592ad/jetified-opensrp-client-chw-core-1.2.12-Pathfinder-20200615.210037-1/AndroidManifest.xml:12:5-75
 MERGED from [org.smartregister:opensrp-client-native-form:1.10.0-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/23da009bf08b92c8b5858a9b94b72c0f/jetified-opensrp-client-native-form-1.10.0-Test-20200603.194752-1/AndroidManifest.xml:18:5-75
 MERGED from [org.smartregister:opensrp-client-native-form:1.10.0-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/23da009bf08b92c8b5858a9b94b72c0f/jetified-opensrp-client-native-form-1.10.0-Test-20200603.194752-1/AndroidManifest.xml:18:5-75
 	android:name
-		ADDED from [org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5859d5ef4615af85d215523c68c92e4a/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200615.133637-101/AndroidManifest.xml:12:22-72
+		ADDED from [org.smartregister:opensrp-client-chw-core:1.2.12-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2cd38195f3afaa8856262f51fd8592ad/jetified-opensrp-client-chw-core-1.2.12-Pathfinder-20200615.210037-1/AndroidManifest.xml:12:22-72
 uses-permission#android.permission.READ_PHONE_NUMBERS
-ADDED from [org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:11:5-77
+ADDED from [org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:11:5-77
 MERGED from [org.smartregister:opensrp-client-chw-anc:0.1.61-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4a9d2b76a02923eb0a4dc6e5c3a39cbd/jetified-opensrp-client-chw-anc-0.1.61-SNAPSHOT/AndroidManifest.xml:11:5-77
 MERGED from [org.smartregister:opensrp-client-chw-anc:0.1.61-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4a9d2b76a02923eb0a4dc6e5c3a39cbd/jetified-opensrp-client-chw-anc-0.1.61-SNAPSHOT/AndroidManifest.xml:11:5-77
 	android:name
-		ADDED from [org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:11:22-74
+		ADDED from [org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:11:22-74
 activity#org.smartregister.chw.referral.activity.BaseIssueReferralActivity
-ADDED from [org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:14:9-17:76
+ADDED from [org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:14:9-17:76
 	android:windowSoftInputMode
-		ADDED from [org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:17:13-73
+		ADDED from [org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:17:13-73
 	android:theme
-		ADDED from [org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:16:13-64
+		ADDED from [org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:16:13-64
 	android:name
-		ADDED from [org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:15:13-93
+		ADDED from [org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:15:13-93
 activity#org.smartregister.chw.referral.activity.ReferralDetailsViewActivity
-ADDED from [org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:18:9-21:76
+ADDED from [org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:18:9-21:76
 	android:windowSoftInputMode
-		ADDED from [org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:21:13-73
+		ADDED from [org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:21:13-73
 	android:theme
-		ADDED from [org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:20:13-64
+		ADDED from [org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:20:13-64
 	android:name
-		ADDED from [org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:19:13-95
+		ADDED from [org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:19:13-95
 uses-permission#android.permission.VIBRATE
 ADDED from [org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:15:5-66
 MERGED from [org.smartregister:opensrp-client-native-form:1.10.0-Test-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/23da009bf08b92c8b5858a9b94b72c0f/jetified-opensrp-client-native-form-1.10.0-Test-20200603.194752-1/AndroidManifest.xml:15:5-66

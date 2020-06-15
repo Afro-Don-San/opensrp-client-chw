@@ -4,23 +4,6 @@
             "outputFile": "/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/build/intermediates/incremental/mergePathfinderDebugResources/merged.dir/values-as/values-as.xml",
             "map": [
                 {
-                    "source": "/Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/82957a909092d1742f49119efe029dfc/core-1.2.0/res/values-as/values-as.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "48",
-                        "startColumns": "4",
-                        "startOffsets": "5559",
-                        "endColumns": "100",
-                        "endOffsets": "5655"
-                    }
-                },
-                {
                     "source": "/Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f5e0b71421c9989336ad4a8b45b33c4c/jetified-play-services-base-16.0.1/res/values-as/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
@@ -52,6 +35,23 @@
                         "startOffsets": "105,213,312,419,515,617,736,816,896,987,1080,1173,1268,1368,1461,1558,1652,1743,1834,1923,2025,2140,2243,2352,2471,2591,2758,5470",
                         "endColumns": "107,98,106,95,101,118,79,79,90,92,92,94,99,92,96,93,90,90,88,101,114,102,108,118,119,166,102,88",
                         "endOffsets": "208,307,414,510,612,731,811,891,982,1075,1168,1263,1363,1456,1553,1647,1738,1829,1918,2020,2135,2238,2347,2466,2586,2753,2856,5554"
+                    }
+                },
+                {
+                    "source": "/Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e5e0503f30bbc688de2458ac64b265f0/core-1.3.0/res/values-as/values-as.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "48",
+                        "startColumns": "4",
+                        "startOffsets": "5559",
+                        "endColumns": "100",
+                        "endOffsets": "5655"
                     }
                 },
                 {

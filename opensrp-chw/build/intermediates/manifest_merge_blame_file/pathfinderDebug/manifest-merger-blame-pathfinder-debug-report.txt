@@ -60,11 +60,11 @@
 30-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:25:5-69
 30-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:25:22-66
 31    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-31-->[org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5859d5ef4615af85d215523c68c92e4a/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200615.133637-101/AndroidManifest.xml:12:5-75
-31-->[org.smartregister:opensrp-client-chw-core:1.2.11-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/5859d5ef4615af85d215523c68c92e4a/jetified-opensrp-client-chw-core-1.2.11-Pathfinder-20200615.133637-101/AndroidManifest.xml:12:22-72
+31-->[org.smartregister:opensrp-client-chw-core:1.2.12-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2cd38195f3afaa8856262f51fd8592ad/jetified-opensrp-client-chw-core-1.2.12-Pathfinder-20200615.210037-1/AndroidManifest.xml:12:5-75
+31-->[org.smartregister:opensrp-client-chw-core:1.2.12-Pathfinder-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/2cd38195f3afaa8856262f51fd8592ad/jetified-opensrp-client-chw-core-1.2.12-Pathfinder-20200615.210037-1/AndroidManifest.xml:12:22-72
 32    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
-32-->[org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:11:5-77
-32-->[org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:11:22-74
+32-->[org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:11:5-77
+32-->[org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:11:22-74
 33    <uses-permission android:name="android.permission.VIBRATE" />
 33-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:15:5-66
 33-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:15:22-63
@@ -119,7 +119,7 @@
 56        android:allowBackup="true"
 56-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:29:9-35
 57        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-57-->[androidx.core:core:1.2.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/82957a909092d1742f49119efe029dfc/core-1.2.0/AndroidManifest.xml:24:18-86
+57-->[androidx.core:core:1.3.0] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/e5e0503f30bbc688de2458ac64b265f0/core-1.3.0/AndroidManifest.xml:24:18-86
 58        android:clearTaskOnLaunch="true"
 58-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:27:9-41
 59        android:debuggable="true"
@@ -671,21 +671,21 @@
 329-->/Users/ilakozejumanne/PathFinder FP Workspace/opensrp-client-chw-pathfinder/opensrp-chw/src/main/AndroidManifest.xml:299:13-37
 330
 331        <activity
-331-->[org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:14:9-17:76
+331-->[org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:14:9-17:76
 332            android:name="org.smartregister.chw.referral.activity.BaseIssueReferralActivity"
-332-->[org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:15:13-93
+332-->[org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:15:13-93
 333            android:theme="@style/ChwReferralTheme.NoActionBar"
-333-->[org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:16:13-64
+333-->[org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:16:13-64
 334            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
-334-->[org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:17:13-73
+334-->[org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:17:13-73
 335        <activity
-335-->[org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:18:9-21:76
+335-->[org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:18:9-21:76
 336            android:name="org.smartregister.chw.referral.activity.ReferralDetailsViewActivity"
-336-->[org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:19:13-95
+336-->[org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:19:13-95
 337            android:theme="@style/ChwReferralTheme.NoActionBar"
-337-->[org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:20:13-64
+337-->[org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:20:13-64
 338            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
-338-->[org.smartregister:opensrp-client-chw-referral:1.3.0-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/f8277a4f7ced3d70bb37156cf75a6531/jetified-opensrp-client-chw-referral-1.3.0-20200529.102425-1/AndroidManifest.xml:21:13-73
+338-->[org.smartregister:opensrp-client-chw-referral:1.3.1-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/8a1ad66b79ffda3763e3cbd27b69dd5e/jetified-opensrp-client-chw-referral-1.3.1-SNAPSHOT/AndroidManifest.xml:21:13-73
 339        <activity
 339-->[org.smartregister:opensrp-client-core:1.11.5-SNAPSHOT] /Users/ilakozejumanne/.gradle/caches/transforms-2/files-2.1/4d4858577d30e39867b96147a94c05b4/jetified-opensrp-client-core-1.11.5-SNAPSHOT/AndroidManifest.xml:34:9-37:54
 340            android:name="org.smartregister.view.activity.ReportsActivity"
