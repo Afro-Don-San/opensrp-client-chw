@@ -1,6 +1,0 @@
-name: one
-description: coc-pop - after cycle is complete
-priority: 1
-condition: "pathfinderFpAlertRule.isCondomValid(14,7,365)"
-actions:
-  - "pathfinderFpAlertRule.setVisitID('1')"
