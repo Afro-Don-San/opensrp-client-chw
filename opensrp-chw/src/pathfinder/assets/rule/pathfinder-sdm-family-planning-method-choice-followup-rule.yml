@@ -1,0 +1,6 @@
+name: one
+description: family planning method choice followup for clients who chose sdm method but do not remember lmp
+priority: 1
+condition: "pathfinderFpAlertRule.isFpChoiceSdmFollowupValid(14,21,365)"
+actions:
+  - "pathfinderFpAlertRule.setVisitID('1')"

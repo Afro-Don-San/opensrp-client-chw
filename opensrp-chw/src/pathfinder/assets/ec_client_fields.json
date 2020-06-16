@@ -1062,14 +1062,6 @@
           }
         },
         {
-          "column_name": "fp_method_choice_done",
-          "type": "Event",
-          "json_mapping": {
-            "field": "obs.fieldCode",
-            "concept": "fp_method_choice_done"
-          }
-        },
-        {
           "column_name": "pregnancy_status",
           "type": "Event",
           "json_mapping": {
@@ -1099,6 +1091,46 @@
           "json_mapping": {
             "field": "obs.fieldCode",
             "concept": "fp_pregnancy_screening_date"
+          }
+        },
+        {
+          "column_name": "fp_method_choice_done",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "fp_method_choice_done"
+          }
+        },
+        {
+          "column_name": "fp_method_choice_date",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "fp_method_choice_date"
+          }
+        },
+        {
+          "column_name": "periods_regularity",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "periods_regularity"
+          }
+        },
+        {
+          "column_name": "does_the_client_remember_lmp",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "does_the_client_remember_lmp"
+          }
+        },
+        {
+          "column_name": "man_request_method_for_partner",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "man_request_method_for_partner"
           }
         },
         {
