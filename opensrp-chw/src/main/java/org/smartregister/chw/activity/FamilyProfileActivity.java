@@ -7,6 +7,8 @@ import android.content.Intent;
 import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
+import com.adosa.opensrp.chw.fp.dao.PathfinderFpDao;
+import org.smartregister.chw.BuildConfig;
 import org.smartregister.chw.anc.activity.BaseAncMemberProfileActivity;
 import org.smartregister.chw.application.ChwApplication;
 import org.smartregister.chw.core.activity.CoreAboveFiveChildProfileActivity;
@@ -138,7 +140,11 @@ public class FamilyProfileActivity extends CoreFamilyProfileActivity {
 
     @Override
     protected void goToFpProfile(String baseEntityId, Activity activity) {
-        FamilyPlanningMemberProfileActivity.startFpMemberProfileActivity(activity, FpDao.getMember(baseEntityId));
+        if (BuildConfig.USE_PATHFINDERS_FP_MODULE) {
+            PathfinderFamilyPlanningMemberProfileActivity.startFpMemberProfileActivity(activity, PathfinderFpDao.getMember(baseEntityId));
+        } else
+            FamilyPlanningMemberProfileActivity.startFpMemberProfileActivity(activity, FpDao.getMember(baseEntityId));
+
     }
 
 

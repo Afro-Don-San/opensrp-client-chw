@@ -90,23 +90,6 @@
         }
       },
       {
-        "key": "fam_village",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "person_address",
-        "openmrs_entity_id": "cityVillage",
-        "type": "edit_text",
-        "edit_type": "name",
-        "hint": "Kijiji / mtaa",
-        "v_required": {
-          "value": "true",
-          "err": "Tafadhali ingiza kijiji au jiji"
-        },
-        "v_regex": {
-          "value": "[A-Za-z\\u00C0-\\u017F\\s\\u00C0-\\u017F\\.\\-]*",
-          "err": "Tafadhali ingiza jina halali la kijiji"
-        }
-      },
-      {
         "key": "landmark",
         "openmrs_entity_parent": "",
         "openmrs_entity": "person_address",
@@ -147,6 +130,22 @@
         "v_required": {
           "value": true,
           "err": "Tafadhali ingiza kituo cha afya kilicho karibu"
+        }
+      },
+      {
+        "key": "fam_village",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_address",
+        "openmrs_entity_id": "cityVillage",
+        "type": "hidden",
+        "edit_type": "name",
+        "hint": "Village",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "family_register_calculation.yml"
+            }
+          }
         }
       }
     ]
@@ -891,6 +890,71 @@
               }
             ]
           }
+        }
+      },
+      {
+        "key": "highest_level_of_education",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "highest_level_of_education",
+        "type": "native_radio",
+        "label": "Highest level of education completed?",
+        "label_text_style": "normal",
+        "text_color": "#C0C0C0",
+        "options": [
+          {
+            "key": "no_education",
+            "text": "No education",
+            "value": false,
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": ""
+          },
+          {
+            "key": "primary",
+            "text": "primary",
+            "value": false,
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": ""
+          },
+          {
+            "key": "secondary_o_level",
+            "text": "Secondary 'O' Level",
+            "value": false,
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": ""
+          },
+          {
+            "key": "secondary_a_level",
+            "text": "Secondary 'A' Level",
+            "value": false,
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": ""
+          },
+          {
+            "key": "tertiary",
+            "text": "Tertiary",
+            "value": false,
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": ""
+          },
+          {
+            "key": "university",
+            "text": "University",
+            "value": false,
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": ""
+          },
+          {
+            "key": "unknown",
+            "text": "Don't Know",
+            "value": false,
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": ""
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select the highest level of education completed"
         }
       }
     ]

@@ -87,20 +87,6 @@
         }
       },
       {
-        "key": "periods_regularity",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "periods_regularity",
-        "type": "hidden",
-        "calculation": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_family_planning_method_choice_calculation.yml"
-            }
-          }
-        }
-      },
-      {
         "key": "age",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
@@ -2251,6 +2237,20 @@
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "man_request_method_for_partner",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "periods_regularity",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "periods_regularity",
         "type": "hidden",
         "calculation": {
           "rules-engine": {

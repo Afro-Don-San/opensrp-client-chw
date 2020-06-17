@@ -90,15 +90,6 @@
         }
       },
       {
-        "key": "fam_village",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "person_address",
-        "openmrs_entity_id": "cityVillage",
-        "type": "hidden",
-        "edit_type": "name",
-        "hint": "Village"
-      },
-      {
         "key": "landmark",
         "openmrs_entity_parent": "",
         "openmrs_entity": "person_address",
@@ -139,6 +130,20 @@
         "v_required": {
           "value": true,
           "err": "Please enter the village name"
+        }
+      },
+      {
+        "key": "fam_village",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_address",
+        "openmrs_entity_id": "cityVillage",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "family_register_calculation.yml"
+            }
+          }
         }
       }
     ]

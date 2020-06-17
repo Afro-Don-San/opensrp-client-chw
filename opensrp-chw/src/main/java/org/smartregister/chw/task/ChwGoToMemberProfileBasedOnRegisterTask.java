@@ -3,11 +3,15 @@ package org.smartregister.chw.task;
 import android.app.Activity;
 import android.os.Bundle;
 
+import com.adosa.opensrp.chw.fp.dao.PathfinderFpDao;
+
+import org.smartregister.chw.BuildConfig;
 import org.smartregister.chw.activity.AboveFiveChildProfileActivity;
 import org.smartregister.chw.activity.AncMemberProfileActivity;
 import org.smartregister.chw.activity.ChildProfileActivity;
 import org.smartregister.chw.activity.FamilyPlanningMemberProfileActivity;
 import org.smartregister.chw.activity.MalariaProfileActivity;
+import org.smartregister.chw.activity.PathfinderFamilyPlanningMemberProfileActivity;
 import org.smartregister.chw.activity.PncMemberProfileActivity;
 import org.smartregister.chw.anc.activity.BaseAncMemberProfileActivity;
 import org.smartregister.chw.core.activity.CoreAboveFiveChildProfileActivity;
@@ -26,7 +30,10 @@ public class ChwGoToMemberProfileBasedOnRegisterTask extends CoreChwNotification
 
     @Override
     protected void goToFpProfile(String baseEntityId, Activity activity) {
-        FamilyPlanningMemberProfileActivity.startFpMemberProfileActivity(activity, FpDao.getMember(baseEntityId));
+        if (BuildConfig.USE_PATHFINDERS_FP_MODULE) {
+            PathfinderFamilyPlanningMemberProfileActivity.startFpMemberProfileActivity(activity, PathfinderFpDao.getMember(baseEntityId));
+        } else
+            FamilyPlanningMemberProfileActivity.startFpMemberProfileActivity(activity, FpDao.getMember(baseEntityId));
     }
 
     @Override

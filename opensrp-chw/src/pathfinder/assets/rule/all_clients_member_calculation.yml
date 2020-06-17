@@ -1,11 +1,4 @@
 ---
-name: step2_surname
-description: surname calculation
-priority: 1
-condition: "step2_surname == ''"
-actions:
-  - "calculation = step1_fam_name"
----
 name: step2_age_calculated
 description: Age calculated
 priority: 1
@@ -19,6 +12,13 @@ priority: 1
 condition: "step2_sex == 'Female' && (step2_age_calculated >= 10 && step2_age_calculated <= 49)"
 actions:
   - "calculation = 1"
+---
+name: step2_surname
+description: set surname as the one added in step one
+priority: 1
+condition: "true"
+actions:
+  - "calculation = step1_fam_name"
 ---
 name: step1_fam_village
 description: fam_village is obtained from the nearest facility tree
