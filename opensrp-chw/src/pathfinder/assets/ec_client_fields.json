@@ -1041,7 +1041,7 @@
           "column_name": "fp_start_date",
           "type": "Event",
           "json_mapping": {
-            "field": "obs.fieldCode",
+            "field": "obs.formSubmissionField",
             "concept": "fp_start_date"
           }
         },
@@ -1131,6 +1131,14 @@
           "json_mapping": {
             "field": "obs.fieldCode",
             "concept": "man_request_method_for_partner"
+          }
+        },
+        {
+          "column_name": "give_fp_method_done",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "give_fp_method_done"
           }
         },
         {

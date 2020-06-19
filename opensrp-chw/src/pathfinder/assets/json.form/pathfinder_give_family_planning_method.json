@@ -73,6 +73,20 @@
         }
       },
       {
+        "key": "give_fp_method_done",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "give_fp_method_done",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_calculation.yml"
+            }
+          }
+        }
+      },
+      {
         "key": "selected_method_note",
         "openmrs_entity_parent": "",
         "openmrs_entity": "person_attribute",

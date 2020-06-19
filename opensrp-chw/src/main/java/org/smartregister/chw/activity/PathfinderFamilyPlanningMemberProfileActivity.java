@@ -130,9 +130,8 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends CorePathfinde
         PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, pathfinderFpMemberObject.getBaseEntityId(), pathfinderFpMemberObject.getAge(), CoreConstants.JSON_FORM.getPathfinderFamilyPlanningIntroduction(), com.adosa.opensrp.chw.fp.util.PathfinderFamilyPlanningConstants.ActivityPayload.CHANGE_METHOD_PAYLOAD_TYPE);
     }
 
-    //    @Override TODO implement this override
-    public void openFamilyPlanningRiskAssessmentHivTestingAndDualCounseling() {
-        Timber.e("Coze ::openFamilyPlanningRiskAssessmentHivTestingAndDualCounseling ");
+    @Override
+    public void openRiskAssessment() {
         PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, pathfinderFpMemberObject.getBaseEntityId(), pathfinderFpMemberObject.getAge(), CoreConstants.JSON_FORM.getPathfinderRiskAssessmentHivTestingDualProtectionCounseling(), PathfinderFamilyPlanningConstants.ActivityPayload.CHANGE_METHOD_PAYLOAD_TYPE);
     }
 

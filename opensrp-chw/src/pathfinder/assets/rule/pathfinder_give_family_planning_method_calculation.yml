@@ -6,6 +6,13 @@ condition: "true"
 actions:
   - "calculation = System.currentTimeMillis()"
 ---
+name: step1_give_fp_method_done
+description: give_fp_method_done calculation
+priority: 1
+condition: "true"
+actions:
+  - "calculation = true"
+---
 name: step1_selected_method_note
 description: selected_method_note calculation
 priority: 1

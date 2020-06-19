@@ -10,6 +10,7 @@ import org.smartregister.chw.anc.domain.MemberObject;
 import org.smartregister.chw.core.activity.CorePathfinderFollowupVisitActivity;
 import org.smartregister.chw.core.presenter.CorePathfinderFpFollowupVisitPresenter;
 import org.smartregister.chw.core.task.RunnableTask;
+import org.smartregister.chw.core.utils.CoreConstants;
 import org.smartregister.chw.interactor.PathfinderFpMethodChoiceInteractor;
 import org.smartregister.chw.interactor.PathfinderGiveFpMethodInteractor;
 import org.smartregister.chw.schedulers.ChwScheduleTaskExecutor;
@@ -23,7 +24,7 @@ public class PathfinderGiveFamilyPlanningMethodActivity extends CorePathfinderFo
         Intent intent = new Intent(activity, PathfinderGiveFamilyPlanningMethodActivity.class);
         intent.putExtra(org.smartregister.chw.anc.util.Constants.ANC_MEMBER_OBJECTS.MEMBER_PROFILE_OBJECT, toMember(memberObject));
         intent.putExtra(org.smartregister.chw.anc.util.Constants.ANC_MEMBER_OBJECTS.EDIT_MODE, isEditMode);
-        activity.startActivityForResult(intent, org.smartregister.chw.anc.util.Constants.REQUEST_CODE_HOME_VISIT);
+        activity.startActivityForResult(intent, CoreConstants.ProfileActivityResults.CHANGE_COMPLETED);
     }
 
     private static MemberObject toMember(PathfinderFpMemberObject memberObject) {
