@@ -5,7 +5,7 @@ import android.app.Activity;
 import com.adosa.opensrp.chw.fp.contract.BaseFpProfileContract;
 import com.adosa.opensrp.chw.fp.domain.PathfinderFpMemberObject;
 
-import org.smartregister.chw.activity.FamilyPlanningMemberProfileActivity;
+import org.smartregister.chw.activity.PathfinderFamilyPlanningMemberProfileActivity;
 import org.smartregister.chw.core.presenter.CorePathfinderFamilyPlanningMemberProfilePresenter;
 import org.smartregister.chw.model.ReferralTypeModel;
 import org.smartregister.chw.util.Utils;
@@ -30,7 +30,7 @@ public class PathfinderFamilyPlanningMemberProfilePresenter extends CorePathfind
 
     @Override
     public void referToFacility() {
-        List<ReferralTypeModel> referralTypeModels = ((FamilyPlanningMemberProfileActivity) getView()).getReferralTypeModels();
+        List<ReferralTypeModel> referralTypeModels = ((PathfinderFamilyPlanningMemberProfileActivity) getView()).getReferralTypeModels();
         if (referralTypeModels.size() == 1) {
             startFamilyPlanningReferral();
         } else {

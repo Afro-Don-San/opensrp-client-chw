@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -49,6 +50,9 @@ public class ClientReferralActivity extends AppCompatActivity implements ClientR
         mapEncounterTypeToTable();
         referralTypeAdapter.setOnClickListener(this);
         setUpView();
+        if (BuildConfig.USE_PATHFINDERS_FP_MODULE) {
+            ((TextView)findViewById(R.id.textview_title)).setText(getString(R.string.refer_client));
+        }
     }
 
     private void mapEncounterTypeToTable() {
@@ -79,7 +83,10 @@ public class ClientReferralActivity extends AppCompatActivity implements ClientR
     @Override
     public void startReferralForm(JSONObject jsonObject, ReferralTypeModel referralTypeModel) {
 
-        if (BuildConfig.USE_UNIFIED_REFERRAL_APPROACH) {
+        if (BuildConfig.USE_PATHFINDERS_FP_MODULE) {
+            startActivityForResult(CoreJsonFormUtils.getJsonIntent(this, jsonObject,
+                    Utils.metadata().familyMemberFormActivity), JsonFormUtils.REQUEST_CODE_GET_JSON);
+        }else if (BuildConfig.USE_UNIFIED_REFERRAL_APPROACH) {
             //TODO Define custom layout on referral library for family planning referrals otherwise do not use custom layout for now
             ReferralRegistrationActivity.startGeneralReferralFormActivityForResults(this,
                     baseEntityId, jsonObject, !CoreConstants.TASKS_FOCUS.FP_SIDE_EFFECTS.equalsIgnoreCase(referralTypeModel.getFocus()));

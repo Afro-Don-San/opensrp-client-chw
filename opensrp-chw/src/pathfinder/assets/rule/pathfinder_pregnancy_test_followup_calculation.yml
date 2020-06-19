@@ -1,0 +1,36 @@
+---
+name: step1_fp_pregnancy_test_referral_followup_date
+description: fp_pregnancy_test_referral_followup_date calculation
+priority: 1
+condition: "true"
+actions:
+  - "calculation = helper.getDateToday()"
+---
+name: step5_pregnancy_status
+description: pregnancy_status calculated
+priority: 1
+condition: "step1_did_the_client_get_pregnancy_test =='yes'"
+actions:
+  - "calculation = step2_pregnancy_test_results =='pregnant'? 'PREGNANT' : 'NOT LIKELY PREGNANT' "
+---
+name: step5_pregnant_screening_done
+description: pregnant_screening_done calculation
+priority: 1
+condition: "step5_what_the_client_wants_to_do_next == 'complete_pregnancy_screening_questions'"
+actions:
+  - "calculation = false"
+---
+name: step5_fp_pregnancy_screening_date
+description: date of pregnancy screening registration calculation
+priority: 1
+condition: "step5_what_the_client_wants_to_do_next == 'try_to_get_a_pregnancy_test'"
+actions:
+  - "calculation = helper.getDateToday()"
+---
+name: step5_edd
+description: edd calculated
+priority: 2
+condition: "step2_pregnancy_test_results =='pregnant'"
+actions:
+  - "calculation = step2_edd_from_facility "
+

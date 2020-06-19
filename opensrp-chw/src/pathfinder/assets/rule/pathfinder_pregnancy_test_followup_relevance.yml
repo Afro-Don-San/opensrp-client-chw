@@ -1,0 +1,56 @@
+---
+name: step2_pregnancy_test_results
+description: pregnancy_test_results relevance
+priority: 1
+condition: "step1_did_the_client_get_pregnancy_test =='yes'"
+actions:
+  - "isRelevant = true"
+---
+name: step2_edd_from_facility
+description: edd_from_facility relevance
+priority: 1
+condition: "step2_pregnancy_test_results =='pregnant'"
+actions:
+  - "isRelevant = true"
+---
+name: step3_did_client_complete_referral
+description: did_client_complete_referral relevance
+priority: 1
+condition: "step1_did_the_client_get_pregnancy_test =='no'"
+actions:
+  - "isRelevant = true"
+---
+name: step4_reasons_for_not_going_to_facility
+description: reasons_for_not_going_to_facility relevance
+priority: 1
+condition: "step1_did_the_client_get_pregnancy_test =='no' && step3_did_client_complete_referral !='no'"
+actions:
+  - "isRelevant = true"
+---
+name: step4_reasons_for_not_getting_any_services_at_the_health_facility
+description: reasons_for_not_getting_any_services_at_the_health_facility relevance
+priority: 1
+condition: "step1_did_the_client_get_pregnancy_test =='no' && step3_did_client_complete_referral !='yes'"
+actions:
+  - "isRelevant = true"
+---
+name: step5_what_the_client_wants_to_do_next
+description: what_the_client_wants_to_do_next relevance
+priority: 1
+condition: "step1_did_the_client_get_pregnancy_test =='no'"
+actions:
+  - "isRelevant = true"
+---
+name: step5_discuss_how_you_will_help_client_complete_referral
+description: discuss_how_you_will_help_client_complete_referral relevance
+priority: 1
+condition: "step5_what_the_client_wants_to_do_next =='try_to_get_a_pregnancy_test'"
+actions:
+  - "isRelevant = true"
+---
+name: step5_return_after_edd
+description: return_after_edd relevance
+priority: 1
+condition: "step2_pregnancy_test_results =='pregnant'"
+actions:
+  - "isRelevant = true"

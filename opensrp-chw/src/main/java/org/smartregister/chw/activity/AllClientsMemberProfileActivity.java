@@ -13,11 +13,13 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
+import com.google.gson.Gson;
 import com.vijay.jsonwizard.constants.JsonFormConstants;
 import com.vijay.jsonwizard.domain.Form;
 
 import org.jetbrains.annotations.NotNull;
 import org.json.JSONObject;
+import org.smartregister.chw.BuildConfig;
 import org.smartregister.chw.R;
 import org.smartregister.chw.contract.AllClientsMemberContract;
 import org.smartregister.chw.core.activity.CoreFamilyOtherMemberProfileActivity;
@@ -35,6 +37,7 @@ import org.smartregister.chw.presenter.AllClientsMemberPresenter;
 import org.smartregister.chw.presenter.FamilyOtherMemberActivityPresenter;
 import org.smartregister.chw.util.Constants;
 import org.smartregister.chw.util.Utils;
+import org.smartregister.chw.util.UtilsFlv;
 import org.smartregister.commonregistry.CommonPersonObject;
 import org.smartregister.commonregistry.CommonPersonObjectClient;
 import org.smartregister.family.adapter.ViewPagerAdapter;
@@ -123,11 +126,12 @@ public class AllClientsMemberProfileActivity extends CoreFamilyOtherMemberProfil
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         menu.findItem(R.id.action_location_info).setVisible(true);
-        menu.findItem(R.id.action_hiv_registration).setVisible(true);
-        menu.findItem(R.id.action_tb_registration).setVisible(true);
+        menu.findItem(R.id.action_hiv_registration).setVisible(false);
+        menu.findItem(R.id.action_tb_registration).setVisible(false);
         menu.findItem(R.id.action_anc_registration).setVisible(false);
         menu.findItem(R.id.action_sick_child_follow_up).setVisible(false);
         menu.findItem(R.id.action_malaria_diagnosis).setVisible(false);
+        UtilsFlv.updateFpMenuItems(baseEntityId,menu);
         return true;
     }
 
@@ -166,16 +170,6 @@ public class AllClientsMemberProfileActivity extends CoreFamilyOtherMemberProfil
     protected void startMalariaRegister() {
         MalariaRegisterActivity.startMalariaRegistrationActivity(AllClientsMemberProfileActivity.this, baseEntityId, familyBaseEntityId);
     }
-
-    @Override
-    protected void startFpRegister() {
-        String dob = org.smartregister.family.util.Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.DOB, false);
-        String gender = org.smartregister.family.util.Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.GENDER, false);
-
-        FpRegisterActivity.startFpRegistrationActivity(this, baseEntityId, dob, CoreConstants.JSON_FORM.getFpRegistrationForm(gender),
-                FamilyPlanningConstants.ActivityPayload.REGISTRATION_PAYLOAD_TYPE);
-    }
-
 
     @Override
     protected void startFpChangeMethod() {
@@ -338,5 +332,19 @@ public class AllClientsMemberProfileActivity extends CoreFamilyOtherMemberProfil
     @Override
     public AllClientsMemberContract.Presenter getAllClientsMemberPresenter() {
         return allClientsMemberPresenter;
+    }
+
+    @Override
+    protected void startFpRegister() {
+        String dob = org.smartregister.family.util.Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.DOB, false);
+        String gender = org.smartregister.family.util.Utils.getValue(commonPersonObject.getColumnmaps(), DBConstants.KEY.GENDER, false);
+
+        Timber.e("Coze :: dob = "+dob);
+        Timber.e("Coze :: collumn maps = "+new Gson().toJson(commonPersonObject.getColumnmaps()));
+        if (BuildConfig.USE_PATHFINDERS_FP_MODULE) {
+            PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(AllClientsMemberProfileActivity.this, baseEntityId, dob, CoreConstants.JSON_FORM.getPathfinderFamilyPlanningRegistrationForm(), FamilyPlanningConstants.ActivityPayload.REGISTRATION_PAYLOAD_TYPE);
+        } else {
+            FpRegisterActivity.startFpRegistrationActivity(AllClientsMemberProfileActivity.this, baseEntityId, dob, CoreConstants.JSON_FORM.getFpRegistrationForm(gender), FamilyPlanningConstants.ActivityPayload.REGISTRATION_PAYLOAD_TYPE);
+        }
     }
 }

@@ -4,18 +4,22 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 
+import com.adosa.opensrp.chw.fp.dao.PathfinderFpDao;
 import com.adosa.opensrp.chw.fp.domain.PathfinderFpMemberObject;
 import com.adosa.opensrp.chw.fp.util.PathfinderFamilyPlanningConstants;
 
 import org.json.JSONObject;
 import org.smartregister.chw.R;
 import org.smartregister.chw.core.activity.CorePathfinderFamilyPlanningMemberProfileActivity;
-import org.smartregister.chw.core.activity.CorePathfinderFamilyPlanningRegisterActivity;
+import org.smartregister.chw.core.custom_views.CorePathfinderFamilyPlanningFloatingMenu;
 import org.smartregister.chw.core.interactor.CorePathfinderFamilyPlanningProfileInteractor;
+import org.smartregister.chw.core.listener.OnClickFloatingMenu;
 import org.smartregister.chw.core.presenter.CorePathfinderFamilyPlanningMemberProfilePresenter;
 import org.smartregister.chw.core.utils.CoreConstants;
 import org.smartregister.chw.core.utils.PathfinderFamilyPlanningUtil;
@@ -138,6 +142,11 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends CorePathfinde
     }
 
     @Override
+    public void openPregnancyTestFollowup() {
+        PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, pathfinderFpMemberObject.getBaseEntityId(), pathfinderFpMemberObject.getAge(), CoreConstants.JSON_FORM.getPathfinderPregnancyTestReferralFollowup(), com.adosa.opensrp.chw.fp.util.PathfinderFamilyPlanningConstants.ActivityPayload.CHANGE_METHOD_PAYLOAD_TYPE);
+    }
+
+    @Override
     public void openChooseFpMethod() {
         PathfinderFamilyPlanningMethodChoiceActivity.startMe(this, pathfinderFpMemberObject, false);
     }
@@ -171,9 +180,8 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends CorePathfinde
     }
 
     private void addFpReferralTypes() {
-        //TODO change the form to pathfinder form
-        referralTypeModels.add(new ReferralTypeModel(getString(R.string.family_planning_referral),
-                org.smartregister.chw.util.Constants.JSON_FORM.getFamilyPlanningReferralForm(pathfinderFpMemberObject.getGender()), CoreConstants.TASKS_FOCUS.FP_SIDE_EFFECTS));
+        referralTypeModels.add(new ReferralTypeModel(getString(R.string.referral_to_loan_unit), org.smartregister.chw.util.Constants.JSON_FORM.getPathfinderLoanUnitReferral(), CoreConstants.TASKS_FOCUS.LOAN_MANAGEMENT_UNIT));
+        referralTypeModels.add(new ReferralTypeModel(getString(R.string.referral_to_beach_management_unit), org.smartregister.chw.util.Constants.JSON_FORM.getPathfinderBeachManagementUnitReferral(), CoreConstants.TASKS_FOCUS.BEACH_MANAGEMENT_UNIT));
     }
 
     public List<ReferralTypeModel> getReferralTypeModels() {
@@ -209,6 +217,34 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends CorePathfinde
                 break;
         }
         super.onActivityResult(requestCode, resultCode, data);
+    }
+
+
+    @Override
+    public void initializeCallFAB() {
+        PathfinderFpMemberObject memberObject = PathfinderFpDao.getMember(pathfinderFpMemberObject.getBaseEntityId());
+        fpFloatingMenu = new CorePathfinderFamilyPlanningFloatingMenu(this, memberObject);
+
+        OnClickFloatingMenu onClickFloatingMenu = viewId -> {
+            if (viewId == org.smartregister.chw.core.R.id.family_planning_fab) {
+                checkPhoneNumberProvided();
+                ((CorePathfinderFamilyPlanningFloatingMenu) fpFloatingMenu).animateFAB();
+            } else if (viewId == org.smartregister.chw.core.R.id.call_layout) {
+                ((CorePathfinderFamilyPlanningFloatingMenu) fpFloatingMenu).launchCallWidget();
+                ((CorePathfinderFamilyPlanningFloatingMenu) fpFloatingMenu).animateFAB();
+            } else if (viewId == org.smartregister.chw.core.R.id.refer_to_facility_layout) {
+                ((PathfinderFamilyPlanningMemberProfilePresenter) fpProfilePresenter).referToFacility();
+            } else {
+                Timber.d("Unknown fab action");
+            }
+
+        };
+
+        ((CorePathfinderFamilyPlanningFloatingMenu) fpFloatingMenu).setFloatingMenuOnClickListener(onClickFloatingMenu);
+        fpFloatingMenu.setGravity(Gravity.BOTTOM | Gravity.END);
+        LinearLayout.LayoutParams linearLayoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT);
+        addContentView(fpFloatingMenu, linearLayoutParams);
     }
 }
 
