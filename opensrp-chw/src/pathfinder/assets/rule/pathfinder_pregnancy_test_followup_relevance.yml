@@ -23,14 +23,14 @@ actions:
 name: step4_reasons_for_not_going_to_facility
 description: reasons_for_not_going_to_facility relevance
 priority: 1
-condition: "step1_did_the_client_get_pregnancy_test =='no' && step3_did_client_complete_referral !='no'"
+condition: "step1_did_the_client_get_pregnancy_test =='no' && step3_did_client_complete_referral =='no'"
 actions:
   - "isRelevant = true"
 ---
 name: step4_reasons_for_not_getting_any_services_at_the_health_facility
 description: reasons_for_not_getting_any_services_at_the_health_facility relevance
 priority: 1
-condition: "step1_did_the_client_get_pregnancy_test =='no' && step3_did_client_complete_referral !='yes'"
+condition: "step1_did_the_client_get_pregnancy_test =='no' && step3_did_client_complete_referral =='yes'"
 actions:
   - "isRelevant = true"
 ---

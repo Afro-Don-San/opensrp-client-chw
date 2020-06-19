@@ -9,9 +9,9 @@ actions:
 name: step5_pregnancy_status
 description: pregnancy_status calculated
 priority: 1
-condition: "step1_did_the_client_get_pregnancy_test =='yes'"
+condition: "true"
 actions:
-  - "calculation = step2_pregnancy_test_results =='pregnant'? 'PREGNANT' : 'NOT LIKELY PREGNANT' "
+  - "calculation = step2_pregnancy_test_results =='pregnant'? 'PREGNANT' : (  step2_pregnancy_test_results =='not_pregnant' ? 'NOT LIKELY PREGNANT':(step5_what_the_client_wants_to_do_next =='try_to_get_a_pregnancy_test'? 'NOT UNLIKELY PREGNANT':null)) "
 ---
 name: step5_pregnant_screening_done
 description: pregnant_screening_done calculation

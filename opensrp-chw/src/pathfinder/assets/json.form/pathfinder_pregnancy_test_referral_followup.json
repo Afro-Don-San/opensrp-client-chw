@@ -292,13 +292,6 @@
             "text": "The method was not available"
           },
           {
-            "key": "changed_his_mind",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "changed_his_mind",
-            "openmrs_entity_parent": "",
-            "text": "I changed my mind"
-          },
-          {
             "key": "no_skilled_service_providers",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no_skilled_service_providers",
@@ -424,7 +417,7 @@
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "fp_pregnancy_screening_date",
-        "type": "hiddem",
+        "type": "hidden",
         "calculation": {
           "rules-engine": {
             "ex-rules": {
