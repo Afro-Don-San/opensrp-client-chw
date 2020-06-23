@@ -132,7 +132,7 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends CorePathfinde
 
     @Override
     public void openRiskAssessment() {
-        PathfinderFamilyPlanningRegisterActivity.startFpRegistrationActivity(this, pathfinderFpMemberObject.getBaseEntityId(), pathfinderFpMemberObject.getAge(), CoreConstants.JSON_FORM.getPathfinderRiskAssessmentHivTestingDualProtectionCounseling(), PathfinderFamilyPlanningConstants.ActivityPayload.CHANGE_METHOD_PAYLOAD_TYPE);
+        PathfinderRiskAssessmentVisitActivity.startMe(this, pathfinderFpMemberObject, false);
     }
 
     @Override

@@ -5,3 +5,10 @@ priority: 1
 condition: "true"
 actions:
   - "calculation = helper.getDateToday()"
+---
+name: step1_fp_risk_assessment_done
+description: fp_risk_assessment_done calculation
+priority: 1
+condition: "true"
+actions:
+  - "calculation = true"

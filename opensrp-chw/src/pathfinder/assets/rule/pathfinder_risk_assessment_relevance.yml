@@ -55,8 +55,8 @@ condition: "step12_has_been_tested_for_hiv == 'yes'"
 actions:
   - "isRelevant = true"
 ---
-name: step14_has_been_tested_for_hiv
-description: has_been_tested_for_hiv relevance
+name: step14_results_of_most_recent_test
+description: results_of_most_recent_test relevance
 priority: 1
 condition: "step13_willing_to_disclose_status == 'yes'"
 actions:
@@ -65,7 +65,7 @@ actions:
 name: step15_has_had_unprotected_sex_since_last_tested_for_hiv
 description: has_had_unprotected_sex_since_last_tested_for_hiv relevance
 priority: 1
-condition: "step14_has_been_tested_for_hiv == 'hiv_negative'"
+condition: "step14_results_of_most_recent_test == 'hiv_negative'"
 actions:
   - "isRelevant = true"
 ---
@@ -79,7 +79,7 @@ actions:
 name: step16_receiving_care_and_treatment_from_facility
 description: receiving_care_and_treatment_from_facility relevance
 priority: 1
-condition: "step15_has_been_tested_for_hiv == 'hiv_positive'"
+condition: "step14_results_of_most_recent_test == 'hiv_positive'"
 actions:
   - "isRelevant = true"
 ---
@@ -93,7 +93,7 @@ actions:
 name: step18_has_received_home_based_care_services
 description: has_received_home_based_care_services relevance
 priority: 1
-condition: "step15_has_been_tested_for_hiv == 'hiv_positive'"
+condition: "step14_results_of_most_recent_test == 'hiv_positive'"
 actions:
   - "isRelevant = true"
 ---

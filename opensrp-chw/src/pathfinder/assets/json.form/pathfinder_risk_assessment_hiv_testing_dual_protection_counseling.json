@@ -73,6 +73,20 @@
         }
       },
       {
+        "key": "fp_risk_assessment_done",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_risk_assessment_done",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_risk_assessment_calculation.yml"
+            }
+          }
+        }
+      },
+      {
         "key": "introduction_notes_1",
         "openmrs_entity_parent": "",
         "openmrs_entity": "person_attribute",
@@ -561,10 +575,10 @@
     "next": "step15",
     "fields": [
       {
-        "key": "has_been_tested_for_hiv",
+        "key": "results_of_most_recent_test",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "has_been_tested_for_hiv",
+        "openmrs_entity_id": "results_of_most_recent_test",
         "openmrs_entity_parent": "",
         "label": "ASK: What were the results of your most recent test?",
         "options": [

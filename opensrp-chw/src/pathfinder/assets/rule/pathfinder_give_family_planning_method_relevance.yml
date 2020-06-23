@@ -189,6 +189,13 @@ condition: "step3_sdm_given == 'no'"
 actions:
   - "isRelevant = true"
 ---
+name: step15_other_reasons
+description: other_reasons relevance
+priority: 1
+condition: "step15_reasons_for_not_giving_sdm.contains('other') || step15_reasons_for_not_giving_pop.contains('other')|| step15_reasons_for_not_giving_male_condoms.contains('other') || step15_reasons_for_not_giving_female_condoms.contains('other') || step15_reasons_for_not_giving_coc.contains('other')"
+actions:
+  - "isRelevant = true"
+---
 name: step16_give_referral_note
 description: step16_give_referral_note relevance
 priority: 1

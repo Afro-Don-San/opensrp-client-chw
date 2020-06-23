@@ -669,6 +669,25 @@
             }
           }
         }
+      },
+      {
+        "key": "other_reasons",
+        "type": "edit_text",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_reasons",
+        "openmrs_entity_parent": "",
+        "hint": "Other Reasons",
+        "v_required": {
+          "value": "true",
+          "err": "Please enter other reasons"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_registration_relevance.yml"
+            }
+          }
+        }
       }
     ]
   },
@@ -901,6 +920,25 @@
         "v_required": {
           "value": "true",
           "err": "Please sect the members who will join counselling"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_registration_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "other_people_joining",
+        "type": "edit_text",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_people_joining",
+        "openmrs_entity_parent": "",
+        "hint": "Other People",
+        "v_required": {
+          "value": "true",
+          "err": "Please enter the other people joining the visits"
         },
         "relevance": {
           "rules-engine": {

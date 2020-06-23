@@ -48,6 +48,13 @@ condition: "step2_is_client_already_using_fp =='no'"
 actions:
   - "isRelevant = true"
 ---
+name: step9_other_reasons
+description: other_reasons relevance
+priority: 1
+condition: "step9_reasons_for_not_currently_using_family_planning.contains('other')"
+actions:
+  - "isRelevant = true"
+---
 name: step10_does_client_want_to_know_more_about_fp
 description: does_client_want_to_know_more_about_fp relevance
 priority: 1
@@ -87,6 +94,13 @@ name: step12_other_people_joining_the_clients_fp_sessions
 description: other_people_joining_the_clients_fp_sessions relevance
 priority: 1
 condition: "step4_continue_to_receive_fp_services =='yes' || step10_does_client_want_to_know_more_about_fp =='yes' || step10_does_the_client_want_to_receive_fp_services== 'yes' "
+actions:
+  - "isRelevant = true"
+---
+name: step12_other_people_joining
+description: other_people_joining relevance
+priority: 1
+condition: "step12_other_people_joining_the_clients_fp_sessions.contains('other') "
 actions:
   - "isRelevant = true"
 
