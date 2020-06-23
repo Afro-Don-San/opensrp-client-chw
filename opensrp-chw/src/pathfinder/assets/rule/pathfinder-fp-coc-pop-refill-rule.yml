@@ -1,6 +1,6 @@
 name: one
 description: coc-pop - after cycle is complete
 priority: 1
-condition: "pathfinderFpAlertRule.isCocPopValid(14,7,365)"
+condition: "pathfinderFpAlertRule.isCocPopValid(30,7,365)"
 actions:
   - "pathfinderFpAlertRule.setVisitID('1')"
