@@ -1,0 +1,292 @@
+---
+name: step3_name_of_health_facility_visited_for_family_planning_services
+description: name_of_health_facility_visited_for_family_planning_services relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+  - "isRelevant = true"
+---
+name: step4_residence
+description: residence relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+  - "isRelevant = true"
+---
+name: step4_education
+description: education relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+  - "isRelevant = true"
+---
+name: step4_occupation
+description: occupation relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+  - "isRelevant = true"
+---
+name: step4_marital_status
+description: marital_status relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+  - "isRelevant = true"
+---
+name: step4_religion
+description: religion relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+  - "isRelevant = true"
+---
+name: step5_reasons_for_people_not_going_to_health_facilities
+description: reasons_for_people_not_going_to_health_facilities relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+  - "isRelevant = true"
+---
+name: step5_means_of_transport_to_facility
+description: means_of_transport_to_facility relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+  - "isRelevant = true"
+---
+name: step5_time_to_reach_facility_closest_from_household
+description: time_to_reach_facility_closest_from_household relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+  - "isRelevant = true"
+---
+name: step5_is_this_the_nearest_facility_from_home
+description: is_this_the_nearest_facility_from_home relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+  - "isRelevant = true"
+---
+name: step5_why_did_you_decide_to_come_to_this_facility_and_not_the_nearest_one
+description: why_did_you_decide_to_come_to_this_facility_and_not_the_nearest_one relevance
+priority: 1
+condition: "step5_is_this_the_nearest_facility_from_home=='no'"
+actions:
+  - "isRelevant = true"
+
+---
+name: step6_was_the_facility_open_when_you_arrived
+description: was_the_facility_open_when_you_arrived relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+  - "isRelevant = true"
+---
+name: step6_did_you_arrive_during_normal_operating_hours
+description: did_you_arrive_during_normal_operating_hours relevance
+priority: 1
+condition: "step6_was_the_facility_open_when_you_arrived == 'no'"
+actions:
+  - "isRelevant = true"
+---
+name: step6_did_you_get_family_planning_information_at_the_reception
+description: did_you_get_family_planning_information_at_the_reception relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+ - "isRelevant = true"
+---
+name: step6_how_long_it_took_to_be_attended_by_service_provider
+description: how_long_it_took_to_be_attended_by_service_provider relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+ - "isRelevant = true"
+---
+name: step6_did_the_service_provider_make_you_feel_welcome
+description: did_the_service_provider_make_you_feel_welcome relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+ - "isRelevant = true"
+---
+name: step6_did_the_service_provider_assure_confidentiality
+description: did_the_service_provider_assure_confidentiality relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+ - "isRelevant = true"
+---
+name: step6_did_you_meet_the_service_providers_in_a_private_room
+description: did_you_meet_the_service_providers_in_a_private_room relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+ - "isRelevant = true"
+---
+name: step6_did_the_service_providers_provide_clear_information_about_various_fp_services_and_methods
+description: did_the_service_providers_provide_clear_information_about_various_fp_services_and_methods relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+ - "isRelevant = true"
+---
+name: step6_did_the_service_providers_use_visual_aids_to_demo_fp_methods
+description: did_the_service_providers_use_visual_aids_to_demo_fp_methods relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+ - "isRelevant = true"
+---
+name: step6_did_the_service_providers_ask_if_you_had_any_concerns_about_previously_used_methods
+description: did_the_service_providers_ask_if_you_had_any_concerns_about_previously_used_methods relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+ - "isRelevant = true"
+---
+name: step6_were_you_given_info_on_dual_protection
+description: were_you_given_info_on_dual_protection relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+ - "isRelevant = true"
+---
+name: step6_how_many_fp_methods_can_you_name
+description: how_many_fp_methods_can_you_name relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+ - "isRelevant = true"
+---
+name: step7_ever_visited_health_facility_for_fp_services_but_not_received_services_needed
+description: ever_visited_health_facility_for_fp_services_but_not_received_services_needed relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+ - "isRelevant = true"
+---
+name: step7_why_did_you_not_get_the_services_at_the_health_facility
+description: why_did_you_not_get_the_services_at_the_health_facility relevance
+priority: 1
+condition: "step7_ever_visited_health_facility_for_fp_services_but_not_received_services_needed.contains('yes') "
+actions:
+ - "isRelevant = true"
+---
+name: step7_times_you_have_missed_services_because_of_a_skilled_provider_not_being_present
+description: times_you_have_missed_services_because_of_a_skilled_provider_not_being_present relevance
+priority: 1
+condition: "step7_why_did_you_not_get_the_services_at_the_health_facility.contains('no_skilled_service_provider') "
+actions:
+ - "isRelevant = true"
+---
+name: step8_did_you_pay_for_the_service
+description: did_you_pay_for_the_service relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+ - "isRelevant = true"
+---
+name: step8_what_were_the_costs_for
+description: what_were_the_costs_for relevance
+priority: 1
+condition: "step8_did_you_pay_for_the_service.contains('yes') "
+actions:
+ - "isRelevant = true"
+
+---
+name: step8_were_you_asked_to_give_some_kickbacks_to_get_the_service
+description: were_you_asked_to_give_some_kickbacks_to_get_the_service relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+ - "isRelevant = true"
+---
+name: step8_amount_paid
+description: amount_paid relevance
+priority: 1
+condition: "step8_were_you_asked_to_give_some_kickbacks_to_get_the_service.contains('yes') "
+actions:
+ - "isRelevant = true"
+---
+name: step9_have_you_had_a_problem_with_fp_services_since_i_saw_you_last
+description: have_you_had_a_problem_with_fp_services_since_i_saw_you_last relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+ - "isRelevant = true"
+---
+name: step9_what_type_of_problem_is_it
+description: what_type_of_problem_is_it relevance
+priority: 1
+condition: "step9_have_you_had_a_problem_with_fp_services_since_i_saw_you_last.contains('yes') "
+actions:
+ - "isRelevant = true"
+
+---
+name: step9_did_you_file_a_complaint
+description: did_you_file_a_complaint relevance
+priority: 1
+condition: "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+ - "isRelevant = true"
+
+---
+name: step9_why_didnt_you_file_a_complaint
+description: why_didnt_you_file_a_complaint relevance
+priority: 1
+condition: "step9_did_you_file_a_complaint.contains('no') "
+actions:
+ - "isRelevant = true"
+
+---
+name: step9_was_your_problem_solved_to_satisfaction
+description: was_your_problem_solved_to_satisfaction relevance
+priority: 1
+condition: "step9_did_you_file_a_complaint.contains('yes') "
+actions:
+ - "isRelevant = true"
+---
+name: step9_how_long_it_took_for_the_problem_to_be_addressed
+description: how_long_it_took_for_the_problem_to_be_addressed relevance
+priority: 1
+condition: "step9_was_your_problem_solved_to_satisfaction.contains('yes') "
+actions:
+ - "isRelevant = true"
+---
+name: step9_did_you_report_the_problem_again
+description: did_you_report_the_problem_again relevance
+priority: 1
+condition: "step9_was_your_problem_solved_to_satisfaction.contains('no') "
+actions:
+ - "isRelevant = true"
+---
+name: step9_will_you_go_back_for_fp_services_at_this_facility
+description: will_you_go_back_for_fp_services_at_this_facility relevance
+priority: 1
+condition: "step9_did_you_file_a_complaint.contains('yes') "
+actions:
+ - "isRelevant = true"
+---
+name: step10_are_you_satisfied_with_fp_services_you_received
+description: are_you_satisfied_with_fp_services_you_received relevance
+priority: 1
+condition:  "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+ - "isRelevant = true"
+---
+name: step10_are_you_satisfied_with_fp_services_am_providing_using_mobile_phone
+description: are_you_satisfied_with_fp_services_am_providing_using_mobile_phone relevance
+priority: 1
+condition:  "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+ - "isRelevant = true"
+---
+name: step10_have_fp_services_improved
+description: have_fp_services_improved relevance
+priority: 1
+condition:  "step2_willing_to_participate_in_survey.contains('yes') "
+actions:
+ - "isRelevant = true"
