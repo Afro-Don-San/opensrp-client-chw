@@ -243,20 +243,24 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
             if (StringUtils.isBlank(satisfaction_with_current_method)) {
                 return BaseAncHomeVisitAction.Status.PENDING;
             } else if ("yes".equalsIgnoreCase(client_need_refill)) {
-                    try {
-                        if (familyPlanningMethod.equalsIgnoreCase("coc")) {
-                            JSONObject jsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.PathfinderFamilyPlanningFollowUpVisitUtils.getFamilyPlanningFollowupResupply());
-                            injectFamilyPlaningMethod(jsonObject);
+                try {
+                    if (
+                            familyPlanningMethod.equalsIgnoreCase("coc") ||
+                                    familyPlanningMethod.equalsIgnoreCase("pop") ||
+                                    familyPlanningMethod.equalsIgnoreCase("sdm")
+                    ) {
+                        JSONObject jsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.PathfinderFamilyPlanningFollowUpVisitUtils.getFamilyPlanningFollowupResupply());
+                        injectFamilyPlaningMethod(jsonObject);
 
-                            LinkedHashMap<String, BaseAncHomeVisitAction> additionalList = new LinkedHashMap<>();
-                            additionalList.put(context.getString(R.string.resupply, familyPlanningMethodTranslated), resupplyAction);
-                            ((PathfinderFamilyPlanningFollowUpVisitActivity) context).initializeActions(additionalList);
-                        }
-                    } catch (Exception e) {
-                        e.printStackTrace();
+                        LinkedHashMap<String, BaseAncHomeVisitAction> additionalList = new LinkedHashMap<>();
+                        additionalList.put(context.getString(R.string.resupply, familyPlanningMethodTranslated), resupplyAction);
+                        ((PathfinderFamilyPlanningFollowUpVisitActivity) context).initializeActions(additionalList);
                     }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 return BaseAncHomeVisitAction.Status.COMPLETED;
-            }else{
+            } else {
                 return BaseAncHomeVisitAction.Status.PARTIALLY_COMPLETED;
             }
         }
