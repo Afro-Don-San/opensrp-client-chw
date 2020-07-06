@@ -1,7 +1,5 @@
 package org.smartregister.chw.interactor;
 
-import com.adosa.opensrp.chw.fp.util.PathfinderFamilyPlanningConstants;
-
 import org.smartregister.chw.anc.contract.BaseAncHomeVisitContract;
 import org.smartregister.chw.anc.domain.MemberObject;
 import org.smartregister.chw.anc.model.BaseAncHomeVisitAction;
