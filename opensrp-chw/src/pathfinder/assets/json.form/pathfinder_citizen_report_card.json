@@ -1,4 +1,7 @@
 {
+  "validate_on_submit": true,
+  "show_errors_on_submit": true,
+  "skip_blank_steps": true,
   "count": "11",
   "encounter_type": "Citizen Report Card",
   "entity_id": "",
