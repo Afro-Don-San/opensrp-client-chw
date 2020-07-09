@@ -56,6 +56,20 @@
     "next": "step2",
     "fields": [
       {
+        "key": "fp_citizen_report_card_done",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_citizen_report_card_done",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_citizen_report_card_calculation.yml"
+            }
+          }
+        }
+      },
+      {
         "key": "not_satisfied_with_chw_given_method",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",

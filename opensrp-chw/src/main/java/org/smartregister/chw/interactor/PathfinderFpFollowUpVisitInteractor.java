@@ -2,20 +2,19 @@ package org.smartregister.chw.interactor;
 
 import android.content.Context;
 
-import com.adosa.opensrp.chw.fp.interactor.BasePathfinderFpFollowUpVisitInteractor;
-
 import org.smartregister.chw.anc.contract.BaseAncHomeVisitContract;
 import org.smartregister.chw.anc.domain.MemberObject;
 import org.smartregister.chw.anc.model.BaseAncHomeVisitAction;
 import org.smartregister.chw.anc.util.VisitUtils;
 import org.smartregister.chw.core.dao.PNCDao;
+import org.smartregister.chw.core.interactor.CorePathfinderFpFollowUpVisitInteractor;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 import timber.log.Timber;
 
-public class PathfinderFpFollowUpVisitInteractor extends BasePathfinderFpFollowUpVisitInteractor {
+public class PathfinderFpFollowUpVisitInteractor extends CorePathfinderFpFollowUpVisitInteractor {
 
     private Flavor flavor = new PathfinderFpFollowUpVisitInteractorFlv();
 
@@ -54,6 +53,7 @@ public class PathfinderFpFollowUpVisitInteractor extends BasePathfinderFpFollowU
 
     public interface Flavor {
         void setContext(Context context);
+
         LinkedHashMap<String, BaseAncHomeVisitAction> calculateActions(final BaseAncHomeVisitContract.View view, MemberObject memberObject, final BaseAncHomeVisitContract.InteractorCallBack callBack) throws BaseAncHomeVisitAction.ValidationException;
     }
 

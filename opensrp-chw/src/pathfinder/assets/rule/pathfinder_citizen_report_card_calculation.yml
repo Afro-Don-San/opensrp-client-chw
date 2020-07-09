@@ -1,0 +1,7 @@
+---
+name: step1_fp_citizen_report_card_done
+description: fp_citizen_report_card_done calculation
+priority: 1
+condition: "true"
+actions:
+  - "calculation = true"

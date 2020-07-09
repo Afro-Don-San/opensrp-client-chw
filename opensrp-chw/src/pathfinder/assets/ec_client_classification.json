@@ -353,6 +353,20 @@
             "creates_case": [
               "ec_referral"
             ]
+          },
+          {
+            "field": "eventType",
+            "field_value": "FP Follow up visit Counselling",
+            "creates_case": [
+              "ec_family_planning"
+            ]
+          },
+          {
+            "field": "eventType",
+            "field_value": "Citizen Report Card",
+            "creates_case": [
+              "ec_family_planning"
+            ]
           }
         ]
       }

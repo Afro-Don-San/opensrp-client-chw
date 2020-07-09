@@ -1,0 +1,7 @@
+---
+name: step1_fp_followup_done
+description: fp_followup_done calculation
+priority: 1
+condition: "true"
+actions:
+  - "calculation = true"

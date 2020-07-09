@@ -1158,6 +1158,22 @@
           }
         },
         {
+          "column_name": "fp_followup_done",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "fp_followup_done"
+          }
+        },
+        {
+          "column_name": "fp_citizen_report_card_done",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "fp_citizen_report_card_done"
+          }
+        },
+        {
           "column_name": "last_interacted_with",
           "type": "Event",
           "json_mapping": {
