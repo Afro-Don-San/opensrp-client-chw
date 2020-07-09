@@ -144,14 +144,14 @@
           {
             "key": "yes",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "yes",
             "openmrs_entity_parent": "",
             "text": "Yes"
           },
           {
             "key": "no",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
             "text": "No"
           }
@@ -223,21 +223,21 @@
         "key": "willingness_to_continue_with_family_planning_method",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "1382AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "openmrs_entity_id": "willingness_to_continue_with_family_planning_method",
         "openmrs_entity_parent": "",
         "label": "ASK: Are you willing to continue to use this family planning method?\n",
         "options": [
           {
             "key": "yes",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "yes",
             "openmrs_entity_parent": "",
             "text": "Yes"
           },
           {
             "key": "no",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
             "text": "No"
           }
@@ -255,52 +255,87 @@
         }
       },
       {
+        "key": "did_the_client_stop_fp_chw",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "did_the_client_stop_fp_chw",
+        "openmrs_entity_parent": "",
+        "label": "Did you stop using that method?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes",
+            "openmrs_entity_parent": "",
+            "text": "Yes"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no",
+            "openmrs_entity_parent": "",
+            "text": "No"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one option"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
+            }
+          }
+        }
+      },
+      {
         "key": "reason_stop_fp_chw",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "164901AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "openmrs_entity_id": "reason_stop_fp_chw",
         "openmrs_entity_parent": "",
         "label": "Why did you stop using that method?",
         "options": [
           {
             "key": "side_effects",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "164154AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "side_effects",
             "openmrs_entity_parent": "",
             "text": "Side-effects"
           },
           {
             "key": "wants_to_conceive",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "160571AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "wants_to_conceive",
             "openmrs_entity_parent": "",
             "text": "Wants to become pregnant"
           },
           {
             "key": "afraid_of_not_getting_pregnant_again",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "164260AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "afraid_of_not_getting_pregnant_again",
             "openmrs_entity_parent": "",
             "text": "I'm afraid I won't be able to get pregnant again"
           },
           {
             "key": "method_was_not_available",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "164260AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "method_was_not_available",
             "openmrs_entity_parent": "",
             "text": "The method was not available"
           },
           {
             "key": "health_workers_had_bad_attitudes",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "134346AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "health_workers_had_bad_attitudes",
             "openmrs_entity_parent": "",
             "text": "Health workers had bad attitudes"
           },
           {
             "key": "i_got_pregnant_while_using_the_method",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "163494AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "i_got_pregnant_while_using_the_method",
             "openmrs_entity_parent": "",
             "value": false,
             "text": "I got pregnant while using the family planning method\n"
@@ -308,7 +343,7 @@
           {
             "key": "partner_does_not_approve",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "163494AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "partner_does_not_approve",
             "openmrs_entity_parent": "",
             "value": false,
             "text": "My partner does not approve"
@@ -316,7 +351,7 @@
           {
             "key": "others",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "others",
             "openmrs_entity_parent": "",
             "text": "Others"
           }
@@ -338,7 +373,7 @@
         "type": "edit_text",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "other_reason_fp_chw",
-        "openmrs_entity_parent": "164901AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "openmrs_entity_parent": "reason_stop_fp_chw",
         "edit_type": "name",
         "hint": "Other reason",
         "v_required": {
@@ -357,21 +392,21 @@
         "key": "side_effects_fp",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "164901AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "openmrs_entity_id": "side_effects_fp",
         "openmrs_entity_parent": "",
         "label": "ASK: Which side effects did you have?",
         "options": [
           {
             "key": "headache",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "headache",
             "openmrs_entity_parent": "",
             "text": "Headache"
           },
           {
             "key": "abdominal_pain",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "160571AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "abdominal_pain",
             "openmrs_entity_parent": "",
             "text": "Abdominal/pelvic pain"
           },
@@ -399,7 +434,7 @@
           {
             "key": "i_got_pregnant_while_using_the_method",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "163494AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "i_got_pregnant_while_using_the_method",
             "openmrs_entity_parent": "",
             "value": false,
             "text": "I got pregnant while using the family planning method"
@@ -407,7 +442,7 @@
           {
             "key": "weight_gain",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "163494AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "weight_gain",
             "openmrs_entity_parent": "",
             "value": false,
             "text": "Weight gain"
@@ -415,14 +450,14 @@
           {
             "key": "dizziness_vertigo",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "dizziness_vertigo",
             "openmrs_entity_parent": "",
             "text": "Dizziness/vertigo"
           },
           {
             "key": "lower_back_pain",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "lower_back_pain",
             "openmrs_entity_parent": "",
             "text": "Lower back pain"
           }
@@ -443,21 +478,21 @@
         "key": "client_need_refill",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "1382AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "openmrs_entity_id": "client_need_refill",
         "openmrs_entity_parent": "",
         "label": "ASK: Does the client need refill? ",
         "options": [
           {
             "key": "yes",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "yes",
             "openmrs_entity_parent": "",
             "text": "Yes"
           },
           {
             "key": "no",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
             "text": "No"
           }

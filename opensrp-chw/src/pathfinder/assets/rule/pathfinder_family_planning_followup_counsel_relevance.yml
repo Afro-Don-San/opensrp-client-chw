@@ -62,10 +62,17 @@ condition: "(step1_satisfaction_with_current_method.contains('yes') || step1_wil
 actions:
  - "isRelevant = true"
 ---
+name: step1_did_the_client_stop_fp_chw
+description: did_the_client_stop_fp_chw relevance
+priority: 1
+condition: "step1_willingness_to_continue_with_family_planning_method == 'no'"
+actions:
+ - "isRelevant = true"
+---
 name: step1_reason_stop_fp_chw
 description: reason_stop_fp_chw relevance
 priority: 1
-condition: "step1_willingness_to_continue_with_family_planning_method == 'no'"
+condition: "step1_did_the_client_stop_fp_chw == 'yes'"
 actions:
  - "isRelevant = true"
 ---
