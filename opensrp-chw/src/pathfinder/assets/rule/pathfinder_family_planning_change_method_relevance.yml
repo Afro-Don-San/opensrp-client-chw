@@ -1,0 +1,30 @@
+---
+name: step1_other_reason_fp_chw
+description: Other reason fp stop
+priority: 1
+condition: "step1_reason_stop_fp_chw =='others'"
+actions:
+  - "isRelevant = true"
+
+---
+name: step1_side_effects_fp
+description: side effects fp
+priority: 1
+condition: "step1_reason_stop_fp_chw =='side_effects'"
+actions:
+  - "isRelevant = true"
+---
+name: step1_used_fp_method_consistently
+description: used_fp_method_consistently relevance
+priority: 1
+condition: "step1_choose_a_different_fp_method == 'yes'"
+actions:
+  - "isRelevant = true"
+
+---
+name: step1_client_does_not_want_another_method
+description: client_does_not_want_another_method relevance
+priority: 1
+condition: "step1_choose_a_different_fp_method == 'no'"
+actions:
+  - "isRelevant = true"

@@ -1,0 +1,438 @@
+{
+  "validate_on_submit": false,
+  "show_errors_on_submit": true,
+  "skip_blank_steps": true,
+  "count": "5",
+  "encounter_type": "Family Planning Method Referral Followup",
+  "entity_id": "",
+  "relational_id": "",
+  "metadata": {
+    "start": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "start",
+      "openmrs_entity_id": "163137AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "end": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "end",
+      "openmrs_entity_id": "163138AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "today": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "encounter",
+      "openmrs_entity_id": "encounter_date"
+    },
+    "deviceid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "deviceid",
+      "openmrs_entity_id": "163149AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "subscriberid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "subscriberid",
+      "openmrs_entity_id": "163150AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "simserial": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "simserial",
+      "openmrs_entity_id": "163151AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "phonenumber": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "phonenumber",
+      "openmrs_entity_id": "163152AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "encounter_location": "",
+    "look_up": {
+      "entity_id": "",
+      "value": ""
+    }
+  },
+  "step1": {
+    "title": "Introduction Notes",
+    "next": "step2",
+    "fields": [
+      {
+        "key": "fp_method_referral_followup_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_method_referral_followup_date",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_fp_method_referral_followup_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "did_the_client_get_fp_method",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "did_the_client_get_fp_method",
+        "openmrs_entity_parent": "",
+        "label": "You were referred to a health facility for a family planning method.\nDid you get a family planning method from the health facility?\n",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes",
+            "openmrs_entity_parent": "",
+            "text": "Yes"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no",
+            "openmrs_entity_parent": "",
+            "text": "No"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        }
+      },
+      {
+        "key": "give_fp_method_done",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "give_fp_method_done",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_fp_method_referral_followup_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "fp_method_given",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_method_given",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_fp_method_referral_followup_calculation.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step2": {
+    "title": "Method Received at the health facility",
+    "next": "step3",
+    "fields": [
+      {
+        "key": "fp_method",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_method",
+        "openmrs_entity_parent": "",
+        "label": "ASK: Which method did you receive?\n",
+        "options": [
+          {
+            "key": "progestin_only_pills",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Progestin only pills"
+          },
+          {
+            "key": "vasectomy",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Vasectomy"
+          },
+          {
+            "key": "male_condom",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Male Condom"
+          },
+          {
+            "key": "coc",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Combined Oral Contraceptives (COC)"
+          },
+          {
+            "key": "tubal_ligation",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Tubal ligation"
+          },
+          {
+            "key": "iud",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Interuterine device (IUD)"
+          },
+          {
+            "key": "lam",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Lactational amenorrhea method (LAM)"
+          },
+          {
+            "key": "implants",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Implants"
+          },
+          {
+            "key": "female_condom",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Female Condom"
+          },
+          {
+            "key": "injection",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Injection"
+          },
+          {
+            "key": "sdm",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Standard days method(SDM)"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_fp_method_referral_followup_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step3": {
+    "title": "Client did not complete referral",
+    "next": "step4",
+    "fields": [
+      {
+        "key": "did_client_complete_referral",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "did_client_complete_referral",
+        "openmrs_entity_parent": "",
+        "label": "ASK: Did you go to the health facility to try to complete this referral?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes",
+            "openmrs_entity_parent": "",
+            "text": "Yes"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no",
+            "openmrs_entity_parent": "",
+            "text": "No"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_fp_method_referral_followup_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step4": {
+    "title": "Reasons for not going to facility",
+    "next": "step5",
+    "fields": [
+      {
+        "key": "reasons_for_not_going_to_facility",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "reasons_for_not_going_to_facility",
+        "openmrs_entity_parent": "",
+        "label": "ASK: Why did you not go to the health facility?",
+        "options": [
+          {
+            "key": "did_not_have_time",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "did_not_have_time",
+            "openmrs_entity_parent": "",
+            "text": "I did not have time"
+          },
+          {
+            "key": "its_too_far",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "its_too_far",
+            "openmrs_entity_parent": "",
+            "text": "It's too far"
+          },
+          {
+            "key": "forgot",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "forgot",
+            "openmrs_entity_parent": "",
+            "text": "I forgot"
+          },
+          {
+            "key": "changed_his_mind",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "changed_his_mind",
+            "openmrs_entity_parent": "",
+            "text": "I changed my mind"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_fp_method_referral_followup_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "reasons_for_not_getting_any_services_at_the_health_facility",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "reasons_for_not_getting_any_services_at_the_health_facility",
+        "openmrs_entity_parent": "",
+        "label": "ASK: Why did you not get any services at the health facility?",
+        "options": [
+          {
+            "key": "too_many_people",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "too_many_people",
+            "openmrs_entity_parent": "",
+            "text": "There were too many people"
+          },
+          {
+            "key": "changed_his_mind",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "changed_his_mind",
+            "openmrs_entity_parent": "",
+            "text": "I changed my mind"
+          },
+          {
+            "key": "method_not_available",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "method_not_available",
+            "openmrs_entity_parent": "",
+            "text": "The method was not available"
+          },
+          {
+            "key": "no_skilled_service_providers",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no_skilled_service_providers",
+            "openmrs_entity_parent": "",
+            "text": "There were no skilled service providers"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_fp_method_referral_followup_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step5": {
+    "title": "End",
+    "fields": [
+      {
+        "key": "what_the_client_wants_to_do_next",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "what_the_client_wants_to_do_next",
+        "openmrs_entity_parent": "",
+        "label": "ASK: What would you like to do now?",
+        "options": [
+          {
+            "key": "choose_a_different_fp_method",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "try_to_get_a_pregnancy_test",
+            "openmrs_entity_parent": "",
+            "text": "Choose a different family planning method"
+          },
+          {
+            "key": "continue_to_try_to_complete_the_referral",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "complete_pregnancy_screening_questions",
+            "openmrs_entity_parent": "",
+            "text": "Continue to try to complete the referral"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_fp_method_referral_followup_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "discuss_how_you_will_help_client_complete_referral",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Discuss how you will help the client complete the referral.\n\nTell the client you will follow up within one week to make sure she/he got the service she/he was referred for.\n",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_fp_method_referral_followup_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

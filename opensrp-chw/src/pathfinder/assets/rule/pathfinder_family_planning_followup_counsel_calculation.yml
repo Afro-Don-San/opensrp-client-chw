@@ -1,4 +1,46 @@
 ---
+name: step1_fp_start_date
+description: fp_start_date calculation
+priority: 2
+condition: "step1_willingness_to_continue_with_family_planning_method.contains('no')"
+actions:
+  - "calculation = '0'"
+---
+name: step1_fp_method_accepted
+description: fp_method_accepted calculation
+priority: 2
+condition: "step1_willingness_to_continue_with_family_planning_method.contains('no')"
+actions:
+  - "calculation = '0'"
+---
+name: step1_pregnant_screening_done
+description: pregnant_screening_done calculation
+priority: 2
+condition: "step1_used_fp_method_consistently == 'no'"
+actions:
+  - "calculation = false"
+---
+name: step1_fp_method_choice_done
+description: fp_method_choice_done calculation
+priority: 2
+condition: "step1_willingness_to_continue_with_family_planning_method.contains('no')"
+actions:
+  - "calculation = false"
+---
+name: step1_give_fp_method_done
+description: give_fp_method_done calculation
+priority: 2
+condition: "step1_willingness_to_continue_with_family_planning_method.contains('no')"
+actions:
+  - "calculation = false"
+---
+name: step1_ecp
+description: ecp calculation
+priority: 2
+condition: "step1_choose_a_different_fp_method.contains('no') "
+actions:
+  - "calculation = '0' "
+---
 name: step1_fp_followup_done
 description: fp_followup_done calculation
 priority: 1

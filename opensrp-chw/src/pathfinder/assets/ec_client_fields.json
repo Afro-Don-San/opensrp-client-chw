@@ -1195,6 +1195,14 @@
           "json_mapping": {
             "field": "version"
           }
+        },
+        {
+          "column_name": "no_pillcycles",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "no_pillcycles"
+          }
         }
       ]
     },

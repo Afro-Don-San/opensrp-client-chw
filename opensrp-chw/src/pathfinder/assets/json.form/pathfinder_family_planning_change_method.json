@@ -62,7 +62,7 @@
         "calculation": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "family_planning_change_method_calculation.yml"
+              "rules-file": "pathfinder_family_planning_change_method_calculation.yml"
             }
           }
         }
@@ -78,49 +78,49 @@
         "key": "reason_stop_fp_chw",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "164901AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "openmrs_entity_id": "reason_stop_fp_chw",
         "openmrs_entity_parent": "",
         "label": "ASK: Why are you discontinuing this method?\n",
         "options": [
           {
             "key": "side_effects",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "164154AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "side_effects",
             "openmrs_entity_parent": "",
             "text": "Side-effects"
           },
           {
             "key": "wants_to_conceive",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "160571AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "wants_to_conceive",
             "openmrs_entity_parent": "",
             "text": "Wants to become pregnant"
           },
           {
             "key": "afraid_of_not_getting_pregnant_again",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "164260AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "afraid_of_not_getting_pregnant_again",
             "openmrs_entity_parent": "",
             "text": "I'm afraid I won't be able to get pregnant again"
           },
           {
             "key": "method_was_not_available",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "164260AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "method_was_not_available",
             "openmrs_entity_parent": "",
             "text": "The method was not available"
           },
           {
             "key": "health_workers_had_bad_attitudes",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "134346AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "health_workers_had_bad_attitudes",
             "openmrs_entity_parent": "",
             "text": "Health workers had bad attitudes"
           },
           {
             "key": "i_got_pregnant_while_using_the_method",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "163494AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "i_got_pregnant_while_using_the_method",
             "openmrs_entity_parent": "",
             "value": false,
             "text": "I got pregnant while using the family planning method\n"
@@ -128,7 +128,7 @@
           {
             "key": "partner_does_not_approve",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "163494AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "partner_does_not_approve",
             "openmrs_entity_parent": "",
             "value": false,
             "text": "My partner does not approve"
@@ -136,7 +136,7 @@
           {
             "key": "others",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "5622AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "others",
             "openmrs_entity_parent": "",
             "text": "Others"
           }
@@ -151,7 +151,7 @@
         "type": "edit_text",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "other_reason_fp_chw",
-        "openmrs_entity_parent": "164901AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "openmrs_entity_parent": "reason_stop_fp_chw",
         "edit_type": "name",
         "hint": "Other reason",
         "v_required": {
@@ -161,7 +161,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "family_planning_change_method_relevance.yml"
+              "rules-file": "pathfinder_family_planning_change_method_relevance.yml"
             }
           }
         }
@@ -170,7 +170,7 @@
         "key": "side_effects_fp",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "164901AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "openmrs_entity_id": "side_effects_fp",
         "openmrs_entity_parent": "",
         "label": "ASK: Which side effects did you have?",
         "options": [
@@ -247,7 +247,185 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "family_planning_change_method_relevance.yml"
+              "rules-file": "pathfinder_family_planning_change_method_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "choose_a_different_fp_method",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "choose_a_different_fp_method",
+        "openmrs_entity_parent": "",
+        "label": "ASK: Would you like to choose a different family planning method?\n",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes",
+            "openmrs_entity_parent": "",
+            "text": "Yes"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no",
+            "openmrs_entity_parent": "",
+            "text": "No"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Required"
+        }
+      },
+      {
+        "key": "used_fp_method_consistently",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "used_fp_method_consistently",
+        "openmrs_entity_parent": "",
+        "label": "ASK: Have you used your family planning method consistently every day in the last month?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes",
+            "openmrs_entity_parent": "",
+            "text": "Yes"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no",
+            "openmrs_entity_parent": "",
+            "text": "No"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Required"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_change_method_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "client_does_not_want_another_method",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Give the client condoms.\nExplain that the client can receive free family planning information through her/his phone with m4RH (15014).\n\nTell the client that at the end of this visit, you will schedule a new visit in three months to talk more about family planning.\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_change_method_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "fp_start_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_start_date",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_change_method_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "fp_method_accepted",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_method_accepted",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_change_method_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "pregnant_screening_done",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "pregnant_screening_done",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_change_method_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "pregnancy_status",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "pregnancy_status",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_change_method_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "fp_method_choice_done",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_method_choice_done",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_change_method_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "give_fp_method_done",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "give_fp_method_done",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_change_method_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "ecp",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "ecp",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_change_method_calculation.yml"
             }
           }
         }

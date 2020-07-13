@@ -38,17 +38,3 @@ priority: 1
 condition: "true"
 actions:
   - "calculation = 'PENDING'"
----
-name: step1_client_is_currently_referred
-description: client_is_currently_referred calculation
-priority: 1
-condition: "true"
-actions:
-  - "calculation = true"
----
-name: step1_issued_referral_service
-description: issued_referral_service calculation
-priority: 1
-condition: "true"
-actions:
-  - "calculation = 'HTC Referral'"

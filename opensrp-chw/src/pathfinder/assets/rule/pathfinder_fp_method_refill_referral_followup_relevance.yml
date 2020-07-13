@@ -1,0 +1,42 @@
+---
+name: step2_fp_method
+description: fp_method relevance
+priority: 1
+condition: "step1_did_the_client_get_a_refill =='yes'"
+actions:
+  - "isRelevant = true"
+---
+name: step3_did_client_complete_referral
+description: did_client_complete_referral relevance
+priority: 1
+condition: "step1_step1_did_the_client_get_a_refill =='no'"
+actions:
+  - "isRelevant = true"
+---
+name: step4_reasons_for_not_going_to_facility
+description: reasons_for_not_going_to_facility relevance
+priority: 1
+condition: "step1_step1_did_the_client_get_a_refill =='no' && step3_did_client_complete_referral =='no'"
+actions:
+  - "isRelevant = true"
+---
+name: step4_reasons_for_not_getting_any_services_at_the_health_facility
+description: reasons_for_not_getting_any_services_at_the_health_facility relevance
+priority: 1
+condition: "step1_step1_did_the_client_get_a_refill =='no' && step3_did_client_complete_referral =='yes'"
+actions:
+  - "isRelevant = true"
+---
+name: step5_what_the_client_wants_to_do_next
+description: what_the_client_wants_to_do_next relevance
+priority: 1
+condition: "step1_step1_did_the_client_get_a_refill =='no'"
+actions:
+  - "isRelevant = true"
+---
+name: step5_discuss_how_you_will_help_client_complete_referral
+description: discuss_how_you_will_help_client_complete_referral relevance
+priority: 1
+condition: "step5_what_the_client_wants_to_do_next =='try_to_get_a_pregnancy_test'"
+actions:
+  - "isRelevant = true"
