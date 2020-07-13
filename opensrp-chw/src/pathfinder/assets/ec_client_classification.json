@@ -367,6 +367,41 @@
             "creates_case": [
               "ec_family_planning"
             ]
+          },
+          {
+            "field": "eventType",
+            "field_value": "ANC Referral",
+            "creates_case": [
+              "ec_family_planning"
+            ]
+          },
+          {
+            "field": "eventType",
+            "field_value": "HIV Referral",
+            "creates_case": [
+              "ec_family_planning"
+            ]
+          },
+          {
+            "field": "eventType",
+            "field_value": "HTC Referral",
+            "creates_case": [
+              "ec_family_planning"
+            ]
+          },
+          {
+            "field": "eventType",
+            "field_value": "Pregnancy Test Referral",
+            "creates_case": [
+              "ec_family_planning"
+            ]
+          },
+          {
+            "field": "eventType",
+            "field_value": "STI Referral",
+            "creates_case": [
+              "ec_family_planning"
+            ]
           }
         ]
       }
