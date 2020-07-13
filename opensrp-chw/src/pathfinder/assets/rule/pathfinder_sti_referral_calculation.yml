@@ -51,4 +51,4 @@ description: issued_referral_service calculation
 priority: 1
 condition: "true"
 actions:
-  - "calculation = 'ANC Referral'"
+  - "calculation = 'STI Referral'"

@@ -1174,6 +1174,22 @@
           }
         },
         {
+          "column_name": "client_is_currently_referred",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "client_is_currently_referred"
+          }
+        },
+        {
+          "column_name": "issued_referral_service",
+          "type": "Event",
+          "json_mapping": {
+            "field": "obs.fieldCode",
+            "concept": "issued_referral_service"
+          }
+        },
+        {
           "column_name": "last_interacted_with",
           "type": "Event",
           "json_mapping": {

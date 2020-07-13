@@ -66,7 +66,7 @@
         "calculation": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_anc_referral_calculation.yml"
+              "rules-file": "pathfinder_htc_referral_calculation.yml"
             }
           }
         }
@@ -80,7 +80,7 @@
         "calculation": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_anc_referral_calculation.yml"
+              "rules-file": "pathfinder_htc_referral_calculation.yml"
             }
           }
         }
@@ -94,7 +94,7 @@
         "calculation": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_anc_referral_calculation.yml"
+              "rules-file": "pathfinder_htc_referral_calculation.yml"
             }
           }
         }
@@ -108,7 +108,35 @@
         "calculation": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_anc_referral_calculation.yml"
+              "rules-file": "pathfinder_htc_referral_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "client_is_currently_referred",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "client_is_currently_referred",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_htc_referral_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "issued_referral_service",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "issued_referral_service",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_htc_referral_calculation.yml"
             }
           }
         }
@@ -163,7 +191,7 @@
         "calculation": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_anc_referral_calculation.yml"
+              "rules-file": "pathfinder_htc_referral_calculation.yml"
             }
           }
         }
