@@ -357,6 +357,14 @@
           },
           {
             "field": "eventType",
+            "field_value": "Family Planning Method Refill Referral",
+            "creates_case": [
+              "ec_referral",
+              "ec_family_planning"
+            ]
+          },
+          {
+            "field": "eventType",
             "field_value": "FP Follow up visit Counselling",
             "creates_case": [
               "ec_family_planning"

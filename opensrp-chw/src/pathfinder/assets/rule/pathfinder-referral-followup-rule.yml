@@ -1,0 +1,6 @@
+name: one
+description: referral followup
+priority: 1
+condition: "pathfinderFpAlertRule.isFollowupValid(14,21,365)"
+actions:
+  - "pathfinderFpAlertRule.setVisitID('1')"
