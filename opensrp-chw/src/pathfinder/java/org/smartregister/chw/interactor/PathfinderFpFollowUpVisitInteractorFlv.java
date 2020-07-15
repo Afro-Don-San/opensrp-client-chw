@@ -23,6 +23,7 @@ import org.smartregister.chw.application.ChwApplication;
 import org.smartregister.chw.domain.PncBaby;
 import org.smartregister.chw.util.Constants;
 import org.smartregister.chw.util.JsonFormUtils;
+import org.smartregister.chw.util.UtilsFlv;
 import org.smartregister.util.FormUtils;
 
 import java.util.Collections;
@@ -77,37 +78,31 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
     }
 
     private void evaluateCounselling() throws Exception {
-        JSONObject resupplyJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.PathfinderFamilyPlanningFollowUpVisitUtils.getFamilyPlanningFollowupResupply());
+        JSONObject fpMethodRefillReferralJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.getPathfinderFpMethodRefillReferral());
+        UtilsFlv.injectReferralFacilities(fpMethodRefillReferralJsonObject);
+
+        BaseAncHomeVisitAction fpMethodRefillReferral = new BaseAncHomeVisitAction.Builder(context, context.getString(R.string.fp_method_refill_referral))
+                .withOptional(false)
+                .withDetails(null)
+                .withBaseEntityID(memberObject.getBaseEntityId())
+                .withHelper(new FpMethodRefillReferralHelper(context))
+                .withProcessingMode(BaseAncHomeVisitAction.ProcessingMode.SEPARATE)
+                .withFormName(Constants.JSON_FORM.getPathfinderFpMethodRefillReferral())
+                .withJsonPayload(fpMethodRefillReferralJsonObject.toString())
+                .build();
+
+        JSONObject resupplyJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.PathfinderFamilyPlanningFollowUpVisitUtils.getFamilyPlanningFollowupRefill());
         injectFamilyPlaningMethod(resupplyJsonObject);
 
-        String familyPlanningMethodTranslated = null;
-        switch (familyPlanningMethod) {
-            case "coc":
-                familyPlanningMethodTranslated = context.getString(R.string.coc);
-                break;
-            case "pop":
-                familyPlanningMethodTranslated = context.getString(R.string.pop);
-                break;
-            case "male_condom":
-                familyPlanningMethodTranslated = context.getString(R.string.male_condom);
-                break;
-            case "female_condom":
-                familyPlanningMethodTranslated = context.getString(R.string.female_condom);
-                break;
-            case "sdm":
-                familyPlanningMethodTranslated = context.getString(R.string.standard_day_method);
-                break;
-            default:
-                familyPlanningMethodTranslated = " ";
-                break;
-        }
+        String familyPlanningMethodTranslated = UtilsFlv.getTranslatedFpMethodName(familyPlanningMethod,((PathfinderFamilyPlanningFollowUpVisitActivity) context));
         BaseAncHomeVisitAction resupplyAction = new BaseAncHomeVisitAction.Builder(context, context.getString(R.string.resupply, familyPlanningMethodTranslated))
                 .withOptional(false)
                 .withDetails(null)
                 .withBaseEntityID(memberObject.getBaseEntityId())
-                .withHelper(new ResupplyHelper(context))
+                .withHelper(new ResupplyHelper(context, fpMethodRefillReferral))
                 .withProcessingMode(BaseAncHomeVisitAction.ProcessingMode.SEPARATE)
-                .withFormName(resupplyJsonObject.toString())
+                .withFormName(Constants.JSON_FORM.PathfinderFamilyPlanningFollowUpVisitUtils.getFamilyPlanningFollowupRefill())
+                .withJsonPayload(resupplyJsonObject.toString())
                 .build();
 
         JSONObject counselingJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.PathfinderFamilyPlanningFollowUpVisitUtils.getFamilyPlanningFollowupCounsel());
@@ -119,7 +114,8 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
                 .withBaseEntityID(memberObject.getBaseEntityId())
                 .withProcessingMode(BaseAncHomeVisitAction.ProcessingMode.SEPARATE)
                 .withHelper(new CounsellingHelper(context, familyPlanningMethodTranslated, resupplyAction))
-                .withFormName(counselingJsonObject.toString())
+                .withFormName(Constants.JSON_FORM.PathfinderFamilyPlanningFollowUpVisitUtils.getFamilyPlanningFollowupCounsel())
+                .withJsonPayload(counselingJsonObject.toString())
                 .build();
 
         actionList.put(context.getString(R.string.counseling), action);
@@ -129,9 +125,9 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
         if (form == null) {
             return null;
         } else {
-
             JSONObject fp_method = new JSONObject();
             fp_method.put("fp_method", familyPlanningMethod);
+            fp_method.put("fp_method_translated", UtilsFlv.getTranslatedFpMethodName(familyPlanningMethod,((PathfinderFamilyPlanningFollowUpVisitActivity) context)));
             form.put("global", fp_method);
             return form;
         }
@@ -142,9 +138,11 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
         private String no_pillcycles;
         private String IsfpMethodGiven;
         private Context context;
+        private BaseAncHomeVisitAction fpMethodRefillReferralAction;
 
-        public ResupplyHelper(Context context) {
+        public ResupplyHelper(Context context, BaseAncHomeVisitAction fpMethodRefillReferralAction) {
             this.context = context;
+            this.fpMethodRefillReferralAction = fpMethodRefillReferralAction;
         }
 
         @Override
@@ -167,13 +165,17 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
                 return null;
             }
             StringBuilder builder = new StringBuilder();
-            if (resupply.equalsIgnoreCase(no_condoms)) {
+            if (familyPlanningMethod.equals("male_condom") || familyPlanningMethod.equals("female_condom")) {
                 builder.append(context.getString(R.string.no_of_condoms)).append(" ").append(resupply);
-            } else if (resupply.equalsIgnoreCase(no_pillcycles)) {
+            } else {
                 builder.append(context.getString(R.string.no_of_pill_cycles)).append(" ").append(resupply);
-
             }
 
+            if (!IsfpMethodGiven.equals("true")) {
+                LinkedHashMap<String, BaseAncHomeVisitAction> additionalList = new LinkedHashMap<>();
+                additionalList.put(context.getString(R.string.fp_method_refill_referral), fpMethodRefillReferralAction);
+                ((PathfinderFamilyPlanningFollowUpVisitActivity) context).initializeActions(additionalList);
+            }
             return builder.toString();
         }
 
@@ -249,9 +251,6 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
                                     familyPlanningMethod.equalsIgnoreCase("pop") ||
                                     familyPlanningMethod.equalsIgnoreCase("sdm")
                     ) {
-                        JSONObject jsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.PathfinderFamilyPlanningFollowUpVisitUtils.getFamilyPlanningFollowupResupply());
-                        injectFamilyPlaningMethod(jsonObject);
-
                         LinkedHashMap<String, BaseAncHomeVisitAction> additionalList = new LinkedHashMap<>();
                         additionalList.put(context.getString(R.string.resupply, familyPlanningMethodTranslated), resupplyAction);
                         ((PathfinderFamilyPlanningFollowUpVisitActivity) context).initializeActions(additionalList);
@@ -266,5 +265,41 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
         }
     }
 
+    private class FpMethodRefillReferralHelper extends HomeVisitActionHelper {
+        private String referral_date;
+
+        public FpMethodRefillReferralHelper(Context context) {
+            this.context = context;
+        }
+
+        @Override
+        public void onPayloadReceived(String jsonPayload) {
+            try {
+                JSONObject jsonObject = new JSONObject(jsonPayload);
+                referral_date = JsonFormUtils.getValue(jsonObject, "referral_date");
+            } catch (JSONException e) {
+                Timber.e(e);
+            }
+        }
+
+        @Override
+        public String evaluateSubTitle() {
+            if (StringUtils.isBlank(referral_date)) {
+                return null;
+            }
+            StringBuilder builder = new StringBuilder();
+            builder.append(context.getString(R.string.fp_method_referral)).append(":").append(" ").append(context.getString(R.string.yes));
+            return builder.toString();
+        }
+
+        @Override
+        public BaseAncHomeVisitAction.Status evaluateStatusOnPayload() {
+            if (StringUtils.isBlank(referral_date)) {
+                return BaseAncHomeVisitAction.Status.PENDING;
+            } else {
+                return BaseAncHomeVisitAction.Status.COMPLETED;
+            }
+        }
+    }
 
 }

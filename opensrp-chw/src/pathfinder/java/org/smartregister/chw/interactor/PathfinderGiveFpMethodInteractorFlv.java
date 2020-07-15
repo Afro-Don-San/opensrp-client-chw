@@ -24,6 +24,7 @@ import org.smartregister.chw.core.activity.CorePathfinderFollowupVisitActivity;
 import org.smartregister.chw.domain.PncBaby;
 import org.smartregister.chw.util.Constants;
 import org.smartregister.chw.util.JsonFormUtils;
+import org.smartregister.chw.util.UtilsFlv;
 import org.smartregister.domain.Location;
 import org.smartregister.repository.LocationRepository;
 import org.smartregister.util.FormUtils;
@@ -89,18 +90,20 @@ public class PathfinderGiveFpMethodInteractorFlv extends DefaultPathfinderFpPreg
                 .withBaseEntityID(memberObject.getBaseEntityId())
                 .withHelper(new FpMethodReferralHelper(context))
                 .withProcessingMode(BaseAncHomeVisitAction.ProcessingMode.SEPARATE)
-                .withFormName(fpMethodReferralJsonObject.toString())
+                .withFormName(Constants.JSON_FORM.getPathfinderFpMethodReferral())
+                .withJsonPayload(fpMethodReferralJsonObject.toString())
                 .build();
 
         JSONObject fpGiveFpMethodJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.getPathfinderGiveFamilyPlanningMethod());
-        injectFpMethod(fpGiveFpMethodJsonObject);
+        injectFamilyPlaningMethod(fpGiveFpMethodJsonObject);
         BaseAncHomeVisitAction action = new BaseAncHomeVisitAction.Builder(context, context.getString(R.string.give_fp_method))
                 .withOptional(false)
                 .withDetails(null)
                 .withBaseEntityID(memberObject.getBaseEntityId())
                 .withProcessingMode(BaseAncHomeVisitAction.ProcessingMode.SEPARATE)
                 .withHelper(new GiveFpMethodHelper(context, fpMethodReferral))
-                .withFormName(fpGiveFpMethodJsonObject.toString())
+                .withFormName(Constants.JSON_FORM.getPathfinderGiveFamilyPlanningMethod())
+                .withJsonPayload(fpGiveFpMethodJsonObject.toString())
                 .build();
 
         actionList.put(context.getString(R.string.give_fp_method), action);
@@ -134,12 +137,13 @@ public class PathfinderGiveFpMethodInteractorFlv extends DefaultPathfinderFpPreg
         }
     }
 
-    private JSONObject injectFpMethod(JSONObject form) throws Exception {
+    private JSONObject injectFamilyPlaningMethod(JSONObject form) throws Exception {
         if (form == null) {
             return null;
         } else {
             JSONObject fp_method = new JSONObject();
             fp_method.put("fp_method", familyPlanningMethod);
+            fp_method.put("fp_method_translated", UtilsFlv.getTranslatedFpMethodName(familyPlanningMethod, ((CorePathfinderFollowupVisitActivity) context)));
             form.put("global", fp_method);
             return form;
         }

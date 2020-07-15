@@ -204,7 +204,7 @@ actions:
   - "isRelevant = true"
 ---
 name: step16_end_note
-description: step17_end_note relevance
+description: step16_end_note relevance
 priority: 1
 condition: "step3_male_condoms_given != 'no' && step3_female_condoms_given != 'no' && step3_coc_given != 'no' && step3_pop_given != 'no' && step3_sdm_given != 'no'"
 actions:

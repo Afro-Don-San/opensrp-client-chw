@@ -1,5 +1,6 @@
 package org.smartregister.chw.util;
 
+import android.app.Activity;
 import android.os.AsyncTask;
 import android.text.TextUtils;
 import android.view.Menu;
@@ -7,6 +8,9 @@ import android.view.Menu;
 import org.apache.commons.lang3.StringUtils;
 import org.joda.time.DateTime;
 import org.joda.time.Period;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.smartregister.Context;
 import org.smartregister.chw.R;
 import org.smartregister.chw.core.rule.MalariaFollowUpRule;
 import org.smartregister.chw.core.utils.CoreConstants;
@@ -14,9 +18,12 @@ import org.smartregister.chw.core.utils.MalariaVisitUtil;
 import org.smartregister.chw.fp.dao.FpDao;
 import org.smartregister.chw.malaria.dao.MalariaDao;
 import org.smartregister.commonregistry.CommonPersonObjectClient;
+import org.smartregister.domain.Location;
+import org.smartregister.repository.LocationRepository;
 import org.smartregister.util.Utils;
 
 import java.util.Date;
+import java.util.List;
 
 import timber.log.Timber;
 
@@ -79,6 +86,59 @@ public class UtilsFlv {
                 menu.findItem(R.id.action_malaria_followup_visit).setVisible(true);
             }
         }
+    }
+
+    public static JSONObject injectReferralFacilities(JSONObject form) throws Exception {
+        if (form == null) {
+            return null;
+        } else {
+
+            JSONArray fields = form.getJSONObject("step1").getJSONArray("fields");
+            for (int i = 0; i < fields.length(); i++) {
+                JSONObject object = fields.getJSONObject(i);
+                if (object.getString("key").equals("chw_referral_hf")) {
+                    List<Location> locations = new LocationRepository().getAllLocations();
+
+                    JSONObject openmrsIds = new JSONObject();
+                    JSONArray values = new JSONArray();
+                    for (Location location : locations) {
+                        openmrsIds.put(location.getProperties().getName(), location.getId());
+                        values.put(location.getProperties().getName());
+                    }
+
+                    object.put("values", values);
+                    object.put("keys", values);
+                    object.put("openmrs_choice_ids", openmrsIds);
+                    break;
+                }
+            }
+            return form;
+        }
+    }
+
+    public static String getTranslatedFpMethodName(String familyPlanningMethod, Activity context){
+        String familyPlanningMethodTranslated = "";
+        switch (familyPlanningMethod) {
+            case "coc":
+                familyPlanningMethodTranslated = context.getString(R.string.coc);
+                break;
+            case "pop":
+                familyPlanningMethodTranslated = context.getString(R.string.pop);
+                break;
+            case "male_condom":
+                familyPlanningMethodTranslated = context.getString(R.string.male_condom);
+                break;
+            case "female_condom":
+                familyPlanningMethodTranslated = context.getString(R.string.female_condom);
+                break;
+            case "sdm":
+                familyPlanningMethodTranslated = context.getString(R.string.standard_day_method);
+                break;
+            default:
+                familyPlanningMethodTranslated = familyPlanningMethod;
+                break;
+        }
+        return familyPlanningMethodTranslated;
     }
 
 }
