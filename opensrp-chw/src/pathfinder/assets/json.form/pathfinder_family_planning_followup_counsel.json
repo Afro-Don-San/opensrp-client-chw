@@ -2,7 +2,7 @@
   "validate_on_submit": false,
   "show_errors_on_submit": true,
   "skip_blank_steps": true,
-  "count": "1",
+  "count": "4",
   "encounter_type": "FP Follow up visit Counselling",
   "entity_id": "",
   "relational_id": "",
@@ -55,6 +55,7 @@
     }
   },
   "step1": {
+    "next": "step2",
     "title": "Counselling",
     "fields": [
       {
@@ -86,6 +87,26 @@
         }
       },
       {
+        "key": "fp_followup_done",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_followup_done",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_followup_counsel_calculation.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step2": {
+    "next": "step3",
+    "title": "Not Satisfied With the current method",
+    "fields": [
+      {
         "key": "not_satisfied_with_chw_given_method",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
@@ -109,109 +130,6 @@
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
         "text": "Tell the client that she needs to return to the health facility to discuss her concerns since method received at the facility require counseling from a trained health care provider.\n\nExplain the reason for giving the referral and explain where the nearest health facility is located.\n\nInform the client that you will follow up to make sure they got the service they were referred for.\n\n Fill in the referral form and refer client to the health facility for further consultations with provider.",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "continue_using_method_provider",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "person_attribute",
-        "openmrs_entity_id": "toaster_notes",
-        "type": "toaster_notes",
-        "text": "Tell the client to continue using the method she/he chose as instructed by the provider.",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "does_the_client_use_condoms",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "does_the_client_use_condoms",
-        "openmrs_entity_parent": "",
-        "label": "ASK: Are you using condoms every time you have sex?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Yes"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "No"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "This value cannot be null"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "emphasize_consistent_use_of_condoms",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "person_attribute",
-        "openmrs_entity_id": "emphasize_consistent_use_of_condoms",
-        "type": "toaster_notes",
-        "text": "Emphasize the importance of using condoms for every sex act..",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "does_the_client_take_the_pills",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "person_attribute",
-        "openmrs_entity_id": "toaster_notes",
-        "type": "toaster_notes",
-        "text": "ASK: Are you remembering to take the pills every day?\n\nExplain what to do if she forgets to take the pills correctly",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "check_the_client_understands_how_to_use_sdm",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "person_attribute",
-        "openmrs_entity_id": "toaster_notes",
-        "type": "toaster_notes",
-        "text": "Check that the client understands how to use the standard days method.\n",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -476,7 +394,121 @@
             }
           }
         }
+      }
+    ]
+  },
+  "step3": {
+    "next": "step4",
+    "title": "Satisfied With the current method",
+    "fields": [
+      {
+        "key": "continue_using_method_provider",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Tell the client to continue using the method she/he chose as instructed by the provider.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
+            }
+          }
+        }
       },
+      {
+        "key": "does_the_client_use_condoms",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "does_the_client_use_condoms",
+        "openmrs_entity_parent": "",
+        "label": "ASK: Are you using condoms every time you have sex?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes",
+            "openmrs_entity_parent": "",
+            "text": "Yes"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no",
+            "openmrs_entity_parent": "",
+            "text": "No"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "This value cannot be null"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "emphasize_consistent_use_of_condoms",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "emphasize_consistent_use_of_condoms",
+        "type": "toaster_notes",
+        "text": "Emphasize the importance of using condoms for every sex act..",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "does_the_client_take_the_pills",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "ASK: Are you remembering to take the pills every day?\n\nExplain what to do if she forgets to take the pills correctly",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "check_the_client_understands_how_to_use_sdm",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Check that the client understands how to use the standard days method.\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step4": {
+    "title": "End",
+    "fields": [
       {
         "key": "used_fp_method_consistently",
         "type": "native_radio",
@@ -560,6 +592,96 @@
           "rules-engine": {
             "ex-rules": {
               "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "fp_start_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_start_date",
+        "type": "edit_text",
+        "hidden": true,
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_followup_counsel_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "fp_method_accepted",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_method_accepted",
+        "type": "edit_text",
+        "hidden": true,
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_followup_counsel_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "pregnant_screening_done",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "pregnant_screening_done",
+        "type": "edit_text",
+        "hidden": true,
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_followup_counsel_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "fp_method_choice_done",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_method_choice_done",
+        "type": "edit_text",
+        "hidden": true,
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_followup_counsel_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "give_fp_method_done",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "give_fp_method_done",
+        "type": "edit_text",
+        "hidden": true,
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_followup_counsel_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "ecp",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "ecp",
+        "type": "edit_text",
+        "hidden": true,
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_followup_counsel_calculation.yml"
             }
           }
         }

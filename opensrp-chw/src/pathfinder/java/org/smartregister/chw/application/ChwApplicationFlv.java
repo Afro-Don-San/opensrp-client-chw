@@ -8,7 +8,7 @@ public class ChwApplicationFlv extends DefaultChwApplicationFlv {
 
     @Override
     public boolean hasReferrals() {
-        return true;
+        return false;
     }
 
     @Override

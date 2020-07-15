@@ -1177,7 +1177,7 @@
           "column_name": "client_is_currently_referred",
           "type": "Event",
           "json_mapping": {
-            "field": "obs.fieldCode",
+            "field": "obs.formSubmissionField",
             "concept": "client_is_currently_referred"
           }
         },
@@ -1185,7 +1185,7 @@
           "column_name": "issued_referral_service",
           "type": "Event",
           "json_mapping": {
-            "field": "obs.fieldCode",
+            "field": "obs.formSubmissionField",
             "concept": "issued_referral_service"
           }
         },
