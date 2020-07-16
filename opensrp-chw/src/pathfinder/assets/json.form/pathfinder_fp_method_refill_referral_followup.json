@@ -2,7 +2,7 @@
   "validate_on_submit": false,
   "show_errors_on_submit": true,
   "skip_blank_steps": true,
-  "count": "5",
+  "count": "4",
   "encounter_type": "Family Planning Method Refill Referral Followup",
   "entity_id": "",
   "relational_id": "",
@@ -67,7 +67,7 @@
         "calculation": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_test_followup_calculation.yml"
+              "rules-file": "pathfinder_fp_method_refill_referral_followup_calculation.yml"
             }
           }
         }
@@ -103,8 +103,152 @@
     ]
   },
   "step2": {
-    "title": "Method Received at the health facility",
+    "title": "Client did not complete referral",
     "next": "step3",
+    "fields": [
+      {
+        "key": "did_client_complete_referral",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "did_client_complete_referral",
+        "openmrs_entity_parent": "",
+        "label": "ASK: Did you go to the health facility to try to complete this referral?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes",
+            "openmrs_entity_parent": "",
+            "text": "Yes"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no",
+            "openmrs_entity_parent": "",
+            "text": "No"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_fp_method_refill_referral_followup_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step3": {
+    "title": "Reasons for not going to facility",
+    "next": "step4",
+    "fields": [
+      {
+        "key": "reasons_for_not_going_to_facility",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "reasons_for_not_going_to_facility",
+        "openmrs_entity_parent": "",
+        "label": "ASK: Why did you not go to the health facility?",
+        "options": [
+          {
+            "key": "did_not_have_time",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "did_not_have_time",
+            "openmrs_entity_parent": "",
+            "text": "I did not have time"
+          },
+          {
+            "key": "its_too_far",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "its_too_far",
+            "openmrs_entity_parent": "",
+            "text": "It's too far"
+          },
+          {
+            "key": "forgot",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "forgot",
+            "openmrs_entity_parent": "",
+            "text": "I forgot"
+          },
+          {
+            "key": "changed_his_mind",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "changed_his_mind",
+            "openmrs_entity_parent": "",
+            "text": "I changed my mind"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_fp_method_refill_referral_followup_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "reasons_for_not_getting_any_services_at_the_health_facility",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "reasons_for_not_getting_any_services_at_the_health_facility",
+        "openmrs_entity_parent": "",
+        "label": "ASK: Why did you not get any services at the health facility?",
+        "options": [
+          {
+            "key": "too_many_people",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "too_many_people",
+            "openmrs_entity_parent": "",
+            "text": "There were too many people"
+          },
+          {
+            "key": "changed_his_mind",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "changed_his_mind",
+            "openmrs_entity_parent": "",
+            "text": "I changed my mind"
+          },
+          {
+            "key": "method_not_available",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "method_not_available",
+            "openmrs_entity_parent": "",
+            "text": "The method was not available"
+          },
+          {
+            "key": "no_skilled_service_providers",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no_skilled_service_providers",
+            "openmrs_entity_parent": "",
+            "text": "There were no skilled service providers"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_fp_method_refill_referral_followup_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step4": {
+    "title": "End",
     "fields": [
       {
         "key": "fp_method",
@@ -199,161 +343,11 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_test_followup_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step3": {
-    "title": "Client did not complete referral",
-    "next": "step4",
-    "fields": [
-      {
-        "key": "did_client_complete_referral",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_client_complete_referral",
-        "openmrs_entity_parent": "",
-        "label": "ASK: Did you go to the health facility to try to complete this referral?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Yes"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "No"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_test_followup_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step4": {
-    "title": "Reasons for not going to facility",
-    "next": "step5",
-    "fields": [
-      {
-        "key": "reasons_for_not_going_to_facility",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "reasons_for_not_going_to_facility",
-        "openmrs_entity_parent": "",
-        "label": "ASK: Why did you not go to the health facility?",
-        "options": [
-          {
-            "key": "did_not_have_time",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "did_not_have_time",
-            "openmrs_entity_parent": "",
-            "text": "I did not have time"
-          },
-          {
-            "key": "its_too_far",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "its_too_far",
-            "openmrs_entity_parent": "",
-            "text": "It's too far"
-          },
-          {
-            "key": "forgot",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "forgot",
-            "openmrs_entity_parent": "",
-            "text": "I forgot"
-          },
-          {
-            "key": "changed_his_mind",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "changed_his_mind",
-            "openmrs_entity_parent": "",
-            "text": "I changed my mind"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_test_followup_relevance.yml"
+              "rules-file": "pathfinder_fp_method_refill_referral_followup_relevance.yml"
             }
           }
         }
       },
-      {
-        "key": "reasons_for_not_getting_any_services_at_the_health_facility",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "reasons_for_not_getting_any_services_at_the_health_facility",
-        "openmrs_entity_parent": "",
-        "label": "ASK: Why did you not get any services at the health facility?",
-        "options": [
-          {
-            "key": "too_many_people",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "too_many_people",
-            "openmrs_entity_parent": "",
-            "text": "There were too many people"
-          },
-          {
-            "key": "changed_his_mind",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "changed_his_mind",
-            "openmrs_entity_parent": "",
-            "text": "I changed my mind"
-          },
-          {
-            "key": "method_not_available",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "method_not_available",
-            "openmrs_entity_parent": "",
-            "text": "The method was not available"
-          },
-          {
-            "key": "no_skilled_service_providers",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no_skilled_service_providers",
-            "openmrs_entity_parent": "",
-            "text": "There were no skilled service providers"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_test_followup_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step5": {
-    "title": "End",
-    "fields": [
       {
         "key": "what_the_client_wants_to_do_next",
         "type": "native_radio",
@@ -384,7 +378,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_test_followup_relevance.yml"
+              "rules-file": "pathfinder_fp_method_refill_referral_followup_relevance.yml"
             }
           }
         }
@@ -400,7 +394,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_test_followup_relevance.yml"
+              "rules-file": "pathfinder_fp_method_refill_referral_followup_relevance.yml"
             }
           }
         }
