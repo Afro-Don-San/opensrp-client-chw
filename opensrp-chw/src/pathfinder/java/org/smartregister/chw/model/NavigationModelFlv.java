@@ -28,8 +28,6 @@ public class NavigationModelFlv implements NavigationModel.Flavor {
 
             navigationOptions.addAll(Arrays.asList(op1, op6));
 
-            if (BuildConfig.USE_UNIFIED_REFERRAL_APPROACH)
-                navigationOptions.add(op8);
         }
 
         return navigationOptions;

@@ -241,6 +241,9 @@
             android:name=".activity.PathfinderFamilyPlanningRegisterActivity"
             android:theme="@style/ChwTheme.NoActionBar" />
         <activity
+            android:name=".activity.PathfinderRegisterFormActivity"
+            android:theme="@style/ChwTheme.NoActionBar" />
+        <activity
             android:name=".activity.PathfinderFamilyPlanningFollowUpVisitActivity"
             android:theme="@style/ChwTheme.NoActionBar" />
         <activity

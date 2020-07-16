@@ -23,7 +23,7 @@ public class PathfinderFamilyPlanningMethodChoiceActivity extends CorePathfinder
         Intent intent = new Intent(activity, PathfinderFamilyPlanningMethodChoiceActivity.class);
         intent.putExtra(org.smartregister.chw.anc.util.Constants.ANC_MEMBER_OBJECTS.MEMBER_PROFILE_OBJECT, toMember(memberObject));
         intent.putExtra(org.smartregister.chw.anc.util.Constants.ANC_MEMBER_OBJECTS.EDIT_MODE, isEditMode);
-        activity.startActivityForResult(intent, CoreConstants.ProfileActivityResults.CHANGE_COMPLETED);
+        activity.startActivityForResult(intent,  org.smartregister.chw.anc.util.Constants.REQUEST_CODE_HOME_VISIT);
     }
 
     private static MemberObject toMember(PathfinderFpMemberObject memberObject) {
