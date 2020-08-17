@@ -77,7 +77,7 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
     }
 
     private void evaluateCounselling() throws Exception {
-        JSONObject resupplyJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.PathfinderFamilyPlanningFollowUpVisitUtils.getFamilyPlanningFollowupResupply());
+        JSONObject resupplyJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.PathfinderFamilyPlanningFollowUpVisitUtils.getFamilyPlanningFollowupRefill());
         injectFamilyPlaningMethod(resupplyJsonObject);
 
         String familyPlanningMethodTranslated = null;
@@ -245,7 +245,7 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
             } else if ("yes".equalsIgnoreCase(client_need_refill)) {
                     try {
                         if (familyPlanningMethod.equalsIgnoreCase("coc")) {
-                            JSONObject jsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.PathfinderFamilyPlanningFollowUpVisitUtils.getFamilyPlanningFollowupResupply());
+                            JSONObject jsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.PathfinderFamilyPlanningFollowUpVisitUtils.getFamilyPlanningFollowupRefill());
                             injectFamilyPlaningMethod(jsonObject);
 
                             LinkedHashMap<String, BaseAncHomeVisitAction> additionalList = new LinkedHashMap<>();

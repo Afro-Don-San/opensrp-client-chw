@@ -144,19 +144,6 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends CorePathfinde
         PathfinderFamilyPlanningUpcomingServicesActivity.startMe(this, PathfinderFamilyPlanningUtil.toMember(pathfinderFpMemberObject));
     }
 
-    @Override
-    public void issueANCReferralForm() {
-        if (BuildConfig.USE_UNIFIED_REFERRAL_APPROACH) {
-            try {
-                JSONObject formJson = FormUtils.getInstance(this).getFormJsonFromRepositoryOrAssets(org.smartregister.chw.util.Constants.JSON_FORM.getAncUnifiedReferralForm());
-                formJson.put(org.smartregister.chw.util.Constants.REFERRAL_TASK_FOCUS, referralTypeModels.get(0).getReferralType());
-                ReferralRegistrationActivity.startGeneralReferralFormActivityForResults(this,
-                        pathfinderFpMemberObject.getBaseEntityId(), formJson);
-            } catch (Exception ex) {
-                Timber.e(ex);
-            }
-        }
-    }
 
     @Override
     public void openFamilyDueServices() {
