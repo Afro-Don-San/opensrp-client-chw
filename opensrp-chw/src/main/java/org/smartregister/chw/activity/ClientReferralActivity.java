@@ -51,7 +51,7 @@ public class ClientReferralActivity extends AppCompatActivity implements ClientR
         referralTypeAdapter.setOnClickListener(this);
         setUpView();
         if (BuildConfig.USE_PATHFINDERS_FP_MODULE) {
-            ((TextView)findViewById(R.id.textview_title)).setText(getString(R.string.refer_client));
+            ((TextView)findViewById(R.id.textview_title)).setText(getResources().getString(R.string.refer_client));
         }
     }
 
@@ -130,7 +130,7 @@ public class ClientReferralActivity extends AppCompatActivity implements ClientR
                     org.smartregister.util.Utils.showShortToast(this, getString(R.string.open_referral_form, referralTypeModel.getReferralType()));
                     referralTypeAdapter.canStart = true; //TODO Remove this necessary evil; necessary since on resume is not revoked again
                 }
-                JSONObject formJson = getFormUtils().getFormJsonFromRepositoryOrAssets(referralTypeModel.getFormName());
+                JSONObject formJson = (new com.vijay.jsonwizard.utils.FormUtils()).getFormJsonFromRepositoryOrAssets(this, referralTypeModel.getFormName());
                 formJson.put(REFERRAL_TASK_FOCUS, referralTypeModel.getFocus());
                 startReferralForm(formJson, referralTypeModel);
             } catch (Exception e) {

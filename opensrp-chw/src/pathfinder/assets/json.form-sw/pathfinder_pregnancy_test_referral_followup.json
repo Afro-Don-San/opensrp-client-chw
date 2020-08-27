@@ -1,0 +1,445 @@
+{
+  "validate_on_submit": false,
+  "show_errors_on_submit": true,
+  "skip_blank_steps": true,
+  "count": "5",
+  "encounter_type": "Family Planning Pregnancy Test Referral Followup",
+  "entity_id": "",
+  "relational_id": "",
+  "metadata": {
+    "start": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "start",
+      "openmrs_entity_id": "163137AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "end": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "end",
+      "openmrs_entity_id": "163138AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "today": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "encounter",
+      "openmrs_entity_id": "encounter_date"
+    },
+    "deviceid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "deviceid",
+      "openmrs_entity_id": "163149AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "subscriberid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "subscriberid",
+      "openmrs_entity_id": "163150AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "simserial": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "simserial",
+      "openmrs_entity_id": "163151AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "phonenumber": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "phonenumber",
+      "openmrs_entity_id": "163152AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "encounter_location": "",
+    "look_up": {
+      "entity_id": "",
+      "value": ""
+    }
+  },
+  "step1": {
+    "title": "Vidokezo vya Utangulizi",
+    "fields": [
+      {
+        "key": "fp_pregnancy_test_referral_followup_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_pregnancy_test_referral_followup_date",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_test_followup_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "did_the_client_get_pregnancy_test",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "did_the_client_get_pregnancy_test",
+        "type": "native_radio",
+        "label": "Ulipewa rufaa kwenda kituo chakutolea huduma za afya kwa ajili ya kupima ujauzito.\nJe ulifanikiwa kupima ujauzito?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes",
+            "openmrs_entity_parent": "",
+            "text": "Ndio"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no",
+            "openmrs_entity_parent": "",
+            "text": "Hapana"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Hakikisha unachagua jibu sahihi"
+        }
+      }
+    ],
+    "next": "step2"
+  },
+  "step2": {
+    "title": "Majibu ya kipimo cha ujauzito?",
+    "next": "step3",
+    "fields": [
+      {
+        "key": "pregnancy_test_results",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "pregnancy_test_results",
+        "openmrs_entity_parent": "",
+        "label": "Je,nini majibu ya kipimo cha ujauzito?",
+        "options": [
+          {
+            "key": "pregnant",
+            "openmrs_entity": "concept6",
+            "openmrs_entity_id": "pregnant",
+            "openmrs_entity_parent": "",
+            "text": "Nina ujauzito"
+          },
+          {
+            "key": "not_pregnant",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "not_pregnant",
+            "openmrs_entity_parent": "",
+            "text": "Sina ujauzito"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Hakikisha unachagua jibu sahihi"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_test_followup_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "edd_from_facility",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person",
+        "openmrs_entity_id": "edd_from_facility",
+        "type": "date_picker",
+        "hint": "Je, unakumbuka tarehe ya kuanza siku yako yahedhi kwa mara ya mwisho",
+        "expanded": false,
+        "duration": {
+          "label": "Time till Delivery"
+        },
+        "min_date": "today",
+        "max_date": "today+40w",
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhli jaza tarehe ya siku ya kuifungua"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_test_followup_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step3": {
+    "title": "Mteja hakukamilisha rufaa uliyopata",
+    "next": "step4",
+    "fields": [
+      {
+        "key": "did_client_complete_referral",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "did_client_complete_referral",
+        "openmrs_entity_parent": "",
+        "label": "Je, ulienda kituo cha kutolea hudumaza afya kukamilisha rufaa uliyopata?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "yes",
+            "openmrs_entity_parent": "",
+            "text": "Ndio"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no",
+            "openmrs_entity_parent": "",
+            "text": "Hapana"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Hakikisha unachagua jibu sahihi"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_test_followup_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step4": {
+    "title": "Sababu za kutokwenda kituo chakutolea huduma za afya",
+    "next": "step5",
+    "fields": [
+      {
+        "key": "reasons_for_not_going_to_facility",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "reasons_for_not_going_to_facility",
+        "openmrs_entity_parent": "",
+        "label": "Kwanini hukwenda kituo cha kutolea huduma za afya?",
+        "options": [
+          {
+            "key": "did_not_have_time",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "did_not_have_time",
+            "openmrs_entity_parent": "",
+            "text": "sikupata nafasi"
+          },
+          {
+            "key": "its_too_far",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "its_too_far",
+            "openmrs_entity_parent": "",
+            "text": "umbali wa kituo cha kutolea hudumaza afya"
+          },
+          {
+            "key": "forgot",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "forgot",
+            "openmrs_entity_parent": "",
+            "text": "Nilisahau"
+          },
+          {
+            "key": "changed_his_mind",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "changed_his_mind",
+            "openmrs_entity_parent": "",
+            "text": "Nilibadilisha mawazo"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Hakikisha unachagua jibu sahihi"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_test_followup_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "reasons_for_not_getting_any_services_at_the_health_facility",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "reasons_for_not_getting_any_services_at_the_health_facility",
+        "openmrs_entity_parent": "",
+        "label": "Je, kwa nini hukupata huduma katikakituo cha kutolea huduma za afya?",
+        "options": [
+          {
+            "key": "too_many_people",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "too_many_people",
+            "openmrs_entity_parent": "",
+            "text": "Kulikuwa na watu wengi"
+          },
+          {
+            "key": "changed_his_mind",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "changed_his_mind",
+            "openmrs_entity_parent": "",
+            "text": "Nilibadilisha mawazo"
+          },
+          {
+            "key": "method_not_available",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "method_not_available",
+            "openmrs_entity_parent": "",
+            "text": "Njia niliyochagua haikuwepo"
+          },
+          {
+            "key": "no_skilled_service_providers",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no_skilled_service_providers",
+            "openmrs_entity_parent": "",
+            "text": "Mhudumu mwenye ujuzi akuwepo"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Hakikisha unachagua jibu sahihi"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_test_followup_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step5": {
+    "title": "Mwisho",
+    "fields": [
+      {
+        "key": "what_the_client_wants_to_do_next",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "what_the_client_wants_to_do_next",
+        "openmrs_entity_parent": "",
+        "label": "Je, ungependa kufanya nini kwa sasa?",
+        "options": [
+          {
+            "key": "try_to_get_a_pregnancy_test",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "try_to_get_a_pregnancy_test",
+            "openmrs_entity_parent": "",
+            "text": "Endeleakujaribu kupata vipimo vya ujauzito kutoka kwenye kituo cha kutolea huduma zaafya."
+          },
+          {
+            "key": "complete_pregnancy_screening_questions",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "complete_pregnancy_screening_questions",
+            "openmrs_entity_parent": "",
+            "text": "Maliziamaswali ya uchunguzi wa ujauzito ili kujua mteja ni mjamzito bila kupima ujauzito."
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Hakikisha unachagua jibu sahihi"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_test_followup_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "discuss_how_you_will_help_client_complete_referral",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Jadiliana na mteja jinsi ya kumsaidiaafanikishe rufaa.\nMwambie mteja kwamba utafuatilia ndaniya wiki moja kuhakikisha amepata huduma kulingana na rufa yake.",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_test_followup_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "return_after_edd",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Muueleze mteja kwamba utarejea baadaya kujifunguwa kujadili njia za uzazi wa mpango.\nMwisho wa tembeleo, chagua tarehe yakumtembelea mteja baada siku ya makadirio ya kujifungua.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_test_followup_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "pregnancy_status",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "pregnancy_status",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_test_followup_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "pregnant_screening_done",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "pregnant_screening_done",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_test_followup_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "fp_pregnancy_screening_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_pregnancy_screening_date",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_test_followup_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "edd",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "edd",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_test_followup_calculation.yml"
+            }
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,251 @@
+{
+  "validate_on_submit": false,
+  "show_errors_on_submit": true,
+  "skip_blank_steps": true,
+  "count": "3",
+  "encounter_type": "Introduction to Family Planning",
+  "entity_id": "",
+  "relational_id": "",
+  "metadata": {
+    "start": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "start",
+      "openmrs_entity_id": "163137AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "end": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "end",
+      "openmrs_entity_id": "163138AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "today": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "encounter",
+      "openmrs_entity_id": "encounter_date"
+    },
+    "deviceid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "deviceid",
+      "openmrs_entity_id": "163149AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "subscriberid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "subscriberid",
+      "openmrs_entity_id": "163150AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "simserial": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "simserial",
+      "openmrs_entity_id": "163151AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "phonenumber": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "phonenumber",
+      "openmrs_entity_id": "163152AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "encounter_location": "",
+    "look_up": {
+      "entity_id": "",
+      "value": ""
+    }
+  },
+  "step1": {
+    "title": "Taarifa za uzazi wa mpango",
+    "next": "step2",
+    "fields": [
+      {
+        "key": "introduction_to_fp_done",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "introduction_to_fp_done",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_introduction_to_family_planning_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "fp_introduction_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_introduction_date",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_introduction_to_family_planning_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "age",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "age",
+        "type": "hidden"
+      },
+      {
+        "key": "introduction_notes",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Mweleze mtejaumuhimu na faida za kutumia njia za uzazi wa mpango kwake yeye binafsi, familiayake na jamaii kwa njumia. \nMwambie mteja kunanjia nyingi za uzazi wa mpango ambazo utamuelezea na kumsaidia kuchagakulingana na mahitaji yake.\nMwambie mteja kuwaanayo haki ya kuchaga njia ya uzazi wa mpango anayoipenda.",
+        "text_color": "#1199F9",
+        "toaster_type": "info"
+      }
+    ]
+  },
+  "step2": {
+    "title": "Kadi ya njia za uzazi wampango",
+    "next": "step3",
+    "fields": [
+      {
+        "key": "family_planning_cards",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Muonyeshe mtejakadi za uzazi wa mpango kwa mpalio ufuatao.\n*Ufanisi mkubwaZaidi (Kitanzi,Kipandikizi)\n*Ufanisi mkubwa(vichocheo viwili (COC), Kichocheo kimoja (POP), Sindano, Njia ya kunyonyesha)\n*Ufanisi (Kondom yakiume, Kondom ya kike,Njia ya kuhesabu siku)\n*Njia za Kudumu(Kufunga uzazi kwa wanaume, Kufunga uzazi kwa wanawake)",
+        "text_color": "#1199F9",
+        "toaster_type": "info"
+      }
+    ]
+  },
+  "step3": {
+    "title": "Maelezo ya njia za uzaziwa mpango",
+    "next": "step4",
+    "fields": [
+      {
+        "key": "family_planning_explanation",
+        "type": "toaster_notes",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "openmrs_entity_parent": "",
+        "text": "Kwa kila njia elezea:\n*Njiahi ni nini\n*Inavyofanya kazi\n*Ufanisi",
+        "text_color": "#1199F9",
+        "toaster_type": "info"
+      }
+    ]
+  },
+  "step4": {
+    "title": "Njia zenye UfanisiMkubwa Zaidi",
+    "next": "step5",
+    "fields": [
+      {
+        "key": "fp_most_effective_methods",
+        "type": "toaster_notes",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "openmrs_entity_parent": "",
+        "text": "Njia zenye UfanisiMkubwa Zaidi\n \n*Lupu/Kitanzi\n*Vipandikizi",
+        "text_color": "#1199F9",
+        "toaster_type": "info"
+      }
+    ]
+  },
+  "step6": {
+    "title": "Njiazenye ufanisi",
+    "next": "step7",
+    "fields": [
+      {
+        "key": "effective_fp_methods",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Njia zeneye ufanisi \n\n*Kodomu za kiume\n\n*Kodomu za kike\n*Njia yakuhesabu siku kwa kutukia shanga",
+        "text_color": "#1199F9",
+        "toaster_type": "info"
+      }
+    ]
+  },
+  "step7": {
+    "title": "Njia zauzazi wa mpango za kudumu",
+    "next": "step8",
+    "fields": [
+      {
+        "key": "fp_permanent_methods",
+        "type": "toaster_notes",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "openmrs_entity_parent": "",
+        "text": "Njia za uzazi wampango za kudumu\n \n*Kufunga uzazi kwamwanaume\n*Kufunga uzazi kwamwanamke",
+        "text_color": "#1199F9",
+        "toaster_type": "info"
+      }
+    ]
+  },
+  "step8": {
+    "title": "Kadi ya uzazi wa mpangoya vidonge vya dharura",
+    "next": "step9",
+    "fields": [
+      {
+        "key": "emergency_contraceptive_card",
+        "type": "toaster_notes",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "openmrs_entity_parent": "",
+        "text": "Sasa, muonyeshemteja kadi ya njia ya uzazi wa mpango ya vidonge vya dharura.\n \nElezea kwamba njiahii ni ya dharura itatumika tu kama njia nyingine ya uzazi wa mpango imetumikakimakosa na mteja yupo hatarini kupata ujauzito.\n \nNjia ya dharura inaufanisi mkubwa ikiwa tu imetumika ndani ya saa 24 baada ya ngono isio salama.",
+        "text_color": "#1199F9",
+        "toaster_type": "info"
+      }
+    ]
+  },
+  "step9": {
+    "title": "Sisitiza kuhusu matumizi ya kondomu",
+    "next": "step10",
+    "fields": [
+      {
+        "key": "emphasis_on_condoms",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Sisitiza kwamba kondomu ni njia pekee inayotumika kuzuia ujauzito na magonjwa yatokanayo na ngono naVVU.",
+        "text_color": "#1199F9",
+        "toaster_type": "info"
+      }
+    ]
+  },
+  "step10": {
+    "title": "Swali lolote kutoka kwamteja",
+    "fields": [
+      {
+        "key": "questions",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Je, una swali lolote?",
+        "text_color": "#1199F9",
+        "toaster_type": "info"
+      }
+    ]
+  },
+  "step5": {
+    "title": "Njia zenyeufanisi",
+    "next": "step6",
+    "fields": [
+      {
+        "key": "fp_more_effective_methods",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Njia za Uzazi wa mpango zenye Ufanisi mkubwa\n\n*Sindano\n\n*Vidonge(Vichocheo viwili,Kichocheo Kimoja)\n\n*Nia ya Kunyonyesha",
+        "text_color": "#1199F9",
+        "toaster_type": "info"
+      }
+    ]
+  }
+}

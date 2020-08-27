@@ -1,0 +1,872 @@
+{
+  "validate_on_submit": false,
+  "show_errors_on_submit": true,
+  "skip_blank_steps": true,
+  "count": "10",
+  "encounter_type": "Family Planning Pregnancy Screening",
+  "entity_id": "",
+  "relational_id": "",
+  "metadata": {
+    "start": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "start",
+      "openmrs_entity_id": "163137AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "end": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "end",
+      "openmrs_entity_id": "163138AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "today": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "encounter",
+      "openmrs_entity_id": "encounter_date"
+    },
+    "deviceid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "deviceid",
+      "openmrs_entity_id": "163149AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "subscriberid": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "subscriberid",
+      "openmrs_entity_id": "163150AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "simserial": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "simserial",
+      "openmrs_entity_id": "163151AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "phonenumber": {
+      "openmrs_entity_parent": "",
+      "openmrs_entity": "concept",
+      "openmrs_data_type": "phonenumber",
+      "openmrs_entity_id": "163152AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "encounter_location": "",
+    "look_up": {
+      "entity_id": "",
+      "value": ""
+    }
+  },
+  "step1": {
+    "title": "Huduma kwa Wateja",
+    "next": "step2",
+    "fields": [
+      {
+        "key": "pregnant_screening_done",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "pregnant_screening_done",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "fp_pregnancy_screening_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_pregnancy_screening_date",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "age",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "age",
+        "type": "hidden"
+      },
+      {
+        "key": "are_you_speaking_to",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "are_you_speaking_to",
+        "type": "native_radio",
+        "label": "Unamtembelea:",
+        "options": [
+          {
+            "key": "couple",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "couple",
+            "openmrs_entity_parent": "",
+            "text": "Mwanamke na mwanaume"
+          },
+          {
+            "key": "man_only",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "man_only",
+            "openmrs_entity_parent": "",
+            "text": "Mwanaume pekee"
+          },
+          {
+            "key": "woman_only",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "woman_only",
+            "openmrs_entity_parent": "",
+            "text": "Mwanamke pekee"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Hakikishaunachagua jibu sahihi"
+        }
+      }
+    ]
+  },
+  "step2": {
+    "title": "Taarifa za wali ",
+    "next": "step3",
+    "fields": [
+      {
+        "key": "introduction_notes",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": " \nMwambie mteja wanawake walio wajawazitohawahitaji njia ya uzazi wa mpango.\nMwambie utamuuliza maswali machache ili kuhakikisha kama simjamzito.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step3": {
+    "title": "Ujauzito wa mteja",
+    "next": "step4",
+    "fields": [
+      {
+        "key": "is_client_pregnant",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "is_client_pregnant",
+        "openmrs_entity_parent": "",
+        "label": "Je,unahisi una ujauzio?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Ndio"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Hapana"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Hakikisha unachagua jibu sahihi"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "knows_lmp",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "knows_lmp",
+        "openmrs_entity_parent": "",
+        "label": "Je, unakumbuka tarehe ya kuanza siku yako yahedhi kwa mara ya mwisho? ",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Ndio"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Hapana"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Hakikisha unachagua jibu sahihi"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "lmp",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person",
+        "openmrs_entity_id": "lmp",
+        "type": "date_picker",
+        "hint": "Uliza:Je Tarehe yako ya kuanza siku yako yahedhi ya mara ya mwisho ilikuwa lini?",
+        "expanded": false,
+        "duration": {
+          "label": "Makadirio ya umri wa mimba kwa wiki"
+        },
+        "min_date": "today-40w",
+        "max_date": "today",
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jaza tarehe za kujifunguwa"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "gestation_age",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "gestation_age",
+        "type": "edit_text",
+        "hint": "Msaidie mteja kukadiria makadirio ya umri wa mimba kwa wiki",
+        "v_numeric_integer": {
+          "value": "true",
+          "err": "Lazima iwe nambari iliyo nzima"
+        },
+        "v_numeric": {
+          "value": "true",
+          "err": "Lazima numba ianze na sifuri na ujumla  nambari 10 kwa urefu"
+        },
+        "v_max": {
+          "value": "39",
+          "err": "Umri wa mimba lazima uwe sawa au chini ya 39"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        },
+        "v_required": {
+          "value": true,
+          "err": "Tafadhali jaza makadirio ya umri wa mimba kwa wiki"
+        }
+      },
+      {
+        "key": "edd_text",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "edd_calculated",
+        "type": "hidden",
+        "value": "Makadirio ya umri wa mimba kwa wiki ni "
+      }
+    ]
+  },
+  "step4": {
+    "title": "Makadirio ya siku ya kujifungua",
+    "next": "step5",
+    "fields": [
+      {
+        "key": "edd_calculated",
+        "type": "toaster_notes",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "edd_calculated",
+        "openmrs_entity_parent": "",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_calculation.yml"
+            }
+          }
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "edd",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "edd",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_calculation.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step6": {
+    "title": "Maudhurioya kliniki ya wajawazito",
+    "next": "step7",
+    "fields": [
+      {
+        "key": "client_has_started_anc_visits",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Mwelezemteja sababu za kumpa rufaa kwenda kituo cha kutolea huduma za afya.\njazafomu ya rufaa.",
+        "text_color": "#1199F9",
+        "toaster_type": "info\n",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step7": {
+    "title": "Ngono isiyo salama",
+    "next": "step8",
+    "fields": [
+      {
+        "key": "has_had_unprotected_sex_since_last_menstruation",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "has_had_unprotected_sex_since_last_menstruation",
+        "openmrs_entity_parent": "",
+        "label": "Je, umefanya ngono isiyo salama tangu ulipopata siku zahedhi mara ya mwisho au ulipojifungua?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Ndio"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Hapana"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Hakikishaunachagua jibu sahihi"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "has_had_a_baby_in_the_last_4_weeks",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "has_had_a_baby_in_the_last_4_weeks",
+        "openmrs_entity_parent": "",
+        "label": "Je,umejifungua mtoto katika kipindi cha wiki 4 zilizopita?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Ndio"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Hapana"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Hakikishaunachagua jibu sahihi"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "has_had_a_baby_in_the_last_6_months",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "has_had_a_baby_in_the_last_6_months",
+        "openmrs_entity_parent": "",
+        "label": "Je, umepata mtoto ndaniya miezi 6 iliopita?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Ndio"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Hapana"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Hakikishaunachagua jibu sahihi"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "exclusively_breast_feeding",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "exclusively_breast_feeding",
+        "openmrs_entity_parent": "",
+        "label": "Je unamyonyesha mtoto huyu maziwaya mama pekee?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Ndio"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Hapana"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Hakikishaunachagua jibu sahihi"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "has_had_period_since_giving_birth",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "has_had_period_since_giving_birth",
+        "openmrs_entity_parent": "",
+        "label": "Je, umeona siku zako hedhi tanguulipojifungua?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Ndio"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Hapana"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Hakikishaunachagua jibu sahihi"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step8": {
+    "title": "Maswali ya uchunguzi wa ujauzito",
+    "next": "step9",
+    "fields": [
+      {
+        "key": "did_menstrual_circle_start_within_last_7_days",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "did_menstrual_circle_start_within_last_7_days",
+        "openmrs_entity_parent": "",
+        "label": "Je,umepata siku zako za hedhi ndani ya siku 7 zilizopita?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Ndio"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Hapana"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Hakikishaunachagua jibu sahihi"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "had_a_miscarriage_in_the_last_7_days",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "had_a_miscarriage_in_the_last_7_days",
+        "openmrs_entity_parent": "",
+        "label": "Je, mimba imeharibika au kutoka katika siku 7 zilizopita?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Ndio"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Hapana"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Hakikishaunachagua jibu sahihi"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "has_been_using_reliable_contraceptive_method_consistently",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "has_been_using_reliable_contraceptive_method_consistently",
+        "openmrs_entity_parent": "",
+        "label": "Je,umekuwa ukitumia njia yeyote ya uzazi wa mpango kwa usahihi?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Ndio"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Hapana"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Hakikishaunachagua jibu sahihi"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step9": {
+    "title": "Haiwezekani kudhibitiujauzito",
+    "next": "step10",
+    "fields": [
+      {
+        "key": "not_unlikely_pregnant",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Mueleze mteja kutokana majibu yake hujaweza hijawezakuhakikisha kama yeye si mjamzito.\nMwambie mteja haitwezekana kumpatia huduma ya uzazi wampango kwa sasa.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "choose_pregnancy_test_referral",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "choose_pregnancy_test_referral",
+        "openmrs_entity_parent": "",
+        "label": "Msaidie mteja aweze kuamua kati ya yafuatayo:",
+        "options": [
+          {
+            "key": "receive_pregnancy_test_referral",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "receive_pregnancy_test_referral",
+            "openmrs_entity_parent": "",
+            "text": "Kwendakwenye kituo cha kutolea huduma za afya kupima endapo ana ujauzito"
+          },
+          {
+            "key": "wait_for_next_visit",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "wait_for_next_visit",
+            "openmrs_entity_parent": "",
+            "text": "Asubiri kwawiki mbili kwa ujio mwingine"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Hakikishaunachagua jibu sahihi"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step10": {
+    "title": "Uwezo wa ujauzito",
+    "fields": [
+      {
+        "key": "return_after_edd",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Mwambie mtejamwisho wa mahojiano utapanga tarahe ya kurudi kumuona baada yay eye kujifunguaili kujadili huduma ya uzazi wa mpango.\nChagua tarehe yakumtembelea, baada ya kujifungua.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "unlikely_pregnant",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Muelezemteja kutokana na majibu yake si mjamzito.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "give_condoms",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Jadili na mteja umuhimu wa kutumia kondomu mpaka atakapopata uhakika kwamba simjamzito.\nMpatiemteja kondomu.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "no_woman_available",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Hakuna mteja wa kike anayepatikana.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "pregnancy_status",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "pregnancy_status",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_calculation.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step5": {
+    "title": "Maudhurio ya kliniki yawajawazito",
+    "next": "step6",
+    "fields": [
+      {
+        "key": "started_anc",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "started_anc",
+        "type": "native_radio",
+        "label": "Je, unahudhuria kliniki ya wajawazito?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Ndio"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Hapana"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Hakikishaunachagua jibu sahihi"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "client_has_started_anc_visits",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Mwambie mteja aendelee kuhudhuria na kufuata ushauri wa mhudumu wa afya kwa manufaa yaujauzito na afya yake.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "client_has_not_started_anc_visits",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Muulize sababu n mwelezee umuhimu wa kufufhuria kliniki mapema kwa manufaa ya ujauzitona afya yake.\nMwambie mteja utamparufaa aende kituo cha kutolea huduma za afya kwa ajili ya huduma ya afya nauzazi.",
+        "text_color": "#1199F93",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  }
+}
