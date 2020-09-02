@@ -37,6 +37,16 @@ public class ChwGoToMemberProfileBasedOnRegisterTask extends CoreChwNotification
     }
 
     @Override
+    protected void goToHivProfile(String s, Activity activity) {
+
+    }
+
+    @Override
+    protected void goToTbProfile(String s, Activity activity) {
+
+    }
+
+    @Override
     protected Class<? extends CoreAboveFiveChildProfileActivity> getAboveFiveChildProfileActivityClass() {
         return AboveFiveChildProfileActivity.class;
     }

@@ -169,16 +169,16 @@
         }
       },
       {
-        "key": "unique_id",
+        "key": "referral_form_unique_id",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "person_identifier",
-        "openmrs_entity_id": "opensrp_id",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "referral_form_unique_id",
         "type": "barcode",
         "barcode_type": "qrcode",
         "hint": "ID *",
         "scanButtonText": "Scan Referral Form\nQR Code",
         "v_numeric": {
-          "value": "true",
+          "value": "false",
           "err": "Please enter a valid ID"
         }
       },

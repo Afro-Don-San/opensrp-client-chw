@@ -71,6 +71,6 @@ public class ChwSyncConfiguration extends SyncConfiguration {
 
     @Override
     public String getTopAllowedLocationLevel() {
-        return "District";
+        return "Council";
     }
 }

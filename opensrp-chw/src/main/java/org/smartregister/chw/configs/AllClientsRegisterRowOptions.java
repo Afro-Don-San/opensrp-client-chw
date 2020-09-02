@@ -24,27 +24,28 @@ public class AllClientsRegisterRowOptions extends CoreAllClientsRegisterRowOptio
             String gender = commonPersonObjectClient.getDetails().get(GENDER);
 
 
-            if(gender.equalsIgnoreCase("Male")){
+            if (gender.equalsIgnoreCase("Male")) {
                 String genderString = allClientsRegisterViewHolder.tvRegisterType.getContext().getResources().getString(
                         R.string.gender_male);
                 allClientsRegisterViewHolder.textViewGender.setText(genderString);
-            }else{
+            } else {
                 String genderString = allClientsRegisterViewHolder.tvRegisterType.getContext().getResources().getString(
                         R.string.gender_female);
                 allClientsRegisterViewHolder.textViewGender.setText(genderString);
             }
 
 
-            if(registerType.equals("Independent")){
-                String independentClientTypeString = allClientsRegisterViewHolder.tvRegisterType.getContext().getResources().getString(
-                        R.string.independent_client);
-                allClientsRegisterViewHolder.tvRegisterType.setText(independentClientTypeString);
+            if (registerType != null) {
+                if (registerType.equals("Independent")) {
+                    String independentClientTypeString = allClientsRegisterViewHolder.tvRegisterType.getContext().getResources().getString(
+                            R.string.independent_client);
+                    allClientsRegisterViewHolder.tvRegisterType.setText(independentClientTypeString);
 
-            }else  if(registerType.equals("Family Planning")){
-
-                String registerTypeString = allClientsRegisterViewHolder.tvRegisterType.getContext().getResources().getString(
-                        R.string.notification_type_family_planning);
-                allClientsRegisterViewHolder.tvRegisterType.setText(registerTypeString);
+                } else if (registerType.equals("Family Planning")) {
+                    String registerTypeString = allClientsRegisterViewHolder.tvRegisterType.getContext().getResources().getString(
+                            R.string.notification_type_family_planning);
+                    allClientsRegisterViewHolder.tvRegisterType.setText(registerTypeString);
+                }
             }
         }
     }

@@ -420,6 +420,16 @@ public class PncMemberProfileActivity extends CorePncMemberProfileActivity imple
     }
 
     @Override
+    protected void startHivRegister() {
+
+    }
+
+    @Override
+    protected void startTbRegister() {
+
+    }
+
+    @Override
     protected void getRemoveBabyMenuItem(MenuItem item) {
         for (CommonPersonObjectClient child : getChildren(memberObject)) {
             for (Map.Entry<String, String> entry : menuItemRemoveNames.entrySet()) {

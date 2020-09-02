@@ -146,6 +146,16 @@ public class FamilyProfileActivity extends CoreFamilyProfileActivity {
 
     }
 
+    @Override
+    protected void goToHivProfile(String s, Activity activity) {
+
+    }
+
+    @Override
+    protected void goToTbProfile(String s, Activity activity) {
+
+    }
+
 
     @Override
     protected boolean isAncMember(String baseEntityId) {
