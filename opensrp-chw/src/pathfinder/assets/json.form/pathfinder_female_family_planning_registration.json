@@ -106,14 +106,14 @@
           {
             "key": "yes",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "yes",
             "openmrs_entity_parent": "",
             "text": "Yes"
           },
           {
             "key": "no",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
             "text": "No"
           }
@@ -445,7 +445,7 @@
           {
             "key": "side_effects",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "side_effects",
             "openmrs_entity_parent": "",
             "text": "Side effects"
           },

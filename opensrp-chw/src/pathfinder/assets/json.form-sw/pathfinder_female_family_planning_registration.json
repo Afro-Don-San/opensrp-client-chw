@@ -85,7 +85,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "introduction_notes",
         "type": "toaster_notes",
-        "text": "Mimi ni mhudumu wa afya ngazi jamii nafanya kazichini ya mradi wa Tuungane /EENT amabo unajumuisha maeneo makuu matatu, watu,afya, na mazingira, kwa kifupi mradi huu unaitwa PHE. Mradi huu unafanyakazikuboresha afya ya familia kwa ujumla, afya ya mazingira na pia kukabiliana namahitaji ya Maisha. Mjadala wetu leo utakuwa juu ya uzazi wa mpango lakininaweza pia kukuuganisha na huduma nyingine zinazotewa na mradi kwa maelezoZaidi.",
+        "text": "Mimi ni mhudumu wa afya ngazi jamii nafanya kazichini ya mradi wa Tuungane /EENT amabo unajumuisha maeneo makuu matatu, watu,afya, na mazingira, kwa kifupi mradi huu unaitwa PHE. Mradi huu unafanyakazi kuboresha afya ya familia kwa ujumla, afya ya mazingira na pia kukabiliana namahitaji ya Maisha. Mjadala wetu leo utakuwa juu ya uzazi wa mpango lakini naweza pia kukuuganisha na huduma nyingine zinazotewa na mradi kwa maelezo Zaidi.",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }
@@ -106,27 +106,27 @@
           {
             "key": "yes",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "yes",
             "openmrs_entity_parent": "",
             "text": "Ndio"
           },
           {
             "key": "no",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
             "text": "Hapana"
           }
         ],
         "v_required": {
           "value": "true",
-          "err": "Please select one choice"
+          "err": "Tafadhali chagua jibu mojawapo"
         }
       }
     ]
   },
   "step3": {
-    "title": "Matumiziy ya uzazi wa mangokwa sasa",
+    "title": "Matumizi ya uzazi wa mpango kwa sasa",
     "next": "step4",
     "fields": [
       {
@@ -271,7 +271,7 @@
       }
     ]
   },
-  "st": {
+  "step5": {
     "title": "Matumiziya awali ya njia za uzazi wa mpango ",
     "next": "step6",
     "fields": [
@@ -323,7 +323,7 @@
             }
           }
         },
-        "label": "Je, ninjiagani ulikuwa ukitumia?",
+        "label": "Je, ni njia gani ulikuwa ukitumia?",
         "options": [
           {
             "key": "progestin_only_pills",
@@ -405,7 +405,7 @@
         ],
         "v_required": {
           "value": "true",
-          "err": "Hakikishaunachagua jibu sahihi"
+          "err": "Hakikisha unachagua jibu sahihi"
         }
       }
     ]
@@ -427,7 +427,7 @@
             }
           }
         },
-        "label": "Je, ni sababu gani kati ya hizi zilizokufanyauache kutumia njia ya uzazi wa mpango? \nChagua zote zinazokubalika.",
+        "label": "Je, ni sababu gani kati ya hizi zilizokufanya uache kutumia njia ya uzazi wa mpango? \nChagua zote zinazokubalika.",
         "options": [
           {
             "key": "get_pregnant",
@@ -453,9 +453,9 @@
           {
             "key": "side_effects",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "side_effects",
             "openmrs_entity_parent": "",
-            "text": "Nilipatamaudhi madogo madogo "
+            "text": "Nilipata maudhi madogo madogo "
           },
           {
             "key": "afraid_of_not_getting_pregnant",
@@ -621,15 +621,15 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
-            "text": "Mteja anapiga "
+            "text": "Mteja anapinga "
           },
           {
             "key": "religious_prohibition",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
-            "openmrs_entity_parent": ""
+            "openmrs_entity_parent": "",
+            "text": "Sababu za kidini"
           },
-          "Sababu za kidini",
           {
             "key": "knows_no_method",
             "openmrs_entity": "concept",
@@ -668,7 +668,7 @@
         ],
         "v_required": {
           "value": "true",
-          "err": "Hakikishaunachagua jibu sahihi"
+          "err": "Hakikisha unachagua jibu sahihi"
         }
       },
       {
@@ -693,7 +693,7 @@
     ]
   },
   "step10": {
-    "title": "Jifunzezaidikuhusu uzazi wa mpango ",
+    "title": "Jifunze zaidi kuhusu uzazi wa mpango ",
     "next": "step11",
     "fields": [
       {
@@ -785,7 +785,7 @@
     ]
   },
   "step11": {
-    "title": "Sababuza kutopenda kujua Zaidi kuhusu huduma hii.",
+    "title": "Sababuza kutopenda kujua zaidi kuhusu huduma hii.",
     "next": "step12",
     "fields": [
       {
@@ -936,7 +936,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "other_people_joining",
         "openmrs_entity_parent": "",
-        "hint": "Other People",
+        "hint": "Watu wengine",
         "v_required": {
           "value": "true",
           "err": "Tafadhali chagua mteja mwingine atakae shiriki\n"

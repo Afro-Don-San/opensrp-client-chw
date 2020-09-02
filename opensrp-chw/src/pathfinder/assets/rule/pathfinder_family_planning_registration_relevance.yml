@@ -2,7 +2,7 @@
 name: step3_fp_method_in_use
 description: fp_method_in_use relevance
 priority: 1
-condition: "step2_is_client_already_using_fp =='yes'"
+condition: "step2_is_client_already_using_fp.contains('yes')"
 actions:
   - "isRelevant = true"
 ---
