@@ -998,7 +998,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Mpongeze mteja kuwaamefanya uamuzi wa busara.\nMpe rufaa kwendakwenye kituo cha upimaji.\nMueleze mteja sababuza kumpa ufaa na kituo cha kutolea huduma za afya\nJaza fomu ya rufaaMpongeze mteja kuwaamefanya uamuzi wa busara.\nMpe rufaa kwendakwenye kituo cha upimaji.",
+        "text": "Mpongeze mteja kuwaamefanya uamuzi wa busara.\nMpe rufaa kwenda kwenye kituo cha upimaji.\nMueleze mteja sababuza kumpa ufaa na kituo cha kutolea huduma za afya\nJaza fomu ya rufaaMpongeze mteja kuwaamefanya uamuzi wa busara.\nMpe rufaa kwendakwenye kituo cha upimaji.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {

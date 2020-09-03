@@ -140,7 +140,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": " \nMwambie mteja wanawake walio wajawazitohawahitaji njia ya uzazi wa mpango.\nMwambie utamuuliza maswali machache ili kuhakikisha kama simjamzito.",
+        "text": "\nMwambie mteja wanawake walio wajawazito hawahitaji njia ya uzazi wa mpango.\nMwambie utamuuliza maswali machache ili kuhakikisha kama simjamzito.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -289,7 +289,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "edd_calculated",
         "type": "hidden",
-        "value": "Makadirio ya umri wa mimba kwa wiki ni "
+        "value": "Makadirio ya siku ya kujifungua ni "
       }
     ]
   },
@@ -334,8 +334,83 @@
       }
     ]
   },
+  "step5": {
+    "title": "Maudhurio ya kliniki yawajawazito",
+    "next": "step6",
+    "fields": [
+      {
+        "key": "started_anc",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "started_anc",
+        "type": "native_radio",
+        "label": "Je, unahudhuria kliniki ya wajawazito?",
+        "options": [
+          {
+            "key": "yes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Ndio"
+          },
+          {
+            "key": "no",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_parent": "",
+            "text": "Hapana"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Hakikishaunachagua jibu sahihi"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "client_has_started_anc_visits",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Mwambie mteja aendelee kuhudhuria na kufuata ushauri wa mhudumu wa afya kwa manufaa yaujauzito na afya yake.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "client_has_not_started_anc_visits",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Muulize sababu na mwelezee umuhimu wa kudhuria kliniki mapema kwa manufaa ya ujauzitona afya yake.\nMwambie mteja utampa rufaa aende kituo cha kutolea huduma za afya kwa ajili ya huduma ya afya ya uzazi.\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
   "step6": {
-    "title": "Maudhurioya kliniki ya wajawazito",
+    "title": "Mteja hajaanza kliniki ya wajawazito",
     "next": "step7",
     "fields": [
       {
@@ -344,7 +419,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Mwelezemteja sababu za kumpa rufaa kwenda kituo cha kutolea huduma za afya.\njazafomu ya rufaa.",
+        "text": "Mweleze mteja sababu za kumpa rufaa kwenda kituo cha kutolea huduma za afya.\nJaza fomu ya rufaa.",
         "text_color": "#1199F9",
         "toaster_type": "info\n",
         "relevance": {
@@ -659,7 +734,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Mueleze mteja kutokana majibu yake hujaweza hijawezakuhakikisha kama yeye si mjamzito.\nMwambie mteja haitwezekana kumpatia huduma ya uzazi wampango kwa sasa.",
+        "text": "Mueleze mteja kutokana majibu yake hujaweza hujaweza kuhakikisha kama yeye si mjamzito.\nMwambie mteja haitwezekana kumpatia huduma ya uzazi wampango kwa sasa.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -690,7 +765,7 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "wait_for_next_visit",
             "openmrs_entity_parent": "",
-            "text": "Asubiri kwawiki mbili kwa ujio mwingine"
+            "text": "Asubiri kwa wiki mbili kwa ujio mwingine"
           }
         ],
         "v_required": {
@@ -716,7 +791,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Mwambie mtejamwisho wa mahojiano utapanga tarahe ya kurudi kumuona baada yay eye kujifunguaili kujadili huduma ya uzazi wa mpango.\nChagua tarehe yakumtembelea, baada ya kujifungua.",
+        "text": "Mwambie mteja mwisho wa mahojiano utapanga tarahe ya kurudi kumuona baada ya yeye kujifungua ili kujadili huduma ya uzazi wa mpango.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -788,81 +863,6 @@
           "rules-engine": {
             "ex-rules": {
               "rules-file": "pathfinder_pregnancy_screening_calculation.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step5": {
-    "title": "Maudhurio ya kliniki yawajawazito",
-    "next": "step6",
-    "fields": [
-      {
-        "key": "started_anc",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "started_anc",
-        "type": "native_radio",
-        "label": "Je, unahudhuria kliniki ya wajawazito?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-            "openmrs_entity_parent": "",
-            "text": "Ndio"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-            "openmrs_entity_parent": "",
-            "text": "Hapana"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikishaunachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "client_has_started_anc_visits",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "person_attribute",
-        "openmrs_entity_id": "toaster_notes",
-        "type": "toaster_notes",
-        "text": "Mwambie mteja aendelee kuhudhuria na kufuata ushauri wa mhudumu wa afya kwa manufaa yaujauzito na afya yake.",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "client_has_not_started_anc_visits",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "person_attribute",
-        "openmrs_entity_id": "toaster_notes",
-        "type": "toaster_notes",
-        "text": "Muulize sababu n mwelezee umuhimu wa kufufhuria kliniki mapema kwa manufaa ya ujauzitona afya yake.\nMwambie mteja utamparufaa aende kituo cha kutolea huduma za afya kwa ajili ya huduma ya afya nauzazi.",
-        "text_color": "#1199F93",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_pregnancy_screening_relevance.yml"
             }
           }
         }

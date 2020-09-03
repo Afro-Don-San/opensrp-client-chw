@@ -99,7 +99,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Mwambie mteja kuwa sasa ungependa kuzungumza nae juu yamahitaji na malengo yake ya kupanga uzazi na kumsaidia kuchagua njia ya uzaziwa mpango itakayomfaa.",
+        "text": "Mwambie mteja kuwa sasa ungependa kuzungumza nae juu ya mahitaji na malengo yake ya kupanga uzazi na kumsaidia kuchagua njia ya uzaziwa mpango itakayomfaa.",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }
@@ -115,7 +115,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Njia ambazo naweza kukupa mimi ni:\n \n*Vidonge vyeneykichocheo viwili (COC)\n*Vidonge vyenyekichocheo kimoja (POP)\n*Kondomu ya kike\n*Kondomu ya kiume\n \nNjia zinazohitajirufaa ni:\n \n*Njia ya kunyonyesha\n*Sindano\n*Vipandikixi\n*Lupu\n*Vidonge vya Dharura\n*Njia ya kuhesabu siku\n*Kufunga uzazi kwa wanawake\n*Kufunga uzazi kwa wanaume",
+        "text": "Njia ambazo naweza kukupa mimi ni:\n \n*Vidonge vyeneykichocheo viwili (COC)\n*Vidonge vyenyekichocheo kimoja (POP)\n*Kondomu ya kike\n*Kondomu ya kiume\n \nNjia zinazohitaji rufaa ni:\n \n*Njia ya kunyonyesha\n*Sindano\n*Vipandikixi\n*Lupu\n*Vidonge vya dharura\n*Njia ya kuhesabu siku\n*Kufunga uzazi kwa wanawake\n*Kufunga uzazi kwa wanaume",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }
@@ -166,7 +166,7 @@
             }
           }
         },
-        "text": "Mshauri mteja njia za uzazi wa mpango za kudumu hazitamfaakwa sababu angependa kuwa na watotosiku zijazo.\n \nWeka pembeni kadi za njia za:\n*Kufunga uzazi kwa mwanamke\n*Kufunguauzazi kwa mwanaume",
+        "text": "Mshauri mteja njia za uzazi wa mpango za kudumu hazitamfaa kwa sababu angependa kuwa na watoto siku zijazo.\n \nWeka pembeni kadi za njia za:\n*Kufunga uzazi kwa mwanamke\n*Kufungu uzazi kwa mwanaume",
         "text_color": "#1199F9",
         "toaster_type": "info"
       },
@@ -279,7 +279,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Muelezee mteja kuwakutumia vidonge vya kumeza vyenye Vichocheo viwili (COC) vya uzazi wa mpango,inaweza ikawa si chaguo sashihi kwa sababu.\n*Hupunguzautengenezaji wa maziwa\n*Inaweza kupunguzakipindi cha kunyonyesha\nMwanamkeanayenyonyesha asitumie njia ya vidonge vya kumeza vyenye vichocheo viwili(COC) mpaka mtoto atakapotimiza miezi sita.",
+        "text": "Muelezee mteja kuwa kutumia vidonge vya kumeza vyenye Vichocheo viwili (COC) vya uzazi wa mpango, inaweza ikawa si chaguo sashihi kwa sababu.\n*Hupunguza utengenezaji wa maziwa\n*Inaweza kupunguza kipindi cha kunyonyesha\nMwanamke anayenyonyesha asitumie njia ya vidonge vya kumeza vyenye vichocheo viwili(COC) mpaka mtoto atakapotimiza miezi sita.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -476,7 +476,7 @@
             }
           }
         },
-        "text": "Dadisi na zungumza na mteja maswaliau wasiwasi alionaokuhusu njia za uzazi wa mpango. Jibu maswali ipasavyo",
+        "text": "Dadisi na zungumza na mteja maswali au wasiwasi alionao kuhusu njia za uzazi wa mpango. Jibu maswali ipasavyo",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }
@@ -929,7 +929,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Mpe mteja kipeperushi cha njia aliochagua\nMsomee mteja maelezo yaliyopo kwenye kipeperushi cha njaaliochagua.",
+        "text": "Mpe mteja kipeperushi cha njia aliochagua\nMsomee mteja maelezo yaliyopo kwenye kipeperushi cha njia aliochagua.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -981,7 +981,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Mshauri mteja njiazinazohitaji ushirikiano na mwanza, kama njia ya:\n*Kuhesabu siku(kuhesabu shanga) na\n*Kondomu zinawezakumfaa.",
+        "text": "Mshauri mteja njia zinazohitaji ushirikiano na mwanze, kama njia ya:\n*Kuhesabu siku(kuhesabu shanga) na\n*Kondomu zinaweza kumfaa.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -998,7 +998,7 @@
         "openmrs_entity": "",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Mshauri mteja njia zinazohitaji ushirikianona mwanza, kama njia ya \n \n*Kuhesabu siku (Kuhesabu shanga) na\n*Kondomu\nHazitaweza kumfaa.\nWeka pembeni\n*Kadi za njia ya kuhesabu siku na\n*Kondomu",
+        "text": "Mshauri mteja njia zinazohitaji ushirikiano na mwenza, kama njia ya \n \n*Kuhesabu siku (Kuhesabu shanga) na\n*Kondomu\nHazitaweza kumfaa.\nWeka pembeni\n*Kadi za njia ya kuhesabu siku na\n*Kondomu",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -1015,7 +1015,7 @@
         "openmrs_entity": "",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Msisitizie mteja njiazote nyingine za uzazi wa mpango hazitoi kinga dhidiya magonjwa ya ngono navirusi vya ukimwi(VVU) isipokuwa kondomu.",
+        "text": "Msisitizie mteja njia zote nyingine za uzazi wa mpango hazitoi kinga dhidiya magonjwa ya ngono na virusi vya ukimwi(VVU) isipokuwa kondomu.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -1158,7 +1158,7 @@
         "openmrs_entity": "",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Mwambie mteja amechagua njia inayohitaji rufaa.\nMwambie mteja utamuuliza maswali yafuatayo ili kuhukikisha anaweza kutumia njia hii kwausahihi.",
+        "text": "Mwambie mteja amechagua njia inayohitaji rufaa.\nMwambie mteja utamuuliza maswali yafuatayo ili kuhukikisha anaweza kutumia njia hii kwa usahihi.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -1172,7 +1172,7 @@
     ]
   },
   "step14": {
-    "title": "Sisitizakwenye matumizi ya kondomu kabla ya rufaa",
+    "title": "Sisitiza kwenye matumizi ya kondomu kabla ya rufaa",
     "next": "step15",
     "fields": [
       {
@@ -1227,21 +1227,21 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "has_had_a_child_in_the_past_6_months",
         "openmrs_entity_parent": "",
-        "label": "Je, umekuwa na mtotokatika kipindi cha miezi sit ana umekuwa ukinyonyesha?",
+        "label": "Je, umekuwa na mtotoka tika kipindi cha miezi sita na umekuwa ukinyonyesha?",
         "options": [
           {
             "key": "yes",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "yes",
             "openmrs_entity_parent": "",
             "text": "Ndio"
           },
           {
             "key": "no",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
-            "text": "Yes"
+            "text": "Hapana"
           }
         ],
         "v_required": {
@@ -1262,7 +1262,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "has_had_a_child_in_the_past_6_months",
         "openmrs_entity_parent": "",
-        "label": "Je, unavuta Zaidi yasigara 15 kwa siku?",
+        "label": "Je, unavuta zaidi yasigara 15 kwa siku?",
         "options": [
           {
             "key": "yes",
@@ -1297,7 +1297,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "has_had_a_child_in_the_past_6_months",
         "openmrs_entity_parent": "",
-        "label": "Je, una maumivu makaliya kichwa yanayojirudia mara kwa mar ana hasa upande mmoja na wakati mwingineyanapelekea usione vizuri (Kipanda uso)?",
+        "label": "Je, una maumivu makali ya kichwa yanayojirudia mara kwa mara na hasa upande mmoja na wakati mwingin eyanapelekea usione vizuri (Kipanda uso)?",
         "options": [
           {
             "key": "yes",
@@ -1332,7 +1332,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "has_high_blood_pressure",
         "openmrs_entity_parent": "",
-        "label": "Je, ulishwahi kuambiwa kuwa una shinikizo la juula damu (BP)?",
+        "label": "Je, ulishwahi kuambiwa kuwa una shinikizo la juu la damu (BP)?",
         "options": [
           {
             "key": "yes",
@@ -1513,7 +1513,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Angaliamacho ya mteja. Kama ni ya manjano",
+        "text": "Angalia macho ya mteja. Kama ni ya manjano",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -1565,7 +1565,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "has_diabetes",
         "openmrs_entity_parent": "",
-        "label": "Je, ulishawahi kupataugonjwa wa kiaharusi, damu kuganda miguuni au kwenye mapafu au shambulio lamoyo?",
+        "label": "Je, ulishawahi kupata ugonjwa wa kiharusi, damu kuganda miguuni au kwenye mapafu au shambulio la moyo?",
         "options": [
           {
             "key": "yes",
@@ -1600,7 +1600,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "has_pain_in_abdomen",
         "openmrs_entity_parent": "",
-        "label": "Je, huwa unakunywa dawa za kifua kikuu(Rifampicin),Kifafa,au dawa za kupunguza makali ya VVU (Ritonavir) na nyinginezoza daraja la pili?",
+        "label": "Je, huwa unakunywa dawa za kifua kikuu(Rifampicin), Kifafa, au dawa za kupunguza makali ya VVU (Ritonavir) na nyinginezo za daraja la pili?",
         "options": [
           {
             "key": "yes",
@@ -1635,7 +1635,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "has_pain_in_abdomen",
         "openmrs_entity_parent": "",
-        "label": "Je, ulishawahi kuambiwakuwa una uvimbe kwenye titi au saratani ya matiti?",
+        "label": "Je, ulishawahi kuambiwa kuwa una uvimbe kwenye titi au saratani ya matiti?",
         "options": [
           {
             "key": "yes",
@@ -1676,7 +1676,7 @@
         "openmrs_entity": "",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Mweleze mtejakwamba anaweza kuanza kutumia vidonge kwa ajili ya uzazi wa mpango.\nMuelekeze mtejajinsi ya kutumia njia ya vidonge",
+        "text": "Mweleze mteja kwamba anaweza kuanza kutumia vidonge kwa ajili ya uzazi wa mpango.\nMuelekeze mteja jinsi ya kutumia njia ya vidonge",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -1739,7 +1739,7 @@
         "openmrs_entity": "",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Baada ya kumeza kidonge cha mwisho katika paketi, aanzapakiti nyingine mara moja.\nKuchelewa kuanza pakiti mpya kutamuweka mwanamke kwenyehatari ya kupata ujauzito.",
+        "text": "Baada ya kumeza kidonge cha mwisho katika paketi, anza pakiti nyingine mara moja.\nKuchelewa kuanza pakiti mpya kutamuweka mwanamke kwenye hatari ya kupata ujauzito.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -1762,7 +1762,7 @@
         "openmrs_entity": "",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Ukisahau kumeza kidonge 1 au 2 katika mstari wa kwanza hadiwa tatu:\n*Mara tu atakapokumbuka ameze kidonge kimoja \n*Na aendelee kumeza vidonge vingine kamakawaida kila siku kwa muda aliojipangia.\n*Hana haja ya kutumia njia ya ziada.",
+        "text": "Ukisahau kumeza kidonge 1 au 2 katika mstari wa kwanza hadi wa tatu:\n*Mara tu atakapokumbuka ameze kidonge kimoja \n*Na aendelee kumeza vidonge vingine kamakawaida kila siku kwa muda aliojipangia.\n*Hana haja ya kutumia njia ya ziada.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -1785,7 +1785,7 @@
         "openmrs_entity": "",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Ukisahaukumeza vidonge 3 au Zaidi katika mstari wa 1 au 2 katika mzunguko wa dawa:\n*Utatakiwaameze kidonge alichokisahau mara moja\n*Uendeleekumeza vidonge vingine kama kawaida, atumie njia ya ziada kwa siku saba.",
+        "text": "Ukisahaukumeza vidonge 3 au zaidi katika mstari wa 1 au 2 katika mzunguko wa dawa:\n*Utatakiwa umeze kidonge alichokisahau mara moja\n*Uendelee kumeza vidonge vingine kama kawaida, atumie njia ya ziada kwa siku saba.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -1808,7 +1808,7 @@
         "openmrs_entity": "",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Ukisahaukumeza vidonge 3 au Zaidi katika mstari wa 3 wa mzunguko wa dawa:\n*Uendeleekumeza vidonge vichocheo (vyenye rangi nyeupe/cream) kama kawaida mpakaatakapovimaliza vyote\n*Utupevidonge 7 visivyo na vichocheo (vyenye rangi ya kahawia) katika paket.\n*Uanzepaketi nyingine siku inayofuata\n*Kumbukekutumia njia ya ziada kwa siku 7",
+        "text": "Ukisahau kumeza vidonge 3 au zaidi katika mstari wa 3 wa mzunguko wa dawa:\n*Uendelee kumeza vidonge vichocheo (vyenye rangi nyeupe/cream) kama kawaida mpaka atakapo vimaliza vyote\n*Utupe vidonge 7 visivyo na vichocheo (vyenye rangi ya kahawia) katika paketi.\n*Uanze paketi nyingine siku inayofuata\n*Kumbuka kutumia njia ya ziada kwa siku 7",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -1831,7 +1831,7 @@
         "openmrs_entity": "",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Akitapikandani ya saa 2 baada ya kumeza kidonge chenye dawa arudie kumeza kidongekingine.",
+        "text": "Akitapika ndani ya saa 2 baada ya kumeza kidonge chenye dawa arudie kumeza kidonge kingine.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -1854,7 +1854,7 @@
         "openmrs_entity": "",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Kama umesahau kumeza kidonge saa 3 au Zaidi, meza kidongekimoja mara moja unapokumbuka, endelea kumeza vidonge kwa wakati ule ule tumiakondomu kwa siku Mbili.",
+        "text": "Kama umesahau kumeza kidonge saa 3 au zaidi, meza kidonge kimoja mara moja unapokumbuka, endelea kumeza vidonge kwa wakati ule ule tumia kondomu kwa siku mbili.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -1877,7 +1877,7 @@
         "openmrs_entity": "",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Kama umesahaukumeza kidonge saa 3 au zaidi na ikiwa umefanya ngono bila yak inga ndani yasiku tano zilizopita  arudi kituo chakutolea huduma za afya ili kupatiwa vidonge vya dharura vya kuzuia kupatamimba.",
+        "text": "Kama umesahau kumeza kidonge saa 3 au zaidi na ikiwa umefanya ngono bila ya kinga ndani ya siku tano zilizopita  arudi kituo chakutolea huduma za afya ili kupatiwa vidonge vya dharura vya kuzuia kupata mimba.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -1900,7 +1900,7 @@
         "openmrs_entity": "",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Ikiwautatapika masaa mawili baada ya kumeza kidonge cha dharura. Meza kidonge chapili mara moja unapokumbuka na endelea kumeza vidonge kwa wakati ule ule kilasiku",
+        "text": "Ikiwa utatapika masaa mawili baada ya kumeza kidonge cha dharura. Meza kidonge chapili mara moja unapokumbuka na endelea kumeza vidonge kwa wakati ule ule kila siku",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -1923,7 +1923,7 @@
         "openmrs_entity": "",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Kamaunatapika au kuhara kwa Zaidi ya siku Mbili tumia kondomu kwa kipindi chote chaugonjwa na siku Mbili Zaidi wakati huohuo aendele kumeza vidonge kama kawaida.",
+        "text": "Kama unatapika au kuhara kwa zaidi ya siku mbili tumia kondomu kwa kipindi chote cha ugonjwa na siku Mbili zaidi wakati huohuo aendele kumeza vidonge kama kawaida.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -1946,7 +1946,7 @@
         "openmrs_entity": "",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Ukiwa msahaulifu mara kwa mara rudi kwa mtoa hudumaili upewe ushauri Zaidi.",
+        "text": "Ukiwa msahaulifu mara kwa mara rudi kwa mtoa huduma ili upewe ushauri zaidi.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -2023,7 +2023,7 @@
         ],
         "v_required": {
           "value": "true",
-          "err": "Hakikishaunachagua jibu sahihi"
+          "err": "Hakikisha unachagua jibu sahihi"
         },
         "relevance": {
           "rules-engine": {
@@ -2111,7 +2111,7 @@
     ]
   },
   "step32": {
-    "title": "Form Submission",
+    "title": "Hifadhi",
     "fields": [
       {
         "key": "sdm_followup_visit",
@@ -2136,7 +2136,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Give the client condoms.\nExplain that the client can receive free family planning information through her/his phone with m4RH (15014).",
+        "text": "Mpatie mteja kondomu. Mueleze mteja kwamba anaweza kuendelea kupata taarifa za bure za uzazi wa mpango kwa kupitia njia ya simu m4RH (15014).",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -2153,7 +2153,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Tell the client you will return after three months to talk more about family planning.",
+        "text": "Mwambie mteja utarudi tena baada ya miezi mitatu kujaribu kuongea nae tena kuhusu uzazi wa mpango.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -2170,7 +2170,7 @@
         "openmrs_entity": "",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Client is Eligible to receive method",
+        "text": "Mteja anaweza kuanza kutumia njia ya uzazi wa mpango",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -2204,7 +2204,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Tell the man that the method he has chosen must be used by a woman.\nTell the man that at the end of this visit, you will schedule a follow-up visit in one week to meet with him and his female partner to choose a method suitable for her.\n",
+        "text": "Mwambie mteja njia aliochagua inatakiwa kutumiwa na mwanamke. \n\n Mwambie mteja utapanga tarehe ya kurudi baadae, ili ndani ya wiki moja uweze kukutana na yeye na mwenzi wake ili waweze kuchagua njia itakayo mfaa.\n",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {

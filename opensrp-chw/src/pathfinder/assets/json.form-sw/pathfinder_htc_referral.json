@@ -119,7 +119,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Jaza fomu ya rufaa\nChagua kituo chakutolea huduma za afya na tegesha fomu ya rufaa sambamba na kamera ya simu ilikuipata HTC alama maalumu.",
+        "text": "Jaza fomu ya rufaa\nChagua kituo cha kutolea huduma za afya na tegesha fomu ya rufaa sambamba na kamera ya simu ilikuipata HTC alama maalumu.",
         "toaster_type": "info"
       },
       {
@@ -128,13 +128,13 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "chw_referral_hf",
         "type": "spinner",
-        "hint": "Referral Facility",
+        "hint": "Chagua Kituo cha kutolea huduma za afya",
         "values": [],
         "keys": [],
         "openmrs_choice_ids": {},
         "v_required": {
           "value": "true",
-          "err": "Chagua kituo cha rufaacha kutolea huduma "
+          "err": "Chagua kituo cha rufaa cha kutolea huduma"
         }
       },
       {
@@ -144,11 +144,11 @@
         "openmrs_entity_id": "opensrp_id",
         "type": "barcode",
         "barcode_type": "qrcode",
-        "hint": "ID *",
-        "scanButtonText": "Scan Referral Form\nQR Code",
+        "hint": "Alama maalum *",
+        "scanButtonText": "SCAN",
         "v_numeric": {
           "value": "true",
-          "err": "Hakikishaunajaza kitambulisho halali"
+          "err": "Hakikisha unajaza kitambulisho halali"
         }
       },
       {

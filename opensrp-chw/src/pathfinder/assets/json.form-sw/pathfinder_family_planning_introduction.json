@@ -99,7 +99,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Mweleze mteja umuhimu na faida za kutumia njia za uzazi wa mpango kwake yeye binafsi, familiayake na jamaii kwa njumia. \nMwambie mteja kunanjia nyingi za uzazi wa mpango ambazo utamuelezea na kumsaidia kuchagua kulingana na mahitaji yake.\nMwambie mteja kuwa anayo haki ya kuchaga njia ya uzazi wa mpango anayoipenda.",
+        "text": "Mweleze mteja umuhimu na faida za kutumia njia za uzazi wa mpango kwake yeye binafsi, familia yake na jamaii kwa ujumla. \nMwambie mteja kuna njia nyingi za uzazi wa mpango ambazo utamuelezea na kumsaidia kuchagua kulingana na mahitaji yake.\nMwambie mteja kuwa anayo haki ya kuchagua njia ya uzazi wa mpango anayoipenda.",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }
@@ -115,7 +115,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Muonyeshe mteja kadi za uzazi wa mpango kwa mpalio ufuatao.\n*Ufanisi mkubwa Zaidi (Kitanzi,Kipandikizi)\n*Ufanisi mkubwa(vichocheo viwili (COC), Kichocheo kimoja (POP), Sindano, Njia ya kunyonyesha)\n*Ufanisi (Kondom yakiume, Kondom ya kike,Njia ya kuhesabu siku)\n*Njia za Kudumu(Kufunga uzazi kwa wanaume, Kufunga uzazi kwa wanawake)",
+        "text": "Muonyeshe mteja kadi za uzazi wa mpango kwa mpangilio ufuatao.\n\n\n*Ufanisi mkubwa zaidi\n(Kitanzi, Kipandikizi)\n\n*Ufanisi mkubwa\n(Vichocheo viwili (COC), Kichocheo kimoja (POP), Sindano, Njia ya kunyonyesha)\n\n*Ufanisi\n(Kondom yakiume, Kondom ya kike, Njia ya kuhesabu siku kwa kutukia shanga)\n\n*Njia za Kudumu\n(Kufunga uzazi kwa wanaume, Kufunga uzazi kwa wanawake)",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }
@@ -131,7 +131,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "openmrs_entity_parent": "",
-        "text": "Kwa kila njia elezea:\n*Njiahi ni nini\n*Inavyofanya kazi\n*Ufanisi",
+        "text": "Kwa kila njia elezea:\n*Njia hii ni nini\n*Inavyofanya kazi\n*Ufanisi",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }
@@ -147,14 +147,14 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "openmrs_entity_parent": "",
-        "text": "Njia zenye UfanisiMkubwa Zaidi\n \n*Lupu/Kitanzi\n*Vipandikizi",
+        "text": "Njia zenye ufanisi Mkubwa Zaidi\n\n*Lupu/Kitanzi\n*Vipandikizi",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }
     ]
   },
   "step6": {
-    "title": "Njiazenye ufanisi",
+    "title": "Njia zenye ufanisi",
     "next": "step7",
     "fields": [
       {
@@ -163,7 +163,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Njia zeneye ufanisi \n\n*Kodomu za kiume\n\n*Kodomu za kike\n*Njia yakuhesabu siku kwa kutukia shanga",
+        "text": "Njia zeneye ufanisi \n\n*Kodomu za kiume\n\n*Kodomu za kike\n*Njia ya kuhesabu siku kwa kutukia shanga",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }
@@ -179,7 +179,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "openmrs_entity_parent": "",
-        "text": "Njia za uzazi wampango za kudumu\n \n*Kufunga uzazi kwamwanaume\n*Kufunga uzazi kwamwanamke",
+        "text": "Njia za uzazi wa mpango za kudumu\n\n*Kufunga uzazi kwa mwanaume\n*Kufunga uzazi kwa mwanamke",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }
@@ -195,7 +195,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "openmrs_entity_parent": "",
-        "text": "Sasa, muonyeshemteja kadi ya njia ya uzazi wa mpango ya vidonge vya dharura.\n \nElezea kwamba njiahii ni ya dharura itatumika tu kama njia nyingine ya uzazi wa mpango imetumikakimakosa na mteja yupo hatarini kupata ujauzito.\n \nNjia ya dharura inaufanisi mkubwa ikiwa tu imetumika ndani ya saa 24 baada ya ngono isio salama.",
+        "text": "Sasa, muonyeshe mteja kadi ya njia ya uzazi wa mpango ya vidonge vya dharura.\n \nElezea kwamba njia hii ni ya dharura itatumika tu kama njia nyingine ya uzazi wa mpango imetumika kimakosa na mteja yupo hatarini kupata ujauzito.\n \nNjia ya dharura inaufanisi mkubwa ikiwa tu imetumika ndani ya saa 24 baada ya ngono isio salama.",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }
@@ -211,7 +211,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Sisitiza kwamba kondomu ni njia pekee inayotumika kuzuia ujauzito na magonjwa yatokanayo na ngono naVVU.",
+        "text": "Sisitiza kwamba kondomu ni njia pekee inayotumika kuzuia ujauzito na magonjwa yatokanayo na ngono na VVU.",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }
@@ -233,7 +233,7 @@
     ]
   },
   "step5": {
-    "title": "Njia zenyeufanisi",
+    "title": "Njia zenye ufanisi",
     "next": "step6",
     "fields": [
       {
@@ -242,7 +242,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Njia za Uzazi wa mpango zenye Ufanisi mkubwa\n\n*Sindano\n\n*Vidonge(Vichocheo viwili,Kichocheo Kimoja)\n\n*Nia ya Kunyonyesha",
+        "text": "Njia za uzazi wa mpango zenye Ufanisi mkubwa\n\n*Sindano\n\n*Vidonge(Vichocheo viwili, Kichocheo Kimoja)\n\n*Njia ya Kunyonyesha",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }

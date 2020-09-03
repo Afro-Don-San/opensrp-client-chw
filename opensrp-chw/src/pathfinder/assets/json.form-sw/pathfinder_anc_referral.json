@@ -156,13 +156,13 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "chw_referral_hf",
         "type": "spinner",
-        "hint": "Referral Facility",
+        "hint": "Chagua kituo cha kutolea huduma za afya",
         "values": [],
         "keys": [],
         "openmrs_choice_ids": {},
         "v_required": {
           "value": "true",
-          "err": "Chagua kituo cha rufaacha kutolea huduma "
+          "err": "Chagua kituo cha rufaa cha kutolea huduma "
         }
       },
       {
@@ -172,11 +172,11 @@
         "openmrs_entity_id": "opensrp_id",
         "type": "barcode",
         "barcode_type": "qrcode",
-        "hint": "ID *",
-        "scanButtonText": "Scan Referral Form\nQR Code",
+        "hint": "Alama maalum *",
+        "scanButtonText": "SCAN",
         "v_numeric": {
           "value": "true",
-          "err": "Hakikishaunajaza kitambulisho halali"
+          "err": "Hakikisha unajaza kitambulisho halali"
         }
       },
       {

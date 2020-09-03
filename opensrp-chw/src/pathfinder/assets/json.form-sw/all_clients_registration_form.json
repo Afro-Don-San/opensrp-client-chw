@@ -125,11 +125,11 @@
         "openmrs_entity_id": "162724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
         "openmrs_data_type": "text",
         "type": "tree",
-        "hint": "Kituo cha karibu cha kutolea huduma za afya",
+        "hint": "Chagua Kijiji",
         "tree": [],
         "v_required": {
           "value": true,
-          "err": "Tafadhali ingiza kituo cha afya kilicho karibu"
+          "err": "Tafadhali ingiza jina la kijiji"
         }
       },
       {

@@ -218,9 +218,9 @@ public class PathfinderFpPregnancyScreeningInteractorFlv extends DefaultPathfind
             }
             StringBuilder builder = new StringBuilder();
             if (is_client_pregnant.equalsIgnoreCase("yes"))
-                builder.append(context.getString(R.string.pregnancy_confirmation)).append(":").append(" ").append(context.getString(R.string.yes));
+                builder.append(context.getString(R.string.pregnancy_confirmation)).append(":").append(" ").append(context.getString(R.string.client_is_pregnant));
             else if (is_client_pregnant.equalsIgnoreCase("no")) {
-                builder.append(context.getString(R.string.pregnancy_confirmation)).append(":").append(" ").append(context.getString(R.string.no));
+                builder.append(context.getString(R.string.pregnancy_confirmation)).append(":").append(" ").append(context.getString(R.string.client_is_not_pregnant));
             }
             return builder.toString();
         }

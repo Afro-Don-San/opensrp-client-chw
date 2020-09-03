@@ -119,7 +119,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Jaza fomu ya rufaa nategesha fomu sambamba na kamera ya simu ili kuipata alama maalumu.",
+        "text": "Jaza fomu ya rufaa na tegesha fomu sambamba na kamera ya simu ili kuipata alama maalumu.",
         "toaster_type": "info"
       },
       {
@@ -137,11 +137,11 @@
         "openmrs_entity_id": "opensrp_id",
         "type": "barcode",
         "barcode_type": "qrcode",
-        "hint": "ID *",
-        "scanButtonText": "Scan Referral Form\nQR Code",
+        "hint": "Alama maalum *",
+        "scanButtonText": "SCAN",
         "v_numeric": {
           "value": "true",
-          "err": "Hakikishaunajaza kitambulisho halali"
+          "err": "Hakikisha unajaza kitambulisho halali"
         }
       },
       {
