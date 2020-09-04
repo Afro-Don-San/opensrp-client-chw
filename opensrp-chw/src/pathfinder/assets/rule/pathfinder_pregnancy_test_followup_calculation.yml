@@ -16,16 +16,32 @@ actions:
 name: step5_pregnant_screening_done
 description: pregnant_screening_done calculation
 priority: 1
-condition: "step5_what_the_client_wants_to_do_next == 'complete_pregnancy_screening_questions'"
+condition: "true"
 actions:
-  - "calculation = false"
+  - "def getPregnancyScreeningStatus(did_the_client_get_pregnancy_test, what_the_client_wants_to_do_next) {
+      status = false;
+      if(did_the_client_get_pregnancy_test == 'yes'){
+        status = 'true';
+      } else if(what_the_client_wants_to_do_next == 'complete_pregnancy_screening_questions'){
+        status = 'false';
+      }
+      return status;
+    }"
+  - "calculation = getPregnancyScreeningStatus(step1_did_the_client_get_pregnancy_test, step5_what_the_client_wants_to_do_next)"
 ---
 name: step5_fp_pregnancy_screening_date
 description: date of pregnancy screening registration calculation
 priority: 1
 condition: "step5_what_the_client_wants_to_do_next == 'try_to_get_a_pregnancy_test'"
 actions:
-  - "calculation = helper.getDateToday()"
+  - "def getPregnancyScreeningDate(did_the_client_get_pregnancy_test) {
+       date = 0;
+       if(did_the_client_get_pregnancy_test == 'yes'){
+         date = helper.getDateToday();
+       }
+       return status;
+     }"
+  - "calculation = getPregnancyScreeningDate(step1_did_the_client_get_pregnancy_test)"
 ---
 name: step5_edd
 description: edd calculated

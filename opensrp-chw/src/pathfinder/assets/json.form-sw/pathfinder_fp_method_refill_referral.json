@@ -3,7 +3,7 @@
   "show_errors_on_submit": true,
   "skip_blank_steps": true,
   "count": "1",
-  "encounter_type": "FP Method Referral",
+  "encounter_type": "Family Planning Method Refill Referral",
   "entity_id": "",
   "relational_id": "",
   "metadata": {
@@ -55,7 +55,7 @@
     }
   },
   "step1": {
-    "title": "Rufaa ya njia za uzazi wa mpango",
+    "title": "Rufaa ya Kupata njia za uzazi wa mpango",
     "fields": [
       {
         "key": "referral_date",
@@ -66,7 +66,7 @@
         "calculation": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_calculation.yml"
+              "rules-file": "pathfinder_fp_method_refill_referral_calculation.yml"
             }
           }
         }
@@ -80,7 +80,7 @@
         "calculation": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_calculation.yml"
+              "rules-file": "pathfinder_fp_method_refill_referral_calculation.yml"
             }
           }
         }
@@ -94,7 +94,7 @@
         "calculation": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_calculation.yml"
+              "rules-file": "pathfinder_fp_method_refill_referral_calculation.yml"
             }
           }
         }
@@ -108,7 +108,7 @@
         "calculation": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_calculation.yml"
+              "rules-file": "pathfinder_fp_method_refill_referral_calculation.yml"
             }
           }
         }
@@ -122,7 +122,7 @@
         "calculation": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_calculation.yml"
+              "rules-file": "pathfinder_fp_method_refill_referral_calculation.yml"
             }
           }
         }
@@ -136,7 +136,7 @@
         "calculation": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_calculation.yml"
+              "rules-file": "pathfinder_fp_method_refill_referral_calculation.yml"
             }
           }
         }
@@ -158,9 +158,12 @@
         "openmrs_entity_id": "chw_referral_hf",
         "type": "spinner",
         "hint": "Chagua Kituo cha kutolea huduma za afya",
-        "values": [],
-        "keys": [],
-        "openmrs_choice_ids": {},
+        "values": [
+        ],
+        "keys": [
+        ],
+        "openmrs_choice_ids": {
+        },
         "v_required": {
           "value": "true",
           "err": "Chagua kituo cha rufaa cha kutolea huduma "
@@ -189,7 +192,7 @@
         "calculation": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_calculation.yml"
+              "rules-file": "pathfinder_fp_method_refill_referral_calculation.yml"
             }
           }
         }
