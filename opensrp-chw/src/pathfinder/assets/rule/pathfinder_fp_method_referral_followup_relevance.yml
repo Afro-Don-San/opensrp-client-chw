@@ -1,42 +1,42 @@
 ---
-name: step2_fp_method
-description: fp_method relevance
-priority: 1
-condition: "step1_did_the_client_get_fp_method =='yes'"
-actions:
-  - "isRelevant = true"
----
-name: step3_did_client_complete_referral
+name: step2_did_client_complete_referral
 description: did_client_complete_referral relevance
 priority: 1
 condition: "step1_did_the_client_get_fp_method =='no'"
 actions:
   - "isRelevant = true"
 ---
-name: step4_reasons_for_not_going_to_facility
+name: step3_reasons_for_not_going_to_facility
 description: reasons_for_not_going_to_facility relevance
 priority: 1
-condition: "step1_did_the_client_get_fp_method =='no' && step3_did_client_complete_referral =='no'"
+condition: "step1_did_the_client_get_fp_method =='no' && step2_did_client_complete_referral =='no'"
 actions:
   - "isRelevant = true"
 ---
-name: step4_reasons_for_not_getting_any_services_at_the_health_facility
+name: step3_reasons_for_not_getting_any_services_at_the_health_facility
 description: reasons_for_not_getting_any_services_at_the_health_facility relevance
 priority: 1
-condition: "step1_did_the_client_get_fp_method =='no' && step3_did_client_complete_referral =='yes'"
+condition: "step1_did_the_client_get_fp_method =='no' && step2_did_client_complete_referral =='yes'"
 actions:
   - "isRelevant = true"
 ---
-name: step5_what_the_client_wants_to_do_next
+name: step4_fp_method
+description: fp_method relevance
+priority: 1
+condition: "step1_did_the_client_get_fp_method =='yes'"
+actions:
+  - "isRelevant = true"
+---
+name: step4_what_the_client_wants_to_do_next
 description: what_the_client_wants_to_do_next relevance
 priority: 1
 condition: "step1_did_the_client_get_fp_method =='no'"
 actions:
   - "isRelevant = true"
 ---
-name: step5_discuss_how_you_will_help_client_complete_referral
+name: step4_discuss_how_you_will_help_client_complete_referral
 description: discuss_how_you_will_help_client_complete_referral relevance
 priority: 1
-condition: "step5_what_the_client_wants_to_do_next =='try_to_get_a_pregnancy_test'"
+condition: "step4_what_the_client_wants_to_do_next =='try_to_get_a_pregnancy_test'"
 actions:
   - "isRelevant = true"

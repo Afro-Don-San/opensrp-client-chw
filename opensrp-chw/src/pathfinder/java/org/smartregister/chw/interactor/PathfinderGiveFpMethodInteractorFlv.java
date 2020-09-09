@@ -24,7 +24,6 @@ import org.smartregister.chw.core.activity.CorePathfinderFollowupVisitActivity;
 import org.smartregister.chw.domain.PncBaby;
 import org.smartregister.chw.util.Constants;
 import org.smartregister.chw.util.JsonFormUtils;
-import org.smartregister.chw.util.UtilsFlv;
 import org.smartregister.domain.Location;
 import org.smartregister.repository.LocationRepository;
 import org.smartregister.util.FormUtils;
@@ -35,6 +34,8 @@ import java.util.List;
 import java.util.Map;
 
 import timber.log.Timber;
+
+import static org.smartregister.chw.util.UtilsFlv.injectFamilyPlaningMethod;
 
 public class PathfinderGiveFpMethodInteractorFlv extends DefaultPathfinderFpPregnancyScreeningInteractorFlv {
     protected LinkedHashMap<String, BaseAncHomeVisitAction> actionList;
@@ -95,7 +96,7 @@ public class PathfinderGiveFpMethodInteractorFlv extends DefaultPathfinderFpPreg
                 .build();
 
         JSONObject fpGiveFpMethodJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.getPathfinderGiveFamilyPlanningMethod());
-        injectFamilyPlaningMethod(fpGiveFpMethodJsonObject);
+        injectFamilyPlaningMethod(fpGiveFpMethodJsonObject, familyPlanningMethod, ((CorePathfinderFollowupVisitActivity) context));
         BaseAncHomeVisitAction action = new BaseAncHomeVisitAction.Builder(context, context.getString(R.string.give_fp_method))
                 .withOptional(false)
                 .withDetails(null)
@@ -133,18 +134,6 @@ public class PathfinderGiveFpMethodInteractorFlv extends DefaultPathfinderFpPreg
                     break;
                 }
             }
-            return form;
-        }
-    }
-
-    private JSONObject injectFamilyPlaningMethod(JSONObject form) throws Exception {
-        if (form == null) {
-            return null;
-        } else {
-            JSONObject fp_method = new JSONObject();
-            fp_method.put("fp_method", familyPlanningMethod);
-            fp_method.put("fp_method_translated", UtilsFlv.getTranslatedFpMethodName(familyPlanningMethod, ((CorePathfinderFollowupVisitActivity) context)));
-            form.put("global", fp_method);
             return form;
         }
     }

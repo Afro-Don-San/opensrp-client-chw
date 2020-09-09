@@ -1,4 +1,11 @@
 ---
+name: step1_satisfaction_with_current_method_label
+description: step1_satisfaction_with_current_method_label calculation
+priority: 1
+condition: "true"
+actions:
+  - 'calculation = ["fp_method" : global_fp_method_translated]'
+---
 name: step1_fp_followup_done
 description: fp_followup_done calculation
 priority: 1

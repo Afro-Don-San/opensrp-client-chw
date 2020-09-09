@@ -12,6 +12,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.smartregister.Context;
 import org.smartregister.chw.R;
+import org.smartregister.chw.core.activity.CorePathfinderFollowupVisitActivity;
 import org.smartregister.chw.core.rule.MalariaFollowUpRule;
 import org.smartregister.chw.core.utils.CoreConstants;
 import org.smartregister.chw.core.utils.MalariaVisitUtil;
@@ -61,33 +62,6 @@ public class UtilsFlv {
         return false;
     }
 
-    private static class UpdateFollowUpMenuItem extends AsyncTask<Void, Void, Void> {
-        private final String baseEntityId;
-        private Menu menu;
-        private MalariaFollowUpRule malariaFollowUpRule;
-
-        public UpdateFollowUpMenuItem(String baseEntityId, Menu menu) {
-            this.baseEntityId = baseEntityId;
-            this.menu = menu;
-        }
-
-        @Override
-        protected Void doInBackground(Void... voids) {
-            Date malariaTestDate = MalariaDao.getMalariaTestDate(baseEntityId);
-            Date followUpDate = MalariaDao.getMalariaFollowUpVisitDate(baseEntityId);
-            malariaFollowUpRule = MalariaVisitUtil.getMalariaStatus(malariaTestDate, followUpDate);
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void param) {
-            if (malariaFollowUpRule != null && StringUtils.isNotBlank(malariaFollowUpRule.getButtonStatus()) &&
-                    !CoreConstants.VISIT_STATE.EXPIRED.equalsIgnoreCase(malariaFollowUpRule.getButtonStatus())) {
-                menu.findItem(R.id.action_malaria_followup_visit).setVisible(true);
-            }
-        }
-    }
-
     public static JSONObject injectReferralFacilities(JSONObject form) throws Exception {
         if (form == null) {
             return null;
@@ -116,7 +90,7 @@ public class UtilsFlv {
         }
     }
 
-    public static String getTranslatedFpMethodName(String familyPlanningMethod, Activity context){
+    public static String getTranslatedFpMethodName(String familyPlanningMethod, Activity context) {
         String familyPlanningMethodTranslated = "";
         switch (familyPlanningMethod) {
             case "coc":
@@ -139,6 +113,41 @@ public class UtilsFlv {
                 break;
         }
         return familyPlanningMethodTranslated;
+    }
+
+    public static JSONObject injectFamilyPlaningMethod(JSONObject form, String familyPlanningMethod, Activity context) throws Exception {
+        JSONObject fp_method = new JSONObject();
+        fp_method.put("global_fp_method", familyPlanningMethod);
+        fp_method.put("global_fp_method_translated", UtilsFlv.getTranslatedFpMethodName(familyPlanningMethod, context));
+        form.put("global", fp_method);
+        return form;
+    }
+
+    private static class UpdateFollowUpMenuItem extends AsyncTask<Void, Void, Void> {
+        private final String baseEntityId;
+        private Menu menu;
+        private MalariaFollowUpRule malariaFollowUpRule;
+
+        public UpdateFollowUpMenuItem(String baseEntityId, Menu menu) {
+            this.baseEntityId = baseEntityId;
+            this.menu = menu;
+        }
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            Date malariaTestDate = MalariaDao.getMalariaTestDate(baseEntityId);
+            Date followUpDate = MalariaDao.getMalariaFollowUpVisitDate(baseEntityId);
+            malariaFollowUpRule = MalariaVisitUtil.getMalariaStatus(malariaTestDate, followUpDate);
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void param) {
+            if (malariaFollowUpRule != null && StringUtils.isNotBlank(malariaFollowUpRule.getButtonStatus()) &&
+                    !CoreConstants.VISIT_STATE.EXPIRED.equalsIgnoreCase(malariaFollowUpRule.getButtonStatus())) {
+                menu.findItem(R.id.action_malaria_followup_visit).setVisible(true);
+            }
+        }
     }
 
 }

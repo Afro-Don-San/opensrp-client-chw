@@ -33,6 +33,8 @@ import java.util.Map;
 
 import timber.log.Timber;
 
+import static org.smartregister.chw.util.UtilsFlv.injectFamilyPlaningMethod;
+
 public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpFollowUpVisitInteractorFlv {
     protected LinkedHashMap<String, BaseAncHomeVisitAction> actionList;
     protected Context context;
@@ -92,9 +94,9 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
                 .build();
 
         JSONObject resupplyJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.PathfinderFamilyPlanningFollowUpVisitUtils.getFamilyPlanningFollowupRefill());
-        injectFamilyPlaningMethod(resupplyJsonObject);
+        injectFamilyPlaningMethod(resupplyJsonObject, familyPlanningMethod, ((PathfinderFamilyPlanningFollowUpVisitActivity) context));
 
-        String familyPlanningMethodTranslated = UtilsFlv.getTranslatedFpMethodName(familyPlanningMethod,((PathfinderFamilyPlanningFollowUpVisitActivity) context));
+        String familyPlanningMethodTranslated = UtilsFlv.getTranslatedFpMethodName(familyPlanningMethod, ((PathfinderFamilyPlanningFollowUpVisitActivity) context));
         BaseAncHomeVisitAction resupplyAction = new BaseAncHomeVisitAction.Builder(context, context.getString(R.string.resupply, familyPlanningMethodTranslated))
                 .withOptional(false)
                 .withDetails(null)
@@ -106,7 +108,7 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
                 .build();
 
         JSONObject counselingJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.PathfinderFamilyPlanningFollowUpVisitUtils.getFamilyPlanningFollowupCounsel());
-        injectFamilyPlaningMethod(counselingJsonObject);
+        injectFamilyPlaningMethod(counselingJsonObject, familyPlanningMethod, ((PathfinderFamilyPlanningFollowUpVisitActivity) context));
 
         BaseAncHomeVisitAction action = new BaseAncHomeVisitAction.Builder(context, context.getString(R.string.counseling))
                 .withOptional(false)
@@ -119,18 +121,6 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
                 .build();
 
         actionList.put(context.getString(R.string.counseling), action);
-    }
-
-    private JSONObject injectFamilyPlaningMethod(JSONObject form) throws Exception {
-        if (form == null) {
-            return null;
-        } else {
-            JSONObject fp_method = new JSONObject();
-            fp_method.put("fp_method", familyPlanningMethod);
-            fp_method.put("fp_method_translated", UtilsFlv.getTranslatedFpMethodName(familyPlanningMethod,((PathfinderFamilyPlanningFollowUpVisitActivity) context)));
-            form.put("global", fp_method);
-            return form;
-        }
     }
 
     private class ResupplyHelper extends HomeVisitActionHelper {

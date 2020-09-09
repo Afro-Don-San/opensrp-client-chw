@@ -13,9 +13,16 @@ condition: "step1_did_the_client_get_fp_method == 'yes'"
 actions:
   - "calculation = true"
 ---
-name: step1_fp_method_given
-description: fp_method_given calculation
+name: step4_client_is_currently_referred
+description: client_is_currently_referred calculation
 priority: 1
-condition: step1_did_the_client_get_fp_method == 'yes'"
+condition: "step1_did_the_client_get_fp_method == 'yes'"
 actions:
-  - "calculation = true"
+  - "calculation = false"
+---
+name: step4_issued_referral_service
+description: issued_referral_service calculation
+priority: 1
+condition: "step1_did_the_client_get_fp_method == 'yes'"
+actions:
+  - "calculation = ''"

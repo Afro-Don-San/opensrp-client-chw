@@ -3,7 +3,7 @@
   "show_errors_on_submit": true,
   "skip_blank_steps": true,
   "count": "4",
-  "encounter_type": "Family Planning Method Referral Followup",
+  "encounter_type": "Family Planning Method Refill Referral Followup",
   "entity_id": "",
   "relational_id": "",
   "metadata": {
@@ -59,26 +59,26 @@
     "next": "step2",
     "fields": [
       {
-        "key": "fp_method_referral_followup_date",
+        "key": "fp_method_refill_referral_followup_date",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_method_referral_followup_date",
+        "openmrs_entity_id": "fp_method_refill_referral_followup_date",
         "type": "hidden",
         "calculation": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_followup_calculation.yml"
+              "rules-file": "pathfinder_fp_method_refill_referral_followup_calculation.yml"
             }
           }
         }
       },
       {
-        "key": "did_the_client_get_fp_method",
+        "key": "did_the_client_get_a_refill",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_the_client_get_fp_method",
+        "openmrs_entity_id": "did_the_client_get_a_refill",
         "openmrs_entity_parent": "",
-        "label": "You were referred to a health facility for a family planning method.\nDid you get a family planning method from the health facility?\n",
+        "label": "You were referred to a health facility for a refill for your family planning method.\nDid you get the refill?\n",
         "options": [
           {
             "key": "yes",
@@ -99,40 +99,12 @@
           "value": "true",
           "err": "Please select one choice"
         }
-      },
-      {
-        "key": "give_fp_method_done",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "give_fp_method_done",
-        "type": "hidden",
-        "calculation": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_followup_calculation.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "fp_method_given",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_method_given",
-        "type": "hidden",
-        "calculation": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_followup_calculation.yml"
-            }
-          }
-        }
       }
     ]
   },
   "step2": {
     "title": "Client did not complete referral",
-    "next": "step4",
+    "next": "step3",
     "fields": [
       {
         "key": "did_client_complete_referral",
@@ -164,7 +136,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_followup_relevance.yml"
+              "rules-file": "pathfinder_fp_method_refill_referral_followup_relevance.yml"
             }
           }
         }
@@ -173,7 +145,7 @@
   },
   "step3": {
     "title": "Reasons for not going to facility",
-    "next": "step5",
+    "next": "step4",
     "fields": [
       {
         "key": "reasons_for_not_going_to_facility",
@@ -219,7 +191,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_followup_relevance.yml"
+              "rules-file": "pathfinder_fp_method_refill_referral_followup_relevance.yml"
             }
           }
         }
@@ -268,7 +240,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_followup_relevance.yml"
+              "rules-file": "pathfinder_fp_method_refill_referral_followup_relevance.yml"
             }
           }
         }
@@ -371,7 +343,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_followup_relevance.yml"
+              "rules-file": "pathfinder_fp_method_refill_referral_followup_relevance.yml"
             }
           }
         }
@@ -406,7 +378,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_followup_relevance.yml"
+              "rules-file": "pathfinder_fp_method_refill_referral_followup_relevance.yml"
             }
           }
         }
@@ -422,35 +394,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_followup_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "client_is_currently_referred",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "client_is_currently_referred",
-        "type": "hidden",
-        "calculation": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_followup_calculation.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "issued_referral_service",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "issued_referral_service",
-        "type": "hidden",
-        "calculation": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_followup_calculation.yml"
+              "rules-file": "pathfinder_fp_method_refill_referral_followup_relevance.yml"
             }
           }
         }

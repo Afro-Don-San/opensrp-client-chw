@@ -2,8 +2,8 @@
   "validate_on_submit": false,
   "show_errors_on_submit": true,
   "skip_blank_steps": true,
-  "count": "4",
-  "encounter_type": "Family Planning Method Referral Followup",
+  "count": "5",
+  "encounter_type": "Family Planning Method Counselling Referral Followup",
   "entity_id": "",
   "relational_id": "",
   "metadata": {
@@ -59,26 +59,26 @@
     "next": "step2",
     "fields": [
       {
-        "key": "fp_method_referral_followup_date",
+        "key": "fp_method_counseling_referral_followup_date",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_method_referral_followup_date",
+        "openmrs_entity_id": "fp_method_counseling_referral_followup_date",
         "type": "hidden",
         "calculation": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_followup_calculation.yml"
+              "rules-file": "pathfinder_fp_method_counseling_referral_followup_calculation.yml"
             }
           }
         }
       },
       {
-        "key": "did_the_client_get_fp_method",
+        "key": "did_the_client_get_counselling",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_the_client_get_fp_method",
+        "openmrs_entity_id": "did_the_client_get_counselling",
         "openmrs_entity_parent": "",
-        "label": "You were referred to a health facility for a family planning method.\nDid you get a family planning method from the health facility?\n",
+        "label": "You were referred to a health facility for counseling because you were not satisfied with your family planning method.\nDid you receive counseling about this method?\n",
         "options": [
           {
             "key": "yes",
@@ -99,38 +99,51 @@
           "value": "true",
           "err": "Please select one choice"
         }
-      },
+      }
+    ]
+  },
+  "step2": {
+    "title": "Outcome of the counseling",
+    "next": "step3",
+    "fields": [
       {
-        "key": "give_fp_method_done",
-        "openmrs_entity_parent": "",
+        "key": "outcome_of_the_counseling",
+        "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "give_fp_method_done",
-        "type": "hidden",
-        "calculation": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_followup_calculation.yml"
-            }
+        "openmrs_entity_id": "outcome_of_the_counseling",
+        "openmrs_entity_parent": "",
+        "label": "ASK: What was the outcome of your counseling?",
+        "options": [
+          {
+            "key": "continue_using_the_method",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "I am going to continue using this method"
+          },
+          {
+            "key": "does_not_want_to_continue_using_the_method",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "I do not want to continue using this method"
           }
-        }
-      },
-      {
-        "key": "fp_method_given",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_method_given",
-        "type": "hidden",
-        "calculation": {
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_followup_calculation.yml"
+              "rules-file": "pathfinder_fp_method_counseling_referral_followup_relevance.yml"
             }
           }
         }
       }
     ]
   },
-  "step2": {
+  "step3": {
     "title": "Client did not complete referral",
     "next": "step4",
     "fields": [
@@ -164,14 +177,14 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_followup_relevance.yml"
+              "rules-file": "pathfinder_fp_method_counseling_referral_followup_relevance.yml"
             }
           }
         }
       }
     ]
   },
-  "step3": {
+  "step4": {
     "title": "Reasons for not going to facility",
     "next": "step5",
     "fields": [
@@ -219,7 +232,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_followup_relevance.yml"
+              "rules-file": "pathfinder_fp_method_counseling_referral_followup_relevance.yml"
             }
           }
         }
@@ -268,114 +281,16 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_followup_relevance.yml"
+              "rules-file": "pathfinder_fp_method_counseling_referral_followup_relevance.yml"
             }
           }
         }
       }
     ]
   },
-  "step4": {
+  "step5": {
     "title": "End",
     "fields": [
-      {
-        "key": "fp_method",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_method",
-        "openmrs_entity_parent": "",
-        "label": "ASK: Which method did you receive?\n",
-        "options": [
-          {
-            "key": "progestin_only_pills",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Progestin only pills"
-          },
-          {
-            "key": "vasectomy",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Vasectomy"
-          },
-          {
-            "key": "male_condom",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Male Condom"
-          },
-          {
-            "key": "coc",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Combined Oral Contraceptives (COC)"
-          },
-          {
-            "key": "tubal_ligation",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Tubal ligation"
-          },
-          {
-            "key": "iud",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Interuterine device (IUD)"
-          },
-          {
-            "key": "lam",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Lactational amenorrhea method (LAM)"
-          },
-          {
-            "key": "implants",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Implants"
-          },
-          {
-            "key": "female_condom",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Female Condom"
-          },
-          {
-            "key": "injection",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Injection"
-          },
-          {
-            "key": "sdm",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Standard days method(SDM)"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_followup_relevance.yml"
-            }
-          }
-        }
-      },
       {
         "key": "what_the_client_wants_to_do_next",
         "type": "native_radio",
@@ -406,7 +321,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_followup_relevance.yml"
+              "rules-file": "pathfinder_fp_method_counseling_referral_followup_relevance.yml"
             }
           }
         }
@@ -422,35 +337,7 @@
         "relevance": {
           "rules-engine": {
             "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_followup_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "client_is_currently_referred",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "client_is_currently_referred",
-        "type": "hidden",
-        "calculation": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_followup_calculation.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "issued_referral_service",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "issued_referral_service",
-        "type": "hidden",
-        "calculation": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_followup_calculation.yml"
+              "rules-file": "pathfinder_fp_method_counseling_referral_followup_relevance.yml"
             }
           }
         }
