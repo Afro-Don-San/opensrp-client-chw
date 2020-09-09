@@ -4,7 +4,7 @@ description: fp_start_date calculation
 priority: 1
 condition: "true"
 actions:
-  - "calculation = helper.getTimeInMillis()"
+  - "calculation = helper.getDateToday()"
 ---
 name: step1_give_fp_method_done
 description: give_fp_method_done calculation
