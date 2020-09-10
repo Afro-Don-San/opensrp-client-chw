@@ -569,7 +569,7 @@
         "openmrs_entity": "",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Elezeakama atakuwa amesahau kusogeza pete:\n*Angaliakalenda sehemu ulioweka alama ya kuanza hedhi\n*Hesabusiku ambazo zimeshapita hadi siku ya leo\n*Ukianzia kwenyeshanga nyekundu sogeza pete sawa sawa na shanga kwenye shanga zako",
+        "text": "Elezea kama atakuwa amesahau kusogeza pete:\n*Angaliakalenda sehemu ulioweka alama ya kuanza hedhi\n*Hesabusiku ambazo zimeshapita hadi siku ya leo\n*Ukianzia kwenyeshanga nyekundu sogeza pete sawa sawa na shanga kwenye shanga zako",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -845,6 +845,25 @@
         "v_required": {
           "value": "true",
           "err": "Hakikisha unachagua jibu sahihi"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "other_reasons",
+        "type": "edit_text",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_reasons",
+        "openmrs_entity_parent": "",
+        "hint": "Sababu nyinginezo",
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jaza sababu nyingine"
         },
         "relevance": {
           "rules-engine": {

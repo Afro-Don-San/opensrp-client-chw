@@ -131,14 +131,14 @@ public class PathfinderFpPregnancyScreeningInteractorFlv extends DefaultPathfind
 
                     JSONObject openmrsIds = new JSONObject();
                     JSONArray values = new JSONArray();
-                    for(Location location : locations){
-                        openmrsIds.put(location.getProperties().getName(),location.getId());
+                    for (Location location : locations) {
+                        openmrsIds.put(location.getProperties().getName(), location.getId());
                         values.put(location.getProperties().getName());
                     }
 
-                    object.put("values",values);
-                    object.put("keys",values);
-                    object.put("openmrs_choice_ids",openmrsIds);
+                    object.put("values", values);
+                    object.put("keys", values);
+                    object.put("openmrs_choice_ids", openmrsIds);
                     break;
                 }
             }
@@ -188,6 +188,7 @@ public class PathfinderFpPregnancyScreeningInteractorFlv extends DefaultPathfind
 
     private class PregnancyScreeningHelper extends HomeVisitActionHelper {
         private String is_client_pregnant;
+        private String are_you_speaking_to;
         private String started_anc;
         private String choose_pregnancy_test_referral;
         private BaseAncHomeVisitAction ancReferralAction;
@@ -204,6 +205,8 @@ public class PathfinderFpPregnancyScreeningInteractorFlv extends DefaultPathfind
             try {
                 JSONObject jsonObject = new JSONObject(jsonPayload);
                 is_client_pregnant = JsonFormUtils.getValue(jsonObject, "is_client_pregnant");
+                are_you_speaking_to = JsonFormUtils.getValue(jsonObject, "are_you_speaking_to");
+                Timber.e("Coze :: are_you_speaking_to = "+are_you_speaking_to);
                 started_anc = JsonFormUtils.getValue(jsonObject, "started_anc");
                 choose_pregnancy_test_referral = JsonFormUtils.getValue(jsonObject, "choose_pregnancy_test_referral");
             } catch (JSONException e) {
@@ -213,11 +216,12 @@ public class PathfinderFpPregnancyScreeningInteractorFlv extends DefaultPathfind
 
         @Override
         public String evaluateSubTitle() {
-            if (StringUtils.isBlank(is_client_pregnant)) {
-                return null;
-            }
             StringBuilder builder = new StringBuilder();
-            if (is_client_pregnant.equalsIgnoreCase("yes"))
+            if (are_you_speaking_to.equalsIgnoreCase("man_only")) {
+                builder.append(context.getString(R.string.no_woman_available));
+            }else if (StringUtils.isBlank(is_client_pregnant)) {
+                return null;
+            }else if (is_client_pregnant.equalsIgnoreCase("yes"))
                 builder.append(context.getString(R.string.pregnancy_confirmation)).append(":").append(" ").append(context.getString(R.string.client_is_pregnant));
             else if (is_client_pregnant.equalsIgnoreCase("no")) {
                 builder.append(context.getString(R.string.pregnancy_confirmation)).append(":").append(" ").append(context.getString(R.string.client_is_not_pregnant));
@@ -227,7 +231,9 @@ public class PathfinderFpPregnancyScreeningInteractorFlv extends DefaultPathfind
 
         @Override
         public BaseAncHomeVisitAction.Status evaluateStatusOnPayload() {
-            if (StringUtils.isBlank(is_client_pregnant)) {
+            if(are_you_speaking_to.equalsIgnoreCase("man_only")){
+                return BaseAncHomeVisitAction.Status.COMPLETED;
+            }else if (StringUtils.isBlank(is_client_pregnant)) {
                 return BaseAncHomeVisitAction.Status.PENDING;
             } else if ("no".equalsIgnoreCase(started_anc)) {
                 try {
@@ -248,9 +254,8 @@ public class PathfinderFpPregnancyScreeningInteractorFlv extends DefaultPathfind
                 }
                 return BaseAncHomeVisitAction.Status.COMPLETED;
             }
-            {
-                return BaseAncHomeVisitAction.Status.COMPLETED;
-            }
+            return BaseAncHomeVisitAction.Status.COMPLETED;
+
         }
     }
 

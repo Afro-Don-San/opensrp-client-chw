@@ -32,4 +32,4 @@ description: step16_give_referral_note calculation
 priority: 1
 condition: "true"
 actions:
-  - 'calculation = ["fp_method" : global_fp_method]'
+  - 'calculation = ["fp_method" : global_fp_method_translated]'
