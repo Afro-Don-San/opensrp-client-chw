@@ -20,8 +20,8 @@ condition: "step1_did_the_client_get_fp_method =='no' && step2_did_client_comple
 actions:
   - "isRelevant = true"
 ---
-name: step4_fp_method
-description: fp_method relevance
+name: step4_fp_method_accepted
+description: fp_method_accepted relevance
 priority: 1
 condition: "step1_did_the_client_get_fp_method =='yes'"
 actions:

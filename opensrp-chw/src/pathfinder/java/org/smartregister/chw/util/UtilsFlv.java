@@ -108,6 +108,18 @@ public class UtilsFlv {
             case "sdm":
                 familyPlanningMethodTranslated = context.getString(R.string.standard_day_method);
                 break;
+            case "implants":
+                familyPlanningMethodTranslated = context.getString(R.string.implants);
+                break;
+            case "tubal_ligation":
+                familyPlanningMethodTranslated = context.getString(R.string.tubal_ligation);
+                break;
+            case "lam":
+                familyPlanningMethodTranslated = context.getString(R.string.lam);
+                break;
+            case "injectable":
+                familyPlanningMethodTranslated = context.getString(R.string.injectable);
+                break;
             default:
                 familyPlanningMethodTranslated = familyPlanningMethod;
                 break;

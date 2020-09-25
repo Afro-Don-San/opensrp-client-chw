@@ -148,23 +148,6 @@
         }
       },
       {
-        "key": "not_satisfied_with_facility_given_method",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "person_attribute",
-        "openmrs_entity_id": "toaster_notes",
-        "type": "toaster_notes",
-        "text": "Tell the client that she needs to return to the health facility to discuss her concerns since method received at the facility require counseling from a trained health care provider.\n\nExplain the reason for giving the referral and explain where the nearest health facility is located.\n\nInform the client that you will follow up to make sure they got the service they were referred for.\n\n Fill in the referral form and refer client to the health facility for further consultations with provider.",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
-            }
-          }
-        }
-      },
-      {
         "key": "willingness_to_continue_with_family_planning_method",
         "type": "native_radio",
         "openmrs_entity": "concept",
@@ -533,6 +516,23 @@
   "step4": {
     "title": "End",
     "fields": [
+      {
+        "key": "not_satisfied_with_facility_given_method",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "toaster_notes",
+        "type": "toaster_notes",
+        "text": "Tell the client that she needs to return to the health facility to discuss her concerns since method received at the facility require counseling from a trained health care provider.\n\nExplain the reason for giving the referral and explain where the nearest health facility is located.\n\nInform the client that you will follow up to make sure they got the service they were referred for.\n\n Fill in the referral form and refer client to the health facility for further consultations with provider.",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_followup_counsel_relevance.yml"
+            }
+          }
+        }
+      },
       {
         "key": "used_fp_method_consistently",
         "type": "native_radio",

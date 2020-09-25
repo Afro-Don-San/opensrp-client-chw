@@ -73,6 +73,20 @@
         }
       },
       {
+        "key": "fp_start_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_start_date",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_fp_method_referral_followup_calculation.yml"
+            }
+          }
+        }
+      },
+      {
         "key": "did_the_client_get_fp_method",
         "type": "native_radio",
         "openmrs_entity": "concept",
@@ -105,20 +119,6 @@
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "give_fp_method_done",
-        "type": "hidden",
-        "calculation": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_fp_method_referral_followup_calculation.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "fp_method_given",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_method_given",
         "type": "hidden",
         "calculation": {
           "rules-engine": {
@@ -279,87 +279,91 @@
     "title": "End",
     "fields": [
       {
-        "key": "fp_method",
+        "key": "fp_method_accepted",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_method",
+        "openmrs_entity_id": "fp_method_accepted",
         "openmrs_entity_parent": "",
         "label": "ASK: Which method did you receive?\n",
         "options": [
           {
-            "key": "progestin_only_pills",
+            "key": "coc",
+            "text": "Combined oral contraceptives (COC)"
+          },
+          {
+            "key": "pop",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "pop",
             "openmrs_entity_parent": "",
             "text": "Progestin only pills"
           },
           {
             "key": "vasectomy",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "vasectomy",
             "openmrs_entity_parent": "",
             "text": "Vasectomy"
           },
           {
             "key": "male_condom",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "male_condom",
             "openmrs_entity_parent": "",
             "text": "Male Condom"
           },
           {
-            "key": "coc",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Combined Oral Contraceptives (COC)"
-          },
-          {
             "key": "tubal_ligation",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "tubal_ligation",
             "openmrs_entity_parent": "",
-            "text": "Tubal ligation"
+            "text": "Tubal Ligation"
+          },
+          {
+            "key": "emergency_contraception",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "emergency_contraception",
+            "openmrs_entity_parent": "",
+            "text": "Emergency Contraception"
           },
           {
             "key": "iud",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "iud",
             "openmrs_entity_parent": "",
             "text": "Interuterine device (IUD)"
           },
           {
             "key": "lam",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "lam",
             "openmrs_entity_parent": "",
             "text": "Lactational amenorrhea method (LAM)"
           },
           {
             "key": "implants",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "implants",
             "openmrs_entity_parent": "",
             "text": "Implants"
           },
           {
             "key": "female_condom",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "female_condom",
             "openmrs_entity_parent": "",
             "text": "Female Condom"
           },
           {
             "key": "injection",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "injection",
             "openmrs_entity_parent": "",
             "text": "Injection"
           },
           {
             "key": "sdm",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "sdm",
             "openmrs_entity_parent": "",
             "text": "Standard days method(SDM)"
           }

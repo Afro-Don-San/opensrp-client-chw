@@ -107,6 +107,18 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
                 .withJsonPayload(resupplyJsonObject.toString())
                 .build();
 
+        JSONObject fpMethodReferralJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.getPathfinderFpMethodReferral());
+        UtilsFlv.injectReferralFacilities(fpMethodReferralJsonObject);
+        BaseAncHomeVisitAction fpMethodReferral = new BaseAncHomeVisitAction.Builder(context, context.getString(R.string.fp_method_referral))
+                .withOptional(false)
+                .withDetails(null)
+                .withBaseEntityID(memberObject.getBaseEntityId())
+                .withHelper(new FpMethodRefillReferralHelper(context))
+                .withProcessingMode(BaseAncHomeVisitAction.ProcessingMode.SEPARATE)
+                .withFormName(Constants.JSON_FORM.getPathfinderFpMethodReferral())
+                .withJsonPayload(fpMethodReferralJsonObject.toString())
+                .build();
+
         JSONObject counselingJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.PathfinderFamilyPlanningFollowUpVisitUtils.getFamilyPlanningFollowupCounsel());
         injectFamilyPlaningMethod(counselingJsonObject, familyPlanningMethod, ((PathfinderFamilyPlanningFollowUpVisitActivity) context));
 
@@ -115,7 +127,7 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
                 .withDetails(null)
                 .withBaseEntityID(memberObject.getBaseEntityId())
                 .withProcessingMode(BaseAncHomeVisitAction.ProcessingMode.SEPARATE)
-                .withHelper(new CounsellingHelper(context, familyPlanningMethodTranslated, resupplyAction))
+                .withHelper(new CounsellingHelper(context, familyPlanningMethodTranslated, resupplyAction, fpMethodReferral))
                 .withFormName(Constants.JSON_FORM.PathfinderFamilyPlanningFollowUpVisitUtils.getFamilyPlanningFollowupCounsel())
                 .withJsonPayload(counselingJsonObject.toString())
                 .build();
@@ -198,10 +210,12 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
         private String client_need_refill;
         private String familyPlanningMethodTranslated;
         private BaseAncHomeVisitAction resupplyAction;
+        private BaseAncHomeVisitAction fpMethodReferral;
 
-        public CounsellingHelper(Context context, String familyPlanningMethodTranslated, BaseAncHomeVisitAction resupplyAction) {
+        public CounsellingHelper(Context context, String familyPlanningMethodTranslated, BaseAncHomeVisitAction resupplyAction, BaseAncHomeVisitAction fpMethodReferral) {
             this.context = context;
             this.resupplyAction = resupplyAction;
+            this.fpMethodReferral = fpMethodReferral;
             this.familyPlanningMethodTranslated = familyPlanningMethodTranslated;
         }
 
@@ -239,12 +253,22 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
                     if (
                             familyPlanningMethod.equalsIgnoreCase("coc") ||
                                     familyPlanningMethod.equalsIgnoreCase("pop") ||
-                                    familyPlanningMethod.equalsIgnoreCase("sdm")
+                                    familyPlanningMethod.equalsIgnoreCase("sdm") ||
+                                    familyPlanningMethod.contains("condom")
                     ) {
                         LinkedHashMap<String, BaseAncHomeVisitAction> additionalList = new LinkedHashMap<>();
                         additionalList.put(context.getString(R.string.resupply, familyPlanningMethodTranslated), resupplyAction);
                         ((PathfinderFamilyPlanningFollowUpVisitActivity) context).initializeActions(additionalList);
                     }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+                return BaseAncHomeVisitAction.Status.COMPLETED;
+            } else if ("no".equalsIgnoreCase(satisfaction_with_current_method) && (familyPlanningMethod.equalsIgnoreCase("injection") || familyPlanningMethod.equalsIgnoreCase("lam") || familyPlanningMethod.equalsIgnoreCase("implants") || familyPlanningMethod.equalsIgnoreCase("vasectomy") || familyPlanningMethod.equalsIgnoreCase("iud") || familyPlanningMethod.equalsIgnoreCase("tubal_ligation"))) {
+                try {
+                    LinkedHashMap<String, BaseAncHomeVisitAction> additionalList = new LinkedHashMap<>();
+                    additionalList.put(context.getString(R.string.fp_method_referral, familyPlanningMethodTranslated), fpMethodReferral);
+                    ((PathfinderFamilyPlanningFollowUpVisitActivity) context).initializeActions(additionalList);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }

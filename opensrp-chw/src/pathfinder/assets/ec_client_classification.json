@@ -372,6 +372,13 @@
           },
           {
             "field": "eventType",
+            "field_value": "Family Planning Method Referral Followup",
+            "creates_case": [
+              "ec_family_planning"
+            ]
+          },
+          {
+            "field": "eventType",
             "field_value": "Citizen Report Card",
             "creates_case": [
               "ec_family_planning"
