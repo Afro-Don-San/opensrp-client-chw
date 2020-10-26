@@ -3,7 +3,6 @@ package org.smartregister.chw.util;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomnavigation.LabelVisibilityMode;
@@ -58,9 +57,9 @@ public class Utils extends org.smartregister.chw.core.utils.Utils {
         return referralTypeModels;
     }
 
-    public static String toCSV(String[] list) {
+    public static String toCSV(List<String> list) {
         String result = "";
-        if (list.length > 0) {
+        if (list.size() > 0) {
             StringBuilder sb = new StringBuilder();
             for (String s : list) {
                 sb.append(s).append(", ");
@@ -125,19 +124,5 @@ public class Utils extends org.smartregister.chw.core.utils.Utils {
         }
     }
 
-
-    public static void updateToolbarTitle(Activity activity, int toolbarTextViewId) {
-        int titleResource = -1;
-        if (activity.getIntent().getExtras() != null)
-            titleResource = activity.getIntent().getExtras().getInt(CoreConstants.INTENT_KEY.TOOLBAR_TITLE, -1);
-        if (titleResource != -1) {
-            TextView toolbarTitleTextView = activity.findViewById(toolbarTextViewId);
-            if (titleResource == org.smartregister.chw.core.R.string.return_to_family_members) {
-                toolbarTitleTextView.setText(activity.getString(org.smartregister.chw.core.R.string.return_to_family_members));
-            } else {
-                toolbarTitleTextView.setText(titleResource);
-            }
-        }
-    }
 
 }

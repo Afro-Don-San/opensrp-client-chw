@@ -15,7 +15,9 @@ import org.smartregister.chw.domain.VillageDose;
 import org.smartregister.chw.util.ReportingConstants;
 import org.smartregister.repository.Repository;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -37,23 +39,30 @@ public class ReportDaoTest extends ReportDao {
     public void testExtractRecordedLocations() {
         Mockito.doReturn(database).when(repository).getReadableDatabase();
         MatrixCursor matrixCursor = new MatrixCursor(new String[]{
-                "location_id"});
-        matrixCursor.addRow(new Object[]{"d5ff0ea1-bbc5-424d-84c2-5b084e10ef90"});
+                "location_id", "provider_id"});
+        matrixCursor.addRow(new Object[]{"d5ff0ea1-bbc5-424d-84c2-5b084e10ef90", "demo"});
         Mockito.doReturn(matrixCursor).when(database).rawQuery(Mockito.any(), Mockito.any());
-        List<String> locationList = ReportDao.extractRecordedLocations();
+        HashMap<String, String> providerList = ReportDao.extractRecordedLocations();
         Mockito.verify(database).rawQuery(Mockito.anyString(), Mockito.any());
-        Assert.assertEquals(locationList.get(0), "d5ff0ea1-bbc5-424d-84c2-5b084e10ef90");
+        String expectedLocationId = null;
+        String expectedProviderId = null;
+        for (Map.Entry<String, String> entry : providerList.entrySet()) {
+            expectedLocationId = entry.getKey();
+            expectedProviderId = entry.getValue();
+        }
+        Assert.assertEquals(expectedLocationId, "d5ff0ea1-bbc5-424d-84c2-5b084e10ef90");
+        Assert.assertEquals(expectedProviderId, "demo");
     }
 
     @Test
     public void testExtractRecordedLocationsReturnsEmptyArrayList() {
         Mockito.doReturn(database).when(repository).getReadableDatabase();
         MatrixCursor matrixCursor = new MatrixCursor(new String[]{
-                "location_id"});
+                "location_id", "provider_id"});
         Mockito.doReturn(matrixCursor).when(database).rawQuery(Mockito.any(), Mockito.any());
-        List<String> locationList = ReportDao.extractRecordedLocations();
+        HashMap<String, String> providerList = ReportDao.extractRecordedLocations();
         Mockito.verify(database).rawQuery(Mockito.anyString(), Mockito.any());
-        Assert.assertEquals(locationList.size(), 0);
+        Assert.assertEquals(providerList.size(), 0);
     }
 
     @Test
@@ -63,9 +72,10 @@ public class ReportDaoTest extends ReportDao {
                 "base_entity_id"});
         matrixCursor.addRow(new Object[]{"abdb6140-d54b-49d4-89e7-6f96c839c62b"});
         Mockito.doReturn(matrixCursor).when(database).rawQuery(Mockito.any(), Mockito.any());
-        String communityId = "d5ff0ea1-bbc5-424d-84c2-5b084e10ef90";
+        ArrayList<String> communityIds = new ArrayList<>();
+        communityIds.add("d5ff0ea1-bbc5-424d-84c2-5b084e10ef90");
         Date dueDate = new DateTime().plusDays(7).toDate();
-        List<EligibleChild> eligibleChildren = ReportDao.eligibleChildrenReport(communityId, dueDate);
+        List<EligibleChild> eligibleChildren = ReportDao.eligibleChildrenReport(communityIds, dueDate);
         Mockito.verify(database).rawQuery(Mockito.anyString(), Mockito.any());
         Assert.assertEquals(eligibleChildren.get(0).getID(), "abdb6140-d54b-49d4-89e7-6f96c839c62b");
     }
@@ -76,26 +86,26 @@ public class ReportDaoTest extends ReportDao {
         MatrixCursor matrixCursor = new MatrixCursor(new String[]{
                 "base_entity_id"});
         Mockito.doReturn(matrixCursor).when(database).rawQuery(Mockito.any(), Mockito.any());
-        String communityId = "d5ff0ea1-bbc5-424d-84c2-5b084e10ef90";
+        ArrayList<String> communityIds = new ArrayList<>();
+        communityIds.add("d5ff0ea1-bbc5-424d-84c2-5b084e10ef90");
         Date dueDate = new DateTime().plusDays(7).toDate();
-        List<EligibleChild> eligibleChildren = ReportDao.eligibleChildrenReport(communityId, dueDate);
+        List<EligibleChild> eligibleChildren = ReportDao.eligibleChildrenReport(communityIds, dueDate);
         Mockito.verify(database).rawQuery(Mockito.anyString(), Mockito.any());
         Assert.assertEquals(eligibleChildren.size(), 0);
     }
 
     @Test
-    public void testVillageDosesReport() {
+    public void testVillageDosesReportSummary() {
         Mockito.doReturn(database).when(repository).getReadableDatabase();
         MatrixCursor matrixCursor = new MatrixCursor(new String[]{
                 "scheduleName"});
         matrixCursor.addRow(new Object[]{"ROTA 1"});
         Mockito.doReturn(matrixCursor).when(database).rawQuery(Mockito.any(), Mockito.any());
         String villageName = "Grenaligne";
-        String communityId = "d5ff0ea1-bbc5-424d-84c2-5b084e10ef90";
         Date dueDate = new DateTime().plusDays(7).toDate();
         Map<String, Integer> map = new TreeMap<>();
-        map.put("ROTA", 0);
-        List<VillageDose> villageDoseList = ReportDao.villageDosesReport(villageName, communityId, dueDate);
+        map.put("ROTA 1", 0);
+        List<VillageDose> villageDoseList = ReportDao.villageDosesReportSummary(villageName, dueDate);
         Mockito.verify(database).rawQuery(Mockito.anyString(), Mockito.any());
         Assert.assertEquals(villageDoseList.get(0).getRecurringServices(), map);
     }
