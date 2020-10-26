@@ -34,24 +34,24 @@ condition: "step5_ever_used_a_fp_method_previously =='yes'"
 actions:
   - "isRelevant = true"
 ---
-name: step8_side_effects
-description: side_effects relevance
-priority: 1
-condition: "step7_reasons_for_stopping_fp.contains('side_effects')"
-actions:
-  - "isRelevant = true"
----
-name: step9_reasons_for_not_currently_using_family_planning
+name: step8_reasons_for_not_currently_using_family_planning
 description: reasons_for_not_currently_using_family_planning relevance
 priority: 1
 condition: "step2_is_client_already_using_fp =='no'"
 actions:
   - "isRelevant = true"
 ---
+name: step9_side_effects
+description: side_effects relevance
+priority: 1
+condition: "step7_reasons_for_stopping_fp.contains('side_effects') || step8_reasons_for_not_currently_using_family_planning.contains('side_effects')"
+actions:
+  - "isRelevant = true"
+---
 name: step9_other_reasons
 description: other_reasons relevance
 priority: 1
-condition: "step9_reasons_for_not_currently_using_family_planning.contains('other')"
+condition: "step8_reasons_for_not_currently_using_family_planning.contains('other') || step7_reasons_for_stopping_fp.contains('other')"
 actions:
   - "isRelevant = true"
 ---

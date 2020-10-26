@@ -486,8 +486,124 @@
     ]
   },
   "step8": {
-    "title": "Side effects",
+    "title": "Reasons for not using Family planning",
     "next": "step9",
+    "fields": [
+      {
+        "key": "reasons_for_not_currently_using_family_planning",
+        "type": "check_box",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "reasons_for_not_currently_using_family_planning",
+        "openmrs_entity_parent": "",
+        "label": "Why is the client not using a family planning method to prevent pregnancy?\nListen to what the woman says then select the appropriate responses.\nDo not read the answers",
+        "options": [
+          {
+            "key": "not_having_sex",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Not having sex/infrequent sex"
+          },
+          {
+            "key": "not_menstruated_since_last_birth",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Not menstruated since last birth"
+          },
+          {
+            "key": "brestfeeding",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Brestfeeding"
+          },
+          {
+            "key": "respondent_opposed",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Respondent opposed "
+          },
+          {
+            "key": "religious_prohibition",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Religious prohibition"
+          },
+          {
+            "key": "knows_no_method",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Knows no method"
+          },
+          {
+            "key": "side_effects",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Side effects/health concerns"
+          },
+          {
+            "key": "lack_of_access",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Lack of access/too far"
+          },
+          {
+            "key": "no_method_available",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "No method available"
+          },
+          {
+            "key": "other",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "other"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please choose all that apply"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_registration_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "other_reasons",
+        "type": "edit_text",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_reasons",
+        "openmrs_entity_parent": "",
+        "hint": "Other Reasons",
+        "v_required": {
+          "value": "true",
+          "err": "Please enter other reasons"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_registration_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step9": {
+    "title": "Side effects",
+    "next": "step10",
     "fields": [
       {
         "key": "side_effects",
@@ -564,122 +680,6 @@
         "v_required": {
           "value": "true",
           "err": "Please choose all that apply"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_family_planning_registration_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step9": {
-    "title": "Reasons for not using Family planning",
-    "next": "step10",
-    "fields": [
-      {
-        "key": "reasons_for_not_currently_using_family_planning",
-        "type": "check_box",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "reasons_for_not_currently_using_family_planning",
-        "openmrs_entity_parent": "",
-        "label": "Why is the client not using a family planning method to prevent pregnancy?\nListen to what the woman says then select the appropriate responses.\nDo not read the answers",
-        "options": [
-          {
-            "key": "not_having_sex",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Not having sex/infrequent sex"
-          },
-          {
-            "key": "not_menstruated_since_last_birth",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Not menstruated since last birth"
-          },
-          {
-            "key": "brestfeeding",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Brestfeeding"
-          },
-          {
-            "key": "respondent_opposed",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Respondent opposed "
-          },
-          {
-            "key": "religious_prohibition",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Religious prohibition"
-          },
-          {
-            "key": "knows_no_method",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Knows no method"
-          },
-          {
-            "key": "health_concerns",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Side effects/health concerns"
-          },
-          {
-            "key": "lack_of_access",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Lack of access/too far"
-          },
-          {
-            "key": "no_method_available",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "No method available"
-          },
-          {
-            "key": "other",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "other"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please choose all that apply"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_family_planning_registration_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "other_reasons",
-        "type": "edit_text",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "other_reasons",
-        "openmrs_entity_parent": "",
-        "hint": "Other Reasons",
-        "v_required": {
-          "value": "true",
-          "err": "Please enter other reasons"
         },
         "relevance": {
           "rules-engine": {
