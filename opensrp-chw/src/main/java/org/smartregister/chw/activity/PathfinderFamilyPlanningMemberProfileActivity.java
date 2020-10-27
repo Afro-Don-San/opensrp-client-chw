@@ -14,8 +14,10 @@ import com.adosa.opensrp.chw.fp.dao.PathfinderFpDao;
 import com.adosa.opensrp.chw.fp.domain.PathfinderFpMemberObject;
 import com.adosa.opensrp.chw.fp.util.PathfinderFamilyPlanningConstants;
 
+import org.apache.commons.lang3.StringUtils;
 import org.json.JSONObject;
 import org.smartregister.chw.R;
+import org.smartregister.chw.application.ChwApplication;
 import org.smartregister.chw.core.activity.CorePathfinderFamilyPlanningMemberProfileActivity;
 import org.smartregister.chw.core.custom_views.CorePathfinderFamilyPlanningFloatingMenu;
 import org.smartregister.chw.core.interactor.CorePathfinderFamilyPlanningProfileInteractor;
@@ -264,6 +266,29 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends CorePathfinde
         LinearLayout.LayoutParams linearLayoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.MATCH_PARENT);
         addContentView(fpFloatingMenu, linearLayoutParams);
+    }
+
+    @Override
+    public void setFamilyLocation() {
+        if (ChwApplication.getApplicationFlavor().hasFamilyLocationRow() && !StringUtils.isBlank(pathfinderFpMemberObject.getGps())) {
+            viewFamilyLocationRow.setVisibility(View.VISIBLE);
+            rlFamilyLocation.setVisibility(View.VISIBLE);
+        }
+    }
+
+    @Override
+    public void openFamilyLocation() {
+        Timber.e("Start map activity");
+        Intent intent = new Intent(this, PathfinderFpMapActivity.class);
+        intent.putExtra(CoreConstants.KujakuConstants.LAT_LNG, pathfinderFpMemberObject.getGps());
+        intent.putExtra(CoreConstants.KujakuConstants.LAND_MARK, pathfinderFpMemberObject.getLandmark());
+        intent.putExtra(CoreConstants.KujakuConstants.NAME, org.smartregister.chw.core.utils.Utils.getName(pathfinderFpMemberObject.getFirstName(), pathfinderFpMemberObject.getMiddleName() + " " + pathfinderFpMemberObject.getLastName()));
+        intent.putExtra(CoreConstants.KujakuConstants.FAMILY_NAME, pathfinderFpMemberObject.getFamilyName());
+        intent.putExtra(CoreConstants.KujakuConstants.ANC_WOMAN_PHONE, pathfinderFpMemberObject.getPhoneNumber());
+        intent.putExtra(CoreConstants.KujakuConstants.ANC_WOMAN_FAMILY_HEAD, pathfinderFpMemberObject.getFamilyHeadName());
+        intent.putExtra(CoreConstants.KujakuConstants.ANC_WOMAN_FAMILY_HEAD_PHONE, pathfinderFpMemberObject.getFamilyHeadPhoneNumber());
+        intent.putExtra(CoreConstants.DB_CONSTANTS.BASE_ENTITY_ID, pathfinderFpMemberObject.getBaseEntityId());
+        this.startActivity(intent);
     }
 }
 

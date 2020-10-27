@@ -17,6 +17,7 @@ public interface RepositoryUtils {
     String ADD_MISSING_REPORTING_COLUMN = "ALTER TABLE 'indicator_queries' ADD COLUMN expected_indicators TEXT NULL;";
     String FAMILY_MEMBER_ADD_REASON_FOR_REGISTRATION = "ALTER TABLE 'ec_family_member' ADD COLUMN reasons_for_registration TEXT NULL;";
     String EC_REFERRAL_ADD_FP_METHOD_COLUMN = "ALTER TABLE 'ec_referral' ADD COLUMN fp_method_accepted_referral TEXT NULL;";
+    String ADD_VISIT_GROUP_COLUMN = "ALTER TABLE 'visits' ADD COLUMN visit_group TEXT NULL;";
 
     String[] UPDATE_REPOSITORY_TYPES = {
             "UPDATE recurring_service_types SET service_group = 'woman' WHERE type = 'IPTp-SP';",

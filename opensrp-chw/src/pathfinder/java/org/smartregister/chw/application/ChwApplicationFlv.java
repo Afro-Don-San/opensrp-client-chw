@@ -64,4 +64,9 @@ public class ChwApplicationFlv extends DefaultChwApplicationFlv {
     public boolean hasStockUsageReport() {
         return false;
     }
+
+    @Override
+    public boolean hasFamilyLocationRow() {
+        return true;
+    }
 }
