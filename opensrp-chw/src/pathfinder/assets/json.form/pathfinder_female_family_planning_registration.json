@@ -122,6 +122,21 @@
           "value": "true",
           "err": "Please select one choice"
         }
+      },
+      {
+        "key": "fp_start_date",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_start_date",
+        "type": "edit_text",
+        "hidden": "true",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "family_planning_registration_calculation.yml"
+            }
+          }
+        }
       }
     ]
   },
@@ -264,6 +279,20 @@
           "rules-engine": {
             "ex-rules": {
               "rules-file": "pathfinder_family_planning_registration_relevance.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "fp_method_accepted",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_method_accepted",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "family_planning_registration_calculation.yml"
             }
           }
         }
@@ -845,6 +874,20 @@
             }
           }
         }
+      },
+      {
+        "key": "ecp",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "ecp",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "family_planning_registration_calculation.yml"
+            }
+          }
+        }
       }
     ]
   },
@@ -854,7 +897,7 @@
       {
         "key": "joining_family_planning_counselling",
         "openmrs_entity_parent": "",
-        "openmrs_entity": "person_attribute",
+        "openmrs_entity": "concept",
         "openmrs_entity_id": "joining_family_planning_counselling",
         "type": "toaster_notes",
         "text": "if the client is comfortable, encourage other family members to join.",
@@ -961,49 +1004,6 @@
           "rules-engine": {
             "ex-rules": {
               "rules-file": "pathfinder_family_planning_registration_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "ecp",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "ecp",
-        "type": "hidden",
-        "calculation": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "family_planning_registration_calculation.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "fp_start_date",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_start_date",
-        "type": "edit_text",
-        "hidden": "true",
-        "calculation": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "family_planning_registration_calculation.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "fp_method_accepted",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_method_accepted",
-        "type": "hidden",
-        "calculation": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "family_planning_registration_calculation.yml"
             }
           }
         }

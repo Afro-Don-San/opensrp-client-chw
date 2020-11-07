@@ -6,23 +6,25 @@ condition: "true"
 actions:
   - "calculation = helper.getDateToday()"
 ---
-name: step12_ecp
-description: calculate ecp
+name: step2_fp_start_date
+description: calculate fp start date
 priority: 1
-condition: "true"
+condition: "step2_is_client_already_using_fp =='yes'"
 actions:
-  - "calculation = (step4_continue_to_receive_fp_services =='yes' || step10_does_client_want_to_know_more_about_fp =='yes' || step10_does_the_client_want_to_receive_fp_services== 'yes') ? 1 : 0"
+  - "calculation = System.currentTimeMillis()"
 ---
-name: step12_fp_method_accepted
+name: step4_fp_method_accepted
 description: calculate fp method accepted
 priority: 1
 condition: "step2_is_client_already_using_fp =='yes'"
 actions:
   - "calculation =  step3_fp_method_in_use"
+
 ---
-name: step12_fp_start_date
-description: calculate fp start date
+name: step11_ecp
+description: calculate ecp
 priority: 1
-condition: "step2_is_client_already_using_fp =='yes'"
+condition: "true"
 actions:
-  - "calculation = System.currentTimeMillis() "
+  - "calculation = (step4_continue_to_receive_fp_services =='yes' || step10_does_client_want_to_know_more_about_fp =='yes' || step10_does_the_client_want_to_receive_fp_services== 'yes') ? 1 : 0"
+
