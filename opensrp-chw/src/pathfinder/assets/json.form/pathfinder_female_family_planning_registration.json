@@ -717,6 +717,25 @@
             }
           }
         }
+      },
+      {
+        "key": "other_side_effects",
+        "type": "edit_text",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_side_effects",
+        "openmrs_entity_parent": "",
+        "hint": "Other side effects",
+        "v_required": {
+          "value": "true",
+          "err": "Please fill in the other side effects\n"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_registration_relevance.yml"
+            }
+          }
+        }
       }
     ]
   },

@@ -718,6 +718,25 @@
           "value": "true",
           "err": "Chagua zote zinazotumika"
         }
+      },
+      {
+        "key": "other_side_effects",
+        "type": "edit_text",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_side_effects",
+        "openmrs_entity_parent": "",
+        "hint": "Maudhi mengine",
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jaza maudhi mwingine\n"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_registration_relevance.yml"
+            }
+          }
+        }
       }
     ]
   },
