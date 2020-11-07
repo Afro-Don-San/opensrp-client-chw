@@ -198,7 +198,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "knows_lmp",
         "openmrs_entity_parent": "",
-        "label": "Je, unakumbuka tarehe ya kuanza siku yako yahedhi kwa mara ya mwisho? ",
+        "label": "Je, unakumbuka tarehe ya kuanza siku yako ya hedhi kwa mara ya mwisho? ",
         "options": [
           {
             "key": "yes",
@@ -233,7 +233,7 @@
         "openmrs_entity": "person",
         "openmrs_entity_id": "lmp",
         "type": "date_picker",
-        "hint": "Uliza:Je Tarehe yako ya kuanza siku yako yahedhi ya mara ya mwisho ilikuwa lini?",
+        "hint": "Uliza:Je Tarehe yako ya kuanza siku yako ya hedhi ya mara ya mwisho ilikuwa lini?",
         "expanded": false,
         "duration": {
           "label": "Makadirio ya umri wa mimba kwa wiki"
@@ -379,7 +379,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Mwambie mteja aendelee kuhudhuria na kufuata ushauri wa mhudumu wa afya kwa manufaa yaujauzito na afya yake.",
+        "text": "Mwambie mteja aendelee kuhudhuria na kufuata ushauri wa mhudumu wa afya kwa manufaa ya ujauzito na afya yake.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -396,7 +396,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Muulize sababu na mwelezee umuhimu wa kudhuria kliniki mapema kwa manufaa ya ujauzitona afya yake.\nMwambie mteja utampa rufaa aende kituo cha kutolea huduma za afya kwa ajili ya huduma ya afya ya uzazi.\n",
+        "text": "Muulize sababu na mwelezee umuhimu wa kuhudhuria kliniki mapema kwa manufaa ya ujauzito na afya yake.\n\nMwambie mteja utampa rufaa aende kituo cha kutolea huduma za afya kwa ajili ya huduma ya afya ya uzazi.\n",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -512,7 +512,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "has_had_a_baby_in_the_last_6_months",
         "openmrs_entity_parent": "",
-        "label": "Je, umepata mtoto ndaniya miezi 6 iliopita?",
+        "label": "Je, umepata mtoto ndani ya miezi 6 iliyopita?",
         "options": [
           {
             "key": "yes",
@@ -734,7 +734,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Mueleze mteja kutokana majibu yake hujaweza hujaweza kuhakikisha kama yeye si mjamzito.\nMwambie mteja haitwezekana kumpatia huduma ya uzazi wampango kwa sasa.",
+        "text": "Mueleze mteja kutokana majibu yake hujaweza kuhakikisha kama yeye si mjamzito.\nMwambie mteja haitwezekana kumpatia huduma ya uzazi wampango kwa sasa.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -758,7 +758,7 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "receive_pregnancy_test_referral",
             "openmrs_entity_parent": "",
-            "text": "Kwendakwenye kituo cha kutolea huduma za afya kupima endapo ana ujauzito"
+            "text": "Kwenda kwenye kituo cha kutolea huduma za afya kupima endapo ana ujauzito"
           },
           {
             "key": "wait_for_next_visit",
@@ -825,7 +825,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Jadili na mteja umuhimu wa kutumia kondomu mpaka atakapopata uhakika kwamba simjamzito.\nMpatiemteja kondomu.",
+        "text": "Jadili na mteja umuhimu wa kutumia kondomu mpaka atakapopata uhakika kwamba simjamzito.\n\nMpatie mteja kondomu.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {

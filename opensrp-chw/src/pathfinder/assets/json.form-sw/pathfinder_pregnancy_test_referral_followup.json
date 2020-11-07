@@ -77,7 +77,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "did_the_client_get_pregnancy_test",
         "type": "native_radio",
-        "label": "Ulipewa rufaa kwenda kituo chakutolea huduma za afya kwa ajili ya kupima ujauzito.\nJe ulifanikiwa kupima ujauzito?",
+        "label": "Ulipewa rufaa kwenda kituo cha kutolea huduma za afya kwa ajili ya kupima ujauzito.\nJe ulifanikiwa kupima ujauzito?",
         "options": [
           {
             "key": "yes",
@@ -147,7 +147,7 @@
         "openmrs_entity": "person",
         "openmrs_entity_id": "edd_from_facility",
         "type": "date_picker",
-        "hint": "Je, unakumbuka tarehe ya kuanza siku yako yahedhi kwa mara ya mwisho",
+        "hint": "Je, unakumbuka tarehe ya kuanza siku yako ya hedhi kwa mara ya mwisho",
         "expanded": false,
         "duration": {
           "label": "Time till Delivery"
@@ -289,7 +289,7 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "method_not_available",
             "openmrs_entity_parent": "",
-            "text": "Njia niliyochagua haikuwepo"
+            "text": "Njia niliyo chagua haikuwepo"
           },
           {
             "key": "no_skilled_service_providers",
@@ -329,14 +329,14 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "try_to_get_a_pregnancy_test",
             "openmrs_entity_parent": "",
-            "text": "Endeleakujaribu kupata vipimo vya ujauzito kutoka kwenye kituo cha kutolea huduma zaafya."
+            "text": "Endelea kujaribu kupata vipimo vya ujauzito kutoka kwenye kituo cha kutolea huduma za afya."
           },
           {
             "key": "complete_pregnancy_screening_questions",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "complete_pregnancy_screening_questions",
             "openmrs_entity_parent": "",
-            "text": "Maliziamaswali ya uchunguzi wa ujauzito ili kujua mteja ni mjamzito bila kupima ujauzito."
+            "text": "Malizia maswali ya uchunguzi wa ujauzito ili kujua mteja ni mjamzito bila kupima ujauzito."
           }
         ],
         "v_required": {
@@ -357,7 +357,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Jadiliana na mteja jinsi ya kumsaidiaafanikishe rufaa.\nMwambie mteja kwamba utafuatilia ndaniya wiki moja kuhakikisha amepata huduma kulingana na rufa yake.",
+        "text": "Jadiliana na mteja jinsi ya kumsaidiaafanikishe rufaa.\nMwambie mteja kwamba utafuatilia ndani ya wiki moja kuhakikisha amepata huduma kulingana na rufa yake.",
         "toaster_type": "info",
         "relevance": {
           "rules-engine": {

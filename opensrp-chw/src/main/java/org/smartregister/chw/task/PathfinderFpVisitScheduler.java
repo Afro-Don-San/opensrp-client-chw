@@ -41,7 +41,7 @@ public class PathfinderFpVisitScheduler extends BaseTaskExecutor {
             return new ArrayList<>();
         Date lastVisitDate = null;
         Visit lastVisit;
-        lastVisit = PathfinderFpDao.getLatestFpVisit(baseEntityID, PathfinderFamilyPlanningConstants.EventType.GIVE_FAMILY_PLANNING_METHOD, fpMethod);
+        lastVisit = PathfinderFpDao.getLatestFpVisit(baseEntityID);
         if (lastVisit == null) {
             lastVisit = PathfinderFpDao.getLatestFpVisit(baseEntityID, PathfinderFamilyPlanningConstants.EventType.FAMILY_PLANNING_REGISTRATION, fpMethod);
         }

@@ -99,7 +99,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Mweleze mteja umuhimu na faida za kutumia njia za uzazi wa mpango kwake yeye binafsi, familia yake na jamaii kwa ujumla. \nMwambie mteja kuna njia nyingi za uzazi wa mpango ambazo utamuelezea na kumsaidia kuchagua kulingana na mahitaji yake.\nMwambie mteja kuwa anayo haki ya kuchagua njia ya uzazi wa mpango anayoipenda.",
+        "text": "Mweleze mteja umuhimu na faida za kutumia njia za uzazi wa mpango kwake yeye binafsi, familia yake na jamaii kwa ujumla. \n\nMwambie mteja kuna njia nyingi za uzazi wa mpango ambazo utamuelezea na kumsaidia kuchagua kulingana na mahitaji yake.\n\nMwambie mteja kuwa anayo haki ya kuchagua njia ya uzazi wa mpango anayoipenda.",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }
@@ -115,14 +115,14 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Muonyeshe mteja kadi za uzazi wa mpango kwa mpangilio ufuatao.\n\n\n*Ufanisi mkubwa zaidi\n(Kitanzi, Kipandikizi)\n\n*Ufanisi mkubwa\n(Vichocheo viwili (COC), Kichocheo kimoja (POP), Sindano, Njia ya kunyonyesha)\n\n*Ufanisi\n(Kondom yakiume, Kondom ya kike, Njia ya kuhesabu siku kwa kutukia shanga)\n\n*Njia za Kudumu\n(Kufunga uzazi kwa wanaume, Kufunga uzazi kwa wanawake)",
+        "text": "Muonyeshe mteja kadi za uzazi wa mpango kwa mpangilio ufuatao.\n\n\n*Ufanisi mkubwa zaidi\n(Kitanzi, Kipandikizi)\n\n*Ufanisi mkubwa\n(Vichocheo viwili (COC), Kichocheo kimoja (POP), Sindano, Njia ya kunyonyesha)\n\n*Ufanisi\n(Kondomu ya kiume, Kondom ya kike, Njia ya kuhesabu siku kwa kutumia shanga)\n\n*Njia za Kudumu\n(Kufunga uzazi kwa wanaume, Kufunga uzazi kwa wanawake)",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }
     ]
   },
   "step3": {
-    "title": "Maelezo ya njia za uzaziwa mpango",
+    "title": "Maelezo ya njia za uzazi wa mpango",
     "next": "step4",
     "fields": [
       {
@@ -163,7 +163,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Njia zeneye ufanisi \n\n*Kodomu za kiume\n\n*Kodomu za kike\n*Njia ya kuhesabu siku kwa kutukia shanga",
+        "text": "Njia zenya ufanisi \n\n*Kodomu za kiume\n\n*Kodomu za kike\n*Njia ya kuhesabu siku kwa kutumia shanga",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }

@@ -85,7 +85,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "introduction_notes",
         "type": "toaster_notes",
-        "text": "Mimi ni mhudumu wa afya ngazi jamii nafanya kazichini ya mradi wa Tuungane /EENT amabo unajumuisha maeneo makuu matatu, watu,afya, na mazingira, kwa kifupi mradi huu unaitwa PHE. Mradi huu unafanyakazi kuboresha afya ya familia kwa ujumla, afya ya mazingira na pia kukabiliana namahitaji ya Maisha. Mjadala wetu leo utakuwa juu ya uzazi wa mpango lakini naweza pia kukuuganisha na huduma nyingine zinazotewa na mradi kwa maelezo Zaidi.",
+        "text": "Mimi ni mhudumu wa afya ngazi ya jamii nafanya kazi chini ya mradi wa Tuungane / EENT /LCWT ambao unajumuisha maeneo makuu matatu, watu, afya, na mazingira. Kwa kifupi mradi huu unaitwa PHE. \n\nMradi huu unafanya kazi kuboresha afya ya familia kwa ujumla, afya ya mazingira na pia kukabiliana na mahitaji ya Maisha. \n\nMjadala wetu leo utakuwa juu ya uzazi wa mpango, pia naweza kukuuganisha na huduma nyingine zinazotewa na mradi kwa maelezo zaidi.",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }
@@ -97,11 +97,11 @@
     "fields": [
       {
         "key": "is_client_already_using_fp",
-        "openmrs_entity_parent": "",
+        "type": "native_radio",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "is_client_already_using_fp",
-        "type": "native_radio",
-        "label": "Je, unatumia njia yoyote ya uzazi wampango kwa sasa?",
+        "openmrs_entity_parent": "",
+        "label": "Is the client already using a family planning method?",
         "options": [
           {
             "key": "yes",
@@ -120,7 +120,7 @@
         ],
         "v_required": {
           "value": "true",
-          "err": "Tafadhali chagua jibu mojawapo"
+          "err": "Please select one choice"
         }
       }
     ]
@@ -156,7 +156,7 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "coc",
             "openmrs_entity_parent": "",
-            "text": "Vichocheoviwili (COC)"
+            "text": "Vichocheo viwili (COC)"
           },
           {
             "key": "vasectomy",
@@ -240,7 +240,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "continue_to_receive_fp_services",
         "openmrs_entity_parent": "",
-        "label": "Je,ungependa niendelee kukufanyia ufatiliaji kukusaidia katika matumizi ya uzaziwa mpango?",
+        "label": "Je, ungependa niendelee kukufanyia ufatiliaji kukusaidia katika matumizi ya uzazi wa mpango?",
         "options": [
           {
             "key": "yes",
@@ -288,7 +288,7 @@
             }
           }
         },
-        "label": "Je, umeshawahi kutumianjia yoyote ya uzazi wa mpango?",
+        "label": "Je, umeshawahi kutumia njia yoyote ya uzazi wa mpango?",
         "options": [
           {
             "key": "yes",
@@ -455,7 +455,7 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "side_effects",
             "openmrs_entity_parent": "",
-            "text": "Nilipata maudhi madogo madogo "
+            "text": "Nilipata maudhi madogo madogo"
           },
           {
             "key": "afraid_of_not_getting_pregnant",
@@ -469,7 +469,7 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
-            "text": "Watoa huduma kituoni hawakunihudumia vizuri"
+            "text": "Watoa huduma kituoni hawakuni hudumia vizuri"
           },
           {
             "key": "other",
@@ -487,8 +487,124 @@
     ]
   },
   "step8": {
-    "title": "Maudhi gani madogo madogo",
+    "title": "Sababu za kutokutumia uzazi wampango",
     "next": "step9",
+    "fields": [
+      {
+        "key": "reasons_for_not_currently_using_family_planning",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "reasons_for_not_currently_using_family_planning",
+        "type": "check_box",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_registration_relevance.yml"
+            }
+          }
+        },
+        "label": "Tafadhali nieleze kwa nini hutuminjia yoyote ya uzazi wa mpango?\nSikiliza kile mteja anachosema na kishachagua majibu sahihi. Usisome majibu.",
+        "options": [
+          {
+            "key": "not_having_sex",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Kutokufanya ngono kabisa/kutokufanya ngono mara kwa mara"
+          },
+          {
+            "key": "not_menstruated_since_last_birth",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Kutokuwa na hedhi tangu kujifungua mara ya mwisho"
+          },
+          {
+            "key": "brestfeeding",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Nanyonyesha "
+          },
+          {
+            "key": "respondent_opposed",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Mteja anapinga "
+          },
+          {
+            "key": "religious_prohibition",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Sababu za kidini"
+          },
+          {
+            "key": "knows_no_method",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Ukosefu wa elimu juu ya njia za mpango"
+          },
+          {
+            "key": "side_effects",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "side_effects",
+            "openmrs_entity_parent": "",
+            "text": "Maudhi madogo madogo"
+          },
+          {
+            "key": "lack_of_access",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Umbali hadi kufikia huduma"
+          },
+          {
+            "key": "no_method_available",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Ukosefu wanjia za uzazi wa mpango"
+          },
+          {
+            "key": "other",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Nyingine"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Hakikisha unachagua jibu sahihi"
+        }
+      },
+      {
+        "key": "other_reasons",
+        "type": "edit_text",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "other_reasons",
+        "openmrs_entity_parent": "",
+        "hint": "Other Reasons",
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali ingiza sababu nyingine"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_registration_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step9": {
+    "title": "Maudhi gani madogo madogo",
+    "next": "step10",
     "fields": [
       {
         "key": "side_effects",
@@ -503,7 +619,7 @@
             }
           }
         },
-        "label": "Je, ni maudhi gani madogo madogo ambayouliyapata? Chagua zote zinazotumika.",
+        "label": "Je, ni maudhi gani madogo madogo ambayo uliyapata? Chagua zote zinazotumika.",
         "options": [
           {
             "key": "heavy_bleedind",
@@ -576,122 +692,6 @@
       }
     ]
   },
-  "step9": {
-    "title": "Sababu za kutokutumia uzazi wampango",
-    "next": "step10",
-    "fields": [
-      {
-        "key": "reasons_for_not_currently_using_family_planning",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "reasons_for_not_currently_using_family_planning",
-        "type": "check_box",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_family_planning_registration_relevance.yml"
-            }
-          }
-        },
-        "label": "Tafadhali nieleze kwa nini hutuminjia yoyote ya uzazi wa mpango?\nSikiliza kile mteja anachosema na kishachagua majibu sahihi. Usisome majibu.",
-        "options": [
-          {
-            "key": "not_having_sex",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Kutokufanya ngono kabisa/kutokufanya ngono mara kwa mara"
-          },
-          {
-            "key": "not_menstruated_since_last_birth",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Kutokuwa na hedhi tangu kujifungua mara ya mwisho"
-          },
-          {
-            "key": "brestfeeding",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Nanyonyesha "
-          },
-          {
-            "key": "respondent_opposed",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Mteja anapinga "
-          },
-          {
-            "key": "religious_prohibition",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Sababu za kidini"
-          },
-          {
-            "key": "knows_no_method",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Ukosefu wa elimu juu ya njia za mpango"
-          },
-          {
-            "key": "health_concerns",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Maudhi madogo madogo"
-          },
-          {
-            "key": "lack_of_access",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Umbali hadi kufikia huduma"
-          },
-          {
-            "key": "no_method_available",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Ukosefu wanjia za uzazi wa mpango"
-          },
-          {
-            "key": "other",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Nyingine"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        }
-      },
-      {
-        "key": "other_reasons",
-        "type": "edit_text",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "other_reasons",
-        "openmrs_entity_parent": "",
-        "hint": "Other Reasons",
-        "v_required": {
-          "value": "true",
-          "err": "Tafadhali ingiza sababu nyingine"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_family_planning_registration_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
   "step10": {
     "title": "Jifunze zaidi kuhusu uzazi wa mpango ",
     "next": "step11",
@@ -709,7 +709,7 @@
             }
           }
         },
-        "label": "Je, utapenda kufahamu Zaidi juu yanjia za uzazi wa mpango?",
+        "label": "Je, utapenda kufahamu zaidi juu ya njia za uzazi wa mpango?",
         "options": [
           {
             "key": "yes",
@@ -904,17 +904,17 @@
           },
           {
             "key": "co_wife",
-            "text": "Mke mwanza ",
+            "text": "Mke mwenza ",
             "value": false
           },
           {
             "key": "other",
-            "text": "Nyingine",
+            "text": "Wengine",
             "value": false
           },
           {
             "key": "none",
-            "text": "Hamna Kati ya hizi (hawa)",
+            "text": "Hamna kati ya hawa",
             "value": false
           }
         ],

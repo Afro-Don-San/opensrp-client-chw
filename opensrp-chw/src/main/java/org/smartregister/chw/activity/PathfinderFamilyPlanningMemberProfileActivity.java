@@ -278,7 +278,6 @@ public class PathfinderFamilyPlanningMemberProfileActivity extends CorePathfinde
 
     @Override
     public void openFamilyLocation() {
-        Timber.e("Start map activity");
         Intent intent = new Intent(this, PathfinderFpMapActivity.class);
         intent.putExtra(CoreConstants.KujakuConstants.LAT_LNG, pathfinderFpMemberObject.getGps());
         intent.putExtra(CoreConstants.KujakuConstants.LAND_MARK, pathfinderFpMemberObject.getLandmark());

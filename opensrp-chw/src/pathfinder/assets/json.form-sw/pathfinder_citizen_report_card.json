@@ -78,7 +78,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "not_satisfied_with_chw_given_method",
         "type": "toaster_notes",
-        "text": "Muulize mteja alijionaje ulipompatia rufaa ya kwenda kupatiwa njia ya uzazi wa \nmpango.\nJadili na mteja kujua alihudumiwa vipi kituoni vibaya au vizuri na kwanini?.\nMwambie mteja utamuuliza maswali machache kujua hali ya huduma aliopatiwa wakati alipotaka kukamilisha rufaa.\nMsisitize mteja kuwa taarifa hizi zitakuwa za siri na zitasaidia kuboresha huduma kwenye vituo vya kutolea huduma za afya.\nMwambie mteja kwamba tunaweza kuboresha huduma kama tutapata majibu ya ukweli kutoka kwa uzoefu wa huduma wanazopatiwa wateja hata kama walihudumiwa vibaya.",
+        "text": "Muulize mteja alijionaje ulipo mpatia rufaa ya kwenda kupatiwa njia ya uzazi wa mpango.\n\nJadili na mteja kujua alihudumiwa vipi kituoni, vibaya au vizuri na kwanini?.\n\nMwambie mteja utamuuliza maswali machache kujua hali ya huduma aliyopatiwa wakati alipotaka kukamilisha rufaa.\n\nMsisitize mteja kuwa taarifa hizi zitakuwa za siri na zitasaidia kuboresha huduma kwenye vituo vya kutolea huduma za afya.\n\nMwambie mteja kwamba tunaweza kuboresha huduma kama tutapata majibu ya ukweli kutoka kwa uzoefu wa huduma wanazopatiwa wateja hata kama walihudumiwa vibaya.\n\nMsisite mteja kuwa wazi na mkweli wakati nanajibu maswali",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }
@@ -147,7 +147,7 @@
     ]
   },
   "step4": {
-    "title": "Demographics",
+    "title": "Taarifa za mteja",
     "next": "step5",
     "fields": [
       {
@@ -1169,14 +1169,14 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
-            "text": "Kuhesabusiku"
+            "text": "Kuhesabu siku"
           },
           {
             "key": "lam",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
-            "text": "Njiaya kunyonyesha (LAM)"
+            "text": "Njia ya kunyonyesha (LAM)"
           },
           {
             "key": "emergency_contraception",

@@ -286,7 +286,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "used_fp_method_consistently",
         "openmrs_entity_parent": "",
-        "label": "Je umekuwa ukitumia njiaya uzazi wa mpango ipasavyo kila siku katika mwezi uliopita?",
+        "label": "Je umekuwa ukitumia njia ya uzazi wa mpango ipasavyo kila siku katika mwezi uliopita?",
         "options": [
           {
             "key": "yes",

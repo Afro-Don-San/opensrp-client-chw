@@ -815,7 +815,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "162881AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
         "type": "date_picker",
-        "hint": "Tarehe ya sindano iliopita",
+        "hint": "Tarehe ya sindano iliyopita",
         "max_date": "today",
         "relevance": {
           "rules-engine": {

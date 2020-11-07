@@ -85,7 +85,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "introduction_notes",
         "type": "toaster_notes",
-        "text": "I am a community health worker of this village under the Tuungane / EENT project that combines health, family planning and natural resource management in short called PHE.\n\nThe project works to improve overral health of the families, health of the ecosystem as well as responding to livelihood needs. For today, our discussion will focus on Family Planning but I will be able to connect you with other PHE resources for more information on other PHE components.\n",
+        "text": "I am a community health worker of this village under the Tuungane / EENT / LCWT project that combines health, family planning and natural resource management in short called PHE.\n\nThe project works to improve overral health of the families, health of the ecosystem as well as responding to livelihood needs. \n\nFor today, our discussion will focus on Family Planning but I will be able to connect you with other PHE resources for more information on other PHE components.\n",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }
@@ -142,7 +142,7 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "pop",
             "openmrs_entity_parent": "",
-            "text": "Progestin only pills"
+            "text": "Progestin only pills (POP)"
           },
           {
             "key": "coc",
