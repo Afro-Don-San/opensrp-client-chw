@@ -432,13 +432,6 @@
             "text": "Progestin only pills (POP)"
           },
           {
-            "key": "vasectomy",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Vasectomy"
-          },
-          {
             "key": "male_condom",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
@@ -446,11 +439,18 @@
             "text": "Male Condom"
           },
           {
-            "key": "tubal_ligation",
+            "key": "female_condom",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
-            "text": "Tubal Ligation"
+            "text": "Female Condom"
+          },
+          {
+            "key": "sdm",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Standard days method(SDM)"
           },
           {
             "key": "emergency_contraception",
@@ -481,13 +481,6 @@
             "text": "Implants"
           },
           {
-            "key": "female_condom",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Female Condom"
-          },
-          {
             "key": "injection",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
@@ -495,11 +488,18 @@
             "text": "Injection"
           },
           {
-            "key": "sdm",
+            "key": "vasectomy",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
-            "text": "Standard days method(SDM)"
+            "text": "Vasectomy"
+          },
+          {
+            "key": "tubal_ligation",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Tubal Ligation"
           }
         ],
         "v_required": {
@@ -704,36 +704,6 @@
         }
       },
       {
-        "key": "fp_method_chose_vasectomy",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_method_chose",
-        "openmrs_entity_parent": "",
-        "options": [
-          {
-            "key": "vasectomy",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Vasectomy"
-          }
-        ],
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
-            }
-          }
-        },
-        "calculation": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_family_planning_method_choice_calculation.yml"
-            }
-          }
-        }
-      },
-      {
         "key": "fp_method_chose_male_condom",
         "type": "native_radio",
         "openmrs_entity": "concept",
@@ -764,18 +734,48 @@
         }
       },
       {
-        "key": "fp_method_chose_tubal_ligation",
+        "key": "fp_method_chose_female_condom",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_method_chose_tubal_ligation",
+        "openmrs_entity_id": "fp_method_chose",
         "openmrs_entity_parent": "",
         "options": [
           {
-            "key": "tubal_ligation",
+            "key": "female_condom",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
-            "text": "Tubal Ligation"
+            "text": "Female Condom"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        },
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "fp_method_chose_sdm",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_method_chose_sdm",
+        "openmrs_entity_parent": "",
+        "options": [
+          {
+            "key": "sdm",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Standard days method(SDM)"
           }
         ],
         "relevance": {
@@ -914,36 +914,6 @@
         }
       },
       {
-        "key": "fp_method_chose_female_condom",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_method_chose",
-        "openmrs_entity_parent": "",
-        "options": [
-          {
-            "key": "female_condom",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Female Condom"
-          }
-        ],
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
-            }
-          }
-        },
-        "calculation": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_family_planning_method_choice_calculation.yml"
-            }
-          }
-        }
-      },
-      {
         "key": "fp_method_chose_injection",
         "type": "native_radio",
         "openmrs_entity": "concept",
@@ -974,18 +944,48 @@
         }
       },
       {
-        "key": "fp_method_chose_sdm",
+        "key": "fp_method_chose_vasectomy",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_method_chose_sdm",
+        "openmrs_entity_id": "fp_method_chose",
         "openmrs_entity_parent": "",
         "options": [
           {
-            "key": "sdm",
+            "key": "vasectomy",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
-            "text": "Standard days method(SDM)"
+            "text": "Vasectomy"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        },
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "fp_method_chose_tubal_ligation",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_method_chose_tubal_ligation",
+        "openmrs_entity_parent": "",
+        "options": [
+          {
+            "key": "tubal_ligation",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Tubal Ligation"
           }
         ],
         "relevance": {

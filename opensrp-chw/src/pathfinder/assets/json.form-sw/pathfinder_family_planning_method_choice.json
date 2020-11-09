@@ -347,13 +347,6 @@
             "text": "Kichocheo kimoja (POP)"
           },
           {
-            "key": "vasectomy",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Kufunga uzazi wanaume "
-          },
-          {
             "key": "male_condom",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
@@ -361,11 +354,18 @@
             "text": "Kondomu ya kiume "
           },
           {
-            "key": "tubal_ligation",
+            "key": "female_condom",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
-            "text": "Kufunga uzazi wanawake "
+            "text": "Kondomu ya kike"
+          },
+          {
+            "key": "sdm",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Kuhesabu siku"
           },
           {
             "key": "emergency_contraception",
@@ -396,13 +396,6 @@
             "text": "Kitanzi"
           },
           {
-            "key": "female_condom",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Kondomu ya kike"
-          },
-          {
             "key": "injection",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
@@ -410,11 +403,18 @@
             "text": "Sindano"
           },
           {
-            "key": "sdm",
+            "key": "vasectomy",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
-            "text": "Kuhesabu siku"
+            "text": "Kufunga uzazi wanaume "
+          },
+          {
+            "key": "tubal_ligation",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Kufunga uzazi wanawake "
           }
         ],
         "v_required": {
@@ -619,36 +619,6 @@
         }
       },
       {
-        "key": "fp_method_chose_vasectomy",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_method_chose",
-        "openmrs_entity_parent": "",
-        "options": [
-          {
-            "key": "vasectomy",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Kufunga uzazi wanaume "
-          }
-        ],
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
-            }
-          }
-        },
-        "calculation": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_family_planning_method_choice_calculation.yml"
-            }
-          }
-        }
-      },
-      {
         "key": "fp_method_chose_male_condom",
         "type": "native_radio",
         "openmrs_entity": "concept",
@@ -679,18 +649,48 @@
         }
       },
       {
-        "key": "fp_method_chose_tubal_ligation",
+        "key": "fp_method_chose_female_condom",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_method_chose_tubal_ligation",
+        "openmrs_entity_id": "fp_method_chose",
         "openmrs_entity_parent": "",
         "options": [
           {
-            "key": "tubal_ligation",
+            "key": "female_condom",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
-            "text": "Kufunga uzazi wanawake "
+            "text": "Kondomu ya kike"
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        },
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "fp_method_chose_sdm",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_method_chose_sdm",
+        "openmrs_entity_parent": "",
+        "options": [
+          {
+            "key": "sdm",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Kuhesabu siku"
           }
         ],
         "relevance": {
@@ -829,36 +829,6 @@
         }
       },
       {
-        "key": "fp_method_chose_female_condom",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_method_chose",
-        "openmrs_entity_parent": "",
-        "options": [
-          {
-            "key": "female_condom",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": "",
-            "text": "Kondomu ya kike"
-          }
-        ],
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
-            }
-          }
-        },
-        "calculation": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_family_planning_method_choice_calculation.yml"
-            }
-          }
-        }
-      },
-      {
         "key": "fp_method_chose_injection",
         "type": "native_radio",
         "openmrs_entity": "concept",
@@ -889,18 +859,48 @@
         }
       },
       {
-        "key": "fp_method_chose_sdm",
+        "key": "fp_method_chose_vasectomy",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_method_chose_sdm",
+        "openmrs_entity_id": "fp_method_chose",
         "openmrs_entity_parent": "",
         "options": [
           {
-            "key": "sdm",
+            "key": "vasectomy",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
-            "text": "Kuhesabu siku"
+            "text": "Kufunga uzazi wanaume "
+          }
+        ],
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_relevance.yml"
+            }
+          }
+        },
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_method_choice_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "fp_method_chose_tubal_ligation",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "fp_method_chose_tubal_ligation",
+        "openmrs_entity_parent": "",
+        "options": [
+          {
+            "key": "tubal_ligation",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "",
+            "openmrs_entity_parent": "",
+            "text": "Kufunga uzazi wanawake "
           }
         ],
         "relevance": {
