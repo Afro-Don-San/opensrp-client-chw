@@ -2,7 +2,7 @@
   "validate_on_submit": true,
   "show_errors_on_submit": true,
   "skip_blank_steps": true,
-  "count": "11",
+  "count": "18",
   "encounter_type": "Citizen Report Card",
   "entity_id": "",
   "relational_id": "",
@@ -59,10 +59,10 @@
     "next": "step2",
     "fields": [
       {
-        "key": "fp_citizen_report_card_done",
+        "key": "introduction_1",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_citizen_report_card_done",
+        "openmrs_entity_id": "introduction_1",
         "type": "hidden",
         "calculation": {
           "rules-engine": {
@@ -78,15 +78,47 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "not_satisfied_with_chw_given_method",
         "type": "toaster_notes",
-        "text": "Muulize mteja alijionaje ulipo mpatia rufaa ya kwenda kupatiwa njia ya uzazi wa mpango.\n\nJadili na mteja kujua alihudumiwa vipi kituoni, vibaya au vizuri na kwanini?.\n\nMwambie mteja utamuuliza maswali machache kujua hali ya huduma aliyopatiwa wakati alipotaka kukamilisha rufaa.\n\nMsisitize mteja kuwa taarifa hizi zitakuwa za siri na zitasaidia kuboresha huduma kwenye vituo vya kutolea huduma za afya.\n\nMwambie mteja kwamba tunaweza kuboresha huduma kama tutapata majibu ya ukweli kutoka kwa uzoefu wa huduma wanazopatiwa wateja hata kama walihudumiwa vibaya.\n\nMsisite mteja kuwa wazi na mkweli wakati nanajibu maswali",
+        "text": "Muulize mteja alijionaje ulipompatia rufaa ya kwenda kupatiwa njia ya uzazi wa mpango.\n\nJadili na mteja kujua alihudumiwa vipi kituoni vibaya au vizuri na kwanini?",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }
     ]
   },
   "step2": {
-    "title": "Utayari wa kushiriki kwenye dodoso",
+    "title": "Taarifa ya awali",
     "next": "step3",
+    "fields": [
+      {
+        "key": "introduction_2",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "introduction_2",
+        "type": "toaster_notes",
+        "text": "Mwambie mteja utamuuliza maswali machache kujua hali ya huduma aliopatiwa wakati alipotaka kukamilisha rufaa.\n\nMsisitize mteja kuwa taarifa hizi zitakuwa za siri na zitasaidia kuboresha huduma kwenye vituo vya kutolea huduma za afya.",
+        "text_color": "#1199F9",
+        "toaster_type": "info"
+      }
+    ]
+  },
+  "step3": {
+    "title": "Taarifa ya awali",
+    "next": "step4",
+    "fields": [
+      {
+        "key": "introduction_3",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "introduction_3",
+        "type": "toaster_notes",
+        "text": "Mwambie mteja kwamba tunaweza kuboresha huduma kama tutapata majibu ya ukweli kutoka kwa uzoefu wa huduma wanazopatiwa wateja hata kama walihudumiwa vibaya.\n\nMsisitize mteja kuwa wazi na mkweli wakati anajibu maswali.",
+        "text_color": "#1199F9",
+        "toaster_type": "info"
+      }
+    ]
+  },
+  "step4": {
+    "title": "Utayari wa kushiriki kwenye dodoso",
+    "next": "step5",
     "fields": [
       {
         "key": "willing_to_participate_in_survey",
@@ -118,9 +150,9 @@
       }
     ]
   },
-  "step3": {
+  "step5": {
     "title": "Kituo Cha kutolea Huduma za Afya kilipo kilichotembelewa",
-    "next": "step4",
+    "next": "step6",
     "fields": [
       {
         "key": "name_of_health_facility_visited_for_family_planning_services",
@@ -146,241 +178,31 @@
       }
     ]
   },
-  "step4": {
-    "title": "Taarifa za mteja",
-    "next": "step5",
+  "step6": {
+    "title": "Ukamilishaji wa rufaa",
+    "next": "step7",
     "fields": [
       {
-        "key": "residence",
+        "key": "did_the_client_complete_referral",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "residence",
+        "openmrs_entity_id": "did_the_client_complete_referral",
         "type": "native_radio",
-        "label": "Makazi",
+        "label": "Muulize:Je ulifanikiwa kukamilisha rufaa?",
         "options": [
           {
-            "key": "urban",
+            "key": "yes",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "urban",
+            "openmrs_entity_id": "yes",
             "openmrs_entity_parent": "",
-            "text": "Mjini"
+            "text": "Ndio"
           },
           {
-            "key": "rural",
+            "key": "no",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "rural",
+            "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
-            "text": "Vijijini"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "education",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "education",
-        "openmrs_entity_parent": "",
-        "label": "Elimu",
-        "options": [
-          {
-            "key": "never_gone_to_school",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "never_gone_to_school",
-            "openmrs_entity_parent": "",
-            "text": "Sijaenda Shule"
-          },
-          {
-            "key": "primary_level",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "primary_level",
-            "openmrs_entity_parent": "",
-            "text": "Elimu ya msingi"
-          },
-          {
-            "key": "secondary_level",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "secondary_level",
-            "openmrs_entity_parent": "",
-            "text": "Elimu ya secondari"
-          },
-          {
-            "key": "college",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "college",
-            "openmrs_entity_parent": "",
-            "text": "Elimu ya juu (Diploma, cheti)"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "occupation",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "occupation",
-        "openmrs_entity_parent": "",
-        "label": "Kazi",
-        "options": [
-          {
-            "key": "farmer_or_peasant",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "farmer_or_peasant",
-            "openmrs_entity_parent": "",
-            "text": "Mkulima"
-          },
-          {
-            "key": "pastoralist",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "pastoralist",
-            "openmrs_entity_parent": "",
-            "text": "Mfugaji"
-          },
-          {
-            "key": "business_person",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "business_person",
-            "openmrs_entity_parent": "",
-            "text": "Mfanyabiashara"
-          },
-          {
-            "key": "casual_worker",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "casual_worker",
-            "openmrs_entity_parent": "",
-            "text": "Kibarua"
-          },
-          {
-            "key": "housewife",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "housewife",
-            "openmrs_entity_parent": "",
-            "text": "Mama wa nyumbani"
-          },
-          {
-            "key": "employed",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "employed",
-            "openmrs_entity_parent": "",
-            "text": "Muajiriwa"
-          },
-          {
-            "key": "student",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "student",
-            "openmrs_entity_parent": "",
-            "text": "Mwanafunzi"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "marital_status",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "marital_status",
-        "openmrs_entity_parent": "",
-        "label": "Hali yako ya ndoa",
-        "options": [
-          {
-            "key": "single",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "single",
-            "openmrs_entity_parent": "",
-            "text": "Sijawahi kuolewa/kuoa"
-          },
-          {
-            "key": "married",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "married",
-            "openmrs_entity_parent": "",
-            "text": "Kwasasa nimeolewa/nimeoa"
-          },
-          {
-            "key": "divorced_or_separated",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "divorced_or_separated",
-            "openmrs_entity_parent": "",
-            "text": "Tumetengana/Nimetalikiwa"
-          },
-          {
-            "key": "widowed",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "widowed",
-            "openmrs_entity_parent": "",
-            "text": "Mjane"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "religion",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "religion",
-        "openmrs_entity_parent": "",
-        "label": "Dini",
-        "options": [
-          {
-            "key": "traditional_religion",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "traditional_religion",
-            "openmrs_entity_parent": "",
-            "text": "Mila na tamaduni"
-          },
-          {
-            "key": "muslim",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "muslim",
-            "openmrs_entity_parent": "",
-            "text": "Muisilamu"
-          },
-          {
-            "key": "christian",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "christian",
-            "openmrs_entity_parent": "",
-            "text": "Mkisto"
+            "text": "Hapana"
           }
         ],
         "v_required": {
@@ -397,63 +219,43 @@
       }
     ]
   },
-  "step5": {
-    "title": "Access and Usage",
+  "step7": {
+    "title": "Ukamilishaji wa rufaa",
+    "next": "step8",
     "fields": [
       {
-        "key": "reasons_for_people_not_going_to_health_facilities",
+        "key": "times_the_client_tried_to_complete_referral",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "reasons_for_people_not_going_to_health_facilities",
+        "openmrs_entity_id": "times_the_client_tried_to_complete_referral",
         "openmrs_entity_parent": "",
-        "label": "What do you think are the reasons that people do not go to health facilities for family planning services?\n",
+        "label": "MUULIZE: Je ni mara ngapi umekuwa ukijaribu kukamilisha rufaa?",
         "options": [
           {
-            "key": "service_providers_are_not_friendly",
+            "key": "first_time",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "service_providers_are_not_friendly",
+            "openmrs_entity_id": "first_time",
             "openmrs_entity_parent": "",
-            "text": "Service providers are not friendly"
+            "text": "Nilikamilisha rufaa mara ya kwanza tu nilipokwenda kituo cha afya."
           },
           {
-            "key": "no_confidentiality",
+            "key": "got_services_second_time",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "no_confidentiality",
+            "openmrs_entity_id": "got_services_second_time",
             "openmrs_entity_parent": "",
-            "text": "No confidentiality"
+            "text": "Sikupata huduma mara ya kwanza nilipoenda, lakini nilipata nilipokwenda mara ya pili."
           },
           {
-            "key": "time_of_service_not_convenient",
+            "key": "two_or_more_times",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "time_of_service_not_convenient",
+            "openmrs_entity_id": "two_or_more_times",
             "openmrs_entity_parent": "",
-            "text": "Time of service not convenient"
-          },
-          {
-            "key": "fear_of_spouse",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "fear_of_spouse",
-            "openmrs_entity_parent": "",
-            "text": "Fear of spouse"
-          },
-          {
-            "key": "religious_reasons",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "religious_reasons",
-            "openmrs_entity_parent": "",
-            "text": "Religious reasons"
-          },
-          {
-            "key": "frequent_lack_of_service",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "frequent_lack_of_service",
-            "openmrs_entity_parent": "",
-            "text": "Frequent lack of service"
+            "text": "Nilikwenda zaidi ya mara mbili sikufanikiwa kupata huduma lakini nipokwenda mara ya mwisho nilifanikiwa."
           }
         ],
         "v_required": {
           "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
+          "err": "Please select one choice"
         },
         "relevance": {
           "rules-engine": {
@@ -462,175 +264,193 @@
             }
           }
         }
-      },
+      }
+    ]
+  },
+  "step8": {
+    "title": "Ukamilishaji wa rufaa",
+    "next": "step9",
+    "fields": [
       {
-        "key": "means_of_transport_to_facility",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "means_of_transport_to_facility",
+        "key": "tried_to_complete_referral",
         "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "tried_to_complete_referral",
+        "openmrs_entity_parent": "",
+        "label": "MUULIZE: Je ni mara ngapi umekuwa ukijaribu kukamilisha rufaa?",
+        "options": [
+          {
+            "key": "never_went",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "never_went",
+            "openmrs_entity_parent": "",
+            "text": "Sikuwahi kwenda kituo cha Kutolea huduma za afya."
+          },
+          {
+            "key": "went_once_but_never_got_services",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "went_once_but_never_got_services",
+            "openmrs_entity_parent": "",
+            "text": "Nilienda mara moja lakini sikupata huduma."
+          },
+          {
+            "key": "went_to_the_facility_2_times_but_never_got_services",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "went_to_the_facility_2_times_but_never_got_services",
+            "openmrs_entity_parent": "",
+            "text": "Nilienda mara mbili kituo cha afya lakini sikupata huduma."
+          },
+          {
+            "key": "went_to_the_facility_3_or_more_times_but_never_got_services",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "went_to_the_facility_3_or_more_times_but_never_got_services",
+            "openmrs_entity_parent": "",
+            "text": "Nilienda zaidi ya mara mbili lakini sikupata huduma."
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali chagua jibu sahihi"
+        },
         "relevance": {
           "rules-engine": {
             "ex-rules": {
               "rules-file": "pathfinder_citizen_report_card_relevance.yml"
             }
           }
-        },
-        "label": "How do you get to your facility of choice?",
+        }
+      }
+    ]
+  },
+  "step9": {
+    "title": "Sababu za kutokujaribu kukamilisha rufaa",
+    "next": "step10",
+    "fields": [
+      {
+        "key": "reasons_for_not_trying_to_close_referral",
+        "type": "check_box",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "reasons_for_not_trying_to_close_referral",
+        "openmrs_entity_parent": "",
+        "label": "MUULIZE: Kwanini hukutaka kwenda kituo cha afya kukamilisha rufaa? \n\nChagua yote kama yanahusika.",
         "options": [
           {
-            "key": "walking",
+            "key": "partner_not_supportive",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "walking",
+            "openmrs_entity_id": "partner_not_supportive",
             "openmrs_entity_parent": "",
-            "text": "Walking"
+            "text": "Mwenzi hakunipa ushurikiano."
           },
           {
-            "key": "bus",
+            "key": "facility_is_too_far",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "bus",
+            "openmrs_entity_id": "facility_is_too_far",
             "openmrs_entity_parent": "",
-            "text": "Bus"
+            "text": "Kituo cha afya kipo mbali."
           },
           {
-            "key": "private_transport",
+            "key": "no_outreach_services",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "private_transport",
+            "openmrs_entity_id": "no_outreach_services",
             "openmrs_entity_parent": "",
-            "text": "Private transport (car or motorcycle)"
+            "text": "Watoa huduma wakuja (outreach) hawakufika eneo langu."
           },
           {
-            "key": "bicycle",
+            "key": "no_trained_service_providers",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "bicycle",
+            "openmrs_entity_id": "no_trained_service_providers",
             "openmrs_entity_parent": "",
-            "text": "Bicycle"
+            "text": "Hakukuwa na muhudumu mwenye ujuzi."
           },
           {
-            "key": "taxi_or_bajaj",
+            "key": "providers_are_known_for_having_bad_attitudes",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "taxi_or_bajaj",
+            "openmrs_entity_id": "providers_are_known_for_having_bad_attitudes",
             "openmrs_entity_parent": "",
-            "text": "Taxi or bajaj"
+            "text": "Watoa huduma wa kituoni wanajulikana kwa kauli mbaya."
+          },
+          {
+            "key": "knows_people_who_had_bad_experiences",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "knows_people_who_had_bad_experiences",
+            "openmrs_entity_parent": "",
+            "text": "Nawajua watu ambao wamehudumiwa vibaya."
+          },
+          {
+            "key": "other",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "other",
+            "openmrs_entity_parent": "",
+            "text": "Nyingine"
           }
         ],
         "v_required": {
           "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
+          "err": "Tafadhali chagua majibu sahihi"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
+            }
+          }
         }
-      },
+      }
+    ]
+  },
+  "step10": {
+    "title": "Muda aliosubiri kabla ya kuhudumiwa",
+    "next": "step11",
+    "fields": [
       {
-        "key": "time_to_reach_facility_closest_from_household",
+        "key": "how_long_it_took_to_be_attended_by_service_provider",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "time_to_reach_facility_closest_from_household",
+        "openmrs_entity_id": "how_long_it_took_to_be_attended_by_service_provider",
         "openmrs_entity_parent": "",
-        "label": "How much time does it take to reach the health facility that is closest to your household?",
+        "label": "MUULIZE: Je ni muda gani ulichukuwa mpaka ulipohudumiwa na mtoa huduma wa kituoni mara ya mwisho ulipokamilisha rufaa yako?",
         "options": [
           {
-            "key": "less_than_15_minutes",
+            "key": "didnt_wait",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "less_than_15_minutes",
+            "openmrs_entity_id": "didnt_wait",
             "openmrs_entity_parent": "",
-            "text": "Less than 15 minutes"
+            "text": "Sikusubiri sana"
+          },
+          {
+            "key": "less_than_30_minutes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "less_than_30_minutes",
+            "openmrs_entity_parent": "",
+            "text": "Chini ya dakika 30"
           },
           {
             "key": "30_minutes_to_1_hour",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "30_minutes_to_1_hour",
             "openmrs_entity_parent": "",
-            "text": "30 minutes - 1 hour"
+            "text": "Kati ya dakika 30 hadi lisaa"
           },
           {
-            "key": "15_minutes_to_30_minutes",
+            "key": "1_to_2_hours",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "15_minutes_to_30_minutes",
+            "openmrs_entity_id": "1_to_2_hours",
             "openmrs_entity_parent": "",
-            "text": "15-30 minutes"
+            "text": "Saa 1 hadi 2"
           },
           {
-            "key": "more_than_1_hour",
+            "key": "2_to_3_hours",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "more_than_1_hour",
+            "openmrs_entity_id": "2_to_3_hours",
             "openmrs_entity_parent": "",
-            "text": "More than 1 hour"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "is_this_the_nearest_facility_from_home",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "is_this_the_nearest_facility_from_home",
-        "openmrs_entity_parent": "",
-        "label": "Is this the nearest health facility from your home?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Ndio"
+            "text": "Masaa 2 - 3"
           },
           {
-            "key": "no",
+            "key": "more_than_3_hours",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
+            "openmrs_entity_id": "more_than_3_hours",
             "openmrs_entity_parent": "",
-            "text": "Hapana"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "why_did_you_decide_to_come_to_this_facility_and_not_the_nearest_one",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "why_did_you_decide_to_come_to_this_facility_and_not_the_nearest_one",
-        "openmrs_entity_parent": "",
-        "label": "Why did you decide to come to this facility and not the nearest one?\n",
-        "options": [
-          {
-            "key": "did_not_need_family_planning_services",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "did_not_need_family_planning_services",
-            "openmrs_entity_parent": "",
-            "text": "I didn't need family planning services"
-          },
-          {
-            "key": "its_expensive_in_the_nearest_facility",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "its_expensive_in_the_nearest_facility",
-            "openmrs_entity_parent": "",
-            "text": "It is expensive in the other facility"
-          },
-          {
-            "key": "services_are_not_good",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "services_are_not_good",
-            "openmrs_entity_parent": "",
-            "text": "Services are not good"
+            "text": "Zaidi ya masaa 3"
           }
         ],
         "v_required": {
@@ -645,20 +465,19 @@
           }
         }
       }
-    ],
-    "next": "step6"
+    ]
   },
-  "step6": {
-    "title": "Quality",
-    "next": "step7",
+  "step11": {
+    "title": "Kupimwa mimba",
+    "next": "step12",
     "fields": [
       {
-        "key": "was_the_facility_open_when_you_arrived",
+        "key": "was_client_screened_for_pregnancy",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "was_the_facility_open_when_you_arrived",
+        "openmrs_entity_id": "was_client_screened_for_pregnancy",
         "openmrs_entity_parent": "",
-        "label": "Was the facility open when you arrived?",
+        "label": "MUULIZE: Je ulipimwa mimba kabla ya kupatiwa njia ya uzazi wa mpango?",
         "options": [
           {
             "key": "yes",
@@ -686,14 +505,199 @@
             }
           }
         }
-      },
+      }
+    ]
+  },
+  "step12": {
+    "title": "Kiasi alichotakiwa kulipa",
+    "next": "step13",
+    "fields": [
       {
-        "key": "did_you_arrive_during_normal_operating_hours",
+        "key": "amount_asked_to_pay_for_services",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_you_arrive_during_normal_operating_hours",
+        "openmrs_entity_id": "amount_asked_to_pay_for_services",
         "openmrs_entity_parent": "",
-        "label": "Did you arrive during normal operating hours at the health facility?",
+        "label": "MUULIZE: Je ni kiasi gani ulitakiwa kulipa kwa ajili ya huduma?",
+        "options": [
+          {
+            "key": "not_asked_to_pay",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "not_asked_to_pay",
+            "openmrs_entity_parent": "",
+            "text": "Sikuambiwa nilipe"
+          },
+          {
+            "key": "asked_to_pay_less_than_500",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "asked_to_pay_less_than_500",
+            "openmrs_entity_parent": "",
+            "text": "Niliambiwa nilipe chini ya shilingi 500"
+          },
+          {
+            "key": "asked_to_pay_between_500_and_1000",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "asked_to_pay_between_500_and_1000",
+            "openmrs_entity_parent": "",
+            "text": "Nilitakiwa kulipa kati ya shilingi 500 hadi 1000"
+          },
+          {
+            "key": "asked_to_pay_more_than_1000",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "asked_to_pay_more_than_1000",
+            "openmrs_entity_parent": "",
+            "text": "Nilitakiwa kulipa zaidi ya shilingi 1000"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Hakikisha unachagua jibu sahihi"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step13": {
+    "title": "Sababu za kutopata huduma",
+    "next": "step14",
+    "fields": [
+      {
+        "key": "reasons_for_not_getting_services",
+        "type": "check_box",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "reasons_for_not_getting_services",
+        "openmrs_entity_parent": "",
+        "label": "MUULIZE: Kwanini hukuweza kupata huduma?\n\nChagua zote kama zinahusika.",
+        "options": [
+          {
+            "key": "providers_were_busy",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "providers_were_busy",
+            "openmrs_entity_parent": "",
+            "text": "Watoa huduma walikuwa wanasema wanakazi nyingi na waliniambia nirudi siku nyingine."
+          },
+          {
+            "key": "providers_used_harsh_language",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "providers_used_harsh_language",
+            "openmrs_entity_parent": "",
+            "text": "Watoa huduma wana maneno ya ukali."
+          },
+          {
+            "key": "fp_method_not_available",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "fp_method_not_available",
+            "openmrs_entity_parent": "",
+            "text": "Njia za uzazi wa mpango hazikuwepo."
+          },
+          {
+            "key": "made_to_wait_too_long",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "made_to_wait_too_long",
+            "openmrs_entity_parent": "",
+            "text": "Nilitakiwa Kusubiri sana."
+          },
+          {
+            "key": "facility_was_closed_when_i_arrived",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "facility_was_closed_when_i_arrived",
+            "openmrs_entity_parent": "",
+            "text": "Kituo cha afya kilikuwa kimefungwa nilipofika."
+          },
+          {
+            "key": "asked_to_pay_for_services",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "asked_to_pay_for_services",
+            "openmrs_entity_parent": "",
+            "text": "Nilitakiwa kulipia huduma."
+          },
+          {
+            "key": "other",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "other",
+            "openmrs_entity_parent": "",
+            "text": "Other"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please choose all that apply"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step14": {
+    "title": "Alivyohudumiwa na watoa huduma wa kituo cha afya",
+    "next": "step15",
+    "fields": [
+      {
+        "key": "treatment_from_service_providers",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "treatment_from_service_providers",
+        "openmrs_entity_parent": "",
+        "label": "Je ulihudumiwaje na mtoa huduma wa\n\nkituo cha afya?",
+        "options": [
+          {
+            "key": "all_providers_treated_me_with_respect",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "all_providers_treated_me_with_respect",
+            "openmrs_entity_parent": "",
+            "text": "Watoa huduma wote walinihudumia vizuri na kwa heshima."
+          },
+          {
+            "key": "some_providers_treated_me_well_but_others_treated_me_with_disrespect",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "some_providers_treated_me_well_but_others_treated_me_with_disrespect",
+            "openmrs_entity_parent": "",
+            "text": "Baadi ya watoa huduma walinihudumia vizuri, lakini wengine walinidharau."
+          },
+          {
+            "key": "all_service_providers_treated_me_with_disrespect",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "asked_to_pay_more_than_1000",
+            "openmrs_entity_parent": "",
+            "text": "Watoa huduma wote walinidharau."
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step15": {
+    "title": "Kuridhika na huduma",
+    "next": "step16",
+    "fields": [
+      {
+        "key": "satisfied_with_fp_services_from_health_facility",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "satisfied_with_fp_services_from_health_facility",
+        "openmrs_entity_parent": "",
+        "label": "MUULIZE: Je uliridhika na huduma ya 2 uzazi wa mpango uliopatiwa katika huduma ya afya?\n\nHii inaonyesha hukuwa na tatizo na ulipata huduma nzuri kila wakati ulipokwenda kituo cha afya.\n\n",
         "options": [
           {
             "key": "yes",
@@ -712,7 +716,7 @@
         ],
         "v_required": {
           "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
+          "err": "Please select one choice"
         },
         "relevance": {
           "rules-engine": {
@@ -721,14 +725,20 @@
             }
           }
         }
-      },
+      }
+    ]
+  },
+  "step16": {
+    "title": "Kuridhika na huduma",
+    "next": "step17",
+    "fields": [
       {
-        "key": "did_you_get_family_planning_information_at_the_reception",
+        "key": "satisfied_with_fp_services_from_chw",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_you_get_family_planning_information_at_the_reception",
+        "openmrs_entity_id": "satisfied_with_fp_services_from_chw",
         "openmrs_entity_parent": "",
-        "label": "Did you get family planning information at the reception?",
+        "label": "MUULIZE: Je umeridhika na huduma ya uzazi wa mpango ninayokupatia kwa njia ya simu?",
         "options": [
           {
             "key": "yes",
@@ -743,18 +753,11 @@
             "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
             "text": "Hapana"
-          },
-          {
-            "key": "i_dont_remember",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_dont_remember",
-            "openmrs_entity_parent": "",
-            "text": "Sikumbuki"
           }
         ],
         "v_required": {
           "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
+          "err": "Please select one choice"
         },
         "relevance": {
           "rules-engine": {
@@ -763,378 +766,20 @@
             }
           }
         }
-      },
-      {
-        "key": "how_long_it_took_to_be_attended_by_service_provider",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "how_long_it_took_to_be_attended_by_service_provider",
-        "openmrs_entity_parent": "",
-        "label": "How long did it take you to be attended by the service provider?",
-        "options": [
-          {
-            "key": "didnt_wait",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "didnt_wait",
-            "openmrs_entity_parent": "",
-            "text": "sikusubiri sana"
-          },
-          {
-            "key": "less_than_30_minutes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "less_than_30_minutes",
-            "openmrs_entity_parent": "",
-            "text": "Chini ya dakika 30"
-          },
-          {
-            "key": "30_minutes_to_1_hour",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "30_minutes_to_1_hour",
-            "openmrs_entity_parent": "",
-            "text": "Kati ya dakika 30 hadilisaa"
-          },
-          {
-            "key": "1_to_2_hours",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "1_to_2_hours",
-            "openmrs_entity_parent": "",
-            "text": "saa 1 hadi 2"
-          },
-          {
-            "key": "2_to_3_hours",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "2_to_3_hours",
-            "openmrs_entity_parent": "",
-            "text": "Masaa 2 - 3"
-          },
-          {
-            "key": "more_than_3_hours",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "more_than_3_hours",
-            "openmrs_entity_parent": "",
-            "text": "zaidi ya masaa 3"
-          },
-          {
-            "key": "i_dont_remember",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_dont_remember",
-            "openmrs_entity_parent": "",
-            "text": "Sikumbukin"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "did_the_service_provider_make_you_feel_welcome",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_the_service_provider_make_you_feel_welcome",
-        "openmrs_entity_parent": "",
-        "label": "Did the service providers make you feel welcome?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Ndio"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "Hapana"
-          },
-          {
-            "key": "i_dont_remember",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_dont_remember",
-            "openmrs_entity_parent": "",
-            "text": "Sikumbuki"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "did_the_service_provider_assure_confidentiality",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_the_service_provider_assure_confidentiality",
-        "openmrs_entity_parent": "",
-        "label": "Did the service provider assure you of confidentiality?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Ndio"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "Hapana"
-          },
-          {
-            "key": "i_dont_remember",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_dont_remember",
-            "openmrs_entity_parent": "",
-            "text": "Sikumbuki"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "did_you_meet_the_service_providers_in_a_private_room",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_you_meet_the_service_providers_in_a_private_room",
-        "openmrs_entity_parent": "",
-        "label": "Did you meet the service providers in a private room?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Ndio"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "Hapana"
-          },
-          {
-            "key": "i_dont_remember",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_dont_remember",
-            "openmrs_entity_parent": "",
-            "text": "Sikumbuki"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "did_the_service_providers_provide_clear_information_about_various_fp_services_and_methods",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_the_service_providers_provide_clear_information_about_various_fp_services_and_methods",
-        "openmrs_entity_parent": "",
-        "label": "Did the service provider provide you with clear information about various family planning services and methods?\n",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Ndio"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "Hapana"
-          },
-          {
-            "key": "i_dont_remember",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_dont_remember",
-            "openmrs_entity_parent": "",
-            "text": "Sikumbuki"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "did_the_service_providers_use_visual_aids_to_demo_fp_methods",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_the_service_providers_use_visual_aids_to_demo_fp_methods",
-        "openmrs_entity_parent": "",
-        "label": "Did the service providers use visual aids to demonstrate family planning methods to you?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Ndio"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "Hapana"
-          },
-          {
-            "key": "i_dont_remember",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_dont_remember",
-            "openmrs_entity_parent": "",
-            "text": "Sikumbuki"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "did_the_service_providers_ask_if_you_had_any_concerns_about_previously_used_methods",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_the_service_providers_ask_if_you_had_any_concerns_about_previously_used_methods",
-        "openmrs_entity_parent": "",
-        "label": "Did the service provider ask if you had any concerns about previously used methods?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Ndio"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "Hapana"
-          },
-          {
-            "key": "i_dont_remember",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_dont_remember",
-            "openmrs_entity_parent": "",
-            "text": "Sikumbuki"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "were_you_given_info_on_dual_protection",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "were_you_given_info_on_dual_protection",
-        "openmrs_entity_parent": "",
-        "label": "Were you given information on dual protection (Preventing both HIV/STIs and pregnancy)?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Ndio"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "Hapana"
-          },
-          {
-            "key": "i_dont_remember",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_dont_remember",
-            "openmrs_entity_parent": "",
-            "text": "Sikumbuki"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
+      }
+    ]
+  },
+  "step17": {
+    "title": "Aina za njia ya uzazi wa mpango",
+    "next": "step18",
+    "fields": [
       {
         "key": "how_many_fp_methods_can_you_name",
         "type": "check_box",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "methods_not_wanted",
+        "openmrs_entity_id": "how_many_fp_methods_can_you_name",
         "openmrs_entity_parent": "",
-        "label": "Muulize:Je ni aina ngapi zanjia za uzazi wa mpango unaweza kutaja? Weka tiki kwenye kila njia mtejaalizoweza kutaja.",
+        "label": "MUULIZE: Je ni aina ngapi za njia za uzazi wa mpango unaweza kutaja? Weka tiki kwenye kila njia mteja alizoweza kutaja.",
         "options": [
           {
             "key": "male_condom",
@@ -1235,757 +880,14 @@
       }
     ]
   },
-  "step7": {
-    "title": "Reliability",
-    "next": "step8",
-    "fields": [
-      {
-        "key": "ever_visited_health_facility_for_fp_services_but_not_received_services_needed",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "is_this_the_nearest_facility_from_home",
-        "openmrs_entity_parent": "",
-        "label": "Have you ever gone to this health facility for family planning services, but not received the services you needed?\n",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Ndio"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "Hapana"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "why_did_you_not_get_the_services_at_the_health_facility",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "why_did_you_not_get_the_services_at_the_health_facility",
-        "openmrs_entity_parent": "",
-        "label": "Why did you not get services at the health facility?",
-        "options": [
-          {
-            "key": "too_many_people",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "too_many_people",
-            "openmrs_entity_parent": "",
-            "text": "There were too many people"
-          },
-          {
-            "key": "method_was_out_of_stock",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "method_was_out_of_stock",
-            "openmrs_entity_parent": "",
-            "text": "The method was out of stock"
-          },
-          {
-            "key": "no_skilled_service_provider",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no_skilled_service_provider",
-            "openmrs_entity_parent": "",
-            "text": "No skilled service provider"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "times_you_have_missed_services_because_of_a_skilled_provider_not_being_present",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "times_you_have_missed_services_because_of_a_skilled_provider_not_being_present",
-        "openmrs_entity_parent": "",
-        "label": "How many times have you missed the service/method you went for because a skilled provider was not present?",
-        "options": [
-          {
-            "key": "once",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "once",
-            "openmrs_entity_parent": "",
-            "text": "Once"
-          },
-          {
-            "key": "twice",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "twice",
-            "openmrs_entity_parent": "",
-            "text": "Twice"
-          },
-          {
-            "key": "private_transport",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "private_transport",
-            "openmrs_entity_parent": "",
-            "text": "Private transport (car or motorcycle)"
-          },
-          {
-            "key": "three_times",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "three_times",
-            "openmrs_entity_parent": "",
-            "text": "Three times"
-          },
-          {
-            "key": "more_than_3_times",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "more_than_3_times",
-            "openmrs_entity_parent": "",
-            "text": "More than 3 times"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step8": {
-    "title": "Corruption/Hidden costs",
-    "next": "step9",
-    "fields": [
-      {
-        "key": "did_you_pay_for_the_service",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_you_pay_for_the_service",
-        "openmrs_entity_parent": "",
-        "label": "Did you pay for the service or method you got?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Ndio"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "Hapana"
-          },
-          {
-            "key": "i_dont_remember",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_dont_remember",
-            "openmrs_entity_parent": "",
-            "text": "Sikumbuki"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "what_were_the_costs_for",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "what_were_the_costs_for",
-        "openmrs_entity_parent": "",
-        "label": "What were the costs for?",
-        "options": [
-          {
-            "key": "fp_method",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "fp_method",
-            "openmrs_entity_parent": "",
-            "text": "Njia ya Uzazi wa mpango"
-          },
-          {
-            "key": "medicines_or_supplies",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "medicines_or_supplies",
-            "openmrs_entity_parent": "",
-            "text": "Dawa na vifaa tiba"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "were_you_asked_to_give_some_kickbacks_to_get_the_service",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "were_you_asked_to_give_some_kickbacks_to_get_the_service",
-        "openmrs_entity_parent": "",
-        "label": "Were you asked to give some kickbacks to get the service?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Ndio"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "Hapana"
-          },
-          {
-            "key": "i_dont_remember",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_dont_remember",
-            "openmrs_entity_parent": "",
-            "text": "Sikumbuki"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "amount_paid",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "amount_paid",
-        "type": "edit_text",
-        "hint": "How much did you pay? (in Tsh)",
-        "edit_type": "decimal",
-        "v_required": {
-          "value": "true",
-          "err": "Tafadhali jaza kiasi kilicho sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step9": {
-    "title": "Problem resolution",
-    "next": "step10",
-    "fields": [
-      {
-        "key": "have_you_had_a_problem_with_fp_services_since_i_saw_you_last",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "have_you_had_a_problem_with_fp_services_since_i_saw_you_last",
-        "openmrs_entity_parent": "",
-        "label": "Have you had a problem with the family planning services in the health facility since I saw you last?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Ndio"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "Hapana"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "what_type_of_problem_is_it",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "what_type_of_problem_is_it",
-        "type": "check_box",
-        "label": "What type of problem was it? Choose all that apply",
-        "label_text_style": "normal",
-        "options": [
-          {
-            "key": "disrespectful_service_providers",
-            "text": "Disrespectful service providers",
-            "value": false,
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": ""
-          },
-          {
-            "key": "asked_for_kickback",
-            "text": "Asked for kickback",
-            "value": false,
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": ""
-          },
-          {
-            "key": "service_provider_absent",
-            "text": "Service Provider absent",
-            "value": false,
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": ""
-          },
-          {
-            "key": "method_of_your_choice_not_available",
-            "text": "Method of your choice not available",
-            "value": false,
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": ""
-          },
-          {
-            "key": "not_satisfied_with_counseling",
-            "text": "Not satisfied with counseling",
-            "value": false,
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": ""
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "did_you_file_a_complaint",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_you_file_a_complaint",
-        "openmrs_entity_parent": "",
-        "label": "Did you file a complaint?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Ndio"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "Hapana"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "why_didnt_you_file_a_complaint",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "why_didnt_you_file_a_complaint",
-        "openmrs_entity_parent": "",
-        "label": "Why didn’t you file a complaint?\n",
-        "options": [
-          {
-            "key": "did_not_think_anything_would_be_done",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "did_not_think_anything_would_be_done",
-            "openmrs_entity_parent": "",
-            "text": "Did not think anything would be done"
-          },
-          {
-            "key": "afraid_to_make_complain",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "afraid_to_make_complain",
-            "openmrs_entity_parent": "",
-            "text": "Afraid to make a complaint"
-          },
-          {
-            "key": "did_not_know_where_to_complain",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "did_not_know_where_to_complain",
-            "openmrs_entity_parent": "",
-            "text": "Did not know where to complain"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "was_your_problem_solved_to_satisfaction",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "was_your_problem_solved_to_satisfaction",
-        "openmrs_entity_parent": "",
-        "label": "Was your problem solved to your satisfaction?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Ndio"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "Hapana"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "how_long_it_took_for_the_problem_to_be_addressed",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "how_long_it_took_for_the_problem_to_be_addressed",
-        "openmrs_entity_parent": "",
-        "label": "How long did it take to have your problem addressed?",
-        "options": [
-          {
-            "key": "i_dont_know",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_dont_know",
-            "openmrs_entity_parent": "",
-            "text": "I don't know"
-          },
-          {
-            "key": "between_1_and_4_months",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "between_1_and_4_months",
-            "openmrs_entity_parent": "",
-            "text": "Between 1 and 4 months"
-          },
-          {
-            "key": "within_one_month",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "within_one_month",
-            "openmrs_entity_parent": "",
-            "text": "Within one month"
-          },
-          {
-            "key": "longer_than_4_months",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "longer_than_4_months",
-            "openmrs_entity_parent": "",
-            "text": "Longer than 4 months"
-          },
-          {
-            "key": "same_day",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "same_day",
-            "openmrs_entity_parent": "",
-            "text": "Same day"
-          },
-          {
-            "key": "within_one_week",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "within_one_week",
-            "openmrs_entity_parent": "",
-            "text": "Within one week"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "did_you_report_the_problem_again",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_you_report_the_problem_again",
-        "openmrs_entity_parent": "",
-        "label": "Je uliripoti tena malalamiko?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Ndio"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "Hapana"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "will_you_go_back_for_fp_services_at_this_facility",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "will_you_go_back_for_fp_services_at_this_facility",
-        "openmrs_entity_parent": "",
-        "label": "Je utarudi tena kituoni kupata huduma za uzazi wa mpango?\n",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Ndio"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "Hapana"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step10": {
-    "title": "Satisfaction",
-    "next": "step11",
-    "fields": [
-      {
-        "key": "are_you_satisfied_with_fp_services_you_received",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "have_you_had_a_problem_with_fp_services_since_i_saw_you_last",
-        "openmrs_entity_parent": "",
-        "label": "Je umeridhika na huduma ya uzazi wa mpango kwa ujumla?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Ndio"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "Hapana"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "are_you_satisfied_with_fp_services_am_providing_using_mobile_phone",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "are_you_satisfied_with_fp_services_am_providing_using_mobile_phone",
-        "openmrs_entity_parent": "",
-        "label": "Are you satisfied with family planning services I am providing you by using the mobile phone?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Ndio"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "Hapana"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "have_fp_services_improved",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "have_fp_services_improved",
-        "openmrs_entity_parent": "",
-        "label": "As compared to the first time you visited the health facility, have family planning services improved?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Ndio"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "Hapana"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step11": {
+  "step18": {
     "title": "Nashukuru sana kwa muda wako. ",
     "fields": [
       {
         "key": "thank_you",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "not_satisfied_with_chw_given_method",
+        "openmrs_entity_id": "thank_you",
         "type": "toaster_notes",
         "text": "Nashukuru sana kwa muda wako.",
         "text_color": "#1199F9",

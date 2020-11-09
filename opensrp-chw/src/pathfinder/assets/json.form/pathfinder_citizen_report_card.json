@@ -2,7 +2,7 @@
   "validate_on_submit": true,
   "show_errors_on_submit": true,
   "skip_blank_steps": true,
-  "count": "11",
+  "count": "18",
   "encounter_type": "Citizen Report Card",
   "entity_id": "",
   "relational_id": "",
@@ -73,20 +73,52 @@
         }
       },
       {
-        "key": "not_satisfied_with_chw_given_method",
+        "key": "introduction_1",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "not_satisfied_with_chw_given_method",
+        "openmrs_entity_id": "introduction_1",
         "type": "toaster_notes",
-        "text": "I am here to find out about the quality of family planning services you received at the health facility.\nI will ask you several questions about the services you received. This interview will take about 30 minutes.\n\nInformation collected will be used to improve family planning services and will be confidential.\n",
+        "text": "Ask the client about her experience with the referral for a family planning method.\n\nDiscuss whether the client had a positive or negative experience, and why?\n",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }
     ]
   },
   "step2": {
-    "title": "Willingness to Participate in survey",
+    "title": "Introduction",
     "next": "step3",
+    "fields": [
+      {
+        "key": "introduction_2",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "introduction_2",
+        "type": "toaster_notes",
+        "text": "Tell the client you will be asking some questions about the quality of services she experienced while trying to complete this referral.\n\nEmphasize to the client that all information is confidential and will help to improve the quality of services at health facilities.",
+        "text_color": "#1199F9",
+        "toaster_type": "info"
+      }
+    ]
+  },
+  "step3": {
+    "title": "Introduction",
+    "next": "step4",
+    "fields": [
+      {
+        "key": "introduction_3",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "introduction_3",
+        "type": "toaster_notes",
+        "text": "Tell the client that we can only improve services if we get honest responses from clients about their experience, even if they had a negative experience. !\n\nEncourage the client to be open and honest about her experience while answering the questions.",
+        "text_color": "#1199F9",
+        "toaster_type": "info"
+      }
+    ]
+  },
+  "step4": {
+    "title": "Willingness to Participate in survey",
+    "next": "step5",
     "fields": [
       {
         "key": "willing_to_participate_in_survey",
@@ -94,7 +126,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "willing_to_participate_in_survey",
         "openmrs_entity_parent": "",
-        "label": "ASK: Are you willing to participate in this survey?",
+        "label": "ASK: Are you willing to answer these questions?",
         "options": [
           {
             "key": "yes",
@@ -118,9 +150,9 @@
       }
     ]
   },
-  "step3": {
+  "step5": {
     "title": "Health facility visited",
-    "next": "step4",
+    "next": "step6",
     "fields": [
       {
         "key": "name_of_health_facility_visited_for_family_planning_services",
@@ -149,518 +181,17 @@
       }
     ]
   },
-  "step4": {
-    "title": "Demographics",
-    "next": "step5",
-    "fields": [
-      {
-        "key": "residence",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "residence",
-        "openmrs_entity_parent": "",
-        "label": "Residence",
-        "options": [
-          {
-            "key": "urban",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "urban",
-            "openmrs_entity_parent": "",
-            "text": "Urban"
-          },
-          {
-            "key": "rural",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "rural",
-            "openmrs_entity_parent": "",
-            "text": "Rural"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "education",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "education",
-        "openmrs_entity_parent": "",
-        "label": "Education",
-        "options": [
-          {
-            "key": "never_gone_to_school",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "never_gone_to_school",
-            "openmrs_entity_parent": "",
-            "text": "Never gone to school"
-          },
-          {
-            "key": "primary_level",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "primary_level",
-            "openmrs_entity_parent": "",
-            "text": "Primary level"
-          },
-          {
-            "key": "secondary_level",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "secondary_level",
-            "openmrs_entity_parent": "",
-            "text": "Secondary level"
-          },
-          {
-            "key": "college",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "college",
-            "openmrs_entity_parent": "",
-            "text": "College"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "occupation",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "occupation",
-        "openmrs_entity_parent": "",
-        "label": "Occupation",
-        "options": [
-          {
-            "key": "farmer_or_peasant",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "farmer_or_peasant",
-            "openmrs_entity_parent": "",
-            "text": "Peasant/farmer"
-          },
-          {
-            "key": "pastoralist",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "pastoralist",
-            "openmrs_entity_parent": "",
-            "text": "Pastoralist"
-          },
-          {
-            "key": "business_person",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "business_person",
-            "openmrs_entity_parent": "",
-            "text": "Business person"
-          },
-          {
-            "key": "casual_worker",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "casual_worker",
-            "openmrs_entity_parent": "",
-            "text": "Casual worker"
-          },
-          {
-            "key": "housewife",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "housewife",
-            "openmrs_entity_parent": "",
-            "text": "Housewife"
-          },
-          {
-            "key": "employed",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "employed",
-            "openmrs_entity_parent": "",
-            "text": "Employed"
-          },
-          {
-            "key": "student",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "student",
-            "openmrs_entity_parent": "",
-            "text": "Student"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },"relevance": {
-        "rules-engine": {
-          "ex-rules": {
-            "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-          }
-        }
-      }
-      },
-      {
-        "key": "marital_status",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "marital_status",
-        "openmrs_entity_parent": "",
-        "label": "Marital status",
-        "options": [
-          {
-            "key": "single",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "single",
-            "openmrs_entity_parent": "",
-            "text": "Single"
-          },
-          {
-            "key": "married",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "married",
-            "openmrs_entity_parent": "",
-            "text": "Married"
-          },
-          {
-            "key": "divorced_or_separated",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "divorced_or_separated",
-            "openmrs_entity_parent": "",
-            "text": "Divorced/separated"
-          },
-          {
-            "key": "widowed",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "widowed",
-            "openmrs_entity_parent": "",
-            "text": "Widowed"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "religion",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "religion",
-        "openmrs_entity_parent": "",
-        "label": "Religion",
-        "options": [
-          {
-            "key": "traditional_religion",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "traditional_religion",
-            "openmrs_entity_parent": "",
-            "text": "Traditional religion"
-          },
-          {
-            "key": "muslim",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "muslim",
-            "openmrs_entity_parent": "",
-            "text": "Muslim"
-          },
-          {
-            "key": "christian",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "christian",
-            "openmrs_entity_parent": "",
-            "text": "Christian"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step5": {
-    "title": "Access and Usage",
-    "next": "step6",
-    "fields": [
-      {
-        "key": "reasons_for_people_not_going_to_health_facilities",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "reasons_for_people_not_going_to_health_facilities",
-        "openmrs_entity_parent": "",
-        "label": "What do you think are the reasons that people do not go to health facilities for family planning services?\n",
-        "options": [
-          {
-            "key": "service_providers_are_not_friendly",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "service_providers_are_not_friendly",
-            "openmrs_entity_parent": "",
-            "text": "Service providers are not friendly"
-          },
-          {
-            "key": "no_confidentiality",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no_confidentiality",
-            "openmrs_entity_parent": "",
-            "text": "No confidentiality"
-          },
-          {
-            "key": "time_of_service_not_convenient",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "time_of_service_not_convenient",
-            "openmrs_entity_parent": "",
-            "text": "Time of service not convenient"
-          },
-          {
-            "key": "fear_of_spouse",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "fear_of_spouse",
-            "openmrs_entity_parent": "",
-            "text": "Fear of spouse"
-          },
-          {
-            "key": "religious_reasons",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "religious_reasons",
-            "openmrs_entity_parent": "",
-            "text": "Religious reasons"
-          },
-          {
-            "key": "frequent_lack_of_service",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "frequent_lack_of_service",
-            "openmrs_entity_parent": "",
-            "text": "Frequent lack of service"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "means_of_transport_to_facility",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "means_of_transport_to_facility",
-        "openmrs_entity_parent": "",
-        "label": "How do you get to your facility of choice?",
-        "options": [
-          {
-            "key": "walking",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "walking",
-            "openmrs_entity_parent": "",
-            "text": "Walking"
-          },
-          {
-            "key": "bus",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "bus",
-            "openmrs_entity_parent": "",
-            "text": "Bus"
-          },
-          {
-            "key": "private_transport",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "private_transport",
-            "openmrs_entity_parent": "",
-            "text": "Private transport (car or motorcycle)"
-          },
-          {
-            "key": "bicycle",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "bicycle",
-            "openmrs_entity_parent": "",
-            "text": "Bicycle"
-          },
-          {
-            "key": "taxi_or_bajaj",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "taxi_or_bajaj",
-            "openmrs_entity_parent": "",
-            "text": "Taxi or bajaj"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "time_to_reach_facility_closest_from_household",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "time_to_reach_facility_closest_from_household",
-        "openmrs_entity_parent": "",
-        "label": "How much time does it take to reach the health facility that is closest to your household?",
-        "options": [
-          {
-            "key": "less_than_15_minutes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "less_than_15_minutes",
-            "openmrs_entity_parent": "",
-            "text": "Less than 15 minutes"
-          },
-          {
-            "key": "30_minutes_to_1_hour",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "30_minutes_to_1_hour",
-            "openmrs_entity_parent": "",
-            "text": "30 minutes - 1 hour"
-          },
-          {
-            "key": "15_minutes_to_30_minutes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "15_minutes_to_30_minutes",
-            "openmrs_entity_parent": "",
-            "text": "15-30 minutes"
-          },
-          {
-            "key": "more_than_1_hour",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "more_than_1_hour",
-            "openmrs_entity_parent": "",
-            "text": "More than 1 hour"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "is_this_the_nearest_facility_from_home",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "is_this_the_nearest_facility_from_home",
-        "openmrs_entity_parent": "",
-        "label": "Is this the nearest health facility from your home?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Yes"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "No"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "why_did_you_decide_to_come_to_this_facility_and_not_the_nearest_one",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "why_did_you_decide_to_come_to_this_facility_and_not_the_nearest_one",
-        "openmrs_entity_parent": "",
-        "label": "Why did you decide to come to this facility and not the nearest one?\n",
-        "options": [
-          {
-            "key": "did_not_need_family_planning_services",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "did_not_need_family_planning_services",
-            "openmrs_entity_parent": "",
-            "text": "I didn't need family planning services"
-          },
-          {
-            "key": "its_expensive_in_the_nearest_facility",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "its_expensive_in_the_nearest_facility",
-            "openmrs_entity_parent": "",
-            "text": "It is expensive in the other facility"
-          },
-          {
-            "key": "services_are_not_good",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "services_are_not_good",
-            "openmrs_entity_parent": "",
-            "text": "Services are not good"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
   "step6": {
-    "title": "Quality",
+    "title": "Completeness of referrals",
     "next": "step7",
     "fields": [
       {
-        "key": "was_the_facility_open_when_you_arrived",
+        "key": "did_the_client_complete_referral",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "was_the_facility_open_when_you_arrived",
+        "openmrs_entity_id": "did_the_client_complete_referral",
         "openmrs_entity_parent": "",
-        "label": "Was the facility open when you arrived?",
+        "label": "ASK: Did you complete the referral?",
         "options": [
           {
             "key": "yes",
@@ -688,28 +219,41 @@
             }
           }
         }
-      },
+      }
+    ]
+  },
+  "step7": {
+    "title": "Completing referrals",
+    "next": "step8",
+    "fields": [
       {
-        "key": "did_you_arrive_during_normal_operating_hours",
+        "key": "times_the_client_tried_to_complete_referral",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_you_arrive_during_normal_operating_hours",
+        "openmrs_entity_id": "times_the_client_tried_to_complete_referral",
         "openmrs_entity_parent": "",
-        "label": "Did you arrive during normal operating hours at the health facility?",
+        "label": "ASK: How many times did you try to complete the referral?",
         "options": [
           {
-            "key": "yes",
+            "key": "first_time",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
+            "openmrs_entity_id": "first_time",
             "openmrs_entity_parent": "",
-            "text": "Yes"
+            "text": "I completed the referral the first time I went to the health facility"
           },
           {
-            "key": "no",
+            "key": "got_services_second_time",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
+            "openmrs_entity_id": "got_services_second_time",
             "openmrs_entity_parent": "",
-            "text": "No"
+            "text": "I did not get services the first time, but received services the second time"
+          },
+          {
+            "key": "two_or_more_times",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "two_or_more_times",
+            "openmrs_entity_parent": "",
+            "text": "I went 2 or more times without getting services, but then received services the last time I went"
           }
         ],
         "v_required": {
@@ -723,35 +267,48 @@
             }
           }
         }
-      },
+      }
+    ]
+  },
+  "step8": {
+    "title": "Completing referrals",
+    "next": "step9",
+    "fields": [
       {
-        "key": "did_you_get_family_planning_information_at_the_reception",
+        "key": "tried_to_complete_referral",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_you_get_family_planning_information_at_the_reception",
+        "openmrs_entity_id": "tried_to_complete_referral",
         "openmrs_entity_parent": "",
-        "label": "Did you get family planning information at the reception?",
+        "label": "ASK: How many times did you go to the facility to try to complete the referral?",
         "options": [
           {
-            "key": "yes",
+            "key": "never_went",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
+            "openmrs_entity_id": "never_went",
             "openmrs_entity_parent": "",
-            "text": "Yes"
+            "text": "I never went to the health facility"
           },
           {
-            "key": "no",
+            "key": "went_once_but_never_got_services",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
+            "openmrs_entity_id": "went_once_but_never_got_services",
             "openmrs_entity_parent": "",
-            "text": "No"
+            "text": "I went once and did not get services"
           },
           {
-            "key": "i_dont_remember",
+            "key": "went_to_the_facility_2_times_but_never_got_services",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_dont_remember",
+            "openmrs_entity_id": "went_to_the_facility_2_times_but_never_got_services",
             "openmrs_entity_parent": "",
-            "text": "I don't remember"
+            "text": "I went to the facility 2 times and did not get services"
+          },
+          {
+            "key": "went_to_the_facility_3_or_more_times_but_never_got_services",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "went_to_the_facility_3_or_more_times_but_never_got_services",
+            "openmrs_entity_parent": "",
+            "text": "I went to the facility 3 or more times and did not get services"
           }
         ],
         "v_required": {
@@ -765,14 +322,96 @@
             }
           }
         }
-      },
+      }
+    ]
+  },
+  "step9": {
+    "title": "Reasons for not trying to complete referrals",
+    "next": "step10",
+    "fields": [
+      {
+        "key": "reasons_for_not_trying_to_close_referral",
+        "type": "check_box",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "reasons_for_not_trying_to_close_referral",
+        "openmrs_entity_parent": "",
+        "label": "ASK: Why did you not attempt to go to the facility to complete the referral?\n\nChoose all that apply.",
+        "options": [
+          {
+            "key": "partner_not_supportive",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "partner_not_supportive",
+            "openmrs_entity_parent": "",
+            "text": "Partner not supportive"
+          },
+          {
+            "key": "facility_is_too_far",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "facility_is_too_far",
+            "openmrs_entity_parent": "",
+            "text": "Facility is too far away"
+          },
+          {
+            "key": "no_outreach_services",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no_outreach_services",
+            "openmrs_entity_parent": "",
+            "text": "There were no outreach services in my area"
+          },
+          {
+            "key": "no_trained_service_providers",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no_trained_service_providers",
+            "openmrs_entity_parent": "",
+            "text": "There are no trained service providers"
+          },
+          {
+            "key": "providers_are_known_for_having_bad_attitudes",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "providers_are_known_for_having_bad_attitudes",
+            "openmrs_entity_parent": "",
+            "text": "Providers are known for having bad attitudes"
+          },
+          {
+            "key": "knows_people_who_had_bad_experiences",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "knows_people_who_had_bad_experiences",
+            "openmrs_entity_parent": "",
+            "text": "I know people who had bad experiences"
+          },
+          {
+            "key": "other",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "other",
+            "openmrs_entity_parent": "",
+            "text": "Other"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please choose all that apply"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step10": {
+    "title": "Duration before being attended",
+    "next": "step11",
+    "fields": [
       {
         "key": "how_long_it_took_to_be_attended_by_service_provider",
         "type": "native_radio",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "how_long_it_took_to_be_attended_by_service_provider",
         "openmrs_entity_parent": "",
-        "label": "How long did it take you to be attended by the service provider?",
+        "label": "ASK: How long did it take you to be 2 attended by the service provider during the visit when you received the services?",
         "options": [
           {
             "key": "didnt_wait",
@@ -815,13 +454,6 @@
             "openmrs_entity_id": "more_than_3_hours",
             "openmrs_entity_parent": "",
             "text": "More than 3 hours"
-          },
-          {
-            "key": "i_dont_remember",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_dont_remember",
-            "openmrs_entity_parent": "",
-            "text": "I don't remember"
           }
         ],
         "v_required": {
@@ -835,14 +467,20 @@
             }
           }
         }
-      },
+      }
+    ]
+  },
+  "step11": {
+    "title": "Screened for Pregnancy",
+    "next": "step12",
+    "fields": [
       {
-        "key": "did_the_service_provider_make_you_feel_welcome",
+        "key": "was_client_screened_for_pregnancy",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_the_service_provider_make_you_feel_welcome",
+        "openmrs_entity_id": "was_client_screened_for_pregnancy",
         "openmrs_entity_parent": "",
-        "label": "Did the service providers make you feel welcome?",
+        "label": "ASK: Were you given a pregnancy test before getting the method?",
         "options": [
           {
             "key": "yes",
@@ -857,13 +495,6 @@
             "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
             "text": "No"
-          },
-          {
-            "key": "i_dont_remember",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_dont_remember",
-            "openmrs_entity_parent": "",
-            "text": "I don't remember"
           }
         ],
         "v_required": {
@@ -877,14 +508,199 @@
             }
           }
         }
-      },
+      }
+    ]
+  },
+  "step12": {
+    "title": "Amount asked to pay",
+    "next": "step13",
+    "fields": [
       {
-        "key": "did_the_service_provider_assure_confidentiality",
+        "key": "amount_asked_to_pay_for_services",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_the_service_provider_assure_confidentiality",
+        "openmrs_entity_id": "amount_asked_to_pay_for_services",
         "openmrs_entity_parent": "",
-        "label": "Did the service provider assure you of confidentiality?",
+        "label": "ASK: How much money were you asked to pay for the services?",
+        "options": [
+          {
+            "key": "not_asked_to_pay",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "not_asked_to_pay",
+            "openmrs_entity_parent": "",
+            "text": "I was not asked to pay"
+          },
+          {
+            "key": "asked_to_pay_less_than_500",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "asked_to_pay_less_than_500",
+            "openmrs_entity_parent": "",
+            "text": "I was asked to pay less than Tsh 500"
+          },
+          {
+            "key": "asked_to_pay_between_500_and_1000",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "asked_to_pay_between_500_and_1000",
+            "openmrs_entity_parent": "",
+            "text": "I was asked to pay between Tsh 500 and Tsh 1000"
+          },
+          {
+            "key": "asked_to_pay_more_than_1000",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "asked_to_pay_more_than_1000",
+            "openmrs_entity_parent": "",
+            "text": "I was asked to pay more than Tsh 1000"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step13": {
+    "title": "Reasons for not getting service",
+    "next": "step14",
+    "fields": [
+      {
+        "key": "reasons_for_not_getting_services",
+        "type": "check_box",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "reasons_for_not_getting_services",
+        "openmrs_entity_parent": "",
+        "label": "ASK: Why did you fail to get services?\nChoose all that apply",
+        "options": [
+          {
+            "key": "providers_were_busy",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "providers_were_busy",
+            "openmrs_entity_parent": "",
+            "text": "Providers said they were busy and told me to come back another day"
+          },
+          {
+            "key": "providers_used_harsh_language",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "providers_used_harsh_language",
+            "openmrs_entity_parent": "",
+            "text": "Providers used harsh language"
+          },
+          {
+            "key": "fp_method_not_available",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "fp_method_not_available",
+            "openmrs_entity_parent": "",
+            "text": "FP method was not available"
+          },
+          {
+            "key": "made_to_wait_too_long",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "made_to_wait_too_long",
+            "openmrs_entity_parent": "",
+            "text": "I was made to wait too long"
+          },
+          {
+            "key": "facility_was_closed_when_i_arrived",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "facility_was_closed_when_i_arrived",
+            "openmrs_entity_parent": "",
+            "text": "The facility was closed when I arrived"
+          },
+          {
+            "key": "asked_to_pay_for_services",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "asked_to_pay_for_services",
+            "openmrs_entity_parent": "",
+            "text": "I was asked to pay for services"
+          },
+          {
+            "key": "other",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "other",
+            "openmrs_entity_parent": "",
+            "text": "Other"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please choose all that apply"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step14": {
+    "title": "Treatment from service providers",
+    "next": "step15",
+    "fields": [
+      {
+        "key": "treatment_from_service_providers",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "treatment_from_service_providers",
+        "openmrs_entity_parent": "",
+        "label": "ASK: How were you treated by service providers?",
+        "options": [
+          {
+            "key": "all_providers_treated_me_with_respect",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "all_providers_treated_me_with_respect",
+            "openmrs_entity_parent": "",
+            "text": "All service providers treated me with respect"
+          },
+          {
+            "key": "some_providers_treated_me_well_but_others_treated_me_with_disrespect",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "some_providers_treated_me_well_but_others_treated_me_with_disrespect",
+            "openmrs_entity_parent": "",
+            "text": "Some service providers treated me well, but others treated me with disrespect"
+          },
+          {
+            "key": "all_service_providers_treated_me_with_disrespect",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "asked_to_pay_more_than_1000",
+            "openmrs_entity_parent": "",
+            "text": "All service providers treated me disrespectfully"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Please select one choice"
+        },
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step15": {
+    "title": "Satisfaction",
+    "next": "step16",
+    "fields": [
+      {
+        "key": "satisfied_with_fp_services_from_health_facility",
+        "type": "native_radio",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "satisfied_with_fp_services_from_health_facility",
+        "openmrs_entity_parent": "",
+        "label": "ASK: Are you satisfied overall with the family planning services you were provided with at the health facility?\n\nThis means you had no problems and received good quality every time you went to the facility.",
         "options": [
           {
             "key": "yes",
@@ -899,13 +715,6 @@
             "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
             "text": "No"
-          },
-          {
-            "key": "i_dont_remember",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_dont_remember",
-            "openmrs_entity_parent": "",
-            "text": "I don't remember"
           }
         ],
         "v_required": {
@@ -919,14 +728,20 @@
             }
           }
         }
-      },
+      }
+    ]
+  },
+  "step16": {
+    "title": "Satisfaction",
+    "next": "step17",
+    "fields": [
       {
-        "key": "did_you_meet_the_service_providers_in_a_private_room",
+        "key": "satisfied_with_fp_services_from_chw",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_you_meet_the_service_providers_in_a_private_room",
+        "openmrs_entity_id": "satisfied_with_fp_services_from_chw",
         "openmrs_entity_parent": "",
-        "label": "Did you meet the service providers in a private room?",
+        "label": "ASK: Are you satisfied with family planning services I am providing you by using the mobile phone?",
         "options": [
           {
             "key": "yes",
@@ -941,13 +756,6 @@
             "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
             "text": "No"
-          },
-          {
-            "key": "i_dont_remember",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_dont_remember",
-            "openmrs_entity_parent": "",
-            "text": "I don't remember"
           }
         ],
         "v_required": {
@@ -961,180 +769,18 @@
             }
           }
         }
-      },
-      {
-        "key": "did_the_service_providers_provide_clear_information_about_various_fp_services_and_methods",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_the_service_providers_provide_clear_information_about_various_fp_services_and_methods",
-        "openmrs_entity_parent": "",
-        "label": "Did the service provider provide you with clear information about various family planning services and methods?\n",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Yes"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "No"
-          },
-          {
-            "key": "i_dont_remember",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_dont_remember",
-            "openmrs_entity_parent": "",
-            "text": "I don't remember"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "did_the_service_providers_use_visual_aids_to_demo_fp_methods",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_the_service_providers_use_visual_aids_to_demo_fp_methods",
-        "openmrs_entity_parent": "",
-        "label": "Did the service providers use visual aids to demonstrate family planning methods to you?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Yes"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "No"
-          },
-          {
-            "key": "i_dont_remember",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_dont_remember",
-            "openmrs_entity_parent": "",
-            "text": "I don't remember"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "did_the_service_providers_ask_if_you_had_any_concerns_about_previously_used_methods",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_the_service_providers_ask_if_you_had_any_concerns_about_previously_used_methods",
-        "openmrs_entity_parent": "",
-        "label": "Did the service provider ask if you had any concerns about previously used methods?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Yes"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "No"
-          },
-          {
-            "key": "i_dont_remember",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_dont_remember",
-            "openmrs_entity_parent": "",
-            "text": "I don't remember"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "were_you_given_info_on_dual_protection",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "were_you_given_info_on_dual_protection",
-        "openmrs_entity_parent": "",
-        "label": "Were you given information on dual protection (Preventing both HIV/STIs and pregnancy)?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Yes"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "No"
-          },
-          {
-            "key": "i_dont_remember",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_dont_remember",
-            "openmrs_entity_parent": "",
-            "text": "I don't remember"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
+      }
+    ]
+  },
+  "step17": {
+    "title": "FP methods known by client",
+    "next": "step18",
+    "fields": [
       {
         "key": "how_many_fp_methods_can_you_name",
         "type": "check_box",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "methods_not_wanted",
+        "openmrs_entity_id": "how_many_fp_methods_can_you_name",
         "openmrs_entity_parent": "",
         "label": "ASK: How many family planning methods can you name? \nCheck the box for each method the client names. Do not give the client any hints.\n",
         "options": [
@@ -1164,7 +810,7 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
-            "text": "Progestin only pills (POP)"
+            "text": "Progestin only pills"
           },
           {
             "key": "sdm",
@@ -1237,757 +883,14 @@
       }
     ]
   },
-  "step7": {
-    "title": "Reliability",
-    "next": "step8",
-    "fields": [
-      {
-        "key": "ever_visited_health_facility_for_fp_services_but_not_received_services_needed",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "is_this_the_nearest_facility_from_home",
-        "openmrs_entity_parent": "",
-        "label": "Have you ever gone to this health facility for family planning services, but not received the services you needed?\n",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Yes"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "No"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "why_did_you_not_get_the_services_at_the_health_facility",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "why_did_you_not_get_the_services_at_the_health_facility",
-        "openmrs_entity_parent": "",
-        "label": "Why did you not get services at the health facility?",
-        "options": [
-          {
-            "key": "too_many_people",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "too_many_people",
-            "openmrs_entity_parent": "",
-            "text": "There were too many people"
-          },
-          {
-            "key": "method_was_out_of_stock",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "method_was_out_of_stock",
-            "openmrs_entity_parent": "",
-            "text": "The method was out of stock"
-          },
-          {
-            "key": "no_skilled_service_provider",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no_skilled_service_provider",
-            "openmrs_entity_parent": "",
-            "text": "No skilled service provider"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "times_you_have_missed_services_because_of_a_skilled_provider_not_being_present",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "times_you_have_missed_services_because_of_a_skilled_provider_not_being_present",
-        "openmrs_entity_parent": "",
-        "label": "How many times have you missed the service/method you went for because a skilled provider was not present?",
-        "options": [
-          {
-            "key": "once",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "once",
-            "openmrs_entity_parent": "",
-            "text": "Once"
-          },
-          {
-            "key": "twice",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "twice",
-            "openmrs_entity_parent": "",
-            "text": "Twice"
-          },
-          {
-            "key": "private_transport",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "private_transport",
-            "openmrs_entity_parent": "",
-            "text": "Private transport (car or motorcycle)"
-          },
-          {
-            "key": "three_times",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "three_times",
-            "openmrs_entity_parent": "",
-            "text": "Three times"
-          },
-          {
-            "key": "more_than_3_times",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "more_than_3_times",
-            "openmrs_entity_parent": "",
-            "text": "More than 3 times"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step8": {
-    "title": "Corruption/Hidden costs",
-    "next": "step9",
-    "fields": [
-      {
-        "key": "did_you_pay_for_the_service",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_you_pay_for_the_service",
-        "openmrs_entity_parent": "",
-        "label": "Did you pay for the service or method you got?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Yes"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "No"
-          },
-          {
-            "key": "i_dont_remember",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_dont_remember",
-            "openmrs_entity_parent": "",
-            "text": "I don't remember"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "what_were_the_costs_for",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "what_were_the_costs_for",
-        "openmrs_entity_parent": "",
-        "label": "What were the costs for?",
-        "options": [
-          {
-            "key": "fp_method",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "fp_method",
-            "openmrs_entity_parent": "",
-            "text": "FP method"
-          },
-          {
-            "key": "medicines_or_supplies",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "medicines_or_supplies",
-            "openmrs_entity_parent": "",
-            "text": "Medicines or supplies"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "were_you_asked_to_give_some_kickbacks_to_get_the_service",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "were_you_asked_to_give_some_kickbacks_to_get_the_service",
-        "openmrs_entity_parent": "",
-        "label": "Were you asked to give some kickbacks to get the service?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Yes"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "No"
-          },
-          {
-            "key": "i_dont_remember",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_dont_remember",
-            "openmrs_entity_parent": "",
-            "text": "I don't remember"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "amount_paid",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "amount_paid",
-        "type": "edit_text",
-        "hint": "How much did you pay? (in Tsh)",
-        "edit_type": "decimal",
-        "v_required": {
-          "value": "true",
-          "err": "Please enter the amount"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step9": {
-    "title": "Problem resolution",
-    "next": "step10",
-    "fields": [
-      {
-        "key": "have_you_had_a_problem_with_fp_services_since_i_saw_you_last",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "have_you_had_a_problem_with_fp_services_since_i_saw_you_last",
-        "openmrs_entity_parent": "",
-        "label": "Have you had a problem with the family planning services in the health facility since I saw you last?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Yes"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "No"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "what_type_of_problem_is_it",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "what_type_of_problem_is_it",
-        "type": "check_box",
-        "label": "What type of problem was it? Choose all that apply",
-        "label_text_style": "normal",
-        "options": [
-          {
-            "key": "disrespectful_service_providers",
-            "text": "Disrespectful service providers",
-            "value": false,
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": ""
-          },
-          {
-            "key": "asked_for_kickback",
-            "text": "Asked for kickback",
-            "value": false,
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": ""
-          },
-          {
-            "key": "service_provider_absent",
-            "text": "Service Provider absent",
-            "value": false,
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": ""
-          },
-          {
-            "key": "method_of_your_choice_not_available",
-            "text": "Method of your choice not available",
-            "value": false,
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": ""
-          },
-          {
-            "key": "not_satisfied_with_counseling",
-            "text": "Not satisfied with counseling",
-            "value": false,
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
-            "openmrs_entity_parent": ""
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please pick at least one"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "did_you_file_a_complaint",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_you_file_a_complaint",
-        "openmrs_entity_parent": "",
-        "label": "Did you file a complaint?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Yes"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "No"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "why_didnt_you_file_a_complaint",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "why_didnt_you_file_a_complaint",
-        "openmrs_entity_parent": "",
-        "label": "Why didn’t you file a complaint?\n",
-        "options": [
-          {
-            "key": "did_not_think_anything_would_be_done",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "did_not_think_anything_would_be_done",
-            "openmrs_entity_parent": "",
-            "text": "Did not think anything would be done"
-          },
-          {
-            "key": "afraid_to_make_complain",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "afraid_to_make_complain",
-            "openmrs_entity_parent": "",
-            "text": "Afraid to make a complaint"
-          },
-          {
-            "key": "did_not_know_where_to_complain",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "did_not_know_where_to_complain",
-            "openmrs_entity_parent": "",
-            "text": "Did not know where to complain"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "was_your_problem_solved_to_satisfaction",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "was_your_problem_solved_to_satisfaction",
-        "openmrs_entity_parent": "",
-        "label": "Was your problem solved to your satisfaction?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Yes"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "No"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "how_long_it_took_for_the_problem_to_be_addressed",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "how_long_it_took_for_the_problem_to_be_addressed",
-        "openmrs_entity_parent": "",
-        "label": "How long did it take to have your problem addressed?",
-        "options": [
-          {
-            "key": "i_dont_know",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_dont_know",
-            "openmrs_entity_parent": "",
-            "text": "I don't know"
-          },
-          {
-            "key": "between_1_and_4_months",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "between_1_and_4_months",
-            "openmrs_entity_parent": "",
-            "text": "Between 1 and 4 months"
-          },
-          {
-            "key": "within_one_month",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "within_one_month",
-            "openmrs_entity_parent": "",
-            "text": "Within one month"
-          },
-          {
-            "key": "longer_than_4_months",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "longer_than_4_months",
-            "openmrs_entity_parent": "",
-            "text": "Longer than 4 months"
-          },
-          {
-            "key": "same_day",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "same_day",
-            "openmrs_entity_parent": "",
-            "text": "Same day"
-          },
-          {
-            "key": "within_one_week",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "within_one_week",
-            "openmrs_entity_parent": "",
-            "text": "Within one week"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "did_you_report_the_problem_again",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "did_you_report_the_problem_again",
-        "openmrs_entity_parent": "",
-        "label": "Did you report a complaint again?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Yes"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "No"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "will_you_go_back_for_fp_services_at_this_facility",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "will_you_go_back_for_fp_services_at_this_facility",
-        "openmrs_entity_parent": "",
-        "label": "Will you go back again for a FP service at this facility?\n",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Yes"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "No"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step10": {
-    "title": "Satisfaction",
-    "next": "step11",
-    "fields": [
-      {
-        "key": "are_you_satisfied_with_fp_services_you_received",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "have_you_had_a_problem_with_fp_services_since_i_saw_you_last",
-        "openmrs_entity_parent": "",
-        "label": "Are you satisfied with the family planning services you received overall?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Yes"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "No"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "are_you_satisfied_with_fp_services_am_providing_using_mobile_phone",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "are_you_satisfied_with_fp_services_am_providing_using_mobile_phone",
-        "openmrs_entity_parent": "",
-        "label": "Are you satisfied with family planning services I am providing you by using the mobile phone?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Yes"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "No"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "have_fp_services_improved",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "have_fp_services_improved",
-        "openmrs_entity_parent": "",
-        "label": "As compared to the first time you visited the health facility, have family planning services improved?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Yes"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "No"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_citizen_report_card_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step11": {
+  "step18": {
     "title": "Thank you",
     "fields": [
       {
         "key": "thank_you",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "not_satisfied_with_chw_given_method",
+        "openmrs_entity_id": "thank_you",
         "type": "toaster_notes",
         "text": "Thank you for your time.",
         "text_color": "#1199F9",
