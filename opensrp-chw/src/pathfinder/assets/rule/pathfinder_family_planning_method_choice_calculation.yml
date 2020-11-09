@@ -132,16 +132,16 @@ condition: "step11_are_you_speaking_to!=''"
 actions:
   - 'calculation = ["this_method" : step9_fp_method_accepted]'
 ---
-name: step32_man_request_method_for_partner
+name: step30_man_request_method_for_partner
 description: man_request_method_for_partner calculation
 priority: 1
 condition: "true"
 actions:
   - "calculation = step9_fp_method_accepted.length() > 1 && step11_are_you_speaking_to == 'man_only' && (step9_fp_method_accepted.contains('coc') || step9_fp_method_accepted.contains('pop') || step9_fp_method_accepted.contains('tubal_ligation') || step9_fp_method_accepted.contains('emergency_contraception') || step9_fp_method_accepted.contains('iud') || step9_fp_method_accepted.contains('implants') || step9_fp_method_accepted.contains('lam') || step9_fp_method_accepted.contains('injection') || step9_fp_method_accepted.contains('female_condom') || step9_fp_method_accepted.contains('injection') || step9_fp_method_accepted.contains('sdm')) "
 ---
-name: step32_periods_regularity
+name: step30_periods_regularity
 description: periods_regularity calculation
 priority: 1
 condition: "true"
 actions:
-  - "calculation = step30_periods_come_once_a_month=='yes'? 'REGULAR':'IRREGULAR' "
+  - "calculation = 'REGULAR' "

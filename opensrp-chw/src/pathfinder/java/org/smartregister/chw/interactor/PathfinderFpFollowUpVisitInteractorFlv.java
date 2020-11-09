@@ -253,7 +253,6 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
                     if (
                             familyPlanningMethod.equalsIgnoreCase("coc") ||
                                     familyPlanningMethod.equalsIgnoreCase("pop") ||
-                                    familyPlanningMethod.equalsIgnoreCase("sdm") ||
                                     familyPlanningMethod.contains("condom")
                     ) {
                         LinkedHashMap<String, BaseAncHomeVisitAction> additionalList = new LinkedHashMap<>();
@@ -264,7 +263,7 @@ public class PathfinderFpFollowUpVisitInteractorFlv extends DefaultPathfinderFpF
                     e.printStackTrace();
                 }
                 return BaseAncHomeVisitAction.Status.COMPLETED;
-            } else if ("no".equalsIgnoreCase(satisfaction_with_current_method) && (familyPlanningMethod.equalsIgnoreCase("injection") || familyPlanningMethod.equalsIgnoreCase("lam") || familyPlanningMethod.equalsIgnoreCase("implants") || familyPlanningMethod.equalsIgnoreCase("vasectomy") || familyPlanningMethod.equalsIgnoreCase("iud") || familyPlanningMethod.equalsIgnoreCase("tubal_ligation"))) {
+            } else if ("no".equalsIgnoreCase(satisfaction_with_current_method) && (familyPlanningMethod.equalsIgnoreCase("injection") || familyPlanningMethod.equalsIgnoreCase("lam") || familyPlanningMethod.equalsIgnoreCase("implants") || familyPlanningMethod.equalsIgnoreCase("vasectomy") || familyPlanningMethod.equalsIgnoreCase("iud") || familyPlanningMethod.equalsIgnoreCase("sdm") || familyPlanningMethod.equalsIgnoreCase("tubal_ligation"))) {
                 try {
                     LinkedHashMap<String, BaseAncHomeVisitAction> additionalList = new LinkedHashMap<>();
                     additionalList.put(context.getString(R.string.fp_method_referral, familyPlanningMethodTranslated), fpMethodReferral);
