@@ -786,28 +786,28 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
-            "text": "Kondomuya kiume "
+            "text": "Kondomu ya kiume "
           },
           {
             "key": "female_condom",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
-            "text": "Kondomuya kike"
+            "text": "Kondomu ya kike"
           },
           {
             "key": "coc",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
-            "text": "Vichocheoviwili (COC)"
+            "text": "Vichocheo viwili (COC)"
           },
           {
             "key": "pop",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
-            "text": "Kichocheokimoja (POP)"
+            "text": "Kichocheo kimoja (POP)"
           },
           {
             "key": "sdm",
@@ -856,14 +856,14 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
-            "text": "Kufungauzazi wanaume "
+            "text": "Kufunga uzazi wanaume "
           },
           {
             "key": "tubal_ligation",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
-            "text": "Kufungauzazi wanawake "
+            "text": "Kufunga uzazi wanawake "
           }
         ],
         "v_required": {

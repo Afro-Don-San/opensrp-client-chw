@@ -291,7 +291,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "pop_given",
         "type": "native_radio",
-        "label": "Je umempatia mteja wako vidonge ya Kichocheokimoja (POP)?",
+        "label": "Je umempatia mteja wako vidonge ya Kichocheo kimoja (POP)?",
         "options": [
           {
             "key": "yes",
