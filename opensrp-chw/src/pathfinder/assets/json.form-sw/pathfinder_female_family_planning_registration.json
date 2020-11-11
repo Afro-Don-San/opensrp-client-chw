@@ -101,7 +101,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "is_client_already_using_fp",
         "openmrs_entity_parent": "",
-        "label": "Is the client already using a family planning method?",
+        "label": "Je mteja anatumia njia yoyote ya uzazi wa mpango kwa sasa?",
         "options": [
           {
             "key": "yes",
@@ -785,7 +785,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Msisitiziemteja umuhimu wa huduma hizi. Jadili na mteja sababu za kutotaka kupokea hudumahizi. Mpe nafasi ya kuuliza maswali",
+        "text": "Msisitizie mteja umuhimu wa huduma hizi. Jadili na mteja sababu za kutotaka kupokea hudumahizi. Mpe nafasi ya kuuliza maswali",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {

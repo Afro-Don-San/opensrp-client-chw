@@ -9,9 +9,9 @@ actions:
 name: step2_fp_start_date
 description: calculate fp start date
 priority: 1
-condition: "step2_is_client_already_using_fp =='yes'"
+condition: "true"
 actions:
-  - "calculation = System.currentTimeMillis()"
+  - "calculation = step2_is_client_already_using_fp =='yes'? System.currentTimeMillis() : 0 "
 ---
 name: step4_fp_method_accepted
 description: calculate fp method accepted
