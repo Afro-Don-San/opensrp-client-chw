@@ -928,49 +928,49 @@
         "options": [
           {
             "key": "no_education",
-            "text": "No education",
+            "text": "Hajasoma",
             "value": false,
             "openmrs_entity": "concept",
             "openmrs_entity_id": ""
           },
           {
             "key": "primary",
-            "text": "primary",
+            "text": "Shule ya msingi",
             "value": false,
             "openmrs_entity": "concept",
             "openmrs_entity_id": ""
           },
           {
             "key": "secondary_o_level",
-            "text": "Secondary 'O' Level",
+            "text": "Shule ya sekondari 'O' Level",
             "value": false,
             "openmrs_entity": "concept",
             "openmrs_entity_id": ""
           },
           {
             "key": "secondary_a_level",
-            "text": "Secondary 'A' Level",
+            "text": "Shule ya sekondari 'A' Level",
             "value": false,
             "openmrs_entity": "concept",
             "openmrs_entity_id": ""
           },
           {
             "key": "tertiary",
-            "text": "Tertiary",
+            "text": "Elimu ya Juu (Diploma, Cheti)",
             "value": false,
             "openmrs_entity": "concept",
             "openmrs_entity_id": ""
           },
           {
             "key": "university",
-            "text": "University",
+            "text": "Chuo Kikuu",
             "value": false,
             "openmrs_entity": "concept",
             "openmrs_entity_id": ""
           },
           {
             "key": "unknown",
-            "text": "Don't Know",
+            "text": "Sijui",
             "value": false,
             "openmrs_entity": "concept",
             "openmrs_entity_id": ""

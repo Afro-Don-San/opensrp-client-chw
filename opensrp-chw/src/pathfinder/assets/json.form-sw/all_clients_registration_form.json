@@ -968,144 +968,60 @@
         }
       },
       {
-        "key": "reasons_for_registration",
+        "key": "highest_level_of_education",
         "openmrs_entity_parent": "",
         "openmrs_entity": "person_attribute",
-        "openmrs_entity_id": "Registration_Reason",
+        "openmrs_entity_id": "highest_level_of_education",
         "type": "native_radio",
-        "label": "Sababu za Usajili",
+        "label": "Highest level of education completed?",
         "label_text_style": "normal",
         "text_color": "#C0C0C0",
         "options": [
           {
-            "key": "hiv_aids_transmission",
-            "text": "Maambukizo ya VVU",
+            "key": "no_education",
+            "text": "Hajasoma",
             "value": false,
             "openmrs_entity": "concept",
             "openmrs_entity_id": ""
           },
           {
-            "key": "sickle_cell_disease",
-            "text": "Sickle cell disease ",
+            "key": "primary",
+            "text": "Shule ya msingi",
             "value": false,
             "openmrs_entity": "concept",
             "openmrs_entity_id": ""
           },
           {
-            "key": "heart_disease",
-            "text": "Magonjwa ya moyo ",
+            "key": "secondary_o_level",
+            "text": "Shule ya sekondari 'O' Level",
             "value": false,
             "openmrs_entity": "concept",
             "openmrs_entity_id": ""
           },
           {
-            "key": "diabetes",
-            "text": "Kisukari ",
+            "key": "secondary_a_level",
+            "text": "Shule ya sekondari 'A' Level",
             "value": false,
             "openmrs_entity": "concept",
             "openmrs_entity_id": ""
           },
           {
-            "key": "cerebral_palsy",
-            "text": "Mtindio wa ubongo",
+            "key": "tertiary",
+            "text": "Elimu ya Juu (Diploma, Cheti)",
             "value": false,
             "openmrs_entity": "concept",
             "openmrs_entity_id": ""
           },
           {
-            "key": "cancer",
-            "text": "Saratani ",
+            "key": "university",
+            "text": "Chuo Kikuu",
             "value": false,
             "openmrs_entity": "concept",
             "openmrs_entity_id": ""
           },
           {
-            "key": "tuberculosis",
-            "text": "Kifua kikuu ",
-            "value": false,
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": ""
-          },
-          {
-            "key": "homosexual",
-            "text": "Mwanaume anayefanya ngono na mwanaume mwenzake",
-            "value": false,
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": ""
-          },
-          {
-            "key": "sex_worker_woman",
-            "text": "Mwanamke anayefanya biashara ya ngono",
-            "value": false,
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": ""
-          },
-          {
-            "key": "hiv_infected_child",
-            "text": "Mtoto aliyezaliwa na mama mwenye VVU",
-            "value": false,
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": ""
-          },
-          {
-            "key": "untested_hiv_infected_child",
-            "text": "Mtoto ambaye hajapimwa VVU ",
-            "value": false,
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": ""
-          },
-          {
-            "key": "weight_stagnation_child",
-            "text": "Mtoto asiyeongezeka uzito",
-            "value": false,
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": ""
-          },
-          {
-            "key": "child_with_fever",
-            "text": "Mtoto anayepata homa za mara kwa mara",
-            "value": false,
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": ""
-          },
-          {
-            "key": "abused_child",
-            "text": "Mtoto anayefanyiwa ukatili",
-            "value": false,
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": ""
-          },
-          {
-            "key": "gender_violence",
-            "text": "Mtu aliyenyanyaswa kijinsia",
-            "value": false,
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": ""
-          },
-          {
-            "key": "drug_abuse",
-            "text": "Mtu anayejidunga",
-            "value": false,
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": ""
-          },
-          {
-            "key": "pregnant_mother",
-            "text": "Mama mjamzito",
-            "value": false,
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": ""
-          },
-          {
-            "key": "breastfeeding_mother",
-            "text": "Mama anayenyonyesha ",
-            "value": false,
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": ""
-          },
-          {
-            "key": "child_in_risky_environment",
-            "text": "Mtoto anayeishi mazingira hatarishi",
+            "key": "unknown",
+            "text": "Sijui",
             "value": false,
             "openmrs_entity": "concept",
             "openmrs_entity_id": ""
@@ -1113,7 +1029,7 @@
         ],
         "v_required": {
           "value": "true",
-          "err": "Sababu ya kisajili mteja inahitajika"
+          "err": "Please select the highest level of education completed"
         }
       }
     ]

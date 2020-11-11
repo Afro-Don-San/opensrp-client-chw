@@ -49,4 +49,10 @@ priority: 2
 condition: "step2_pregnancy_test_results =='pregnant'"
 actions:
   - "calculation = step2_edd_from_facility "
-
+---
+name: step5_client_is_currently_referred
+description: client_is_currently_referred calculation
+priority: 1
+condition: "step1_did_the_client_get_pregnancy_test == 'yes'"
+actions:
+  - "calculation = false"

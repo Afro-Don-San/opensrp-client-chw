@@ -150,7 +150,7 @@
         "hint": "Je, unakumbuka tarehe ya kuanza siku yako ya hedhi kwa mara ya mwisho",
         "expanded": false,
         "duration": {
-          "label": "Time till Delivery"
+          "label": "Muda uliobaki mpaka siku kujifungua"
         },
         "min_date": "today",
         "max_date": "today+40w",
@@ -431,6 +431,20 @@
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "edd",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_test_followup_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "client_is_currently_referred",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "client_is_currently_referred",
         "type": "hidden",
         "calculation": {
           "rules-engine": {
