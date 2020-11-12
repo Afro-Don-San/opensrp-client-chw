@@ -2,7 +2,7 @@
   "validate_on_submit": false,
   "show_errors_on_submit": true,
   "skip_blank_steps": true,
-  "count": "16",
+  "count": "6",
   "encounter_type": "Give Family Planning Method",
   "entity_id": "",
   "relational_id": "",
@@ -133,23 +133,6 @@
         "openmrs_entity_id": "",
         "type": "toaster_notes",
         "text": "Mpe mteja pakiti 3 za vidonge.",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "give_sdm_note",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "text": "Give the client the cycle beads.\n",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -321,41 +304,6 @@
         }
       },
       {
-        "key": "sdm_given",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "sdm_given",
-        "openmrs_entity_parent": "",
-        "label": "Je umempatia mteja shanga za kuhesabu siku?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Ndio"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "Hapana"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        }
-      },
-      {
         "key": "number_of_condoms",
         "type": "edit_text",
         "openmrs_entity": "concept",
@@ -446,238 +394,8 @@
     ]
   },
   "step5": {
-    "title": "Cycle beads counseling 1",
-    "next": "step6",
-    "fields": [
-      {
-        "key": "sdm_counselling_1",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        },
-        "text": "Msaidie mteja kufanya yafuatyo:\n*Weka alama kwenye siku ya kwanza ya mwishokuanza hedhi kwenye kalenda\n*Anza na hiyo tarehe kwenye mzunguko washanga\n*Weka pete kwenye shanga nyekundu na tembezakutoka shanga moja hadi nyingine kwa leo\n*Weka pete kwenye shanga ya tsrehe ya leo\n ",
-        "text_color": "#1199F9",
-        "toaster_type": "info"
-      }
-    ]
-  },
-  "step6": {
-    "title": "Cycle beads counseling 2",
-    "next": "step7",
-    "fields": [
-      {
-        "key": "sdm_counselling_2",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "text": "Mwambie mteja:\n*Shanga nyekundu inamasnisha siku yako ya kuanzahedhi.\n*Kama amefanya ngono isiyo salama kati yasiku ya kwanza na ya tano ya shanga   nyeupe,atahitaji vidonge vya dharura\n*Kama alitumia vidonge vya dharura,atumie njia nyingine yauzazi wa mpango kama vile kondomu mpaka atakapo ona tena mzunguko wake wa mwezi.",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step7": {
-    "title": "Cycle beads counseling 3",
-    "next": "step8",
-    "fields": [
-      {
-        "key": "sdm_counselling_3",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        },
-        "text": "Mwambiemteja:\n*Sikuzote weka alama siku unayoanza hedhi kwenye kalenda\n*Msaidiejinsi ya kukumbuka kuzungusha pete kila siku \n*Wekaalama siku ya kwanza hedhi kalenda\n*Shanganyekundu inaonyesha siku ya kwanza ya hedhi.",
-        "text_color": "#1199F9",
-        "toaster_type": "info"
-      }
-    ]
-  },
-  "step8": {
-    "title": "Cycle beads counseling 4",
-    "next": "step9",
-    "fields": [
-      {
-        "key": "sdm_counselling_4",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        },
-        "text": "Mwambie Mteja:\n*Sogeza pete kwenye shanga moja kila siku kwakufata mshale\n*Pete itakapo kuwa kwenye shanga nyeupe tumia kondomu auusifanye ngono. Kuna uwezekano wa kupata ujauzito katika siku hizo.",
-        "text_color": "#1199F9",
-        "toaster_type": "info"
-      }
-    ]
-  },
-  "step9": {
-    "title": "Cycle beads counseling 5",
-    "next": "step10",
-    "fields": [
-      {
-        "key": "sdm_counselling_5",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "text": "Mkumbushe mteja kufanya yafuatayo:\n*Sogeza pete kila siku\n*Hakikisha mzunguko wa wedhi ni kati ya siku26 hadi 32\n*Kuwa ukichunguza ukubwa wa mzunguko wa hedhi.",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step10": {
-    "title": "Cycle beads counseling 6",
-    "fields": [
-      {
-        "key": "sdm_counselling_6",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "text": "Elezea kama atakuwa amesahau kusogeza pete:\n*Angaliakalenda sehemu ulioweka alama ya kuanza hedhi\n*Hesabusiku ambazo zimeshapita hadi siku ya leo\n*Ukianzia kwenyeshanga nyekundu sogeza pete sawa sawa na shanga kwenye shanga zako",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        }
-      }
-    ],
-    "next": "step11"
-  },
-  "step11": {
-    "title": "Uelewa wa mteja kuhusu njia aliyochagua",
-    "next": "step12",
-    "fields": [
-      {
-        "key": "determine_clients_comprehension_1",
-        "type": "toaster_notes",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "openmrs_entity_parent": "",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        },
-        "text": "Muulize mteja maswali yafuatayokufahamu uelewa wa mteja kuhusu njia aliochagua:",
-        "text_color": "#1199F9",
-        "toaster_type": "info"
-      }
-    ]
-  },
-  "step12": {
-    "title": "Uelewa wa mteja kuhusu njia aliyochagua 2",
-    "next": "step13",
-    "fields ": [
-      {
-        "key": "determine_clients_comprehension_2",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "text": "Utatumia vipi njia ulioichagua?",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step13": {
-    "title": "Uelewa wa mteja kuhusu njia aliyochagua\n\n3",
-    "next": "step14",
-    "fields": [
-      {
-        "key": "determine_clients_comprehension_3",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "text": "Ni yapi maudhi madogomadogo unayoweza kupata kwa njiautakayoitumia?",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step14": {
-    "title": "Uelewa wa mteja kuhusu njia aliyochagua 4",
-    "next": "step15",
-    "fields": [
-      {
-        "key": "determine_clients_comprehension_4",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "text": "Taja dalili zitakazo kusababisha kwenda haraka kwenye kituocha kutolea huduma za afya?",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step15": {
     "title": "Njia ya uzazi wa mpango haijatolewa",
-    "next": "step16",
+    "next": "step6",
     "fields": [
       {
         "key": "reasons_for_not_giving_male_condoms",
@@ -692,7 +410,7 @@
             }
           }
         },
-        "label": "Je umempatia mteja wako kondomu ya kiume?",
+        "label": "Kwa nini hukumpatia mteja wako kondomu ya kiume?",
         "options": [
           {
             "key": "out_of_stock",
@@ -820,41 +538,6 @@
         }
       },
       {
-        "key": "reasons_for_not_giving_sdm",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "reasons_for_not_giving_sdm",
-        "openmrs_entity_parent": "",
-        "label": "Kwa nini hukumpatia mteja wako shanga",
-        "options": [
-          {
-            "key": "out_of_stock",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "out_of_stock",
-            "openmrs_entity_parent": "",
-            "text": "Hakuna"
-          },
-          {
-            "key": "other",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "Nyinginezo"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        }
-      },
-      {
         "key": "other_reasons",
         "type": "edit_text",
         "openmrs_entity": "concept",
@@ -875,7 +558,7 @@
       }
     ]
   },
-  "step16": {
+  "step6": {
     "title": "Mwisho",
     "fields": [
       {

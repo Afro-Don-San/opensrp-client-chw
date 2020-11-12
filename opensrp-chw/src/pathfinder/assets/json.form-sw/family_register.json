@@ -922,7 +922,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "highest_level_of_education",
         "type": "native_radio",
-        "label": "Highest level of education completed?",
+        "label": "MUULIZE: Je umehitimu kiwango gani cha elimu?",
         "label_text_style": "normal",
         "text_color": "#C0C0C0",
         "options": [

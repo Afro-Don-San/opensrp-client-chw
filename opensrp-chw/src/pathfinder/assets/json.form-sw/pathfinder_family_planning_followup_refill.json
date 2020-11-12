@@ -2,7 +2,7 @@
   "validate_on_submit": false,
   "show_errors_on_submit": true,
   "skip_blank_steps": true,
-  "count": "16",
+  "count": "6",
   "encounter_type": "Give Family Planning Method",
   "entity_id": "",
   "relational_id": "",
@@ -105,23 +105,6 @@
         "openmrs_entity_id": "",
         "type": "toaster_notes",
         "text": "Mpe mteja pakiti 3 za vidonge.",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "give_sdm_note",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "text": "Give the client the cycle beads.\n",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -293,41 +276,6 @@
         }
       },
       {
-        "key": "sdm_given",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "sdm_given",
-        "openmrs_entity_parent": "",
-        "label": "Je umempatia mteja shanga za kuhesabu siku?",
-        "options": [
-          {
-            "key": "yes",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "yes",
-            "openmrs_entity_parent": "",
-            "text": "Ndio"
-          },
-          {
-            "key": "no",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "Hapana"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Tafadhali chagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        }
-      },
-      {
         "key": "number_of_condoms",
         "type": "edit_text",
         "openmrs_entity": "concept",
@@ -418,238 +366,8 @@
     ]
   },
   "step5": {
-    "title": "Cycle beads counseling 1",
-    "next": "step6",
-    "fields": [
-      {
-        "key": "sdm_counselling_1",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "text": "Help the client complete the following steps:\nMark the first day of the client’s last menstrual period on the calendar\nStart with that date on the cycle beads\nPut the ring on the RED bead and move it from bead to bead as you say and count the dates until you reach the bead for today\nPut the ring on the bead for today’s date\n",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step6": {
-    "title": "Cycle beads counseling 2",
-    "next": "step7",
-    "fields": [
-      {
-        "key": "sdm_counselling_2",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "text": "Tell the client:\nThe red bead marks the first day of her period\nIf she has unprotected sex between the first and fifth white bead, she may need emergency contraception (ECP)\nIf she uses ECP, she should use other FP methods such as condoms until she gets her period again\n",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step7": {
-    "title": "Cycle beads counseling 3",
-    "next": "step8",
-    "fields": [
-      {
-        "key": "sdm_counselling_3",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "text": "Tell the client:\nAlways mark the first day of bleeding on her calendar\nHelp her find ways to remember to move the ring every day\nMark the first day of her period on the calendar\nThe red bead marks the first day of her period\n",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step8": {
-    "title": "Cycle beads counseling 4",
-    "next": "step9",
-    "fields": [
-      {
-        "key": "sdm_counselling_4",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "text": "Tell the client:\nMove the ring one bead every day in the direction of the arrow\nWhen the ring is on any white bead, use a condom or do not have sex. You are likely to get pregnant on those days\n",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step9": {
-    "title": "Cycle beads counseling 5",
-    "next": "step10",
-    "fields": [
-      {
-        "key": "sdm_counselling_5",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "text": "Remind the client to do the following:\nMove the ring every day\nMake sure her cycle is between 26 and 32 days\nKeep checking the length of her menstrual cycle\n",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step10": {
-    "title": "Cycle beads counseling 6",
-    "next": "step11",
-    "fields": [
-      {
-        "key": "sdm_counselling_6",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "text": "Explain what to do if she forgets to move the ring:\nCheck your calendar for the day you marked as the first day of your period\nCount the number of days that have passed from that day until today\nStarting on the red bead, move the ring that same number of beads on your cycle beads\n",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step11": {
-    "title": "Determine client comprehension 1",
-    "next": "step12",
-    "fields": [
-      {
-        "key": "determine_clients_comprehension_1",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "text": "Ask the client the following questions to determine her/his comprehension about the method chosen:",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step12": {
-    "title": "Determine client comprehension 2",
-    "next": "step13",
-    "fields": [
-      {
-        "key": "determine_clients_comprehension_2",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "text": "ASK: How will you use the method you have chosen?",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step13": {
-    "title": "Determine client comprehension 3",
-    "next": "step14",
-    "fields": [
-      {
-        "key": "determine_clients_comprehension_3",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "text": "ASK: What are the side effects you can get from this method?\n",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step14": {
-    "title": "Determine client comprehension 4",
-    "next": "step15",
-    "fields": [
-      {
-        "key": "determine_clients_comprehension_4",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "text": "ASK: Which symptoms would require you to go quickly to a health facility?",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        }
-      }
-    ]
-  },
-  "step15": {
     "title": "Njia ya uzazi wa mpango haijatolewa",
-    "next": "step16",
+    "next": "step6",
     "fields": [
       {
         "key": "reasons_for_not_giving_male_condoms",
@@ -664,7 +382,7 @@
             }
           }
         },
-        "label": "Je umempatia mteja wako kondomu ya kiume?",
+        "label": "Kwa nini hukumpatia mteja wako kondomu ya kiume?",
         "options": [
           {
             "key": "out_of_stock",
@@ -792,41 +510,6 @@
         }
       },
       {
-        "key": "reasons_for_not_giving_sdm",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "reasons_for_not_giving_sdm",
-        "openmrs_entity_parent": "",
-        "label": "Kwa nini hukumpatia mteja wako shanga",
-        "options": [
-          {
-            "key": "out_of_stock",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "out_of_stock",
-            "openmrs_entity_parent": "",
-            "text": "Hakuna"
-          },
-          {
-            "key": "other",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "Nyinginezo"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Hakikisha unachagua jibu sahihi"
-        },
-        "relevance": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
-            }
-          }
-        }
-      },
-      {
         "key": "other_reasons",
         "type": "edit_text",
         "openmrs_entity": "concept",
@@ -847,7 +530,7 @@
       }
     ]
   },
-  "step16": {
+  "step6": {
     "title": "Mwisho",
     "fields": [
       {

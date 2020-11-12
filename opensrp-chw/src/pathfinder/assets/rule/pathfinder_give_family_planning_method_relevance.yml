@@ -13,13 +13,6 @@ condition: "global_fp_method.contains('coc') || global_fp_method.contains('pop')
 actions:
   - "isRelevant = true"
 ---
-name: step2_give_sdm_note
-description: step2_give_sdm_note relevance
-priority: 1
-condition: "global_fp_method.contains('sdm')"
-actions:
-  - "isRelevant = true"
----
 name: step3_male_condoms_given
 description: step3_male_condoms_given relevance
 priority: 1
@@ -48,13 +41,6 @@ condition: "global_fp_method == 'pop'"
 actions:
   - "isRelevant = true"
 ---
-name: step3_sdm_given
-description: step3_sdm_given relevance
-priority: 1
-condition: "global_fp_method == 'sdm'"
-actions:
-  - "isRelevant = true"
----
 name: step3_number_of_condoms
 description: step3_number_of_condoms relevance
 priority: 1
@@ -65,7 +51,7 @@ actions:
 name: step3_number_of_pills
 description: step3_number_of_pills relevance
 priority: 1
-condition: "step3_coc_given == 'yes' || step3_pop_given == 'yes' || step3_sdm_given == 'yes'"
+condition: "step3_coc_given == 'yes' || step3_pop_given == 'yes' "
 actions:
   - "isRelevant = true"
 ---
@@ -83,130 +69,52 @@ condition: "step3_pop_given == 'yes'"
 actions:
   - "isRelevant = true"
 ---
-name: step5_sdm_counselling_1
-description: step5_sdm_counselling_1 relevance
-priority: 1
-condition: "step3_sdm_given == 'yes'"
-actions:
-  - "isRelevant = true"
----
-name: step6_sdm_counselling_2
-description: step6_sdm_counselling_2 relevance
-priority: 1
-condition: "step3_sdm_given == 'yes'"
-actions:
-  - "isRelevant = true"
----
-name: step7_sdm_counselling_3
-description: step7_sdm_counselling_3 relevance
-priority: 1
-condition: "step3_sdm_given == 'yes'"
-actions:
-  - "isRelevant = true"
----
-name: step8_sdm_counselling_4
-description: step8_sdm_counselling_4 relevance
-priority: 1
-condition: "step3_sdm_given == 'yes'"
-actions:
-  - "isRelevant = true"
----
-name: step9_sdm_counselling_5
-description: step9_sdm_counselling_5 relevance
-priority: 1
-condition: "step3_sdm_given == 'yes'"
-actions:
-  - "isRelevant = true"
----
-name: step10_sdm_counselling_6
-description: step10_sdm_counselling_6 relevance
-priority: 1
-condition: "step3_sdm_given == 'yes'"
-actions:
-  - "isRelevant = true"
----
-name: step11_determine_clients_comprehension_1
-description: step11_determine_clients_comprehension_1 relevance
-priority: 1
-condition: "step3_male_condoms_given == 'yes' || step3_female_condoms_given == 'yes' || step3_coc_given == 'yes' || step3_pop_given == 'yes' || step3_sdm_given == 'yes'"
-actions:
-  - "isRelevant = true"
----
-name: step12_determine_clients_comprehension_2
-description: step12_determine_clients_comprehension_2 relevance
-priority: 1
-condition: "step3_male_condoms_given == 'yes' || step3_female_condoms_given == 'yes' || step3_coc_given == 'yes' || step3_pop_given == 'yes' || step3_sdm_given == 'yes'"
-actions:
-  - "isRelevant = true"
----
-name: step13_determine_clients_comprehension_3
-description: step13_determine_clients_comprehension_3 relevance
-priority: 1
-condition: "step3_male_condoms_given == 'yes' || step3_female_condoms_given == 'yes' || step3_coc_given == 'yes' || step3_pop_given == 'yes' || step3_sdm_given == 'yes'"
-actions:
-  - "isRelevant = true"
----
-name: step14_determine_clients_comprehension_4
-description: step14_determine_clients_comprehension_4 relevance
-priority: 1
-condition: "step3_male_condoms_given == 'yes' || step3_female_condoms_given == 'yes' || step3_coc_given == 'yes' || step3_pop_given == 'yes' || step3_sdm_given == 'yes'"
-actions:
-  - "isRelevant = true"
-
----
-name: step15_reasons_for_not_giving_male_condoms
-description: step15_reasons_for_not_giving_male_condoms relevance
+name: step5_reasons_for_not_giving_male_condoms
+description: step5_reasons_for_not_giving_male_condoms relevance
 priority: 1
 condition: "step3_male_condoms_given == 'no'"
 actions:
   - "isRelevant = true"
 ---
-name: step15_reasons_for_not_giving_female_condoms
-description: step15_reasons_for_not_giving_female_condoms relevance
+name: step5_reasons_for_not_giving_female_condoms
+description: step5_reasons_for_not_giving_female_condoms relevance
 priority: 1
 condition: "step3_female_condoms_given == 'no'"
 actions:
   - "isRelevant = true"
 ---
-name: step15_reasons_for_not_giving_coc
-description: step15_reasons_for_not_giving_coc relevance
+name: step5_reasons_for_not_giving_coc
+description: step5_reasons_for_not_giving_coc relevance
 priority: 1
 condition: "step3_coc_given == 'no'"
 actions:
   - "isRelevant = true"
 ---
-name: step15_reasons_for_not_giving_pop
-description: step15_reasons_for_not_giving_pop relevance
+name: step5_reasons_for_not_giving_pop
+description: step5_reasons_for_not_giving_pop relevance
 priority: 1
 condition: "step3_pop_given == 'no'"
 actions:
   - "isRelevant = true"
 ---
-name: step15_reasons_for_not_giving_sdm
-description: step15_reasons_for_not_giving_sdm relevance
-priority: 1
-condition: "step3_sdm_given == 'no'"
-actions:
-  - "isRelevant = true"
----
-name: step15_other_reasons
+name: step5_other_reasons
 description: other_reasons relevance
 priority: 1
-condition: "step15_reasons_for_not_giving_sdm.contains('other') || step15_reasons_for_not_giving_pop.contains('other')|| step15_reasons_for_not_giving_male_condoms.contains('other') || step15_reasons_for_not_giving_female_condoms.contains('other') || step15_reasons_for_not_giving_coc.contains('other')"
+condition: " step5_reasons_for_not_giving_pop.contains('other')|| step5_reasons_for_not_giving_male_condoms.contains('other') || step5_reasons_for_not_giving_female_condoms.contains('other') || step5_reasons_for_not_giving_coc.contains('other')"
 actions:
   - "isRelevant = true"
 ---
-name: step16_give_referral_note
-description: step16_give_referral_note relevance
+name: step6_give_referral_note
+description: step6_give_referral_note relevance
 priority: 1
-condition: "step3_male_condoms_given == 'no' || step3_female_condoms_given == 'no' || step3_coc_given == 'no' || step3_pop_given == 'no' || step3_sdm_given == 'no'"
+condition: "step3_male_condoms_given == 'no' || step3_female_condoms_given == 'no' || step3_coc_given == 'no' || step3_pop_given == 'no' "
 actions:
   - "isRelevant = true"
 ---
-name: step16_end_note
-description: step16_end_note relevance
+name: step6_end_note
+description: step6_end_note relevance
 priority: 1
-condition: "step3_male_condoms_given != 'no' && step3_female_condoms_given != 'no' && step3_coc_given != 'no' && step3_pop_given != 'no' && step3_sdm_given != 'no'"
+condition: "step3_male_condoms_given != 'no' && step3_female_condoms_given != 'no' && step3_coc_given != 'no' && step3_pop_given != 'no'"
 actions:
   - "isRelevant = true"
 
