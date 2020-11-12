@@ -94,31 +94,31 @@ public class UtilsFlv {
         String familyPlanningMethodTranslated = "";
         switch (familyPlanningMethod) {
             case "coc":
-                familyPlanningMethodTranslated = context.getString(R.string.coc);
+                familyPlanningMethodTranslated = context.getString(R.string.fp_coc);
                 break;
             case "pop":
-                familyPlanningMethodTranslated = context.getString(R.string.pop);
+                familyPlanningMethodTranslated = context.getString(R.string.fp_pop);
                 break;
             case "male_condom":
-                familyPlanningMethodTranslated = context.getString(R.string.male_condom);
+                familyPlanningMethodTranslated = context.getString(R.string.fp_male_condom);
                 break;
             case "female_condom":
-                familyPlanningMethodTranslated = context.getString(R.string.female_condom);
+                familyPlanningMethodTranslated = context.getString(R.string.fp_female_condom);
                 break;
             case "sdm":
-                familyPlanningMethodTranslated = context.getString(R.string.standard_day_method);
+                familyPlanningMethodTranslated = context.getString(R.string.fp_standard_day_method);
                 break;
             case "implants":
-                familyPlanningMethodTranslated = context.getString(R.string.implants);
+                familyPlanningMethodTranslated = context.getString(R.string.fp_implants);
                 break;
             case "tubal_ligation":
-                familyPlanningMethodTranslated = context.getString(R.string.tubal_ligation);
+                familyPlanningMethodTranslated = context.getString(R.string.fp_tubal_ligation);
                 break;
             case "lam":
-                familyPlanningMethodTranslated = context.getString(R.string.lam);
+                familyPlanningMethodTranslated = context.getString(R.string.fp_lam);
                 break;
-            case "injectable":
-                familyPlanningMethodTranslated = context.getString(R.string.injectable);
+            case "injection":
+                familyPlanningMethodTranslated = context.getString(R.string.fp_injection);
                 break;
             default:
                 familyPlanningMethodTranslated = familyPlanningMethod;
