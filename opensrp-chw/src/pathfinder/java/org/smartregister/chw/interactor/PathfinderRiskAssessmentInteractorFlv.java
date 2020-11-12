@@ -80,7 +80,7 @@ public class PathfinderRiskAssessmentInteractorFlv extends DefaultPathfinderFpPr
     }
 
     private void evaluateRiskAssessment() throws Exception {
-        JSONObject hivReferralJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.getPathfinderAncReferral());
+        JSONObject hivReferralJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.getPathfinderHivReferral());
         injectReferralFacilities(hivReferralJsonObject);
 
         BaseAncHomeVisitAction hivReferralAction = new BaseAncHomeVisitAction.Builder(context, context.getString(R.string.issue_hiv_referral))
@@ -92,7 +92,7 @@ public class PathfinderRiskAssessmentInteractorFlv extends DefaultPathfinderFpPr
                 .withFormName(hivReferralJsonObject.toString())
                 .build();
 
-        JSONObject htcReferralJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.getPathfinderAncReferral());
+        JSONObject htcReferralJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.getPathfinderHtcReferral());
         injectReferralFacilities(htcReferralJsonObject);
 
         BaseAncHomeVisitAction htcReferralAction = new BaseAncHomeVisitAction.Builder(context, context.getString(R.string.issue_htc_referral))
@@ -104,7 +104,7 @@ public class PathfinderRiskAssessmentInteractorFlv extends DefaultPathfinderFpPr
                 .withFormName(htcReferralJsonObject.toString())
                 .build();
 
-        JSONObject stiReferralJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.getPathfinderAncReferral());
+        JSONObject stiReferralJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.getPathfinderStiReferral());
         injectReferralFacilities(stiReferralJsonObject);
 
         BaseAncHomeVisitAction stiReferralAction = new BaseAncHomeVisitAction.Builder(context, context.getString(R.string.issue_sti_referral))
