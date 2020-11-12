@@ -211,6 +211,7 @@ public class PathfinderFpMethodChoiceInteractorFlv extends DefaultPathfinderFpPr
                     "lam".equalsIgnoreCase(fp_method_accepted)||
                     "implants".equalsIgnoreCase(fp_method_accepted)||
                     "injection".equalsIgnoreCase(fp_method_accepted)||
+                    "sdm".equalsIgnoreCase(fp_method_accepted)||
                     "emergency_contraception".equalsIgnoreCase(fp_method_accepted)||
                     "tubal_ligation".equalsIgnoreCase(fp_method_accepted)
             ) {

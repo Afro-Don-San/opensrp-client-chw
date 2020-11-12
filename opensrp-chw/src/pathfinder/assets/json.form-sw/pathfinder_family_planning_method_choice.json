@@ -2019,7 +2019,7 @@
         "openmrs_entity": "",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Explain the reason for giving the referral and explain where the nearest health facility is located.\nFill in the referral form. Scan QR code on the referral form.\nInform the client that you will follow up to make sure they got the service they were referred for\n",
+        "text": "Mwambie mteja utampa rufaa kwenda kituo cha kutolea huduma za afya ili apatiwe njia ya uzazi wa mpango aliyochagua.\n\nMueleze sababu ya kumpa rufaa na muelekeze kituo cha kutolea huduma za afya kilipo.\n\nJaza fomu ya rufaa.\n\nMjulishe mteja kuwa utamtembelea tena kuhakikisha amepata huduma uliompa rufaa.\n",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {

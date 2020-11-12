@@ -422,7 +422,7 @@ actions:
 name: step30_explanation_of_reasons_for_giving_referral
 description: explanation_of_reasons_for_giving_referral relevance
 priority: 1
-condition: "  (step11_are_you_speaking_to !='man_only' && (step9_fp_method_accepted.contains('tubal_ligation') || step9_fp_method_accepted.contains('emergency_contraception') || step9_fp_method_accepted.contains('iud') || step9_fp_method_accepted.contains('implants') || step9_fp_method_accepted.contains('lam') || step9_fp_method_accepted.contains('injection'))) || (step9_fp_method_accepted.contains('vasectomy')) "
+condition: "  (step11_are_you_speaking_to !='man_only' && (step9_fp_method_accepted.contains('tubal_ligation') || step9_fp_method_accepted.contains('emergency_contraception') || step9_fp_method_accepted.contains('iud') || step9_fp_method_accepted.contains('implants') || step9_fp_method_accepted.contains('lam')  || step9_fp_method_accepted.contains('sdm') || step9_fp_method_accepted.contains('injection'))) || (step9_fp_method_accepted.contains('vasectomy')) "
 actions:
   - "isRelevant = true"
 
