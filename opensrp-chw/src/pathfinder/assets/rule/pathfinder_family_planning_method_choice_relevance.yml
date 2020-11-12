@@ -198,14 +198,14 @@ actions:
 name: step13_explanation_of_method_requiring_referral
 description: explanation_of_method_requiring_referral relevance
 priority: 1
-condition: " (step11_are_you_speaking_to !='man_only' && (step9_fp_method_accepted.contains('tubal_ligation') || step9_fp_method_accepted.contains('emergency_contraception') || step9_fp_method_accepted.contains('iud') || step9_fp_method_accepted.contains('implants') || step9_fp_method_accepted.contains('lam') || step9_fp_method_accepted.contains('injection'))) || (step9_fp_method_accepted.contains('vasectomy') || (step9_fp_method_accepted.contains('sdm')) "
+condition: " (step11_are_you_speaking_to !='man_only' && (step9_fp_method_accepted.contains('tubal_ligation') || step9_fp_method_accepted.contains('emergency_contraception') || step9_fp_method_accepted.contains('iud') || step9_fp_method_accepted.contains('implants') || step9_fp_method_accepted.contains('lam') || step9_fp_method_accepted.contains('sdm') || step9_fp_method_accepted.contains('injection'))) || step9_fp_method_accepted.contains('vasectomy')"
 actions:
   - "isRelevant = true"
 ---
 name: step14_explanation_importance_of_condoms
 description: explanation_importance_of_condoms relevance
 priority: 1
-condition: " (step11_are_you_speaking_to !='man_only' && (step9_fp_method_accepted.contains('tubal_ligation') || step9_fp_method_accepted.contains('emergency_contraception') || step9_fp_method_accepted.contains('iud') || step9_fp_method_accepted.contains('implants') || step9_fp_method_accepted.contains('lam') || step9_fp_method_accepted.contains('injection'))) || (step9_fp_method_accepted.contains('vasectomy') || (step9_fp_method_accepted.contains('sdm')) "
+condition: " (step11_are_you_speaking_to !='man_only' && (step9_fp_method_accepted.contains('tubal_ligation') || step9_fp_method_accepted.contains('emergency_contraception') || step9_fp_method_accepted.contains('iud') || step9_fp_method_accepted.contains('implants') || step9_fp_method_accepted.contains('lam') || step9_fp_method_accepted.contains('injection') || step9_fp_method_accepted.contains('sdm'))) || step9_fp_method_accepted.contains('vasectomy') "
 actions:
   - "isRelevant = true"
 ---

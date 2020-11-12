@@ -2,7 +2,7 @@
   "validate_on_submit": false,
   "show_errors_on_submit": false,
   "skip_blank_steps": true,
-  "count": "32",
+  "count": "30",
   "encounter_type": "Family Planning Method Choice",
   "entity_id": "",
   "relational_id": "",
@@ -195,23 +195,23 @@
     "fields": [
       {
         "key": "is_the_woman_currently_breast_feeding",
-        "type": "native_radio",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "do_you_want_to_have_children",
         "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "is_the_woman_currently_breast_feeding",
+        "type": "native_radio",
         "label": "ASK: Is the woman currently breastfeeding?",
         "options": [
           {
             "key": "yes",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "1066AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "yes",
             "openmrs_entity_parent": "",
             "text": "Yes"
           },
           {
             "key": "no",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "1065AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
             "text": "No"
           }
