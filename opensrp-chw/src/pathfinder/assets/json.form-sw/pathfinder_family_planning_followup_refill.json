@@ -64,7 +64,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Client has chosen {fp_method}.",
+        "text": "Njia ya uzazi wa mpango iliochaguliwa na mteja ni {fp_method}.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "calculation": {
@@ -78,7 +78,7 @@
     ]
   },
   "step2": {
-    "title": "Instructions on Giving FP Method",
+    "title": "Muongozo wa kutoa njia za uzazi wa mpango",
     "next": "step3",
     "fields": [
       {
@@ -87,7 +87,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "give_condoms_note",
         "type": "toaster_notes",
-        "text": "Give the client condoms and ask if she/he knows how to use them.\n\nShow her/him how to accurately use the condoms.\n\nAsk the client to show you the steps for correct condom usage.",
+        "text": "Mpatie mteja kondomu na kishamuulize kama anajua kuitumia. Onyesha namna ya kuitumia kondomu kwa usahihi hatuakwa hatua.\nMshirikishe mteja arudie hatuamuhimu za uvaaji wa kondomu kwa usahihi.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -104,7 +104,7 @@
         "openmrs_entity": "",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Give the client 3 packets of pills.",
+        "text": "Mpe mteja pakiti 3 za vidonge.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -135,7 +135,7 @@
     ]
   },
   "step3": {
-    "title": "Give fp method",
+    "title": "Mpatie mteja njia ya uzazi wa mpango",
     "next": "step4",
     "fields": [
       {
@@ -158,21 +158,21 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "male_condoms_given",
         "openmrs_entity_parent": "",
-        "label": "Did you give the clients male condoms?",
+        "label": "Je umempatia mteja wako kondomu ya kiume?",
         "options": [
           {
             "key": "yes",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "yes",
             "openmrs_entity_parent": "",
-            "text": "Yes"
+            "text": "Ndio"
           },
           {
             "key": "no",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
-            "text": "No"
+            "text": "Hapana"
           }
         ],
         "v_required": {
@@ -193,21 +193,21 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "female_condoms_given",
         "openmrs_entity_parent": "",
-        "label": "Did you give the client female condoms",
+        "label": "Je umempatia mteja wako kondomu ya kike?",
         "options": [
           {
             "key": "yes",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "yes",
             "openmrs_entity_parent": "",
-            "text": "Yes"
+            "text": "Ndio"
           },
           {
             "key": "no",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
-            "text": "No"
+            "text": "Hapana"
           }
         ],
         "v_required": {
@@ -228,21 +228,21 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "coc_given",
         "openmrs_entity_parent": "",
-        "label": "Did you give the client COC pills?",
+        "label": "Je umempatia mteja wako vidonge vya Vichocheo viwili (COC)?",
         "options": [
           {
             "key": "yes",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "yes",
             "openmrs_entity_parent": "",
-            "text": "Yes"
+            "text": "Ndio"
           },
           {
             "key": "no",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
-            "text": "No"
+            "text": "Hapana"
           }
         ],
         "v_required": {
@@ -263,26 +263,26 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "pop_given",
         "openmrs_entity_parent": "",
-        "label": "Did you give the client POP pills?",
+        "label": "Je umempatia mteja wako vidonge ya Kichocheo kimoja (POP)?",
         "options": [
           {
             "key": "yes",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "yes",
             "openmrs_entity_parent": "",
-            "text": "Yes"
+            "text": "Ndio"
           },
           {
             "key": "no",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
-            "text": "No"
+            "text": "Hapana"
           }
         ],
         "v_required": {
           "value": "true",
-          "err": "Please select one choice"
+          "err": "Tafadhali chagua jibu sahihi"
         },
         "relevance": {
           "rules-engine": {
@@ -298,26 +298,26 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "sdm_given",
         "openmrs_entity_parent": "",
-        "label": "Did you give the client cycle beads?\n",
+        "label": "Je umempatia mteja shanga za kuhesabu siku?",
         "options": [
           {
             "key": "yes",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "yes",
             "openmrs_entity_parent": "",
-            "text": "Yes"
+            "text": "Ndio"
           },
           {
             "key": "no",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
-            "text": "No"
+            "text": "Hapana"
           }
         ],
         "v_required": {
           "value": "true",
-          "err": "Please select one choice"
+          "err": "Tafadhali chagua jibu sahihi"
         },
         "relevance": {
           "rules-engine": {
@@ -334,14 +334,14 @@
         "openmrs_entity_id": "number_of_condoms",
         "openmrs_entity_parent": "",
         "edit_type": "number",
-        "hint": "Enter the number of condoms you gave the client",
+        "hint": "Jaza idadi ya kondomu ya kiume ulizompa mteja",
         "v_required": {
           "value": "true",
-          "err": "this value cannot be null"
+          "err": "Hi tarakimu haiwezekani kuwa sifuri/batili"
         },
         "v_numeric_integer": {
           "value": "true",
-          "err": "Must be a rounded number"
+          "err": "Lazima iwe nambari iliyo na nzima"
         },
         "relevance": {
           "rules-engine": {
@@ -358,14 +358,14 @@
         "openmrs_entity_id": "number_of_pills",
         "openmrs_entity_parent": "",
         "edit_type": "number",
-        "hint": "Fill in the number of packets you gave the client",
+        "hint": "Jaza idadi ya pakiti ulizompa mteja",
         "v_required": {
           "value": "true",
-          "err": "this value cannot be null"
+          "err": "Hi tarakimu haiwezekani kuwa sifuri/batili"
         },
         "v_numeric_integer": {
           "value": "true",
-          "err": "Must be a rounded number"
+          "err": "Hi tarakimu haiwezekani kuwa sifuri/batili"
         },
         "relevance": {
           "rules-engine": {
@@ -387,7 +387,7 @@
         "openmrs_entity": "",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Tell the client you will bring her more pills before she uses up her supply of pills.\nEncourage the client to come to see you if she experiences\n*severe abdominal pain\n*severe headache with blurred vision\n*severe chest pain\n*severe muscle cramps\n",
+        "text": "Mwambie mteja utaongeza vidongekabla hajamaliza vidonge alivyopatiwa. Msisitize mteja aje kukuona kamaatapatwa na lolote kati ya haya:\n*Maumivu makali ya tumbo\n*Maumivu makali ya kichwayakiamatana na kutokuona vizuri\n*Maumivu makali ya kifua\n*Maumivu makali ya miguu",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -404,7 +404,7 @@
         "openmrs_entity": "",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Tell the client you will bring her more pills before she uses up her supply of pills.\nEncourage the client to come to see you if she experiences\n*Severe stomach pain\n*Vaginal bleeding or a missed period\n",
+        "text": "Mwambie mteja utaongeza vidongekabla hajamaliza vidonge alivyopatiwa. Msisitize mteja aje kukuona kamaatapatwa na lolote kati ya haya:\n*Maumivu makali ya tumbo\n*Kutokwa na damu nyingi ukeni\n*kukosa hedhi",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -648,42 +648,42 @@
     ]
   },
   "step15": {
-    "title": "FP Method Not Given",
+    "title": "Njia ya uzazi wa mpango haijatolewa",
     "next": "step16",
     "fields": [
       {
         "key": "reasons_for_not_giving_male_condoms",
-        "type": "native_radio",
+        "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "reasons_for_not_giving_condoms",
-        "openmrs_entity_parent": "",
-        "label": "Why didn’t you give the client male condoms?",
-        "options": [
-          {
-            "key": "out_of_stock",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "out_of_stock",
-            "openmrs_entity_parent": "",
-            "text": "Out of Stock"
-          },
-          {
-            "key": "other",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "no",
-            "openmrs_entity_parent": "",
-            "text": "Other"
-          }
-        ],
-        "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
-        },
+        "type": "native_radio",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
               "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
             }
           }
+        },
+        "label": "Je umempatia mteja wako kondomu ya kiume?",
+        "options": [
+          {
+            "key": "out_of_stock",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "out_of_stock",
+            "openmrs_entity_parent": "",
+            "text": "Hakuna"
+          },
+          {
+            "key": "other",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "no",
+            "openmrs_entity_parent": "",
+            "text": "Nyinginezo"
+          }
+        ],
+        "v_required": {
+          "value": "true",
+          "err": "Hakikisha unachagua jibu sahihi"
         }
       },
       {
@@ -692,26 +692,26 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "reasons_for_not_giving_female_condoms",
         "openmrs_entity_parent": "",
-        "label": "Why didn’t you give the client male condoms?",
+        "label": "Kwa nini hukumpatia mteja wako kondomu ya kiume?",
         "options": [
           {
             "key": "out_of_stock",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "out_of_stock",
             "openmrs_entity_parent": "",
-            "text": "Out of Stock"
+            "text": "Hakuna"
           },
           {
             "key": "other",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
-            "text": "Other"
+            "text": "Nyinginezo"
           }
         ],
         "v_required": {
           "value": "true",
-          "err": "Please select one choice"
+          "err": "Hakikisha unachagua jibu sahihi"
         },
         "relevance": {
           "rules-engine": {
@@ -727,27 +727,27 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "reasons_for_not_giving_coc",
         "openmrs_entity_parent": "",
-        "label": "Why did you not give the client COC?",
+        "label": "Kwa nini hukumpatia mteja wako vidonge vya Vichocheo viwili (COC)?",
         "options": [
           {
             "key": "out_of_stock",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "out_of_stock",
             "openmrs_entity_parent": "",
-            "text": "Out of Stock"
+            "text": "Nimeishiwa"
           },
           {
             "key": "other",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
-            "text": "Other"
+            "text": "Nyinginezo"
           }
         ],
         "v_required": {
-          "value": "true",
-          "err": "Please select one choice"
+          "value": "true"
         },
+        "err": "Hakikisha unachagua jibu sahihi",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -762,26 +762,26 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "reasons_for_not_giving_pop",
         "openmrs_entity_parent": "",
-        "label": "Why did you not give the client POP?\n",
+        "label": "Kwa nini hukumpatia mteja wako vidonge ya kichocheo kimoja (POP)?",
         "options": [
           {
             "key": "out_of_stock",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "out_of_stock",
             "openmrs_entity_parent": "",
-            "text": "Out of Stock"
+            "text": "Hakuna"
           },
           {
             "key": "other",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
-            "text": "Other"
+            "text": "Nyinginezo"
           }
         ],
         "v_required": {
           "value": "true",
-          "err": "Please select one choice"
+          "err": "Hakikisha unachagua jibu sahihi"
         },
         "relevance": {
           "rules-engine": {
@@ -797,26 +797,26 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "reasons_for_not_giving_sdm",
         "openmrs_entity_parent": "",
-        "label": "Why did you not give the client cycle beads?\n",
+        "label": "Kwa nini hukumpatia mteja wako shanga",
         "options": [
           {
             "key": "out_of_stock",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "out_of_stock",
             "openmrs_entity_parent": "",
-            "text": "Out of Stock"
+            "text": "Hakuna"
           },
           {
             "key": "other",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
-            "text": "Other"
+            "text": "Nyinginezo"
           }
         ],
         "v_required": {
           "value": "true",
-          "err": "Please select one choice"
+          "err": "Hakikisha unachagua jibu sahihi"
         },
         "relevance": {
           "rules-engine": {
@@ -832,10 +832,10 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "other_reasons",
         "openmrs_entity_parent": "",
-        "hint": "Other Reasons",
+        "hint": "Sababu nyinginezo",
         "v_required": {
           "value": "true",
-          "err": "Please enter other reasons"
+          "err": "Tafadhali jaza sababu nyingine"
         },
         "relevance": {
           "rules-engine": {
@@ -848,17 +848,14 @@
     ]
   },
   "step16": {
-    "title": "End",
+    "title": "Mwisho",
     "fields": [
       {
         "key": "give_referral_note",
-        "openmrs_entity_parent": "",
+        "type": "toaster_notes",
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
-        "type": "toaster_notes",
-        "text": "Mwambie mteja utampa rufaa kwenda kituo cha kutolea huduma za afya ili apatiwe {fp_method}.\n\nMueleze sababu ya kumpa rufaa na muelekeze kituo cha kutolea huduma za afya kilipo.\n\nJaza fomu ya rufaa.\n\nMjulishe mteja kuwa utamtembelea tena kuhakikisha amepata huduma uliompa rufaa.\n",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
+        "openmrs_entity_parent": "",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
@@ -866,6 +863,9 @@
             }
           }
         },
+        "text": "Mwambie mteja utampa rufaa kwenda kituo cha kutolea huduma za afya ili apatiwe {fp_method}.\n\nMueleze sababu ya kumpa rufaa na muelekeze kituo cha kutolea huduma za afya kilipo.\n\nJaza fomu ya rufaa.\n\nMjulishe mteja kuwa utamtembelea tena kuhakikisha amepata huduma uliompa rufaa.\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
         "calculation": {
           "rules-engine": {
             "ex-rules": {
@@ -876,20 +876,20 @@
       },
       {
         "key": "end_note",
-        "openmrs_entity_parent": "",
+        "type": "toaster_notes",
         "openmrs_entity": "",
         "openmrs_entity_id": "",
-        "type": "toaster_notes",
-        "text": "EXPLAIN: It is fine if you don’t remember all the details. That is why I am leaving this brochure that contains the information and will tell you where you can get it.\n",
-        "text_color": "#1199F9",
-        "toaster_type": "info",
+        "openmrs_entity_parent": "",
         "relevance": {
           "rules-engine": {
             "ex-rules": {
               "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
             }
           }
-        }
+        },
+        "text": "EXPLAIN: It is fine if you don’t remember all the details. That is why I am leaving this brochure that contains the information and will tell you where you can get it.\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info"
       }
     ]
   }

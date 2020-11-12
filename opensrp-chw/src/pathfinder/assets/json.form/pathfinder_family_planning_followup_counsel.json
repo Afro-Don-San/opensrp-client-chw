@@ -212,6 +212,13 @@
             "text": "I'm afraid I won't be able to get pregnant again"
           },
           {
+            "key": "afraid_of_getting_pregnant_while_using_this_method",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "afraid_of_getting_pregnant_while_using_this_method",
+            "openmrs_entity_parent": "",
+            "text": "Afraid of getting pregnant while using this family planning method"
+          },
+          {
             "key": "method_was_not_available",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "method_was_not_available",
@@ -323,14 +330,6 @@
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
             "text": "Nausea"
-          },
-          {
-            "key": "i_got_pregnant_while_using_the_method",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_got_pregnant_while_using_the_method",
-            "openmrs_entity_parent": "",
-            "value": false,
-            "text": "I got pregnant while using the family planning method"
           },
           {
             "key": "weight_gain",

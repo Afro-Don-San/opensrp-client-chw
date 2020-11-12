@@ -440,7 +440,7 @@
     ]
   },
   "step7": {
-    "title": "Sababu ya kusitisha matumizi ya njia za uzazi wampango ",
+    "title": "Sababu ya kusitisha matumizi ya njia za uzazi wa mpango ",
     "next": "step8",
     "fields": [
       {
@@ -516,7 +516,7 @@
     ]
   },
   "step8": {
-    "title": "Sababu za kutokutumia uzazi wampango",
+    "title": "Sababu za kutokutumia uzazi wa mpango",
     "next": "step9",
     "fields": [
       {

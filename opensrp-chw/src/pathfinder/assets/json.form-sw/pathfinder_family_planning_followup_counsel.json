@@ -56,7 +56,7 @@
   },
   "step1": {
     "next": "step2",
-    "title": "Counselling",
+    "title": "Kuridhishwa kwa njia ya uzazi wa mpango",
     "fields": [
       {
         "key": "satisfaction_with_current_method_label",
@@ -64,7 +64,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "ASK: Are you satisfied with using {fp_method}.",
+        "text": "MUULIZE: Je, umeridhika kutumia njia ya {fp_method}.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "calculation": {
@@ -88,19 +88,19 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "yes",
             "openmrs_entity_parent": "",
-            "text": "Yes"
+            "text": "Ndio"
           },
           {
             "key": "no",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
-            "text": "No"
+            "text": "Hapana"
           }
         ],
         "v_required": {
           "value": "true",
-          "err": "This value cannot be null"
+          "err": "Tafadhali jaza jibu sahihi"
         },
         "calculation": {
           "rules-engine": {
@@ -128,7 +128,7 @@
   },
   "step2": {
     "next": "step3",
-    "title": "Not Satisfied With the current method",
+    "title": "Hajaridhishwa na njia ya uzazi wa mpango",
     "fields": [
       {
         "key": "not_satisfied_with_chw_given_method",
@@ -136,7 +136,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "not_satisfied_with_chw_given_method",
         "type": "toaster_notes",
-        "text": "Discuss concerns, find out if client was misinformed about family planning and clarify if there is any misinformation\n",
+        "text": "Jadili kwa makini, chunguza kama mteja hakueleweshwa kwa usahihi kuhusu uzazi wa mpango na sahihisha dhana potofu.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -170,26 +170,26 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "willingness_to_continue_with_family_planning_method",
         "openmrs_entity_parent": "",
-        "label": "ASK: Are you willing to continue to use this family planning method?\n",
+        "label": "MUULIZE: Je upo tayari kuendelea kutumia njia hii ya uzazi wa mpango?\n",
         "options": [
           {
             "key": "yes",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "yes",
             "openmrs_entity_parent": "",
-            "text": "Yes"
+            "text": "Ndio"
           },
           {
             "key": "no",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
-            "text": "No"
+            "text": "Hapana"
           }
         ],
         "v_required": {
           "value": "true",
-          "err": "This value cannot be null"
+          "err": "Tafadhali jaza jibu sahihi"
         },
         "relevance": {
           "rules-engine": {
@@ -205,42 +205,49 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "reason_stop_fp_chw",
         "openmrs_entity_parent": "",
-        "label": "Why did you stop using that method?",
+        "label": "MUULIZE: Je ni kwanini unaacha kutumia\n\nnjia za uzazi wa mpango?",
         "options": [
           {
             "key": "side_effects",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "side_effects",
             "openmrs_entity_parent": "",
-            "text": "Side-effects"
+            "text": "Maudhi madogomadogo"
           },
           {
             "key": "wants_to_conceive",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "wants_to_conceive",
             "openmrs_entity_parent": "",
-            "text": "Wants to become pregnant"
+            "text": "Nataka kupata ujauzito"
           },
           {
             "key": "afraid_of_not_getting_pregnant_again",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "afraid_of_not_getting_pregnant_again",
             "openmrs_entity_parent": "",
-            "text": "I'm afraid I won't be able to get pregnant again"
+            "text": "Ninaogopa sitaweza kupata ujauzito tena"
+          },
+          {
+            "key": "afraid_of_getting_pregnant_while_using_this_method",
+            "openmrs_entity": "concept",
+            "openmrs_entity_id": "afraid_of_getting_pregnant_while_using_this_method",
+            "openmrs_entity_parent": "",
+            "text": "Ninaogopa nitapata ujauzito nikitumia hii njia"
           },
           {
             "key": "method_was_not_available",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "method_was_not_available",
             "openmrs_entity_parent": "",
-            "text": "The method was not available"
+            "text": "Njia haikuweza kupatikana"
           },
           {
             "key": "health_workers_had_bad_attitudes",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "health_workers_had_bad_attitudes",
             "openmrs_entity_parent": "",
-            "text": "Health workers had bad attitudes"
+            "text": "Watoa huduma kituoni hawakunihudumia vizuri"
           },
           {
             "key": "i_got_pregnant_while_using_the_method",
@@ -248,7 +255,7 @@
             "openmrs_entity_id": "i_got_pregnant_while_using_the_method",
             "openmrs_entity_parent": "",
             "value": false,
-            "text": "I got pregnant while using the family planning method\n"
+            "text": "Nilipata ujauzito wakati natumia njia hii ya uzazi wa mpango"
           },
           {
             "key": "partner_does_not_approve",
@@ -256,7 +263,7 @@
             "openmrs_entity_id": "partner_does_not_approve",
             "openmrs_entity_parent": "",
             "value": false,
-            "text": "My partner does not approve"
+            "text": "Mwenzi hakukubali"
           },
           {
             "key": "others",
@@ -285,7 +292,7 @@
         "openmrs_entity_id": "other_reason_fp_chw",
         "openmrs_entity_parent": "reason_stop_fp_chw",
         "edit_type": "name",
-        "hint": "Other reason",
+        "hint": "Sababu nyinginezo",
         "v_required": {
           "value": "true",
           "err": "Required"
@@ -304,50 +311,42 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "side_effects_fp",
         "openmrs_entity_parent": "",
-        "label": "ASK: Which side effects did you have?",
+        "label": "MUULIZE Ni maudhi gani madogomadogo ullyopata?",
         "options": [
           {
             "key": "headache",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "headache",
             "openmrs_entity_parent": "",
-            "text": "Headache"
+            "text": "Maumivu ya kichwa"
           },
           {
             "key": "abdominal_pain",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "abdominal_pain",
             "openmrs_entity_parent": "",
-            "text": "Abdominal/pelvic pain"
+            "text": "Maumivu chini ya kitovu"
           },
           {
             "key": "menstrual_changes",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
-            "text": "Menstrual changes"
+            "text": "Mabadiliko ya hedhi"
           },
           {
             "key": "heavy_bleeding",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
-            "text": "Heavy bleeding\n"
+            "text": "Damu nyingi siku za hedhi"
           },
           {
             "key": "nausea",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "",
             "openmrs_entity_parent": "",
-            "text": "Nausea"
-          },
-          {
-            "key": "i_got_pregnant_while_using_the_method",
-            "openmrs_entity": "concept",
-            "openmrs_entity_id": "i_got_pregnant_while_using_the_method",
-            "openmrs_entity_parent": "",
-            "value": false,
-            "text": "I got pregnant while using the family planning method"
+            "text": "Kichefuchefu"
           },
           {
             "key": "weight_gain",
@@ -355,21 +354,21 @@
             "openmrs_entity_id": "weight_gain",
             "openmrs_entity_parent": "",
             "value": false,
-            "text": "Weight gain"
+            "text": "Kuongezeka uzito"
           },
           {
             "key": "dizziness_vertigo",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "dizziness_vertigo",
             "openmrs_entity_parent": "",
-            "text": "Dizziness/vertigo"
+            "text": "Kizunguzungu"
           },
           {
             "key": "lower_back_pain",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "lower_back_pain",
             "openmrs_entity_parent": "",
-            "text": "Lower back pain"
+            "text": "Maumivu ya kiuno"
           }
         ],
         "v_required": {
@@ -390,21 +389,21 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "choose_a_different_fp_method",
         "openmrs_entity_parent": "",
-        "label": "ASK: Would you like to choose a different family planning method?\n",
+        "label": "MUULIZE: Je, ungependa kuchagua njia nyingine ya uzazi wa mpango?",
         "options": [
           {
             "key": "yes",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "yes",
             "openmrs_entity_parent": "",
-            "text": "Yes"
+            "text": "Ndio"
           },
           {
             "key": "no",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
-            "text": "No"
+            "text": "Hapana"
           }
         ],
         "v_required": {
@@ -423,7 +422,7 @@
   },
   "step3": {
     "next": "step4",
-    "title": "Satisfied With the current method",
+    "title": "Ameridhika na njia ya uzazi wa mpango",
     "fields": [
       {
         "key": "continue_using_method_provider",
@@ -431,7 +430,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Tell the client to continue using the method she/he chose as instructed by the provider.",
+        "text": "Mwambie mteja aendelee kutumia njia ya uzazi wa mpango kama alivvyo elekezwa na muhudumu wa kutuo cha afya.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -455,19 +454,19 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "yes",
             "openmrs_entity_parent": "",
-            "text": "Yes"
+            "text": "Ndio"
           },
           {
             "key": "no",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
-            "text": "No"
+            "text": "Hapana"
           }
         ],
         "v_required": {
           "value": "true",
-          "err": "This value cannot be null"
+          "err": "Tafadhali jaza jibu sahihi"
         },
         "relevance": {
           "rules-engine": {
@@ -500,7 +499,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "ASK: Are you remembering to take the pills every day?\n\nExplain what to do if she forgets to take the pills correctly",
+        "text": "MUULIZE: Je, unakumbuka kumeza vidonge vyako kila siku?\n\nMueleweshe mteja nini cha kufanya kama atasahau kumeza vidonge kwa usahihi kwa kutumia kipeperushi.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -539,21 +538,21 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "used_fp_method_consistently",
         "openmrs_entity_parent": "",
-        "label": "ASK: Have you used your family planning method consistently every day in the last month?",
+        "label": "MULIZE: Je, umekuwa ukitumia njia yako / ya uzazi wa mpango ipasavyo kila siku katika mwezi uliopita?",
         "options": [
           {
             "key": "yes",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "yes",
             "openmrs_entity_parent": "",
-            "text": "Yes"
+            "text": "Ndio"
           },
           {
             "key": "no",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
-            "text": "No"
+            "text": "Hapana"
           }
         ],
         "v_required": {
@@ -574,7 +573,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Give the client condoms.\nExplain that the client can receive free family planning information through her/his phone with m4RH (15014).\n\nTell the client that at the end of this visit, you will schedule a new visit in three months to talk more about family planning.\n",
+        "text": "Mpatie mteja kondomu.\n\nMuelekeze mteja kwamba anaweza kuendelea kupata taarifa za bure za uzazi wa mpango kwa kupitia njia ya simu:\n\n15014",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -591,26 +590,26 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "client_need_refill",
         "openmrs_entity_parent": "",
-        "label": "ASK: Does the client need refill? ",
+        "label": "MUULIZE: Je, unahitaji kuongezewa njia hii?",
         "options": [
           {
             "key": "yes",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "yes",
             "openmrs_entity_parent": "",
-            "text": "Yes"
+            "text": "Ndio"
           },
           {
             "key": "no",
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no",
             "openmrs_entity_parent": "",
-            "text": "No"
+            "text": "Hapana"
           }
         ],
         "v_required": {
           "value": "true",
-          "err": "This value cannot be null"
+          "err": "Tafadhali jaza jibu sahihi"
         },
         "relevance": {
           "rules-engine": {
