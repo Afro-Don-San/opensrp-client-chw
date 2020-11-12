@@ -453,6 +453,20 @@
             }
           }
         }
+      },
+      {
+        "key": "choose_pregnancy_test_referral",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "choose_pregnancy_test_referral",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_pregnancy_test_followup_calculation.yml"
+            }
+          }
+        }
       }
     ]
   }

@@ -53,6 +53,13 @@ actions:
 name: step5_client_is_currently_referred
 description: client_is_currently_referred calculation
 priority: 1
-condition: "step1_did_the_client_get_pregnancy_test == 'yes'"
+condition: "true"
 actions:
-  - "calculation = false"
+  - "calculation = (step1_did_the_client_get_pregnancy_test == 'yes' || step5_what_the_client_wants_to_do_next == 'complete_pregnancy_screening_questions') ? false : true"
+---
+name: step5_choose_pregnancy_test_referral
+description: choose_pregnancy_test_referral calculation
+priority: 1
+condition: "true"
+actions:
+  - "calculation = step5_what_the_client_wants_to_do_next == 'complete_pregnancy_screening_questions' ? 'complete_pregnancy_screening_questions' : 'receive_pregnancy_test_referral'"
