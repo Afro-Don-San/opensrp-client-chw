@@ -59,10 +59,10 @@
     "next": "step2",
     "fields": [
       {
-        "key": "introduction_1",
+        "key": "fp_citizen_report_card_done",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "introduction_1",
+        "openmrs_entity_id": "fp_citizen_report_card_done",
         "type": "hidden",
         "calculation": {
           "rules-engine": {
@@ -73,10 +73,10 @@
         }
       },
       {
-        "key": "not_satisfied_with_chw_given_method",
+        "key": "introduction_1",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "not_satisfied_with_chw_given_method",
+        "openmrs_entity_id": "introduction_1",
         "type": "toaster_notes",
         "text": "Muulize mteja alijionaje ulipompatia rufaa ya kwenda kupatiwa njia ya uzazi wa mpango.\n\nJadili na mteja kujua alihudumiwa vipi kituoni vibaya au vizuri na kwanini?",
         "text_color": "#1199F9",

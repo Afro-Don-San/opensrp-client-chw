@@ -447,7 +447,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "does_the_client_use_condoms",
         "openmrs_entity_parent": "",
-        "label": "ASK: Are you using condoms every time you have sex?",
+        "label": "MUULIZE: Je unatumia kondomu kila unapofanya tendo la ndoa?",
         "options": [
           {
             "key": "yes",
@@ -482,7 +482,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "emphasize_consistent_use_of_condoms",
         "type": "toaster_notes",
-        "text": "Emphasize the importance of using condoms for every sex act..",
+        "text": "Sisitiza umuhimu wa kutumia kondomu kwa mteja kila anapofanya tendo la ndoa",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -530,7 +530,7 @@
     ]
   },
   "step4": {
-    "title": "End",
+    "title": "Mwisho",
     "fields": [
       {
         "key": "used_fp_method_consistently",
