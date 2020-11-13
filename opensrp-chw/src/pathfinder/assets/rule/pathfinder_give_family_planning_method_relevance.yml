@@ -114,7 +114,7 @@ actions:
 name: step6_end_note
 description: step6_end_note relevance
 priority: 1
-condition: "step3_male_condoms_given != 'no' && step3_female_condoms_given != 'no' && step3_coc_given != 'no' && step3_pop_given != 'no'"
+condition: "step3_coc_given != 'no' && step3_pop_given != 'no'"
 actions:
   - "isRelevant = true"
 
