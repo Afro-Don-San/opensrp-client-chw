@@ -137,6 +137,7 @@ android {
             buildConfigField "boolean", "USE_PATHFINDERS_FP_MODULE", "false"
             buildConfigField "boolean", "USE_UNIFIED_REFERRAL_APPROACH", "true"
             buildConfigField "boolean", "BUILD_FOR_BORESHA_AFYA_SOUTH", "false"
+            buildConfigField "boolean", "USE_PATHFINDERS_FP_MODULE", "true"
             buildConfigField "String", "MAPBOX_SDK_ACCESS_TOKEN", properties["mapbox.sdk.token"]
         }
 
