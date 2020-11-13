@@ -27,8 +27,8 @@ condition: "true"
 actions:
   - "calculation = ( step3_male_condoms_given == 'yes' || step3_female_condoms_given == 'yes' || step3_coc_given == 'yes' || step3_pop_given == 'yes' )"
 ---
-name: step6_give_referral_note
-description: step6_give_referral_note calculation
+name: step10_give_referral_note
+description: step10_give_referral_note calculation
 priority: 1
 condition: "true"
 actions:

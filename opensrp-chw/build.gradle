@@ -204,8 +204,8 @@ android {
         pathfinder {
             dimension = 'baseDimension'
             applicationIdSuffix ".pf"
-            versionCode 2
-            versionName "1.0.2"
+            versionCode 3
+            versionName "1.1.0"
             buildConfigField "String", 'opensrp_url', '"https://boresha-afya.smartregister.org/opensrp/"'
             buildConfigField "String", 'guidebooks_url', '"https://opensrp.s3.amazonaws.com/media/ba/"'
             buildConfigField "String", 'opensrp_url_debug', '"http://172.105.87.198:8082/opensrp/"'

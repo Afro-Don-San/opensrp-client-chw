@@ -124,7 +124,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Muulize mteja tabia gani hatarishi zinazoweza kumsababisha kupata maambukizi ya ngono.\nMsahihishe pale alipokosea na ujibu maswali yoyote aliyonayo.",
+        "text": "Muulize mteja tabia gani hatarishi zinazoweza kumsababisha kupata maambukizo ya ngono.\nMsahihishe pale alipokosea na ujibu maswali yoyote aliyonayo.",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }
@@ -156,7 +156,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "has_more_than_one_sexual_partner",
         "type": "native_radio",
-        "label": "Katika kipindi cha miezi mitatu iliyopita,je umeshiriki tendo la ngono na mtu mwengine zaidi ya mwenzi wako?",
+        "label": "Katika kipindi cha miezi mitatu iliyopita, je umeshiriki tendo la ngono na mtu mwengine zaidi ya mwenzi wako?",
         "options": [
           {
             "key": "yes",
@@ -489,7 +489,7 @@
             }
           }
         },
-        "text": "Mteja hajapata tiba kamilifu. Mwambie mteja utampa rufaa kwenda kwenye kituo chakutolea huduma za afya kukamilisha tiba na kwa uchunguzi zaidi.\n*Muelezemteja sababu za kumpa rufaa kwenda kituo cha kutolea huduma za afya.",
+        "text": "Mteja hajapata tiba kamilifu. Mwambie mteja utampa rufaa kwenda kwenye kituo chakutolea huduma za afya kukamilisha tiba na kwa uchunguzi zaidi.\n*Mueleze mteja sababu za kumpa rufaa kwenda kituo cha kutolea huduma za afya.",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }
@@ -546,7 +546,7 @@
             }
           }
         },
-        "label": "Je upo tayari kunishirikisha majibu yako?",
+        "label": "Je, upo tayari kunishirikisha majibu yako?",
         "options": [
           {
             "key": "yes",
@@ -670,7 +670,7 @@
     ]
   },
   "step16": {
-    "title": "Mteja ana maambukizi yaVVU",
+    "title": "Mteja ana maambukizo yaVVU",
     "fields": [
       {
         "key": "receiving_care_and_treatment_from_facility",
@@ -685,7 +685,7 @@
             }
           }
         },
-        "label": "Je umepata huduma za matibabu na ushauri nasaha (CTC) kutoka kwenye kituo cha kutolea huduma za afya?",
+        "label": "Je, umepata huduma za matibabu na ushauri nasaha (CTC) kutoka kwenye kituo cha kutolea huduma za afya?",
         "options": [
           {
             "key": "yes",
@@ -743,7 +743,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "has_received_home_based_care_services",
         "openmrs_entity_parent": "",
-        "label": "Je umepata huduma ya kutembelewa na watoa huduma za wagonjwa nyumbani (HBCP)",
+        "label": "Je, umepata huduma ya kutembelewa na watoa huduma za wagonjwa nyumbani (HBCP)",
         "options": [
           {
             "key": "yes",
@@ -853,7 +853,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Jadili na mpe maelezo mteja kuhusu umuhimu wa kupimana na kujua hali ya maambukizo ya VVU; Vipimo vya VVU na matokeo.\nMsisitize mteja kwamba huduma ipo ila ni muhimu kuanza huduma hii mapema.\nMpe mteja nafasi ya kuuliza maswali na fafanua kadri uwezavyo.",
+        "text": "Jadili na mpe maelezo mteja kuhusu umuhimu wa kupima na kujua hali ya maambukizo ya VVU, Vipimo vya VVU na matokeo.\nMsisitize mteja kwamba huduma ipo ila ni muhimu kuanza huduma hii mapema.\nMpe mteja nafasi ya kuuliza maswali na fafanua kadri uwezavyo.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -899,7 +899,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "client_would_like_to_be_tested_for_hiv",
         "openmrs_entity_parent": "",
-        "label": "Je,ungependa kupima hali ya maambukizo ya VVU?",
+        "label": "Je, ungependa kupima hali ya maambukizo ya VVU?",
         "options": [
           {
             "key": "yes",
@@ -934,7 +934,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Jadili na kudadisi vikwazo vinavyopelekeamteja kutokutaka kupima hali ya maambukizo ya VVU.\nMruhusu mteja kuuliza na fafanuaipasavyo.",
+        "text": "Jadili na kudadisi vikwazo vinavyo pelekea mteja kutokutaka kupima hali ya maambukizo ya VVU.\nMruhusu mteja kuuliza na fafanua ipasavyo.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -1020,7 +1020,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "toaster_notes",
         "type": "toaster_notes",
-        "text": "Muulize mteja kama anafahamu maana ya kinga Mbili.\nFafanua na jadili vipengele vifuaatavyo\n*Matumizi sahihi yakondomu ya kike au kiume kwa kila tendo la ngono.\n*Kutumia njia nyingine ya uzazi wa mpango pamoja na kondomu kwa usahihi\n*Kwa wenzi wanaofahamu hawana maambukizo ya VVU au magonjwa ya ngono, wanaweza kutumia njia yoyote ya uzazi wa mpango na kuendelea kuwa waaminifu.\n*Kufanya ngono bila ya kugusana au kubadilishana kwa maji maji ya sehemu za kike ua za kiume.\n*Usifanye ngono na mwezi ambaye hali yake ya maambukizo haijulikani.",
+        "text": "Muulize mteja kama anafahamu maana ya kinga Mbili.\nFafanua na jadili vipengele vifuaatavyo\n*Matumizi sahihi ya kondomu ya kike au kiume kwa kila tendo la ngono.\n*Kutumia njia nyingine ya uzazi wa mpango pamoja na kondomu kwa usahihi\n*Kwa wenzi wanaofahamu hawana maambukizo ya VVU au magonjwa ya ngono, wanaweza kutumia njia yoyote ya uzazi wa mpango na kuendelea kuwa waaminifu.\n*Kufanya ngono bila ya kugusana au kubadilishana kwa maji maji ya sehemu za kike ua za kiume.\n*Usifanye ngono na mwezi ambaye hali yake ya maambukizo haijulikani.",
         "text_color": "#1199F9",
         "toaster_type": "info"
       },

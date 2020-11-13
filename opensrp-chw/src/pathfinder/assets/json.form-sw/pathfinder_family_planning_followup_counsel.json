@@ -170,7 +170,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "willingness_to_continue_with_family_planning_method",
         "openmrs_entity_parent": "",
-        "label": "MUULIZE: Je upo tayari kuendelea kutumia njia hii ya uzazi wa mpango?\n",
+        "label": "MUULIZE: Je, upo tayari kuendelea kutumia njia hii ya uzazi wa mpango?\n",
         "options": [
           {
             "key": "yes",
@@ -212,7 +212,7 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "side_effects",
             "openmrs_entity_parent": "",
-            "text": "Maudhi madogomadogo"
+            "text": "Maudhi madogo madogo"
           },
           {
             "key": "wants_to_conceive",
@@ -270,7 +270,7 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "others",
             "openmrs_entity_parent": "",
-            "text": "Others"
+            "text": "Nyingine"
           }
         ],
         "v_required": {
@@ -311,7 +311,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "side_effects_fp",
         "openmrs_entity_parent": "",
-        "label": "MUULIZE Ni maudhi gani madogomadogo ullyopata?",
+        "label": "MUULIZE Ni maudhi gani madogo madogo ullyopata?",
         "options": [
           {
             "key": "headache",
@@ -538,7 +538,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "used_fp_method_consistently",
         "openmrs_entity_parent": "",
-        "label": "MULIZE: Je, umekuwa ukitumia njia yako / ya uzazi wa mpango ipasavyo kila siku katika mwezi uliopita?",
+        "label": "MULIZE: Je, umekuwa ukitumia njia ya uzazi wa mpango ipasavyo kila siku katika mwezi uliopita?",
         "options": [
           {
             "key": "yes",

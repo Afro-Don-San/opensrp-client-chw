@@ -87,7 +87,7 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "side_effects",
             "openmrs_entity_parent": "",
-            "text": "Maudhi madogomadogo"
+            "text": "Maudhi madogo madogo"
           },
           {
             "key": "wants_to_conceive",
@@ -138,7 +138,7 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "others",
             "openmrs_entity_parent": "",
-            "text": "Nyinginezo"
+            "text": "Nyingine"
           }
         ],
         "v_required": {
@@ -172,7 +172,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "side_effects_fp",
         "openmrs_entity_parent": "",
-        "label": "Ni maudhi gani madogomadogo uliyopata?",
+        "label": "Ni maudhi gani madogo madogo uliyopata?",
         "options": [
           {
             "key": "headache",

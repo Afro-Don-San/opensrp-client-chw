@@ -202,7 +202,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "reasons_for_not_getting_any_services_at_the_health_facility",
         "openmrs_entity_parent": "",
-        "label": "Je, kwa nini hukupata huduma katikakituo cha kutolea huduma za afya?",
+        "label": "Je, kwa nini hukupata huduma katika kituo cha kutolea huduma za afya?",
         "options": [
           {
             "key": "too_many_people",

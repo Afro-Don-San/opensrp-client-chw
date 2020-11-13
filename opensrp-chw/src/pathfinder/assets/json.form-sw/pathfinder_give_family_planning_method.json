@@ -2,7 +2,7 @@
   "validate_on_submit": false,
   "show_errors_on_submit": true,
   "skip_blank_steps": true,
-  "count": "6",
+  "count": "10",
   "encounter_type": "Give Family Planning Method",
   "entity_id": "",
   "relational_id": "",
@@ -115,7 +115,7 @@
         "openmrs_entity": "person_attribute",
         "openmrs_entity_id": "give_condoms_note",
         "type": "toaster_notes",
-        "text": "Mpatie mteja kondomu na kishamuulize kama anajua kuitumia. Onyesha namna ya kuitumia kondomu kwa usahihi hatuakwa hatua.\nMshirikishe mteja arudie hatuamuhimu za uvaaji wa kondomu kwa usahihi.",
+        "text": "Mpatie mteja kondomu na kishamuulize kama anajua kuitumia. Onyesha namna ya kuitumia kondomu kwa usahihi hatua kwa hatua.\n\nMshirikishe mteja arudie hatua muhimu za uvaaji wa kondomu kwa usahihi.",
         "text_color": "#1199F9",
         "toaster_type": "info",
         "relevance": {
@@ -394,8 +394,100 @@
     ]
   },
   "step5": {
-    "title": "Njia ya uzazi wa mpango haijatolewa",
+    "title": "Uelewa wa mteja kuhusu njia aliyochagua",
     "next": "step6",
+    "fields": [
+      {
+        "key": "determine_clients_comprehension_1",
+        "type": "toaster_notes",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "openmrs_entity_parent": "",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        },
+        "text": "Muulize mteja maswali yafuatayo kufahamu uelewa wa mteja kuhusu njia aliochagua:",
+        "text_color": "#1199F9",
+        "toaster_type": "info"
+      }
+    ]
+  },
+  "step6": {
+    "title": "Uelewa wa mteja kuhusu njia aliyochagua 2",
+    "next": "step7",
+    "fields ": [
+      {
+        "key": "determine_clients_comprehension_2",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Utatumia vipi njia ulioichagua?",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step7": {
+    "title": "Uelewa wa mteja kuhusu njia aliyochagua\n\n3",
+    "next": "step8",
+    "fields": [
+      {
+        "key": "determine_clients_comprehension_3",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Ni yapi maudhi madogo madogo unayoweza kupata kwa njia utakayoitumia?",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step8": {
+    "title": "Uelewa wa mteja kuhusu njia aliyochagua 4",
+    "next": "step9",
+    "fields": [
+      {
+        "key": "determine_clients_comprehension_4",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Taja dalili zitakazo kusababisha kwenda haraka kwenye kituo cha kutolea huduma za afya?",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step9": {
+    "title": "Njia ya uzazi wa mpango haijatolewa",
+    "next": "step10",
     "fields": [
       {
         "key": "reasons_for_not_giving_male_condoms",
@@ -558,7 +650,7 @@
       }
     ]
   },
-  "step6": {
+  "step10": {
     "title": "Mwisho",
     "fields": [
       {

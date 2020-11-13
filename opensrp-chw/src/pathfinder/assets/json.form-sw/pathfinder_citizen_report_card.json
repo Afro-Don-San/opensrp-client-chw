@@ -78,7 +78,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "introduction_1",
         "type": "toaster_notes",
-        "text": "Muulize mteja alijionaje ulipompatia rufaa ya kwenda kupatiwa njia ya uzazi wa mpango.\n\nJadili na mteja kujua alihudumiwa vipi kituoni vibaya au vizuri na kwanini?",
+        "text": "Muulize mteja alijionaje ulipompatia rufaa ya kwenda kupatiwa njia ya uzazi wa mpango.\n\nJadili na mteja kujua alihudumiwa vipi kituoni, vibaya au vizuri na kwanini?",
         "text_color": "#1199F9",
         "toaster_type": "info"
       }
@@ -126,7 +126,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "willing_to_participate_in_survey",
         "type": "native_radio",
-        "label": "Muulize:Je upo tayari kujibu maswali haya?",
+        "label": "Muulize:Je, upo tayari kujibu maswali haya?",
         "options": [
           {
             "key": "yes",
@@ -171,7 +171,7 @@
             }
           }
         },
-        "hint": "Jina na mahali Kituo cha kutolea Huduma za Afya kilipo\n ",
+        "hint": "Jina na la Kituo cha kutolea Huduma za Afya ",
         "values": [],
         "keys": [],
         "openmrs_choice_ids": {}
@@ -622,7 +622,7 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "other",
             "openmrs_entity_parent": "",
-            "text": "Other"
+            "text": "Nyingine"
           }
         ],
         "v_required": {
@@ -663,7 +663,7 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "some_providers_treated_me_well_but_others_treated_me_with_disrespect",
             "openmrs_entity_parent": "",
-            "text": "Baadi ya watoa huduma walinihudumia vizuri, lakini wengine walinidharau."
+            "text": "Baadhi ya watoa huduma walinihudumia vizuri, lakini wengine walinidharau."
           },
           {
             "key": "all_service_providers_treated_me_with_disrespect",
@@ -697,7 +697,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "satisfied_with_fp_services_from_health_facility",
         "openmrs_entity_parent": "",
-        "label": "MUULIZE: Je uliridhika na huduma ya 2 uzazi wa mpango uliopatiwa katika huduma ya afya?\n\nHii inaonyesha hukuwa na tatizo na ulipata huduma nzuri kila wakati ulipokwenda kituo cha afya.\n\n",
+        "label": "MUULIZE: Je uliridhika na huduma ya uzazi wa mpango uliyopatiwa katika kituo cha kutolea huduma ya afya?\n\nHii inaonyesha hukuwa na tatizo na ulipata huduma nzuri kila wakati ulipokwenda kituo cha afya.\n\n",
         "options": [
           {
             "key": "yes",

@@ -1,8 +1,8 @@
 {
-  "validate_on_submit": true,
+  "validate_on_submit": false,
   "show_errors_on_submit": true,
   "skip_blank_steps": true,
-  "count": "6",
+  "count": "10",
   "encounter_type": "Give Family Planning Method",
   "entity_id": "",
   "relational_id": "",
@@ -390,8 +390,100 @@
     ]
   },
   "step5": {
-    "title": "FP Method Not Given",
+    "title": "Determine client comprehension 1",
     "next": "step6",
+    "fields": [
+      {
+        "key": "determine_clients_comprehension_1",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Ask the client the following questions to determine her/his comprehension about the method chosen:",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step6": {
+    "title": "Determine client comprehension 2",
+    "next": "step7",
+    "fields": [
+      {
+        "key": "determine_clients_comprehension_2",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "ASK: How will you use the method you have chosen?",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step7": {
+    "title": "Determine client comprehension 3",
+    "next": "step8",
+    "fields": [
+      {
+        "key": "determine_clients_comprehension_3",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "ASK: What are the side effects you can get from this method?\n",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step8": {
+    "title": "Determine client comprehension 4",
+    "next": "step9",
+    "fields": [
+      {
+        "key": "determine_clients_comprehension_4",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "",
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "ASK: Which symptoms would require you to go quickly to a health facility?",
+        "text_color": "#1199F9",
+        "toaster_type": "info",
+        "relevance": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_give_family_planning_method_relevance.yml"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "step9": {
+    "title": "FP Method Not Given",
+    "next": "step9",
     "fields": [
       {
         "key": "reasons_for_not_giving_male_condoms",
@@ -554,7 +646,7 @@
       }
     ]
   },
-  "step6": {
+  "step10": {
     "title": "End",
     "fields": [
       {

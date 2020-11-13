@@ -63,7 +63,7 @@
         "openmrs_entity": "person",
         "openmrs_entity_id": "first_name",
         "type": "edit_text",
-        "hint": "Taarifa ya familia",
+        "hint": "Jina la kaya",
         "edit_type": "name",
         "v_required": {
           "value": "true",
@@ -125,7 +125,7 @@
         "openmrs_entity_id": "162724AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
         "openmrs_data_type": "text",
         "type": "tree",
-        "hint": "Kituo cha karibu cha kutolea huduma za afya",
+        "hint": "Chagua Kijiji",
         "tree": [],
         "v_required": {
           "value": true,
