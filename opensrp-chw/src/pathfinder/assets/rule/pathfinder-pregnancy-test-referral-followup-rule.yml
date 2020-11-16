@@ -1,5 +1,5 @@
 name: one
-description: pregnant test followup
+description: pregnant test referral followup
 priority: 1
 condition: "pathfinderFpAlertRule.isPregnancyScreeningFollowupValid(3,5,365)"
 actions:
