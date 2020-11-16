@@ -96,6 +96,18 @@
     "next": "step3",
     "fields": [
       {
+        "key": "client_cbhs_number",
+        "type": "edit_text",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "client_cbhs_number",
+        "openmrs_entity_parent": "",
+        "hint": "Jaza namba ya usaliji ya mteja",
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jaza namba ya usajili ya mteja"
+        }
+      },
+      {
         "key": "is_client_already_using_fp",
         "type": "native_radio",
         "openmrs_entity": "concept",
