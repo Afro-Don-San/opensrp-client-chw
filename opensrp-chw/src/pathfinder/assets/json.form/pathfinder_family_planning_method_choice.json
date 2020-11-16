@@ -647,7 +647,7 @@
         "key": "fp_method_chose_coc",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_method_chose_coc",
+        "openmrs_entity_id": "fp_method_chose",
         "openmrs_entity_parent": "",
         "options": [
           {
@@ -707,7 +707,7 @@
         "key": "fp_method_chose_male_condom",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_method_chose_male_condom",
+        "openmrs_entity_id": "fp_method_chose",
         "openmrs_entity_parent": "",
         "options": [
           {
@@ -767,7 +767,7 @@
         "key": "fp_method_chose_sdm",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_method_chose_sdm",
+        "openmrs_entity_id": "fp_method_chose",
         "openmrs_entity_parent": "",
         "options": [
           {
@@ -917,7 +917,7 @@
         "key": "fp_method_chose_injection",
         "type": "native_radio",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "fp_method_chose_injection",
+        "openmrs_entity_id": "fp_method_chose",
         "openmrs_entity_parent": "",
         "options": [
           {

@@ -114,7 +114,7 @@ actions:
 name: step9_fp_method_chose_tubal_ligation
 description: fp_method_chose_tubal_ligation relevance
 priority: 1
-condition: "step3_do_you_want_to_have_children.contains('no') && !step6_methods_not_wanted.contains('tubal_legation') && (step7_has_decided_method_wanted =='yes' || step8_is_the_client_now_ready_to_choose_a_method=='yes')"
+condition: "step3_do_you_want_to_have_children.contains('no') && !step6_methods_not_wanted.contains('tubal_ligation') && (step7_has_decided_method_wanted =='yes' || step8_is_the_client_now_ready_to_choose_a_method=='yes')"
 actions:
   - "isRelevant = true"
 ---
