@@ -163,7 +163,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "is_client_pregnant",
         "openmrs_entity_parent": "",
-        "label": "Je,unahisi una ujauzio?",
+        "label": "Je,unahisi una ujauzito?",
         "options": [
           {
             "key": "yes",

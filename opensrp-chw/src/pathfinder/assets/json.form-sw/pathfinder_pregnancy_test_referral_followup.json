@@ -178,7 +178,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "did_client_complete_referral",
         "openmrs_entity_parent": "",
-        "label": "Je, ulienda kituo cha kutolea hudumaza afya kukamilisha rufaa uliyopata?",
+        "label": "Je, ulienda kituo cha kutolea huduma za afya kukamilisha rufaa uliyopata?",
         "options": [
           {
             "key": "yes",
@@ -210,7 +210,7 @@
     ]
   },
   "step4": {
-    "title": "Sababu za kutokwenda kituo chakutolea huduma za afya",
+    "title": "Sababu za kutokwenda kituo cha kutolea huduma za afya",
     "next": "step5",
     "fields": [
       {
@@ -233,7 +233,7 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "its_too_far",
             "openmrs_entity_parent": "",
-            "text": "umbali wa kituo cha kutolea hudumaza afya"
+            "text": "umbali wa kituo cha kutolea huduma za afya"
           },
           {
             "key": "forgot",
@@ -296,7 +296,7 @@
             "openmrs_entity": "concept",
             "openmrs_entity_id": "no_skilled_service_providers",
             "openmrs_entity_parent": "",
-            "text": "Mhudumu mwenye ujuzi akuwepo"
+            "text": "Mhudumu mwenye ujuzi hakuwepo"
           }
         ],
         "v_required": {
