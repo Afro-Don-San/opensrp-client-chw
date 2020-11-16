@@ -349,6 +349,13 @@
           },
           {
             "field": "eventType",
+            "field_value": "Risk assessment, HIV testing &amp; Dual protection counseling",
+            "creates_case": [
+              "ec_family_planning"
+            ]
+          },
+          {
+            "field": "eventType",
             "field_value": "FP Method Referral",
             "creates_case": [
               "ec_referral",

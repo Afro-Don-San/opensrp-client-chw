@@ -216,7 +216,7 @@ public class PathfinderGiveFpMethodInteractorFlv extends DefaultPathfinderFpPreg
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                return BaseAncHomeVisitAction.Status.PARTIALLY_COMPLETED;
+                return BaseAncHomeVisitAction.Status.COMPLETED;
             } else {
                 return BaseAncHomeVisitAction.Status.COMPLETED;
             }

@@ -4,4 +4,7 @@
     <string name="nav_logo">Pathfinder International</string>
     <string name="menu_anc">Wajawazito</string>
     <string name="menu_pnc">Baada ya Kujifungua</string>
+    <string name="login_failed_dialog_message">Hakisha jina na neno la siri ni sahihi</string>
+    <string name="unauthorized">Tafadhali hakisha jina la mtumiaji na neno la siri ni sahihi</string>
+    <string name="login_failed_dialog_title">Imeshindikana kuingia kwenye mfumo</string>
 </resources>

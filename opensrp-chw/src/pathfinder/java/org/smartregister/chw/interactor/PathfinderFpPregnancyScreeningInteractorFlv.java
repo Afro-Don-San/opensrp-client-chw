@@ -179,10 +179,7 @@ public class PathfinderFpPregnancyScreeningInteractorFlv extends DefaultPathfind
                 return BaseAncHomeVisitAction.Status.PENDING;
             }
 
-            if (!StringUtils.isBlank(referral_date)) {
-                return BaseAncHomeVisitAction.Status.COMPLETED;
-            } else
-                return BaseAncHomeVisitAction.Status.PARTIALLY_COMPLETED;
+            return BaseAncHomeVisitAction.Status.COMPLETED;
         }
     }
 

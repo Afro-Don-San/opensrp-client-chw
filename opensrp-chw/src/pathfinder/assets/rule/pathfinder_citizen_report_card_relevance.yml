@@ -58,21 +58,21 @@ actions:
 name: step13_reasons_for_not_getting_services
 description: reasons_for_not_getting_services relevance
 priority: 1
-condition: "step4_willing_to_participate_in_survey == 'yes' && step6_did_the_client_complete_referral.contains('yes') && !step7_times_the_client_tried_to_complete_referral.contains('first_time') "
+condition: "step4_willing_to_participate_in_survey == 'yes' && ( (step6_did_the_client_complete_referral.contains('no') &&  !step8_tried_to_complete_referral.contains('never_went')) || (step6_did_the_client_complete_referral.contains('yes') && !step7_times_the_client_tried_to_complete_referral.contains('first_time'))) "
 actions:
   - "isRelevant = true"
 ---
 name: step14_treatment_from_service_providers
 description: treatment_from_service_providers relevance
 priority: 1
-condition: "step4_willing_to_participate_in_survey == 'yes' && (step6_did_the_client_complete_referral.contains('yes') || !step8_tried_to_complete_referral.contains('never_went'))  "
+condition: "step4_willing_to_participate_in_survey == 'yes' && step6_did_the_client_complete_referral.contains('yes')  "
 actions:
   - "isRelevant = true"
 ---
 name: step15_satisfied_with_fp_services_from_health_facility
 description: satisfied_with_fp_services_from_health_facility relevance
 priority: 1
-condition: "step4_willing_to_participate_in_survey == 'yes' "
+condition: "step4_willing_to_participate_in_survey == 'yes'  && step6_did_the_client_complete_referral.contains('yes') "
 actions:
   - "isRelevant = true"
 ---

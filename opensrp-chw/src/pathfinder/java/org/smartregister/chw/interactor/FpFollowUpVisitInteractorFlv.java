@@ -281,7 +281,7 @@ public class FpFollowUpVisitInteractorFlv extends DefaultFpFollowUpVisitInteract
                 return BaseAncHomeVisitAction.Status.PENDING;
             }
             if("0".equalsIgnoreCase(no_pillcycles) || "0".equalsIgnoreCase(no_condoms))
-                return BaseAncHomeVisitAction.Status.PARTIALLY_COMPLETED;
+                return BaseAncHomeVisitAction.Status.COMPLETED;
 
             if (!StringUtils.isBlank(no_condoms) || !StringUtils.isBlank(no_pillcycles) || !StringUtils.isBlank(last_injection_date)) {
                 return BaseAncHomeVisitAction.Status.COMPLETED;
@@ -504,10 +504,8 @@ public class FpFollowUpVisitInteractorFlv extends DefaultFpFollowUpVisitInteract
             if (StringUtils.isBlank(action_taken) && StringUtils.isBlank(sideEffects) && StringUtils.isBlank(other)) {
                 return BaseAncHomeVisitAction.Status.PENDING;
             }
-            if (StringUtils.isBlank(action_taken) || !"no_action_taken".equalsIgnoreCase(action_taken)) {
-                return BaseAncHomeVisitAction.Status.COMPLETED;
-            }
-            return BaseAncHomeVisitAction.Status.PARTIALLY_COMPLETED;
+            StringUtils.isBlank(action_taken);
+            return BaseAncHomeVisitAction.Status.COMPLETED;
         }
     }
 
@@ -543,10 +541,8 @@ public class FpFollowUpVisitInteractorFlv extends DefaultFpFollowUpVisitInteract
             if (StringUtils.isBlank(fp_counselling)) {
                 return BaseAncHomeVisitAction.Status.PENDING;
             }
-            if ("yes".equalsIgnoreCase(fp_counselling))
-                return BaseAncHomeVisitAction.Status.COMPLETED;
 
-            return BaseAncHomeVisitAction.Status.PARTIALLY_COMPLETED;
+            return BaseAncHomeVisitAction.Status.COMPLETED;
         }
     }
 

@@ -5,4 +5,6 @@
     <string name="menu_anc">ANC</string>
     <string name="menu_pnc">PNC</string>
     <string name="sick_child_title">SICK CHILD FORM</string>
+    <string name="login_failed_dialog_message">Please Check The Credentials</string>
+    <string name="login_failed_dialog_title">Log In Failed</string>
 </resources>
