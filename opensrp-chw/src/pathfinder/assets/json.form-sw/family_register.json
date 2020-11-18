@@ -584,14 +584,6 @@
         }
       },
       {
-        "key": "mra",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "",
-        "openmrs_entity_id": "",
-        "type": "hidden",
-        "values": ""
-      },
-      {
         "key": "preg_1yr",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",

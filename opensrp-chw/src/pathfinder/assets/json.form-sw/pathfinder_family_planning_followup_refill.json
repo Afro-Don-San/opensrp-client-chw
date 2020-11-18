@@ -282,7 +282,7 @@
         "openmrs_entity_id": "number_of_condoms",
         "openmrs_entity_parent": "",
         "edit_type": "number",
-        "hint": "Jaza idadi ya kondomu ya kiume ulizompa mteja",
+        "hint": "Jaza idadi ya kondomu ya ulizompa mteja",
         "v_required": {
           "value": "true",
           "err": "Hi tarakimu haiwezekani kuwa sifuri/batili"

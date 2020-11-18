@@ -20,12 +20,12 @@ public class ChwSyncConfiguration extends SyncConfiguration {
 
     @Override
     public SyncFilter getSyncFilterParam() {
-        return SyncFilter.LOCATION;
+        return SyncFilter.PROVIDER;
     }
 
     @Override
     public String getSyncFilterValue() {
-        return Utils.getSyncFilterValue();
+        return org.smartregister.Context.getInstance().allSharedPreferences().fetchRegisteredANM();
     }
 
     @Override

@@ -224,7 +224,7 @@ public class PathfinderFpMethodChoiceInteractorFlv extends DefaultPathfinderFpPr
                 }
                 return BaseAncHomeVisitAction.Status.COMPLETED;
             } else  {
-                return BaseAncHomeVisitAction.Status.COMPLETED;
+                return BaseAncHomeVisitAction.Status.PENDING;
             }
         }
     }
