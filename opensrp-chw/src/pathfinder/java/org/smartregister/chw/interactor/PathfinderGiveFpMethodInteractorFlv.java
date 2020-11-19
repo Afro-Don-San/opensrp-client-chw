@@ -217,8 +217,9 @@ public class PathfinderGiveFpMethodInteractorFlv extends DefaultPathfinderFpPreg
                     e.printStackTrace();
                 }
                 return BaseAncHomeVisitAction.Status.COMPLETED;
-            } else {
-                return BaseAncHomeVisitAction.Status.PENDING;
+            }
+            else {
+                return BaseAncHomeVisitAction.Status.COMPLETED;
             }
         }
     }

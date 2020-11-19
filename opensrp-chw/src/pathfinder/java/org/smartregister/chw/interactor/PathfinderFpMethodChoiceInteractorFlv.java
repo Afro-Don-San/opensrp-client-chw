@@ -11,7 +11,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.smartregister.chw.R;
-import org.smartregister.chw.activity.PathfinderFamilyPlanningPregnancyScreeningActivity;
 import org.smartregister.chw.anc.AncLibrary;
 import org.smartregister.chw.anc.actionhelper.HomeVisitActionHelper;
 import org.smartregister.chw.anc.contract.BaseAncHomeVisitContract;
@@ -120,14 +119,14 @@ public class PathfinderFpMethodChoiceInteractorFlv extends DefaultPathfinderFpPr
 
                     JSONObject openmrsIds = new JSONObject();
                     JSONArray values = new JSONArray();
-                    for(Location location : locations){
-                        openmrsIds.put(location.getProperties().getName(),location.getId());
+                    for (Location location : locations) {
+                        openmrsIds.put(location.getProperties().getName(), location.getId());
                         values.put(location.getProperties().getName());
                     }
 
-                    object.put("values",values);
-                    object.put("keys",values);
-                    object.put("openmrs_choice_ids",openmrsIds);
+                    object.put("values", values);
+                    object.put("keys", values);
+                    object.put("openmrs_choice_ids", openmrsIds);
                     break;
                 }
             }
@@ -166,7 +165,7 @@ public class PathfinderFpMethodChoiceInteractorFlv extends DefaultPathfinderFpPr
         public BaseAncHomeVisitAction.Status evaluateStatusOnPayload() {
             if (StringUtils.isBlank(referral_date)) {
                 return BaseAncHomeVisitAction.Status.PENDING;
-            }else {
+            } else {
                 return BaseAncHomeVisitAction.Status.COMPLETED;
             }
         }
@@ -206,14 +205,14 @@ public class PathfinderFpMethodChoiceInteractorFlv extends DefaultPathfinderFpPr
             if (StringUtils.isBlank(fp_method_accepted)) {
                 return BaseAncHomeVisitAction.Status.PENDING;
             } else if (
-                    "vasectomy".equalsIgnoreCase(fp_method_accepted)||
-                    "iud".equalsIgnoreCase(fp_method_accepted)||
-                    "lam".equalsIgnoreCase(fp_method_accepted)||
-                    "implants".equalsIgnoreCase(fp_method_accepted)||
-                    "injection".equalsIgnoreCase(fp_method_accepted)||
-                    "sdm".equalsIgnoreCase(fp_method_accepted)||
-                    "emergency_contraception".equalsIgnoreCase(fp_method_accepted)||
-                    "tubal_ligation".equalsIgnoreCase(fp_method_accepted)
+                    "vasectomy".equalsIgnoreCase(fp_method_accepted) ||
+                            "iud".equalsIgnoreCase(fp_method_accepted) ||
+                            "lam".equalsIgnoreCase(fp_method_accepted) ||
+                            "implants".equalsIgnoreCase(fp_method_accepted) ||
+                            "injection".equalsIgnoreCase(fp_method_accepted) ||
+                            "sdm".equalsIgnoreCase(fp_method_accepted) ||
+                            "emergency_contraception".equalsIgnoreCase(fp_method_accepted) ||
+                            "tubal_ligation".equalsIgnoreCase(fp_method_accepted)
             ) {
                 try {
                     LinkedHashMap<String, BaseAncHomeVisitAction> additionalList = new LinkedHashMap<>();
@@ -223,7 +222,13 @@ public class PathfinderFpMethodChoiceInteractorFlv extends DefaultPathfinderFpPr
                     e.printStackTrace();
                 }
                 return BaseAncHomeVisitAction.Status.COMPLETED;
-            } else  {
+            } else if (
+                    fp_method_accepted.contains("condom") ||
+                            "pop".equalsIgnoreCase(fp_method_accepted) ||
+                            "coc".equalsIgnoreCase(fp_method_accepted)
+            ) {
+                return BaseAncHomeVisitAction.Status.COMPLETED;
+            } else {
                 return BaseAncHomeVisitAction.Status.PENDING;
             }
         }

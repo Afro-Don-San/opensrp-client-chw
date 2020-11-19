@@ -251,7 +251,7 @@ public class PathfinderFpPregnancyScreeningInteractorFlv extends DefaultPathfind
                 }
                 return BaseAncHomeVisitAction.Status.COMPLETED;
             }
-            return BaseAncHomeVisitAction.Status.PENDING;
+            return BaseAncHomeVisitAction.Status.COMPLETED;
 
         }
     }
