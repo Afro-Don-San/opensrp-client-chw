@@ -13,6 +13,13 @@ condition: "true"
 actions:
   - "calculation = true"
 ---
+name: step1_is_client_already_using_fp
+description: is_client_already_using_fp calculation
+priority: 1
+condition: "true"
+actions:
+  - "calculation = 'no'"
+---
 name: step4_fp_start_date
 description: fp_start_date calculation
 priority: 2
@@ -30,9 +37,16 @@ actions:
 name: step4_pregnant_screening_done
 description: pregnant_screening_done calculation
 priority: 2
-condition: "step1_used_fp_method_consistently == 'no'"
+condition: "true"
 actions:
-  - "calculation = false"
+  - "calculation = step4_used_fp_method_consistently == 'yes' ? true : false "
+---
+name: step4_pregnancy_status
+description: pregnancy_status calculation
+priority: 2
+condition: "true"
+actions:
+  - "calculation = step4_used_fp_method_consistently == 'yes' ? 'NOT LIKELY PREGNANT' : 'null' "
 ---
 name: step4_fp_method_choice_done
 description: fp_method_choice_done calculation

@@ -123,6 +123,20 @@
             }
           }
         }
+      },
+      {
+        "key": "is_client_already_using_fp",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "is_client_already_using_fp",
+        "type": "hidden",
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_followup_counsel_calculation.yml"
+            }
+          }
+        }
       }
     ]
   },
@@ -654,6 +668,21 @@
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
         "openmrs_entity_id": "pregnant_screening_done",
+        "type": "edit_text",
+        "hidden": true,
+        "calculation": {
+          "rules-engine": {
+            "ex-rules": {
+              "rules-file": "pathfinder_family_planning_followup_counsel_calculation.yml"
+            }
+          }
+        }
+      },
+      {
+        "key": "pregnancy_status",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "concept",
+        "openmrs_entity_id": "pregnancy_status",
         "type": "edit_text",
         "hidden": true,
         "calculation": {

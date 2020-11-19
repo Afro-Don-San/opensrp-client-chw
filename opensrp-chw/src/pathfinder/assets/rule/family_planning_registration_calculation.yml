@@ -11,7 +11,42 @@ description: calculate fp start date
 priority: 1
 condition: "true"
 actions:
-  - "calculation = step2_is_client_already_using_fp =='yes'? System.currentTimeMillis() : 0 "
+  - "calculation = step2_is_client_already_using_fp =='yes'? helper.getDateToday() : 0 "
+---
+name: step3_introduction_to_fp_done
+description: calculate introduction_to_fp_done
+priority: 1
+condition: "step2_is_client_already_using_fp =='yes'"
+actions:
+  - "calculation = true "
+---
+name: step3_pregnant_screening_done
+description: calculate pregnant_screening_done
+priority: 1
+condition: "step2_is_client_already_using_fp =='yes'"
+actions:
+  - "calculation = true"
+---
+name: step3_pregnancy_status
+description: calculate pregnancy_status
+priority: 1
+condition: "step2_is_client_already_using_fp =='yes'"
+actions:
+  - "calculation = 'NOT LIKELY PREGNANT'"
+---
+name: step3_edd
+description: calculate edd
+priority: 1
+condition: "step2_is_client_already_using_fp =='yes'"
+actions:
+  - "calculation = '0'"
+---
+name: step3_fp_pregnancy_screening_date
+description: calculate fp_pregnancy_screening_date
+priority: 1
+condition: "step2_is_client_already_using_fp =='yes'"
+actions:
+  - "calculation = helper.getDateToday()"
 ---
 name: step4_fp_method_accepted
 description: calculate fp method accepted
