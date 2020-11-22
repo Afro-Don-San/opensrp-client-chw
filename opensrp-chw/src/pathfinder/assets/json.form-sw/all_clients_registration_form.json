@@ -869,6 +869,30 @@
         }
       },
       {
+        "key": "service_provider_other",
+        "openmrs_entity_parent": "",
+        "openmrs_entity": "person_attribute",
+        "openmrs_entity_id": "service_provider_other",
+        "type": "edit_text",
+        "hint": "Kazi nyingine anayojishughulisha",
+        "edit_type": "name",
+        "v_required": {
+          "value": "true",
+          "err": "Tafadhali jaza kazi nyingine"
+        },
+        "relevance": {
+          "step2:service_provider": {
+            "ex-checkbox": [
+              {
+                "or": [
+                  "chk_other"
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
         "key": "leader",
         "openmrs_entity_parent": "",
         "openmrs_entity": "person_attribute",
