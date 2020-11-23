@@ -48,7 +48,7 @@
                         android:layout_toEndOf="@+id/close"
                         android:layout_toRightOf="@+id/close"
                         android:ellipsize="end"
-                        android:text="@string/other_refer_client_title"
+                        android:text="@string/pathfinder_other_refer_client_title"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textColor="@android:color/white"
                         android:textSize="@dimen/tool_bar_title" />
