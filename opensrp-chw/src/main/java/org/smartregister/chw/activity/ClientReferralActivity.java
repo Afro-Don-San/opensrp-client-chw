@@ -51,7 +51,8 @@ public class ClientReferralActivity extends AppCompatActivity implements ClientR
         referralTypeAdapter.setOnClickListener(this);
         setUpView();
         if (BuildConfig.USE_PATHFINDERS_FP_MODULE) {
-            ((TextView)findViewById(R.id.textview_title)).setText(getResources().getString(R.string.refer_client));
+            ((TextView)findViewById(R.id.textview_title)).setText(getResources().getString(R.string.pathfinder_other_refer_client_title));
+            ((TextView)findViewById(R.id.referralReasonTextView)).setText(getResources().getString(R.string.referral_to_other_available_services));
         }
     }
 
