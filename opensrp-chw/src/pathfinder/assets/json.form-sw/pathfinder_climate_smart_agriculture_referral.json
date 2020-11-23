@@ -3,7 +3,7 @@
   "show_errors_on_submit": true,
   "skip_blank_steps": true,
   "count": "1",
-  "encounter_type": "Loan Unit Referral",
+  "encounter_type": "Climate Smart Agriculture Referral",
   "entity_id": "",
   "relational_id": "",
   "metadata": {
@@ -55,7 +55,7 @@
     }
   },
   "step1": {
-    "title": "Rufaa ya sehemu ya mkopo",
+    "title": "Rufaa ya Kilimo endelevu",
     "fields": [
       {
         "key": "referral_date",
@@ -119,7 +119,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Jaza fomu ya rufaa na tegesha fomu sambamba na kamera ya simu ili kuipata alama maalumu.",
+        "text": "Mshrikishe mteja taarifa za mtu anayehusika na huduma nyingine zinazotolewa na mradi\n\nAndika mawasiliano ya mtu anayehusika na huduma hizo na wasiliana nao kwaajili ya msaada. Muhusika wa huduma atapata pia ujumbe na atakufuatilia.",
         "toaster_type": "info"
       },
       {
@@ -131,18 +131,13 @@
         "spacer_height": "15dp"
       },
       {
-        "key": "unique_id",
+        "key": "info",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "unique_id",
-        "type": "barcode",
-        "barcode_type": "qrcode",
-        "hint": "Alama maalum *",
-        "scanButtonText": "SCAN",
-        "v_numeric": {
-          "value": "true",
-          "err": "Hakikisha unajaza kitambulisho halali"
-        }
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Kilimo endelevu: Hakuna",
+        "toaster_type": "info"
       },
       {
         "key": "referral_appointment_date",

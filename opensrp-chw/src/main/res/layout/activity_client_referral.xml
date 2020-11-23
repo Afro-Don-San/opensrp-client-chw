@@ -48,7 +48,7 @@
                         android:layout_toEndOf="@+id/close"
                         android:layout_toRightOf="@+id/close"
                         android:ellipsize="end"
-                        android:text="@string/refer_to_facility"
+                        android:text="@string/other_refer_client_title"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textColor="@android:color/white"
                         android:textSize="@dimen/tool_bar_title" />
@@ -70,7 +70,7 @@
             android:layout_marginBottom="24dp"
             android:gravity="center_vertical"
             android:singleLine="false"
-            android:text="@string/referral_reason"
+            android:text="@string/referral_to_other_available_services"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@android:color/black" />
 

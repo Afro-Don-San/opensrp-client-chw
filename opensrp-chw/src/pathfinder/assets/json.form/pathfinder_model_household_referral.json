@@ -3,7 +3,7 @@
   "show_errors_on_submit": true,
   "skip_blank_steps": true,
   "count": "1",
-  "encounter_type": "Loan Unit Referral",
+  "encounter_type": "Model Household Referral",
   "entity_id": "",
   "relational_id": "",
   "metadata": {
@@ -55,7 +55,7 @@
     }
   },
   "step1": {
-    "title": "Loan Unit Referral",
+    "title": "Model Household Referral",
     "fields": [
       {
         "key": "referral_date",
@@ -119,7 +119,7 @@
         "openmrs_entity": "concept",
         "openmrs_entity_id": "",
         "type": "toaster_notes",
-        "text": "Please fill the referral form and scan the Loan Unit Referral form QR Code",
+        "text": "Share the resource person information with the client\n\nWrite down the resource person contact information and reach out to them for support. The resource person will also get a message to follow up with you.",
         "toaster_type": "info"
       },
       {
@@ -131,18 +131,13 @@
         "spacer_height": "15dp"
       },
       {
-        "key": "unique_id",
+        "key": "info",
         "openmrs_entity_parent": "",
         "openmrs_entity": "concept",
-        "openmrs_entity_id": "unique_id",
-        "type": "barcode",
-        "barcode_type": "qrcode",
-        "hint": "ID *",
-        "scanButtonText": "Scan Referral Form\nQR Code",
-        "v_numeric": {
-          "value": "true",
-          "err": "Please enter a valid ID"
-        }
+        "openmrs_entity_id": "",
+        "type": "toaster_notes",
+        "text": "Model Household: None",
+        "toaster_type": "info"
       },
       {
         "key": "referral_appointment_date",
