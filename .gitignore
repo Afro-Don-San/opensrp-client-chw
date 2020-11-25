@@ -21,3 +21,4 @@ build/
 build/*
 jacoco.exec
 opensrp-chw/ba/
+opensrp-chw/pathfinder/release/*
