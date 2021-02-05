@@ -1,0 +1,66 @@
+---
+name: step1_community_conservation_groups_the_client_belongs_to
+description: community_conservation_groups_the_client_belongs_to relevance
+priority: 1
+condition: "step1_is_a_member_of_any_community_conservation_group == 'yes' "
+actions:
+  - "isRelevant = true"
+---
+name: step1_other_community_conservation_groups
+description: other_community_conservation_groups relevance
+priority: 1
+condition: "step1_community_conservation_groups_the_client_belongs_to.contains('other')"
+actions:
+  - "isRelevant = true"
+---
+name: step2_counsel
+description: counsel relevance
+priority: 1
+condition: "step1_is_a_member_of_any_community_conservation_group.contains('no')"
+actions:
+  - "isRelevant = true"
+---
+name: step3_counselled_topics
+description: counselled_topics relevance
+priority: 1
+condition: "step1_is_a_member_of_any_community_conservation_group.contains('no')"
+actions:
+  - "isRelevant = true"
+---
+name: step3_other_counselled_topics
+description: other_counselled_topics relevance
+priority: 1
+condition: "step3_counselled_topics.contains('other')"
+actions:
+  - "isRelevant = true"
+---
+name: step4_would_like_to_join_a_conservation_group
+description: would_like_to_join_a_conservation_group relevance
+priority: 1
+condition: "step1_is_a_member_of_any_community_conservation_group.contains('no')"
+actions:
+  - "isRelevant = true"
+---
+name: step4_community_conservation_group_to_join
+description: community_conservation_group_to_join relevance
+priority: 1
+condition: "step4_would_like_to_join_a_conservation_group =='yes'"
+actions:
+  - "isRelevant = true"
+
+---
+name: step4_other_community_conservation_groups_to_join
+description: other_community_conservation_groups_to_join relevance
+priority: 1
+condition: "step4_community_conservation_group_to_join.contains('other')"
+actions:
+  - "isRelevant = true"
+---
+name: step5_fill_the_referral_form
+description: fill_the_referral_form relevance
+priority: 1
+condition: "step4_would_like_to_join_a_conservation_group =='yes'"
+actions:
+  - "isRelevant = true"
+
+

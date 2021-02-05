@@ -42,6 +42,7 @@ public class Utils extends org.smartregister.chw.core.utils.Utils {
         List<ReferralTypeModel> referralTypeModels = new ArrayList<>();
 
         if (BuildConfig.USE_PATHFINDERS_FP_MODULE) {
+            referralTypeModels.add(new ReferralTypeModel(activity.getString(R.string.referral_to_community_conservation), org.smartregister.chw.util.Constants.JSON_FORM.getPathfinderCommunityConservation(), CoreConstants.TASKS_FOCUS.COMMUNITY_CONSERVATION));
             referralTypeModels.add(new ReferralTypeModel(activity.getString(R.string.referral_to_loan_unit), org.smartregister.chw.util.Constants.JSON_FORM.getPathfinderLoanUnitReferral(), CoreConstants.TASKS_FOCUS.LOAN_MANAGEMENT_UNIT));
             referralTypeModels.add(new ReferralTypeModel(activity.getString(R.string.referral_to_beach_management_unit), org.smartregister.chw.util.Constants.JSON_FORM.getPathfinderBeachManagementUnitReferral(), CoreConstants.TASKS_FOCUS.BEACH_MANAGEMENT_UNIT));
             referralTypeModels.add(new ReferralTypeModel(activity.getString(R.string.referral_to_client_smart_agriculture), org.smartregister.chw.util.Constants.JSON_FORM.getPathfinderClimateSmartAgricultureReferral(), CoreConstants.TASKS_FOCUS.CLIMATE_SMART_AGRICULTURE));

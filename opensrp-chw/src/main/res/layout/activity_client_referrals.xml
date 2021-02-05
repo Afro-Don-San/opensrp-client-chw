@@ -48,8 +48,9 @@
                         android:layout_marginLeft="6dp"
                         android:layout_toEndOf="@+id/close"
                         android:layout_toRightOf="@+id/close"
+                        android:layout_centerVertical="true"
                         android:ellipsize="end"
-                        android:text="@string/pathfinder_other_refer_client_title"
+                        android:text="@string/refer_to_facility"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textColor="@android:color/white"
                         android:textSize="@dimen/tool_bar_title" />
@@ -71,7 +72,7 @@
             android:layout_marginBottom="24dp"
             android:gravity="center_vertical"
             android:singleLine="false"
-            android:text="@string/referral_to_other_available_services"
+            android:text="@string/referral_reason"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textColor="@android:color/black" />
 

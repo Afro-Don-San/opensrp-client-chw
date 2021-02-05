@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "121503578965",
+    "project_id": "pathfinder-fp-app",
+    "storage_bucket": "pathfinder-fp-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:121503578965:android:0ecb3be3ed282b986fcddc",
+        "android_client_info": {
+          "package_name": "org.smartregister.chw.pf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "121503578965-uqupg69qk5tdb073q9outhie4577daam.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgXnm4uzYBCKasdrZKbt9e2oAwHwDXGuY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "121503578965-uqupg69qk5tdb073q9outhie4577daam.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

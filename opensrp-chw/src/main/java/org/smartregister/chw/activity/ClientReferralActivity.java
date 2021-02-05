@@ -1,7 +1,11 @@
 package org.smartregister.chw.activity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -28,6 +32,7 @@ import org.smartregister.util.FormUtils;
 
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 import timber.log.Timber;
@@ -44,15 +49,30 @@ public class ClientReferralActivity extends AppCompatActivity implements ClientR
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_client_referral);
+        setContentView(R.layout.activity_client_referrals);
         referralTypeAdapter = new ReferralTypeAdapter();
         encounterTypeToTableMap = new HashMap<>();
         mapEncounterTypeToTable();
         referralTypeAdapter.setOnClickListener(this);
         setUpView();
+
+
+        Locale locale = getBaseContext().getResources().getConfiguration().locale;
+        Context context = this.getBaseContext();
+
+        Resources res = getResources();
+        Configuration config = new Configuration(res.getConfiguration());
+        if (Build.VERSION.SDK_INT >= 17) {
+            config.setLocale(locale);
+            context = context.createConfigurationContext(config);
+        } else {
+            config.locale = locale;
+            res.updateConfiguration(config, res.getDisplayMetrics());
+        }
+
         if (BuildConfig.USE_PATHFINDERS_FP_MODULE) {
-            ((TextView)findViewById(R.id.textview_title)).setText(getResources().getString(R.string.pathfinder_other_refer_client_title));
-            ((TextView)findViewById(R.id.referralReasonTextView)).setText(getResources().getString(R.string.referral_to_other_available_services));
+            ((TextView) findViewById(R.id.textview_title)).setText(context.getResources().getString(R.string.pathfinder_other_refer_client_title));
+            ((TextView) findViewById(R.id.referralReasonTextView)).setText(context.getResources().getString(R.string.referral_to_other_available_services));
         }
     }
 
@@ -87,7 +107,7 @@ public class ClientReferralActivity extends AppCompatActivity implements ClientR
         if (BuildConfig.USE_PATHFINDERS_FP_MODULE) {
             startActivityForResult(CoreJsonFormUtils.getJsonIntent(this, jsonObject,
                     Utils.metadata().familyMemberFormActivity), JsonFormUtils.REQUEST_CODE_GET_JSON);
-        }else if (BuildConfig.USE_UNIFIED_REFERRAL_APPROACH) {
+        } else if (BuildConfig.USE_UNIFIED_REFERRAL_APPROACH) {
             //TODO Define custom layout on referral library for family planning referrals otherwise do not use custom layout for now
             ReferralRegistrationActivity.startGeneralReferralFormActivityForResults(this,
                     baseEntityId, jsonObject, !CoreConstants.TASKS_FOCUS.FP_SIDE_EFFECTS.equalsIgnoreCase(referralTypeModel.getFocus()));
