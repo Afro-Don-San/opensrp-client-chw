@@ -2,7 +2,7 @@
   "validate_on_submit": false,
   "show_errors_on_submit": true,
   "skip_blank_steps": true,
-  "count": "5",
+  "count": "6",
   "encounter_type": "Community Conservation",
   "entity_id": "",
   "relational_id": "",
@@ -59,62 +59,6 @@
     "next": "step2",
     "fields": [
       {
-        "key": "referral_date",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "referral_date",
-        "type": "hidden",
-        "calculation": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_anc_referral_calculation.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "referral_time",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "referral_time",
-        "type": "hidden",
-        "calculation": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_anc_referral_calculation.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "referral_type",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "referral_type",
-        "type": "hidden",
-        "calculation": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_anc_referral_calculation.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "referral_status",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "referral_status",
-        "type": "hidden",
-        "calculation": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_anc_referral_calculation.yml"
-            }
-          }
-        }
-      },
-      {
         "key": "is_a_member_of_any_community_conservation_group",
         "type": "native_radio",
         "openmrs_entity": "concept",
@@ -153,35 +97,35 @@
           {
             "key": "cocoba",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "cocoba",
             "openmrs_entity_parent": "",
             "text": "COCOBA"
           },
           {
             "key": "trees_planting",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "trees_planting",
             "openmrs_entity_parent": "",
             "text": "Trees planting"
           },
           {
             "key": "forest_monitoring",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "forest_monitoring",
             "openmrs_entity_parent": "",
             "text": "Forest monitoring"
           },
           {
             "key": "lup",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "lup",
             "openmrs_entity_parent": "",
             "text": "Land use planning (LUP) board"
           },
           {
             "key": "other",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "other",
             "openmrs_entity_parent": "",
             "text": "Other"
           }
@@ -213,20 +157,6 @@
           "rules-engine": {
             "ex-rules": {
               "rules-file": "pathfinder_community_conservation_relevance.yml"
-            }
-          }
-        }
-      },
-      {
-        "key": "referral_appointment_date",
-        "openmrs_entity_parent": "",
-        "openmrs_entity": "concept",
-        "openmrs_entity_id": "referral_appointment_date",
-        "type": "hidden",
-        "calculation": {
-          "rules-engine": {
-            "ex-rules": {
-              "rules-file": "pathfinder_anc_referral_calculation.yml"
             }
           }
         }
@@ -271,56 +201,56 @@
           {
             "key": "energy_saving_stove",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "energy_saving_stove",
             "openmrs_entity_parent": "",
             "text": "Energy Saving Stove"
           },
           {
             "key": "forest_management",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "forest_management",
             "openmrs_entity_parent": "",
             "text": "Forestry Management"
           },
           {
             "key": "climate_smart_agriculture",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "climate_smart_agriculture",
             "openmrs_entity_parent": "",
             "text": "Climate smart agriculture"
           },
           {
             "key": "sustainable_fishing_practices",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "sustainable_fishing_practices",
             "openmrs_entity_parent": "",
             "text": "Sustainable fishing practices"
           },
           {
             "key": "safe_and_clean_water",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "safe_and_clean_water",
             "openmrs_entity_parent": "",
             "text": "Safe and Clean Water"
           },
           {
             "key": "use_of_toilets",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "use_of_toilets",
             "openmrs_entity_parent": "",
             "text": "Use of Toilets"
           },
           {
             "key": "insect_treated_nets",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "insect_treated_nets",
             "openmrs_entity_parent": "",
             "text": "Insect Treated Nets"
           },
           {
             "key": "other",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "other",
             "openmrs_entity_parent": "",
             "text": "Other (Please Specify)"
           }
@@ -360,7 +290,7 @@
   },
   "step4": {
     "title": "Join Conservation Group",
-    "next": "step4",
+    "next": "step5",
     "fields": [
       {
         "key": "would_like_to_join_a_conservation_group",
@@ -408,35 +338,35 @@
           {
             "key": "cocoba",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "cocoba",
             "openmrs_entity_parent": "",
             "text": "COCOBA"
           },
           {
             "key": "trees_planting",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "trees_planting",
             "openmrs_entity_parent": "",
             "text": "Trees planting"
           },
           {
             "key": "forest_monitoring",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "forest_monitoring",
             "openmrs_entity_parent": "",
             "text": "Forest monitoring"
           },
           {
             "key": "lup",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "lup",
             "openmrs_entity_parent": "",
             "text": "Land use planning (LUP) board"
           },
           {
             "key": "other",
             "openmrs_entity": "concept",
-            "openmrs_entity_id": "",
+            "openmrs_entity_id": "other",
             "openmrs_entity_parent": "",
             "text": "Other"
           }

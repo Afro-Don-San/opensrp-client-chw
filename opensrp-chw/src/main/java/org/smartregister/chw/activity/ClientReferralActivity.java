@@ -7,6 +7,7 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -173,13 +174,21 @@ public class ClientReferralActivity extends AppCompatActivity implements ClientR
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        Log.d("frisay","on activity result");
         if (resultCode != Activity.RESULT_OK) return;
         if (requestCode == JsonFormUtils.REQUEST_CODE_GET_JSON)
+
+            Log.d("frisay","request code get json");
             try {
                 String jsonString = data.getStringExtra(org.smartregister.family.util.Constants.JSON_FORM_EXTRA.JSON);
                 JSONObject form = new JSONObject(jsonString);
                 String encounterType = form.getString(JsonFormUtils.ENCOUNTER_TYPE);
-                if (isReferralForm(encounterType)) {
+                if (BuildConfig.USE_PATHFINDERS_FP_MODULE) {
+                    CoreReferralUtils.createReferralEvent(Utils.getAllSharedPreferences(),
+                            jsonString, encounterTypeToTableMap.get(encounterType), baseEntityId);
+                    Utils.showToast(this, this.getString(R.string.referral_submitted));
+                }
+                else if (isReferralForm(encounterType)) {
                     CoreReferralUtils.createReferralEvent(Utils.getAllSharedPreferences(),
                             jsonString, encounterTypeToTableMap.get(encounterType), baseEntityId);
                     Utils.showToast(this, this.getString(R.string.referral_submitted));
