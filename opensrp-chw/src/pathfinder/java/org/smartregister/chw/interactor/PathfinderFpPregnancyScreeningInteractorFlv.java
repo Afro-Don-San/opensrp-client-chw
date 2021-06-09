@@ -89,7 +89,8 @@ public class PathfinderFpPregnancyScreeningInteractorFlv extends DefaultPathfind
                 .withBaseEntityID(memberObject.getBaseEntityId())
                 .withHelper(new ANCReferralHelper(context))
                 .withProcessingMode(BaseAncHomeVisitAction.ProcessingMode.SEPARATE)
-                .withFormName(ancReferralJsonObject.toString())
+                .withJsonPayload(ancReferralJsonObject.toString())
+                .withFormName(Constants.JSON_FORM.getPathfinderAncReferral())
                 .build();
 
         JSONObject pregnancyTestReferralJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.getPathfinderPregnancyTestReferral());
@@ -101,7 +102,8 @@ public class PathfinderFpPregnancyScreeningInteractorFlv extends DefaultPathfind
                 .withBaseEntityID(memberObject.getBaseEntityId())
                 .withHelper(new ANCReferralHelper(context))
                 .withProcessingMode(BaseAncHomeVisitAction.ProcessingMode.SEPARATE)
-                .withFormName(pregnancyTestReferralJsonObject.toString())
+                .withJsonPayload(pregnancyTestReferralJsonObject.toString())
+                .withFormName(Constants.JSON_FORM.getPathfinderPregnancyTestReferral())
                 .build();
 
         JSONObject pregnancyScreeningJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.getPathfinderPregnancyScreening());
@@ -112,7 +114,8 @@ public class PathfinderFpPregnancyScreeningInteractorFlv extends DefaultPathfind
                 .withBaseEntityID(memberObject.getBaseEntityId())
                 .withProcessingMode(BaseAncHomeVisitAction.ProcessingMode.SEPARATE)
                 .withHelper(new PregnancyScreeningHelper(context, ancReferralAction, pregnancyTestReferralAction))
-                .withFormName(pregnancyScreeningJsonObject.toString())
+                .withJsonPayload(pregnancyScreeningJsonObject.toString())
+                .withFormName(Constants.JSON_FORM.getPathfinderPregnancyScreening())
                 .build();
 
         actionList.put(context.getString(R.string.fp_pregnancy_screening), action);

@@ -89,7 +89,8 @@ public class PathfinderFpMethodChoiceInteractorFlv extends DefaultPathfinderFpPr
                 .withBaseEntityID(memberObject.getBaseEntityId())
                 .withHelper(new FpMethodReferralHelper(context))
                 .withProcessingMode(BaseAncHomeVisitAction.ProcessingMode.SEPARATE)
-                .withFormName(fpMethodReferralJsonObject.toString())
+                .withJsonPayload(fpMethodReferralJsonObject.toString())
+                .withFormName(Constants.JSON_FORM.getPathfinderFpMethodReferral())
                 .build();
 
         JSONObject fpMethodChoiceJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.getPathfinderChooseFamilyPlanningMethod());
@@ -100,7 +101,8 @@ public class PathfinderFpMethodChoiceInteractorFlv extends DefaultPathfinderFpPr
                 .withBaseEntityID(memberObject.getBaseEntityId())
                 .withProcessingMode(BaseAncHomeVisitAction.ProcessingMode.SEPARATE)
                 .withHelper(new FpMethodChoiceHelper(context, fpMethodReferral))
-                .withFormName(fpMethodChoiceJsonObject.toString())
+                .withJsonPayload(fpMethodChoiceJsonObject.toString())
+                .withFormName(Constants.JSON_FORM.getPathfinderChooseFamilyPlanningMethod())
                 .build();
 
         actionList.put(context.getString(R.string.choose_fp_method), action);

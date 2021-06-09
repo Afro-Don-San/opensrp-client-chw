@@ -89,7 +89,8 @@ public class PathfinderRiskAssessmentInteractorFlv extends DefaultPathfinderFpPr
                 .withBaseEntityID(memberObject.getBaseEntityId())
                 .withHelper(new HIVReferralHelper(context))
                 .withProcessingMode(BaseAncHomeVisitAction.ProcessingMode.SEPARATE)
-                .withFormName(hivReferralJsonObject.toString())
+                .withJsonPayload(hivReferralJsonObject.toString())
+                .withFormName(Constants.JSON_FORM.getPathfinderHivReferral())
                 .build();
 
         JSONObject htcReferralJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.getPathfinderHtcReferral());
@@ -101,7 +102,8 @@ public class PathfinderRiskAssessmentInteractorFlv extends DefaultPathfinderFpPr
                 .withBaseEntityID(memberObject.getBaseEntityId())
                 .withHelper(new HIVReferralHelper(context))
                 .withProcessingMode(BaseAncHomeVisitAction.ProcessingMode.SEPARATE)
-                .withFormName(htcReferralJsonObject.toString())
+                .withJsonPayload(htcReferralJsonObject.toString())
+                .withFormName(Constants.JSON_FORM.getPathfinderHtcReferral())
                 .build();
 
         JSONObject stiReferralJsonObject = FormUtils.getInstance(context).getFormJson(Constants.JSON_FORM.getPathfinderStiReferral());
